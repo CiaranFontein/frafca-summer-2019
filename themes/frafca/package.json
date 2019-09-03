@@ -1,7 +1,7 @@
 {
-  "name": "redstarter",
+  "name": "FRAFCA",
   "version": "1.1.0",
-  "description": "A starter theme for RED students, based on Underscores.",
+  "description": "FRAFCA theme for WordPress, based on Underscores.",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.23.6",
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redacademy/redstarter.git"
+    "url": "git+https://github.com/redacademy/frafca-summer-2019.git"
   },
-  "author": "redacademy",
+  "author": "Flex Flow",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redacademy/redstarter/issues"
+    "url": "https://github.com/redacademy/frafca-summer-2019/issues"
   },
-  "homepage": "https://github.com/redacademy/redstarter#readme"
+  "homepage": "https://github.com/redacademy/frafca-summer-2019#readme"
 }

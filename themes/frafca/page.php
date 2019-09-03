@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages.
  *
- * @package RED_Starter_Theme
+ * @package FRAFCA_Theme
  */
 
 get_header(); ?>
