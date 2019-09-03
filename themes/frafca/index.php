@@ -6,7 +6,8 @@
  */
 
 get_header(); ?>
-
+	<h1>hello world</h1>
+	<!-- TO DO :: DO DO DO DO -->
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
