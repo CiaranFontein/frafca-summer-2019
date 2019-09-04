@@ -11,12 +11,12 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
+					<p> © 2019 FRAFCA copyright - All rights reserved </p>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
-		<?php wp_footer(); ?>
+		<?php get_footer(); ?>
 
 	</body>
 </html>
