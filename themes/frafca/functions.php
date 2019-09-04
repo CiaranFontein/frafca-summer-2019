@@ -83,6 +83,8 @@ add_filter( 'stylesheet_uri', 'frafca_theme_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function frafca_theme_scripts() {
+	wp_enqueue_style( 'google-fonts-style', 'https://fonts.googleapis.com/css?family=Merriweather:700|Raleway:400,700&display=swap');
+
 	wp_enqueue_style( 'frafca-theme-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'frafca-theme-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
