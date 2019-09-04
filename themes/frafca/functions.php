@@ -27,7 +27,15 @@ function frafca_theme_setup() {
 	) );
 
 	register_nav_menus( array(
-		'footer' => esc_html( 'Footer Menu' ),
+		'footer_connect' => esc_html( 'Footer Menu - Connect' ),
+	) );
+
+	register_nav_menus( array(
+		'footer_get_involved' => esc_html( 'Footer Menu - Get Invloved' ),
+	) );
+
+	register_nav_menus( array(
+		'footer_what_we_do' => esc_html( 'Footer Menu - What We Do' ),
 	) );
 
 	
