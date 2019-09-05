@@ -41,7 +41,6 @@ a {
         z-index: 1;
         margin: 0 2rem;
     }
-
 }
 
 .main-navigation {
@@ -78,10 +77,11 @@ a {
 
     .side-header-menu {
         color: #000;
-        padding: 0rem 1rem;
+        padding-right: 1rem;
 
         ul {
-            margin: 0.15rem 1.7rem;
+            margin: 0.15rem;
+            margin-right: 1.7rem;
         }
 
         li {
