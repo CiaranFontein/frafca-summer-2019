@@ -23,26 +23,12 @@ function frafca_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'Header-Menu' => esc_html( 'Header-Menu' ),
-	) );
-
-	register_nav_menus( array(
-		'Side-Header-Menu' => esc_html( 'Side-Header-Menu' ),
-	) );
-
-	register_nav_menus( array(
+		'header-menu' => esc_html( 'Header-Menu' ),
+		'side-header-menu' => esc_html( 'Side-Header-Menu' ),
 		'footer_connect' => esc_html( 'Footer Menu - Connect' ),
-	) );
-
-	register_nav_menus( array(
 		'footer_get_involved' => esc_html( 'Footer Menu - Get Invloved' ),
-	) );
-
-	register_nav_menus( array(
 		'footer_what_we_do' => esc_html( 'Footer Menu - What We Do' ),
 	) );
-
-	
 
 	// Switch search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
