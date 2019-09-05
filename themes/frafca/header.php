@@ -28,8 +28,8 @@
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="main-navigation" role="navigation">
-                <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'menu_id' => 'Header-Menu' ) ); ?>
-                <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'menu_id' => 'Side-Header-Menu' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
 
