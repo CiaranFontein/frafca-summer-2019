@@ -23,7 +23,11 @@ function frafca_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html( 'Primary Menu' ),
+		'Header-Menu' => esc_html( 'Header-Menu' ),
+	) );
+
+	register_nav_menus( array(
+		'Side-Header-Menu' => esc_html( 'Side-Header-Menu' ),
 	) );
 
 	register_nav_menus( array(
