@@ -41,20 +41,25 @@
     
 }
 
-.show-footer {
 
-    .menu-footer-connect-container a,
-    .menu-footer-get-involved-container a,
-    .menu-footer-what-we-do-container a 
-        {
-            text-decoration: none;
-        }
+.footer-menu-container {
+    
+    display: none;
+    
+}
+
+.footer-menu-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .menu-footer-connect-container a,
 .menu-footer-get-involved-container a,
 .menu-footer-what-we-do-container a {
-    display:none;
+    text-decoration: none;
+
 }
 
 .copyright {
@@ -64,4 +69,9 @@
 .footer-logo-img {
     widows: 40px;
     height: 40px;
+}
+
+.footer-connect {
+    padding-left: 20px;
+
 }
