@@ -133,17 +133,18 @@ get_header(); ?>
                 </div>
         </section>
 
-        <section>
+        <!-- Section :: partners -->
+        <section id="front_partners">
             <h2>Partners</h2>
             <?php 
                 $partners = CFS()->get( 'partners' );                
                 foreach( $partners as $partner ) :
                     $partner_name = $partner['partner_name'];
-                    $img_partner = 'img_' . strtolower(str_replace( ' ', '_', $partner_name )) . '.png';
+                    $img_partner = $partner['logo'];
             ?>
                 <div class="partner-content">
                     <div class="partner-logo">
-                        <img src="<?php echo get_template_directory_uri() . "/images/{$img_partner}"; ?>" alt="<?php echo $partner_name; ?>">
+                        <img src="<?php echo $img_partner;?>" alt="<?php echo $partner_name; ?>">
                     </div>
                     <p>
                         <?php echo $partner_name; ?>
@@ -151,7 +152,7 @@ get_header(); ?>
                 </div>
 
             <?php endforeach; ?>
-        </section>
+        </section><!-- #front_partners -->
 
     </main><!-- #main -->
 </div><!-- #primary -->
