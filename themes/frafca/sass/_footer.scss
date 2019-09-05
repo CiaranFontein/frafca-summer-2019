@@ -8,11 +8,11 @@
 }
 
 .footer-container{
-    margin: 10px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 40px;
+    color:black;
 }
 
 .footer-navigation,
@@ -22,14 +22,15 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-end;
-    padding: 10px;
-    border-bottom: 1px solid white;
+    padding: 15px 40px;
+    border-bottom: 1px solid black;
+    color:black;
     
 
 }
 
 .footer-menu-header {
-    color:white;
+    color: black;
 }
 
 .menu-footer-connect-container ul,
@@ -58,4 +59,9 @@
 
 .copyright {
     text-align: center;
+}
+
+.footer-logo-img {
+    widows: 40px;
+    height: 40px;
 }
