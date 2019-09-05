@@ -20,3 +20,11 @@ function frafca_theme_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'frafca_theme_body_classes' );
+
+
+// Remove "Editor" links from sub-menus
+function frafca_remove_submenus() {
+    remove_submenu_page( 'themes.php', 'theme-editor.php' );
+    remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+}
+add_action( 'admin_menu', 'frafca_remove_submenus', 110 );
