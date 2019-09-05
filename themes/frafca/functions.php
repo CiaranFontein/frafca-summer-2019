@@ -89,6 +89,7 @@ add_filter( 'stylesheet_uri', 'frafca_theme_minified_css', 10, 2 );
 function frafca_theme_scripts() {
 	wp_enqueue_style( 'google-fonts-style', 'https://fonts.googleapis.com/css?family=Merriweather:700|Raleway:400,700&display=swap');
 
+	wp_enqueue_script('frafca-script', get_template_directory_uri() . '/build/js/script.min.js', array('jquery'), '', true );
 	wp_enqueue_style( 'frafca-theme-style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'frafca-theme-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array(), '20151215', true );
@@ -115,3 +116,4 @@ add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 function tthq_add_custom_fa_css() {
 	wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
 }
+
