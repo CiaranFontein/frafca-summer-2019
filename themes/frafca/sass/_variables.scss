@@ -2,6 +2,12 @@
 
 $base__space-unit: 1.5rem;
 
+// Media Query
+
+$desktop-width: 1120px;
+$tablet-width: 620px;
+$mobile-width: 450px;
+
 // Colors
 
 $color__background-body: #4D4E60;
@@ -26,9 +32,17 @@ $color__link-hover: midnightblue;
 
 // Typography
 
-$font__main: 'Raleway', sans-serif;
-$font__header: 'Merriweather', serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__main: 'Raleway',
+sans-serif;
+$font__header: 'Merriweather',
+serif;
+$font__code: Monaco,
+Consolas,
+"Andale Mono",
+"DejaVu Sans Mono",
+monospace;
+$font__pre: "Courier 10 Pitch",
+Courier,
+monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
