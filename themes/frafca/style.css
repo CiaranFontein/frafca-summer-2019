@@ -315,12 +315,6 @@ img {
   .search-form::-webkit-input-placeholder {
     color: blue;
     font-size: 1.5em; }
-<<<<<<< HEAD
-  .search-form::-moz-placeholder {
-    color: blue;
-    font-size: 1.5em; }
-=======
->>>>>>> 3e7adef8ab099cae3aca3bdae37b7bf66b5c40bc
   .search-form::-ms-input-placeholder {
     color: blue;
     font-size: 1.5em; }
@@ -344,13 +338,45 @@ a {
     outline: 0; }
 
 /* Menus */
-.main-navigation ul {
-  list-style: none;
-  color: red; }
-  .main-navigation ul li {
-    display: inline; }
-<<<<<<< HEAD
-=======
+.main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ccc;
+  position: fixed;
+  width: 100%; }
+  .main-navigation i {
+    color: #fff;
+    padding: 0.8rem; }
+  .main-navigation ul {
+    list-style: none;
+    -webkit-padding-start: 0px;
+            padding-inline-start: 0px; }
+    .main-navigation ul li {
+      display: inline;
+      padding: 0.8rem; }
+      .main-navigation ul li a {
+        text-decoration: none;
+        color: #fff; }
+  .main-navigation .side-header-menu {
+    color: #000;
+    padding: 0rem 1rem; }
+    .main-navigation .side-header-menu li {
+      padding: 0.8rem;
+      border-radius: 0.8rem;
+      background: #fff;
+      margin: 0.15rem; }
+      .main-navigation .side-header-menu li a {
+        color: #000; }
+      .main-navigation .side-header-menu li:nth-child(2n) {
+        background: yellow;
+        text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -410,7 +436,6 @@ a {
 
 .copyright {
   text-align: center; }
->>>>>>> 3e7adef8ab099cae3aca3bdae37b7bf66b5c40bc
 
 .footer-logo-img {
   widows: 40px;
