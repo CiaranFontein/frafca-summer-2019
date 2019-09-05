@@ -315,6 +315,12 @@ img {
   .search-form::-webkit-input-placeholder {
     color: blue;
     font-size: 1.5em; }
+<<<<<<< HEAD
+  .search-form::-moz-placeholder {
+    color: blue;
+    font-size: 1.5em; }
+=======
+>>>>>>> 3e7adef8ab099cae3aca3bdae37b7bf66b5c40bc
   .search-form::-ms-input-placeholder {
     color: blue;
     font-size: 1.5em; }
@@ -343,6 +349,8 @@ a {
   color: red; }
   .main-navigation ul li {
     display: inline; }
+<<<<<<< HEAD
+=======
 
 /*--------------------------------------------------------------
 # Footer
@@ -402,6 +410,7 @@ a {
 
 .copyright {
   text-align: center; }
+>>>>>>> 3e7adef8ab099cae3aca3bdae37b7bf66b5c40bc
 
 .footer-logo-img {
   widows: 40px;

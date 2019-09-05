@@ -23,8 +23,8 @@ function frafca_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'header-menu' => esc_html( 'Header-Menu' ),
-		'side-header-menu' => esc_html( 'Side-Header-Menu' ),
+		'Header-Menu' => esc_html( 'Header-Menu' ),
+		'Side-Header-Menu' => esc_html( 'Side-Header-Menu' ),
 		'footer_connect' => esc_html( 'Footer Menu - Connect' ),
 		'footer_get_involved' => esc_html( 'Footer Menu - Get Invloved' ),
 		'footer_what_we_do' => esc_html( 'Footer Menu - What We Do' ),
