@@ -42,8 +42,7 @@ function frafca_post_type_programs_services() {
 		'label'                 => __( 'Program and Service', 'text_domain' ),
 		'description'           => __( 'A program and service post type for FRAFCA', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor' ),
-		'taxonomies'            => array( 'prgrm_svc_type' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -56,7 +55,7 @@ function frafca_post_type_programs_services() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-        'capability_type'       => 'page',
+        'capability_type'       => 'post',
         'show_in_rest'			=> true,
 	);
 	register_post_type( 'prgrm_svc', $args );
