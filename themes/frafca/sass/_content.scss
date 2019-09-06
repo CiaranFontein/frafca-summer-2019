@@ -51,7 +51,7 @@
 
 /* Contact Page **** START */
 
-.page-contact-entry-content {
+.age-contact-image {
 
     display: flex;
     flex-direction: column;
@@ -69,8 +69,9 @@
 
 }
 
-.page-contact-entry-content p {
-    width: 655px;
+.page-contact-card p {
+	width: 655px;
+	color:black;
 }
 
 .page-contact-entry-title {
@@ -81,8 +82,10 @@
 }
 
 .page-contact-image {
-    height: 100vh;
+	height: 100vh;
+	
 }
+
 
 .hero-image-page {
     height: 72vh;

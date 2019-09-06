@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {
   font-size: 30px;
   font-weight: 700; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     h1, h2 {
       font-size: 42px; } }
 
@@ -356,14 +356,14 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: auto;
-  width: 100%; }
-  @media (min-width: 1120px) {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  left: 0; }
+  @media (min-width: 1200px) {
     .site-header {
-      background: #ccc;
+      background: rgba(255, 255, 255, 0.3);
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end; } }
@@ -374,7 +374,7 @@ a {
     width: 40px;
     z-index: 1;
     margin: 0 2rem; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .site-header {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
@@ -386,7 +386,7 @@ a {
 .hamburger-icon {
   display: block;
   color: #000; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .hamburger-icon {
       display: none; } }
 
@@ -404,7 +404,7 @@ a {
   padding: 0.8rem 0rem; }
   .main-navigation .header-menu {
     display: none; }
-    @media (min-width: 1120px) {
+    @media (min-width: 1200px) {
       .main-navigation .header-menu {
         display: block; } }
   .main-navigation ul {
@@ -430,7 +430,7 @@ a {
   .main-navigation .side-header-menu {
     display: none;
     height: auto; }
-    @media (min-width: 1120px) {
+    @media (min-width: 1200px) {
       .main-navigation .side-header-menu {
         display: block;
         color: #000;
@@ -463,7 +463,7 @@ a {
   padding-top: 30px;
   color: #ffffff; }
 
-@media (min-width: 1120px) {
+@media (min-width: 1200px) {
   .footer-nav-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -493,19 +493,19 @@ a {
   padding: 15px 40px;
   border-bottom: 1px solid #ffffff;
   color: #ffffff; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .footer-navigation,
     .logo-social-container {
       border-bottom: none;
       padding: 0; } }
 
-@media (min-width: 1120px) {
+@media (min-width: 1200px) {
   .footer-navigation {
     width: auto;
     display: block;
     padding-bottom: 20px; } }
 
-@media (min-width: 1120px) {
+@media (min-width: 1200px) {
   .logo-social-container {
     border-bottom: none;
     -webkit-box-orient: vertical;
@@ -521,14 +521,14 @@ a {
 
 .footer-menu-header {
   color: #ffffff; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .footer-menu-header {
       font-size: 23px;
       font-weight: bold; } }
 
 .footer-menu-container {
   color: #ffffff; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .footer-menu-container {
       font-size: 23px; } }
 
@@ -539,7 +539,7 @@ a {
   -webkit-padding-start: 0px;
           padding-inline-start: 0px;
   scroll-padding-inline: 0px; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .menu-footer-connect-container ul,
     .menu-footer-get-involved-container ul,
     .menu-footer-what-we-do-container ul {
@@ -547,7 +547,7 @@ a {
 
 .footer-menu-container {
   display: none; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .footer-menu-container {
       display: inline; } }
 
@@ -562,7 +562,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .footer-menu-trigger {
       display: inline;
       width: 0; } }
@@ -590,7 +590,7 @@ a {
 .footer-logo-img {
   widows: 40px;
   height: 40px; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .footer-logo-img {
       widows: 70px;
       height: 70px;
@@ -599,18 +599,18 @@ a {
 .footer-connect
 .footer-what-we-do {
   padding-left: 20px; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .footer-connect
 .footer-what-we-do {
       padding: 0px; } }
 
 .fa-facebook {
   font-size: 20px; }
-  @media (min-width: 1120px) {
+  @media (min-width: 1200px) {
     .fa-facebook {
       font-size: 30px; } }
 
-@media (min-width: 1120px) {
+@media (min-width: 1200px) {
   .footer-arrow-down-icon {
     display: none; } }
 
@@ -723,14 +723,7 @@ a {
   display: block; }
 
 /* Contact Page **** START */
-.site-header {
-  position: absolute;
-  width: 100%;
-  padding: 20px;
-  top: 0;
-  left: 0; }
-
-.page-contact-entry-content {
+.age-contact-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,8 +746,9 @@ a {
   overflow: hidden;
   font-size: 23px; }
 
-.page-contact-entry-content p {
-  width: 655px; }
+.page-contact-card p {
+  width: 655px;
+  color: black; }
 
 .page-contact-entry-title {
   text-align: ceter;
