@@ -31,9 +31,12 @@ a {
 .site-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: auto;
+    position: absolute;
     width: 100%;
+    padding: 20px;
+    left: 0;
+
 
     @include desktop {
         background: rgba(255, 255, 255, 0.3);

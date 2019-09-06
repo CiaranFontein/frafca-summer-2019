@@ -5,101 +5,94 @@
 /* Posts and pages */
 
 .sticky {
-	display: block;
+    display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+    margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+    display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+    margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+    clear: both;
+    margin: 0 0 $base__space-unit;
 }
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+    display: none;
 }
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
+
 .bypostauthor {
-	display: block;
+    display: block;
 }
 
 /* Contact Page **** START */
 
-.site-header {
-	position: absolute;
-	width: 100%;
-	padding: 20px;
-	top: 0;
-	left: 0;
-}
-
-
 .page-contact-entry-content {
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	justify-content: center;
-	height: 635px;
-	width: auto;
-	background: 
-	linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,  rgba(0,0,0,0.3) 100%),
-	url('http://localhost:8888/frafca/wp-content/uploads/2019/09/Contact_Us_Hero_Image.png')no-repeat center top;
-	background-size: cover, cover;
-	overflow: hidden;
-	font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 635px;
+    width: auto;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+        url('http://localhost:8888/frafca/wp-content/uploads/2019/09/Contact_Us_Hero_Image.png')no-repeat center top;
+    background-size: cover, cover;
+    overflow: hidden;
+    font-size: 23px;
 
 }
 
-.page-contact-entry-content p{
-	width: 655px;
+.page-contact-entry-content p {
+    width: 655px;
 }
 
 .page-contact-entry-title {
-	text-align: ceter;
-	font-size:42px;
-	color:$color__link;
-	padding:0px;
+    text-align: ceter;
+    font-size: 42px;
+    color: $color__link;
+    padding: 0px;
 }
 
 .page-contact-image {
-	height: 100vh;
+    height: 100vh;
 }
 
 .hero-image-page {
-	height: 72vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	.page-template-front-page & {
-		height: 100vh;
-	}	
+    height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .page-template-front-page & {
+        height: 100vh;
+    }
 }
 
 
