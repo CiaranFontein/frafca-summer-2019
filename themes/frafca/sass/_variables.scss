@@ -26,22 +26,21 @@ $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
 $color__link: #FFD400;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link-visited: #2F2B5C;
+$color__link-hover: darken($color__link,15%);
 
 // Typography
 
-$font__main: 'Raleway',
-sans-serif;
-$font__header: 'Merriweather',
-serif;
-$font__code: Monaco,
-Consolas,
-"Andale Mono",
-"DejaVu Sans Mono",
-monospace;
-$font__pre: "Courier 10 Pitch",
-Courier,
-monospace;
+$font__main: 'Raleway',sans-serif;
+$font__header: 'Merriweather',serif;
+$font__code: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+$font__pre: "Courier 10 Pitch",Courier,monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+$font__size_main: 16px;
+
+
+// Border 
+
+$border-radius: 8px;

@@ -322,6 +322,17 @@ img {
     color: blue;
     font-size: 1.5em; }
 
+/* Button */
+button, input[type="button"] {
+  padding: 16px 8px;
+  border: 0 solid transparent;
+  border-radius: 8px; }
+  button.default-btn, input[type="button"].default-btn {
+    min-width: 200px; }
+  button.yellow, input[type="button"].yellow {
+    background: #FFD400;
+    color: #323232; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -329,9 +340,9 @@ img {
 a {
   color: #FFD400; }
   a:visited {
-    color: purple; }
+    color: #2F2B5C; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #b39400; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
