@@ -36,8 +36,7 @@ a {
     width: 100%;
 
     @include desktop {
-        background: #fff;
-        opacity: 0.3;
+        background: rgba(255, 255, 255, 0.3);
         justify-content: flex-end;
     }
 
