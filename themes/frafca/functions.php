@@ -98,13 +98,14 @@ function frafca_theme_scripts()
 	wp_enqueue_style('custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css');
 
 	wp_enqueue_script('frafca-script', get_template_directory_uri() . '/build/js/script.min.js', array('jquery'), '', true);
+	wp_enqueue_script('frafca-hamburger-animations', get_template_directory_uri() . '/build/js/hamburger-animations.min.js', array('jquery'), '', true);
+	wp_enqueue_script('frafca-theme-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_style('frafca-theme-style', get_stylesheet_uri());
 
 	wp_enqueue_style('flickity-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 	wp_register_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', null, null, true);
 	wp_enqueue_script('flickity');
 
-	wp_enqueue_script('frafca-theme-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array(), '20151215', true);
 	wp_enqueue_script('frafca-theme-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
 	wp_enqueue_script('frafca-theme-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 
