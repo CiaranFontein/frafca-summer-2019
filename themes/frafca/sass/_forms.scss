@@ -7,9 +7,26 @@
 .search-form {
     width: 100%;
     background: #fff;
+    font-size: 1.5em;
 
     &::placeholder {
         color: blue;
-        font-size: 1.5em;
+    }
+}
+
+/* Button */
+
+button, input[type="button"] {
+    padding: 16px 8px;
+    border: 0 solid transparent;
+    border-radius: $border-radius;
+
+    &.default-btn {
+        min-width: 200px;
+    }
+
+    &.yellow {
+        background: $color__background-button;
+        color: $color__text-sec;
     }
 }

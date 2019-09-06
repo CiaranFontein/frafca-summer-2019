@@ -1,11 +1,16 @@
 (function ($) {
     let transitionTime = 400;
 
-    //Footer drop down menu//
+    //Footer drop down menu only on mobile//
 
     $('.footer-navigation').on('click', function () {
-        $(this).children('.footer-menu-container').slideToggle(transitionTime);
+        if ($(window).width() < 970) {
+            $(this).children('.footer-menu-container').slideToggle(transitionTime);
+        }
     });
+
+
+
 
 
 

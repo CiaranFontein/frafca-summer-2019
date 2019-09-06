@@ -235,13 +235,19 @@ select,
 textarea {
   color: #ffffff;
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 22px;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  margin: 0; }
+
+h1, h2 {
+  font-size: 30px;
+  font-weight: 700; }
+  @media (min-width: 1120px) {
+    h1, h2 {
+      font-size: 42px; } }
 
 /* Copy */
 p {
@@ -259,8 +265,7 @@ address {
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 22px;
   line-height: 1.6;
   margin-bottom: 1.6rem;
   max-width: 100%;
@@ -269,8 +274,7 @@ pre {
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem; }
+  font-size: 22px; }
 
 abbr, acronym {
   border-bottom: 1px dotted #666;
@@ -288,9 +292,7 @@ big {
 --------------------------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 16px;
-  font-size: 1rem; }
+          box-sizing: border-box; }
 
 *,
 *:before,
@@ -311,16 +313,25 @@ img {
 /* Search Forms */
 .search-form {
   width: 100%;
-  background: #fff; }
+  background: #fff;
+  font-size: 1.5em; }
   .search-form::-webkit-input-placeholder {
-    color: blue;
-    font-size: 1.5em; }
+    color: blue; }
   .search-form::-ms-input-placeholder {
-    color: blue;
-    font-size: 1.5em; }
+    color: blue; }
   .search-form::placeholder {
-    color: blue;
-    font-size: 1.5em; }
+    color: blue; }
+
+/* Button */
+button, input[type="button"] {
+  padding: 16px 8px;
+  border: 0 solid transparent;
+  border-radius: 8px; }
+  button.default-btn, input[type="button"].default-btn {
+    min-width: 200px; }
+  button.yellow, input[type="button"].yellow {
+    background: #FFD400;
+    color: #323232; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -329,9 +340,9 @@ img {
 a {
   color: #FFD400; }
   a:visited {
-    color: purple; }
+    color: #2F2B5C; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #b39400; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -347,7 +358,15 @@ a {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  height: auto;
+  width: 100%; }
+  @media (min-width: 1120px) {
+    .site-header {
+      background: #ccc;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
   .site-header .header-logo {
     background: url(../../images/logos/2018_frafca_logo_final.png) no-repeat;
     background-size: 40px 40px;
@@ -355,27 +374,50 @@ a {
     width: 40px;
     z-index: 1;
     margin: 0 2rem; }
+  @media (min-width: 1120px) {
+    .site-header {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+.hamburger-icon {
+  display: block;
+  color: #000; }
+  @media (min-width: 1120px) {
+    .hamburger-icon {
+      display: none; } }
 
 .main-navigation {
+  background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ccc;
-  position: fixed;
-  width: 100%;
   padding: 0.8rem 0rem; }
+  .main-navigation .header-menu {
+    display: none; }
+    @media (min-width: 1120px) {
+      .main-navigation .header-menu {
+        display: block; } }
+  .main-navigation ul {
+    display: none; }
+    .main-navigation ul li {
+      display: none; }
   .main-navigation i {
     color: #fff;
     padding: 0.8rem;
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1); }
   .main-navigation ul {
+    display: block;
     list-style: none;
     -webkit-padding-start: 0px;
             padding-inline-start: 0px; }
@@ -386,21 +428,29 @@ a {
         text-decoration: none;
         color: #fff; }
   .main-navigation .side-header-menu {
-    color: #000;
-    padding-right: 1rem; }
-    .main-navigation .side-header-menu ul {
-      margin: 0.15rem;
-      margin-right: 1.7rem; }
-    .main-navigation .side-header-menu li {
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.65rem;
-      background: #fff;
-      margin: 0.15rem; }
-      .main-navigation .side-header-menu li a {
-        color: #000; }
-      .main-navigation .side-header-menu li:nth-child(2n) {
-        background: yellow;
-        text-transform: uppercase; }
+    display: none;
+    height: auto; }
+    @media (min-width: 1120px) {
+      .main-navigation .side-header-menu {
+        display: block;
+        color: #000;
+        padding-right: 1rem; }
+        .main-navigation .side-header-menu ul {
+          margin: 0.15rem;
+          margin-right: 1.7rem; }
+        .main-navigation .side-header-menu li {
+          padding: 0.8rem 1.5rem;
+          border-radius: 0.65rem;
+          background: #fff;
+          margin: 0.15rem; }
+          .main-navigation .side-header-menu li a {
+            color: #000; }
+          .main-navigation .side-header-menu li:nth-child(2n) {
+            background: yellow;
+            text-transform: uppercase; } }
+
+.hidden {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -485,7 +535,10 @@ a {
 .menu-footer-connect-container ul,
 .menu-footer-get-involved-container ul,
 .menu-footer-what-we-do-container ul {
-  list-style: none; }
+  list-style: none;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  scroll-padding-inline: 0px; }
   @media (min-width: 1120px) {
     .menu-footer-connect-container ul,
     .menu-footer-get-involved-container ul,
@@ -517,7 +570,16 @@ a {
 .menu-footer-connect-container a,
 .menu-footer-get-involved-container a,
 .menu-footer-what-we-do-container a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #FFFFFF; }
+  .menu-footer-connect-container a:hover,
+  .menu-footer-get-involved-container a:hover,
+  .menu-footer-what-we-do-container a:hover {
+    color: #FFD400; }
+  .menu-footer-connect-container a:active,
+  .menu-footer-get-involved-container a:active,
+  .menu-footer-what-we-do-container a:active {
+    color: #FFFFFF; }
 
 .copyright {
   text-align: center;
@@ -549,8 +611,8 @@ a {
       font-size: 30px; } }
 
 @media (min-width: 1120px) {
-  .fa-angle-down {
-    visibility: hidden; } }
+  .footer-arrow-down-icon {
+    display: none; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -570,8 +632,7 @@ a {
     clip: auto !important;
     color: #21759b;
     display: block;
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 22px;
     font-weight: bold;
     height: auto;
     left: 5px;
@@ -661,6 +722,64 @@ a {
 .bypostauthor {
   display: block; }
 
+/* Contact Page **** START */
+.site-header {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  top: 0;
+  left: 0; }
+
+.page-contact-entry-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 635px;
+  width: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("http://localhost:8888/frafca/wp-content/uploads/2019/09/Contact_Us_Hero_Image.png") no-repeat center top;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url("http://localhost:8888/frafca/wp-content/uploads/2019/09/Contact_Us_Hero_Image.png") no-repeat center top;
+  background-size: cover, cover;
+  overflow: hidden;
+  font-size: 23px; }
+
+.page-contact-entry-content p {
+  width: 655px; }
+
+.page-contact-entry-title {
+  text-align: ceter;
+  font-size: 42px;
+  color: #FFD400;
+  padding: 0px; }
+
+.page-contact-image {
+  height: 100vh; }
+
+.hero-image-page {
+  height: 72vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .page-template-front-page .hero-image-page {
+    height: 100vh; }
+
+/* Contact Page #### END */
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

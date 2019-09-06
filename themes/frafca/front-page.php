@@ -14,13 +14,13 @@ get_header(); ?>
         <header id="front-page-banner"  class="frafca-hero-image">
             <!-- hero contents -->
             <?php 
-                $heros = CFS() -> get('banner');
+                $heros = frafca_cfs('banner');
                 foreach( $heros as $hero ) :        
                     $hero_img = $hero['banner_image'];
                     $hero_title = $hero['banner_title'];
                     $hero_description = $hero['banner_description'];
             ?>
-                <div class="hero-image-front-page" style="
+                <div class="hero-image-page" style="
                     background : 
                         url(<?php echo $hero_img; ?>);
                     background-size: cover;
@@ -32,7 +32,7 @@ get_header(); ?>
                         <?php single_post_title(); ?>
                     </h1>     
                     
-                    <div class="header-title">
+                    <div class="header-meta">
                         <h2>
                             <?php echo $hero_title ;?>
                         </h2>
@@ -41,7 +41,7 @@ get_header(); ?>
                         </p>
                     </div>
                 </div>
-            <?php endforeach ?>
+            <?php endforeach ?><!-- end hero contents -->
 
             <!-- scroll down with the arrow -->
             <div class="scroll-down">
@@ -52,96 +52,89 @@ get_header(); ?>
         </header><!-- #front-page-banner -->
 
         <section id="front-page-about-us">
-            <h2>About Us</h2>
+            <h2><?php echo frafca_cfs('about_us') ?></h2>
             <div class="flex-cards">
-                <div class="round-rect-card pink">
-                    <div class="card-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/ic_support.svg'; ?>" alt="Providing Support">
-                    </div>
-                    <h3>Providing Support</h3>
-                    <p>
-                        We are working to build a continuum of care for people through feedback and guidance to our members.
-                    </p>
-                </div>
+                <?php  
+                    $card_about_us = frafca_cfs('card_about_us');
+                    foreach($card_about_us as $card) :
+                            $icon = $card['card_icon'];
+                            $title = $card['card_title'];
+                            $description = $card['card_description'];
+                ?>
 
-                <div class="round-rect-card pink">
-                    <div class="card-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/ic_community.svg'; ?>" alt="Building Community">
+                    <div class="round-rect-card pink">
+                        <div class="card-icon">
+                            <img src="<?php echo $icon ;?>" alt="<?php echo $title;?>">
+                        </div>
+                        <h3><?php echo $title;?></h3>
+                        <p><?php echo $description;?></p>
                     </div>
-                    <h3>Building Community</h3>
-                    <p>
-                        We provide a place of support, healing, and advocacy for members and support them through their journey.
-                    </p>
-                </div>
 
-                <div class="round-rect-card pink">
-                    <div class="card-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/ic_connection.svg'; ?>" alt="Creating Connections">
-                    </div>
-                    <h3>Creating Connections</h3>
-                    <p>
-                        FRAFCA’s environment supports community and cultural, and spiritual connections.
-                    </p>
-                </div>
+                <?php endforeach; ?>
             </div>
             <input class='default-btn yellow' type="button" value="Learn More">
         </section><!-- #front-page-about-us -->
 
         <section id="front-page-what-we-offer">
-            <div class="containter col-2" style="
-                background :
-                    linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100%), 
-                    url(<?php echo get_template_directory_uri() . '/images/img_culture_night.png';?>);
-                background-size: cover;
-                background-position: center; 
-                background-attachment: fixed;
-                background-repeat: no-repeat;
-            ">
-            </div>
-            <div class="containter col-2">
-                <h3>What We Offer</h3>
-                <p>
-                    We offer a variety of programs and services to suit the various needs of our members including Early Childhood Development, Youth & Young Adult, Extra Support Needs, Health and Wellness Promotion, Housing and Homelessness prevention, and Indigenous Domestic Violence Prevention (IDVP).
-                </p>
-                <input class='default-btn yellow' type="button" value="Programs & Services">
-            </div>
+            <?php  
+                $what_we_offer = frafca_cfs('what_we_offer');
+                foreach($what_we_offer as $content) :
+                    $image = $content['image'];
+                    $title = $content['title'];
+                    $description = $content['description'];
+                    $button = $content['button'];
+            ?>
+                <div class="containter col-2" style="
+                    background :
+                        linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100%), 
+                        url(<?php echo $image;?>);
+                    background-size: cover;
+                    background-position: center; 
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                ">
+                </div>
+
+                <div class="containter col-2">
+                    <h3><?php echo $title ?></h3>
+                    <p><?php echo $description ?></p>
+                    <a href="<?php echo $button['url']; ?>">
+                        <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
+                    </a>
+                </div>
+
+            <?php endforeach ?>
+            
         </section><!-- #front-page-what-we-offer -->
 
         <section id="front-page-get-involved">
-            <h2>Get Involved</h2>
+            <h2>
+                <?php echo frafca_cfs('get_involved') ?>
+            </h2>
             <div class="flex-cards">
-                <div class="round-rect-card purple">
-                    <div class="card-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/ic_vonlunteer.svg'; ?>" alt="Volunteer">
-                    </div>
-                    <h3>Volunteer</h3>
-                    <p>
-                        Learn how you can make a difference in the Indigenous community through volunteering
-                    </p>
-                    <input class='default-btn yellow' type="button" value="Learn More">
-                </div>
+                <?php  
+                    $card_get_involved = frafca_cfs('card_get_involved');
+                    foreach($card_get_involved as $content):
+                        $icon = $content['card_icon'];
+                        $title = $content['card_title'];
+                        $description = $content['descriptoin_of_the_card'];
+                        $button = $content['button'];
+                ?>
 
-                <div class="round-rect-card purple">
-                    <div class="card-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/ic_donate.svg'; ?>" alt="Donate">
+                    <div class="round-rect-card purple">
+                        <div class="card-icon">
+                            <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
+                        </div>
+                        <h3><?php echo $title; ?></h3>
+                        <p><?php echo $description; ?></p>
+                        
+                        <a href="<?php echo $button['url']; ?>">
+                            <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
+                        </a>
                     </div>
-                    <h3>Donate</h3>
-                    <p>
-                    Learn how your donation to our organization helps to support the indigenous community
-                    </p>
-                    <input class='default-btn yellow' type="button" value="Learn More">
-                </div>
 
-                <div class="round-rect-card purple">
-                    <div class="card-icon">
-                        <img src="<?php echo get_template_directory_uri() . '/images/ic_job_postings.svg'; ?>" alt="Job Postings">
-                    </div>
-                    <h3>Job Postings</h3>
-                    <p>
-                        Join our team and support the community through meaningful, life-changing work.
-                    </p>
-                    <input class='default-btn yellow' type="button" value="Learn More">
-                </div>
+                <?php endforeach ?>
+
         </section><!-- #front-page-get-involved -->
 
         <section id="front-page-partners">
