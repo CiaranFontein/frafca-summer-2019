@@ -1,39 +1,72 @@
 <?php
+
 /**
- * The template for displaying all pages.
- *
+ * The main template file.
+ * 
  * @package FRAFCA_Theme
+ * Template Name: page-contact
  */
 
 get_header(); ?>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-	<div id="page-contact-id" class="page-contact-container">
-		<main id="page-contact-main" class="page-contact-site-main" role="main">
+        <!-- Hero Image : type 1  -->
+        <header id="page-contact-banner"  class="frafca-hero-image">
+            <!-- hero contents -->
+            <?php 
+                $heros = frafca_cfs('banner');
+                foreach( $heros as $hero ) :
+                    $hero_img = $hero['banner_image'];
+                    $hero_title = $hero['banner_title'];
+                    $hero_description = $hero['banner_description'];
+            ?>
+                <div class="hero-image-page" style="
+                    background : 
+                        url(<?php echo $hero_img; ?>);
+                    background-size: cover;
+                    background-position: center; 
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;                   
+                ">
+                    <h1 class="page-title screen-reader-text">
+                        <?php single_post_title(); ?>
+                    </h1>     
+                    
+                    <div class="header-title">
+                        <h2>
+                            <?php echo $hero_title ;?>
+                        </h2>
+                        <p>
+                            <?php echo $hero_description; ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach ?><!-- end hero contents -->
+        </header><!-- #front-page-banner -->
 
-			<?php while ( have_posts() ) : the_post(); ?>
+        <section id="page-contact">
+            <div class="grid-cards">
+                <?php  
+                    $card = frafca_cfs('cards');
+                    foreach( $prgrm_svc_categories as $category ):
+                        $cat = get_term($category);
+                            $name = $cat->name;
+                            $description = $cat->description;
+                ?>
+                    <div class="rect-card purple">
+                        <h3><?php echo $name ?></h3>
+                        <p><?php echo $description ?></p>
+                        <a href="<?php echo get_term_link($cat) ?>">
+                            <input class='default-btn yellow' type="button" value="View Category">
+                        </a>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </section><!-- #prgrm_svc-categories -->
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				
+    </main><!-- #main -->
+</div><!-- #primary -->
 
-
-				<div class="page-contact-entry-content">
-					<header class="page-contact-entry-header">
-						<?php the_title( '<h1 class="page-contact-entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
-
-					<?php the_content(); ?>
-					<?php
-					wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-					'after'  => '</div>',
-					) );
-					?>
-				</div><!-- .entry-content -->
-			</article><!-- #post-## -->
-
-			<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php get_footer(); ?>

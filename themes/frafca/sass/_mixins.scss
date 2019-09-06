@@ -7,12 +7,6 @@
 
 // Media Query
 
-@mixin mobile {
-    @media (min-width: $mobile-width) {
-        @content;
-    }
-}
-
 @mixin desktop {
     @media (min-width: $desktop-width) {
         @content;
