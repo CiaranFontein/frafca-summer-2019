@@ -22,14 +22,20 @@
         <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
         <header id="masthead" class="site-header" role="banner">
-            <div class="site-branding">
-                <h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                        rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+            <div class="site-branding header-logo">
+                <h1 class=" site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                        rel="home"><?php bloginfo( 'name' ); ?></a>
+                </h1>
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="main-navigation" role="navigation">
-                <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
-                <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
+                <div class="header-menu">
+                    <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
+                </div>
+                <i class="fas fa-search"></i>
+                <div class="side-header-menu">
+                    <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
+                </div>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
 
