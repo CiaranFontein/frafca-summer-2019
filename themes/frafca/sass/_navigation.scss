@@ -59,6 +59,21 @@ a {
     }
 }
 
+.mobile-header-menu {
+    display: none;
+    position: fixed;
+    background: #fff;
+    height: 100%;
+    width: 90%;
+    left: 0px;
+    top: 90px;
+
+    &--open {
+        display: block;
+        overflow: hidden;
+    }
+}
+
 .hamburger-icon {
     display: block;
     color: #fff;
