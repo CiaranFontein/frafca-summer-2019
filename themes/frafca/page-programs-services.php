@@ -31,9 +31,9 @@ get_header(); ?>
                 ">
                     <h1 class="page-title screen-reader-text">
                         <?php single_post_title(); ?>
-                    </h1>     
+                    </h1>
                     
-                    <div class="header-title">
+                    <div class="header-meta">
                         <h2>
                             <?php echo $hero_title ;?>
                         </h2>
