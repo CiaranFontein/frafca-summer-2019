@@ -9,38 +9,49 @@
 get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <header>
-            <!-- Hero Image : type 1  -->
-            <?php if ( has_post_thumbnail() ) : ?>
-                <div class="hero-image-front-page" style="				
-                    background :
-                        url(<?php echo get_the_post_thumbnail_url();?>);
+
+        <!-- Hero Image : type 1  -->
+        <header id="front-page-banner"  class="frafca-hero-image">
+            <!-- hero contents -->
+            <?php 
+                $heros = CFS() -> get('banner');
+                foreach( $heros as $hero ) :        
+                    $hero_img = $hero['banner_image'];
+                    $hero_title = $hero['banner_title'];
+                    $hero_description = $hero['banner_description'];
+            ?>
+                <div class="hero-image-front-page" style="
+                    background : 
+                        url(<?php echo $hero_img; ?>);
                     background-size: cover;
                     background-position: center; 
                     background-attachment: fixed;
-                    background-repeat: no-repeat;
+                    background-repeat: no-repeat;                   
                 ">
                     <h1 class="page-title screen-reader-text">
                         <?php single_post_title(); ?>
-                    </h1>
+                    </h1>     
+                    
                     <div class="header-title">
                         <h2>
-                            Fraser Region Aboriginal Friendship Centre Association <br>
-                            (<span class="header-highlighted">FRAFCA</span>)
+                            <?php echo $hero_title ;?>
                         </h2>
                         <p>
-                            <strong>Our Mission</strong> is to support the activities that promote the health and well-being of Aboriginal People and to promote the resurgence of resident Aboriginal culture, language and teachings, particularly those of local residency.
+                            <?php echo $hero_description; ?>
                         </p>
                     </div>
-                    <div class="scroll-down">
-                        <p>Scroll Down</p>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
                 </div>
-            <?php endif; ?>
-        </header>
+            <?php endforeach ?>
 
-        <section>
+            <!-- scroll down with the arrow -->
+            <div class="scroll-down">
+                <p>Scroll Down</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+        </header><!-- #front-page-banner -->
+
+        <section id="front-page-about-us">
             <h2>About Us</h2>
             <div class="flex-cards">
                 <div class="round-rect-card pink">
@@ -74,9 +85,9 @@ get_header(); ?>
                 </div>
             </div>
             <input class='default-btn yellow' type="button" value="Learn More">
-        </section>
+        </section><!-- #front-page-about-us -->
 
-        <section>
+        <section id="front-page-what-we-offer">
             <div class="containter col-2" style="
                 background :
                     linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100%), 
@@ -94,9 +105,9 @@ get_header(); ?>
                 </p>
                 <input class='default-btn yellow' type="button" value="Programs & Services">
             </div>
-        </section>
+        </section><!-- #front-page-what-we-offer -->
 
-        <section>
+        <section id="front-page-get-involved">
             <h2>Get Involved</h2>
             <div class="flex-cards">
                 <div class="round-rect-card purple">
@@ -131,10 +142,9 @@ get_header(); ?>
                     </p>
                     <input class='default-btn yellow' type="button" value="Learn More">
                 </div>
-        </section>
+        </section><!-- #front-page-get-involved -->
 
-        <!-- Section :: partners -->
-        <section id="front_partners">
+        <section id="front-page-partners">
             <h2>Partners</h2>
             <?php 
                 $partners = CFS()->get( 'partners' );                
@@ -152,7 +162,7 @@ get_header(); ?>
                 </div>
 
             <?php endforeach; ?>
-        </section><!-- #front_partners -->
+        </section><!-- #front-page-partners -->
 
     </main><!-- #main -->
 </div><!-- #primary -->
