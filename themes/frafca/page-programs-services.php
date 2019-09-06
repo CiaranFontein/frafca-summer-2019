@@ -11,28 +11,59 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-        <?php if (have_posts()) : ?>
+        <!-- Hero Image : type 1  -->
+        <header id="prgrm_svc-banner"  class="frafca-hero-image">
+            <!-- hero contents -->
+            <?php 
+                $heros = frafca_cfs('banner');
+                foreach( $heros as $hero ) :        
+                    $hero_img = $hero['banner_image'];
+                    $hero_title = $hero['banner_title'];
+                    $hero_description = $hero['banner_description'];
+            ?>
+                <div class="hero-image-page" style="
+                    background : 
+                        url(<?php echo $hero_img; ?>);
+                    background-size: cover;
+                    background-position: center; 
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;                   
+                ">
+                    <h1 class="page-title screen-reader-text">
+                        <?php single_post_title(); ?>
+                    </h1>     
+                    
+                    <div class="header-title">
+                        <h2>
+                            <?php echo $hero_title ;?>
+                        </h2>
+                        <p>
+                            <?php echo $hero_description; ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach ?><!-- end hero contents -->
 
-            <?php if (is_home() && !is_front_page()) : ?>
-                <header>
-                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                </header>
-            <?php endif; ?>
+            <!-- scroll down with the arrow -->
+            <div class="scroll-down">
+                <p>Scroll Down</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
 
-            <?php /* Start the Loop */ ?>
-            <?php while (have_posts()) : the_post(); ?>
+        </header><!-- #front-page-banner -->
 
-                <?php get_template_part('template-parts/content'); ?>
+        <section id="prgrm_svc-categories">
+                    
+            <?php  
+                $prgrm_svc_lists = array(
+                    'taxonomy' => 'category',
+                    'hide_empty' => false,
+                );
+                $prgrm_svc_loops = get_terms($prgrm_svc_lists);
+                var_dump($prgrm_svc_loops);
+            ?>
 
-            <?php endwhile; ?>
-
-            <?php the_posts_navigation(); ?>
-
-        <?php else : ?>
-
-            <?php get_template_part('template-parts/content', 'none'); ?>
-
-        <?php endif; ?>
+        </section>
 
     </main><!-- #main -->
 </div><!-- #primary -->

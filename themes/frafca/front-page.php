@@ -20,7 +20,7 @@ get_header(); ?>
                     $hero_title = $hero['banner_title'];
                     $hero_description = $hero['banner_description'];
             ?>
-                <div class="hero-image-front-page" style="
+                <div class="hero-image-page" style="
                     background : 
                         url(<?php echo $hero_img; ?>);
                     background-size: cover;

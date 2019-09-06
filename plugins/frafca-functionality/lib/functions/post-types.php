@@ -43,7 +43,7 @@ function frafca_post_type_programs_services() {
 		'description'           => __( 'A program and service post type for FRAFCA', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor' ),
-		'taxonomies'            => array( 'category' ),
+		'taxonomies'            => array( 'prgrm_svc_type' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
