@@ -118,6 +118,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Custom functions that act independently of the theme templates.
  */
+require get_template_directory() . '/inc/extras.php';
 
 /* Font Awesome for Icons */
 add_action('wp_enqueue_scripts', 'tthq_add_custom_fa_css');

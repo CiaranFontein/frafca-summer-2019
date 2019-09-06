@@ -28,3 +28,12 @@ function frafca_remove_submenus() {
     remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
 }
 add_action( 'admin_menu', 'frafca_remove_submenus', 110 );
+
+
+// Create CFS shorthand
+function frafca_cfs($make_var) {
+	//** Custom Field Suite plugin is required
+	$frafca_cfs = CFS() -> get($make_var);
+	return $frafca_cfs;
+}
+add_action('plugins_loaded', 'frafca_cfs');
