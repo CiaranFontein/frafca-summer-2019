@@ -56,7 +56,8 @@ function frafca_post_type_programs_services() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+        'capability_type'       => 'page',
+        'show_in_rest'			=> true,
 	);
 	register_post_type( 'prgrm_svc', $args );
 
