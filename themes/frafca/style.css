@@ -733,7 +733,11 @@ a {
   display: block; }
 
 /* Contact Page **** START */
+<<<<<<< HEAD
+.age-contact-image {
+=======
 .page-contact-entry-content {
+>>>>>>> d68166ccefb8628a8c05a200c4b64051b737b78e
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,8 +760,9 @@ a {
   overflow: hidden;
   font-size: 23px; }
 
-.page-contact-entry-content p {
-  width: 655px; }
+.page-contact-card p {
+  width: 655px;
+  color: black; }
 
 .page-contact-entry-title {
   text-align: ceter;
