@@ -36,6 +36,10 @@ h1, h2 {
 
 p {
 	margin-bottom: $base__space-unit;
+
+	.hero-image-page & {
+		font-size: 1.2rem;
+	}
 }
 
 dfn, cite, em, i {

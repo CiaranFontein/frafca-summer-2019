@@ -85,10 +85,16 @@
 }
 
 .hero-image-page {
-    height: 72vh;
-    display: flex;
+	display: flex;
     align-items: center;
-    justify-content: center;
+	justify-content: center;
+	padding: 1rem;
+    height: 100vh;
+	text-align: center;
+
+	@include desktop {
+		height: 72vh;
+	}
 
     .page-template-front-page & {
         height: 100vh;
