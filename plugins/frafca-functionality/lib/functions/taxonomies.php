@@ -38,7 +38,8 @@ function frafca_taxonomy_programs_services() {
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'				 => true,
 	);
 	register_taxonomy( 'prgrm_svc_type', array( 'prgrm_svc' ), $args );
 
