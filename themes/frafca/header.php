@@ -22,7 +22,9 @@
         <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
         <header id="masthead" class="site-header" role="banner">
-            <div class="hamburger-icon">
+            <div class="mobile-header-menu">
+            </div>
+            <div class=" hamburger-icon">
                 <i class="fas fa-bars"></i>
             </div>
             <div class="site-branding header-logo">
