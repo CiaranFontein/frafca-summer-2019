@@ -235,12 +235,19 @@ select,
 textarea {
   color: #ffffff;
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
+
+h1, h2 {
+  font-size: 30px;
+  font-weight: 700; }
+  @media (min-width: 1120px) {
+    h1, h2 {
+      font-size: 42px; } }
 
 /* Copy */
 p {
@@ -258,7 +265,7 @@ address {
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.6;
   margin-bottom: 1.6rem;
   max-width: 100%;
@@ -267,7 +274,7 @@ pre {
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 16px; }
+  font-size: 22px; }
 
 abbr, acronym {
   border-bottom: 1px dotted #666;
@@ -285,8 +292,7 @@ big {
 --------------------------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 16px; }
+          box-sizing: border-box; }
 
 *,
 *:before,
@@ -307,16 +313,14 @@ img {
 /* Search Forms */
 .search-form {
   width: 100%;
-  background: #fff; }
+  background: #fff;
+  font-size: 1.5em; }
   .search-form::-webkit-input-placeholder {
-    color: blue;
-    font-size: 1.5em; }
+    color: blue; }
   .search-form::-ms-input-placeholder {
-    color: blue;
-    font-size: 1.5em; }
+    color: blue; }
   .search-form::placeholder {
-    color: blue;
-    font-size: 1.5em; }
+    color: blue; }
 
 /* Button */
 button, input[type="button"] {
@@ -628,7 +632,7 @@ a {
     clip: auto !important;
     color: #21759b;
     display: block;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     height: auto;
     left: 5px;
