@@ -22,6 +22,9 @@
         <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
         <header id="masthead" class="site-header" role="banner">
+            <div class="hamburger-icon">
+                <i class="fas fa-bars"></i>
+            </div>
             <div class="site-branding header-logo">
                 <h1 class=" site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                         rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -32,7 +35,9 @@
                 <div class="header-menu">
                     <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
                 </div>
-                <i class="fas fa-search"></i>
+                <a href="#">
+                    <i class="fas fa-search"></i>
+                </a>
                 <div class="side-header-menu">
                     <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
                 </div>

@@ -47,3 +47,51 @@
 .bypostauthor {
 	display: block;
 }
+
+/* Contact Page **** START */
+
+.site-header {
+	position: absolute;
+	width: 100%;
+	padding: 20px;
+	top: 0;
+	left: 0;
+}
+
+
+.page-contact-entry-content {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	height: 635px;
+	width: auto;
+	background: 
+	linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,  rgba(0,0,0,0.3) 100%),
+	url('http://localhost:8888/frafca/wp-content/uploads/2019/09/Contact_Us_Hero_Image.png')no-repeat center top;
+	background-size: cover, cover;
+	overflow: hidden;
+	font-size: 23px;
+
+}
+
+.page-contact-entry-content p{
+	width: 655px;
+}
+
+.page-contact-entry-title {
+	text-align: ceter;
+	font-size:42px;
+	color:$color__link;
+	padding:0px;
+}
+
+.page-contact-image {
+	height: 100vh;
+}
+
+
+
+/* Contact Page #### END */
