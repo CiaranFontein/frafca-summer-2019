@@ -16,7 +16,7 @@ get_header(); ?>
             <!-- hero contents -->
             <?php 
                 $heros = frafca_cfs('banner');
-                foreach( $heros as $hero ) :        
+                foreach( $heros as $hero ) :
                     $hero_img = $hero['banner_image'];
                     $hero_title = $hero['banner_title'];
                     $hero_description = $hero['banner_description'];
@@ -43,27 +43,27 @@ get_header(); ?>
                     </div>
                 </div>
             <?php endforeach ?><!-- end hero contents -->
-
-            <!-- scroll down with the arrow -->
-            <div class="scroll-down">
-                <p>Scroll Down</p>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-
         </header><!-- #front-page-banner -->
 
         <section id="prgrm_svc-categories">
-                    
-            <?php  
-                $prgrm_svc_lists = array(
-                    'taxonomy' => 'category',
-                    'hide_empty' => false,
-                );
-                $prgrm_svc_loops = get_terms($prgrm_svc_lists);
-                var_dump($prgrm_svc_loops);
-            ?>
-
-        </section>
+            <div class="grid-cards">
+                <?php  
+                    $prgrm_svc_categories = frafca_cfs('categories');
+                    foreach( $prgrm_svc_categories as $category ):
+                        $cat = get_term($category);
+                            $name = $cat->name;
+                            $description = $cat->description;
+                ?>
+                    <div class="rect-card purple">
+                        <h3><?php echo $name ?></h3>
+                        <p><?php echo $description ?></p>
+                        <a href="<?php echo get_term_link($cat) ?>">
+                            <input class='default-btn yellow' type="button" value="View Category">
+                        </a>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </section><!-- #prgrm_svc-categories -->
 
     </main><!-- #main -->
 </div><!-- #primary -->
