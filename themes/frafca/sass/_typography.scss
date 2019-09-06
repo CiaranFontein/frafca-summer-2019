@@ -26,12 +26,20 @@ h1, h2 {
 	@include desktop {
 		font-size: 42px;
 	}
+
+	.hero-image-page & {
+		color: $color__link;
+	}
 }
 
 /* Copy */
 
 p {
 	margin-bottom: $base__space-unit;
+
+	.hero-image-page & {
+		font-size: 1.2rem;
+	}
 }
 
 dfn, cite, em, i {
