@@ -336,6 +336,11 @@ button, input[type="button"] {
   button.yellow, input[type="button"].yellow {
     background: #FFD400;
     color: #323232; }
+  .rect-card button, .rect-card input[type="button"] {
+    font-size: 1rem;
+    font-weight: 900; }
+    .rect-card button:hover, .rect-card input[type="button"]:hover {
+      background-color: #b39400; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -733,6 +738,32 @@ a {
   display: block; }
 
 /* Contact Page **** START */
+<<<<<<< HEAD
+=======
+.age-contact-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 635px;
+  width: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("http://localhost:8888/frafca/wp-content/uploads/2019/09/Contact_Us_Hero_Image.png") no-repeat center top;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url("http://localhost:8888/frafca/wp-content/uploads/2019/09/Contact_Us_Hero_Image.png") no-repeat center top;
+  background-size: cover, cover;
+  overflow: hidden;
+  font-size: 23px; }
+
+>>>>>>> 20fa8bf20841d78647376e567bd1bdec918091fc
 .page-contact-card p {
   width: 655px;
   color: black; }
@@ -765,6 +796,20 @@ a {
   .page-template-front-page .hero-image-page {
     height: 100vh; }
 
+<<<<<<< HEAD
+=======
+.grid-cards .rect-card {
+  margin: 5rem 0;
+  padding: 5rem 1.5rem 2rem 1.5rem;
+  text-align: center; }
+
+.grid-cards .purple {
+  background-color: #2F2B5C; }
+
+.grid-cards p {
+  margin-bottom: 3rem; }
+
+>>>>>>> 20fa8bf20841d78647376e567bd1bdec918091fc
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

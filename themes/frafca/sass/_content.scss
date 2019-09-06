@@ -66,6 +66,7 @@
 .page-contact-card h5 {
     color:black;
 }
+/* Contact Page #### END */
 
 
 
@@ -86,4 +87,22 @@
     .page-template-front-page & {
         height: 100vh;
     }
+<<<<<<< HEAD
+=======
+}
+
+.grid-cards {
+	.rect-card {
+		margin: 5rem 0;
+		padding: 5rem 1.5rem 2rem 1.5rem; 
+		text-align: center;
+	}
+	.purple {
+		background-color: $color__background-article;
+	}
+
+	p {
+		margin-bottom: 3rem;
+	}
+>>>>>>> 20fa8bf20841d78647376e567bd1bdec918091fc
 }
