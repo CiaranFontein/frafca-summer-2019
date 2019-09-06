@@ -26,6 +26,10 @@ h1, h2 {
 	@include desktop {
 		font-size: 42px;
 	}
+
+	.hero-image-page & {
+		color: $color__link;
+	}
 }
 
 /* Copy */
