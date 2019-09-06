@@ -85,6 +85,7 @@
 	height: 100vh;
 	
 }
+/* Contact Page #### END */
 
 
 .hero-image-page {
@@ -104,5 +105,17 @@
     }
 }
 
+.grid-cards {
+	.rect-card {
+		margin: 5rem 0;
+		padding: 5rem 1.5rem 2rem 1.5rem; 
+		text-align: center;
+	}
+	.purple {
+		background-color: $color__background-article;
+	}
 
-/* Contact Page #### END */
+	p {
+		margin-bottom: 3rem;
+	}
+}

@@ -336,6 +336,11 @@ button, input[type="button"] {
   button.yellow, input[type="button"].yellow {
     background: #FFD400;
     color: #323232; }
+  .rect-card button, .rect-card input[type="button"] {
+    font-size: 1rem;
+    font-weight: 900; }
+    .rect-card button:hover, .rect-card input[type="button"]:hover {
+      background-color: #b39400; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -733,11 +738,7 @@ a {
   display: block; }
 
 /* Contact Page **** START */
-<<<<<<< HEAD
 .age-contact-image {
-=======
-.page-contact-entry-content {
->>>>>>> d68166ccefb8628a8c05a200c4b64051b737b78e
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -773,6 +774,7 @@ a {
 .page-contact-image {
   height: 100vh; }
 
+/* Contact Page #### END */
 .hero-image-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -792,7 +794,17 @@ a {
   .page-template-front-page .hero-image-page {
     height: 100vh; }
 
-/* Contact Page #### END */
+.grid-cards .rect-card {
+  margin: 5rem 0;
+  padding: 5rem 1.5rem 2rem 1.5rem;
+  text-align: center; }
+
+.grid-cards .purple {
+  background-color: #2F2B5C; }
+
+.grid-cards p {
+  margin-bottom: 3rem; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
