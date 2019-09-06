@@ -32,7 +32,7 @@ get_header(); ?>
                         <?php single_post_title(); ?>
                     </h1>     
                     
-                    <div class="header-title">
+                    <div class="header-meta">
                         <h2>
                             <?php echo $hero_title ;?>
                         </h2>
@@ -81,7 +81,7 @@ get_header(); ?>
                 foreach($what_we_offer as $content) :
                     $image = $content['image'];
                     $title = $content['title'];
-                    $description = $content['descriptoin'];
+                    $description = $content['description'];
                     $button = $content['button'];
             ?>
                 <div class="containter col-2" style="
