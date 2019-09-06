@@ -750,6 +750,8 @@ a {
   display: block; }
 
 /* Contact Page **** START */
+<<<<<<< HEAD
+=======
 .age-contact-image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -773,18 +775,18 @@ a {
   overflow: hidden;
   font-size: 23px; }
 
+>>>>>>> 20fa8bf20841d78647376e567bd1bdec918091fc
 .page-contact-card p {
   width: 655px;
   color: black; }
 
-.page-contact-entry-title {
-  text-align: ceter;
-  font-size: 42px;
-  color: #FFD400;
-  padding: 0px; }
+.page-contact-location-header {
+  color: black;
+  text-align: center;
+  padding: 80px 0px 50px 0px; }
 
-.page-contact-image {
-  height: 100vh; }
+.page-contact-card h5 {
+  color: black; }
 
 /* Contact Page #### END */
 .hero-image-page {
@@ -806,6 +808,8 @@ a {
   .page-template-front-page .hero-image-page {
     height: 100vh; }
 
+<<<<<<< HEAD
+=======
 .grid-cards .rect-card {
   margin: 5rem 0;
   padding: 5rem 1.5rem 2rem 1.5rem;
@@ -817,6 +821,7 @@ a {
 .grid-cards p {
   margin-bottom: 3rem; }
 
+>>>>>>> 20fa8bf20841d78647376e567bd1bdec918091fc
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

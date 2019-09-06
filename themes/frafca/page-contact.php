@@ -15,7 +15,7 @@ get_header(); ?>
         <header id="page-contact-banner"  class="frafca-hero-image page-contact-banner-header">
 			<?php get_template_part( 'template-parts/hero_banner' ); ?>
         </header><!-- #front-page-banner -->
-
+		<h2 class="page-contact-location-header"><?php echo frafca_cfs('location_header') ?></h2>
         <section id="page-contact">
 				<?php  
                     $card = frafca_cfs('card');
@@ -25,7 +25,7 @@ get_header(); ?>
 							$services = $card['services'];
 							$phone = $card['phone'];
 							$fax = $card['fax'];
-							$location = $card['view_location'];
+							$button = $card['view_location'];
                 ?>
 
                     <div class="page-contact-card purple">
@@ -34,7 +34,9 @@ get_header(); ?>
 						<p><?php echo $services;?></p>
 						<p><?php echo $phone;?></p>
 						<p><?php echo $fax;?></p>
-						<p><?php echo $location;?></p>
+                        <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                        <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
+                        </a>
                     </div>
 
                 <?php endforeach; ?>
