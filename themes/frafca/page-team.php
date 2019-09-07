@@ -28,12 +28,12 @@ get_header(); ?>
 							$contact = $card['member_contact'];
                 ?>
 
-                    <div class="rect-card purple">
+                    <div class="rect-card white">
                         <?php echo '<img src=' . $image . '">';?>
 						<p><?php echo $name;?></p>
 						<p><?php echo $title;?></p>
 						<p><?php echo $description;?></p>
-						<p><?php echo $contact;?></p>
+						<a href="mailto:<?php echo $contact;?>" target="_top"><?php echo $contact;?></a>
                         
                     </div>
 

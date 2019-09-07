@@ -781,6 +781,10 @@ a {
 .grid-cards .purple {
   background-color: #2F2B5C; }
 
+.grid-cards .white {
+  background-color: #ffffff;
+  color: #0D0D0D; }
+
 .grid-cards p {
   margin-bottom: 3rem; }
 
