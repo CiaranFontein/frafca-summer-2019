@@ -15,8 +15,9 @@ get_header(); ?>
         <header id="page-contact-banner"  class="frafca-hero-image page-contact-banner-header">
 			<?php get_template_part( 'template-parts/hero_banner' ); ?>
         </header><!-- #front-page-banner -->
-		<h2 class="page-contact-location-header"><?php echo frafca_cfs('location_header') ?></h2>
+		<h2 class="contact-location-header"><?php echo frafca_cfs('location_header') ?></h2>
         <section id="page-contact">
+            <div class="grid-cards contact-cards">
 				<?php  
                     $card = frafca_cfs('card');
                     foreach($card as $card) :
@@ -28,18 +29,19 @@ get_header(); ?>
 							$button = $card['view_location'];
                 ?>
 
-                    <div class="page-contact-card purple">
-                        <h5><?php echo $title;?></h5>
+                    <div class="rect-card purple">
+                        <h3><?php echo $title;?></h3>
 						<p><?php echo $address;?></p>
 						<p><?php echo $services;?></p>
 						<p><?php echo $phone;?></p>
 						<p><?php echo $fax;?></p>
                         <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
-                        <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
+                            <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
                         </a>
                     </div>
 
                 <?php endforeach; ?>
+            
             </div>
         </section><!-- #prgrm_svc-categories -->
 
