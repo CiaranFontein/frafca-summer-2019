@@ -12,29 +12,28 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <!-- Hero Image : type 1  -->
-        <header id="page-contact-banner"  class="frafca-hero-image page-contact-banner-header">
+        <header id="page-team-banner"  class="frafca-hero-image page-team-banner-header">
 			<?php get_template_part( 'template-parts/hero_banner' ); ?>
-        </header><!-- #front-page-banner -->
-		<h2 class="contact-location-header"><?php echo frafca_cfs('location_header') ?></h2>
-        <section id="page-contact">
-            <div class="grid-cards contact-cards">
+        </header><!-- #page-banner -->
+		<h2 class="contact-location-header page-team-header"><?php echo frafca_cfs('location_header') ?></h2>
+        <section id="page-team">
+            <div class="grid-cards team-cards">
 				<?php  
                     $card = frafca_cfs('card');
                     foreach($card as $card) :
-                            $title = $card['office_title'];
-                            $address = $card['address'];
-							$services = $card['services'];
-							$phone = $card['phone'];
-							$fax = $card['fax'];
-							$button = $card['view_location'];
+                            $image = $card['member_image'];
+                            $name = $card['member_name'];
+							$title = $card['member_title'];
+							$description = $card['member_description'];
+							$contact = $card['member_contact'];
                 ?>
 
                     <div class="rect-card purple">
-                        <h3><?php echo $title;?></h3>
-						<p><?php echo $address;?></p>
-						<p><?php echo $services;?></p>
-						<p><?php echo $phone;?></p>
-						<p><?php echo $fax;?></p>
+                        <h3><?php echo $image;?></h3>
+						<p><?php echo $name;?></p>
+						<p><?php echo $title;?></p>
+						<p><?php echo $description;?></p>
+						<p><?php echo $contact;?></p>
                         <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                             <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
                         </a>
