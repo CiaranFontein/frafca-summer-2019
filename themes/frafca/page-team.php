@@ -29,14 +29,12 @@ get_header(); ?>
                 ?>
 
                     <div class="rect-card purple">
-                        <h3><?php echo $image;?></h3>
+                        <?php echo '<img src=' . $image . '">';?>
 						<p><?php echo $name;?></p>
 						<p><?php echo $title;?></p>
 						<p><?php echo $description;?></p>
 						<p><?php echo $contact;?></p>
-                        <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
-                            <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
-                        </a>
+                        
                     </div>
 
                 <?php endforeach; ?>
