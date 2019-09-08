@@ -808,6 +808,20 @@ a {
       padding: 5rem 0 5rem 0; } }
 
 /* Contact Page #### END */
+/* Team Page **** START */
+.page-template-page-team-php .grid-cards .rect-card {
+  margin: 0; }
+
+.page-template-page-team-php .grid-cards p {
+  margin-bottom: 1.5rem; }
+
+.page-template-page-team-php .card-info p:first-child {
+  font-weight: bold; }
+
+.page-template-page-team-php .card-info p:nth-child(2) {
+  font-weight: 500; }
+
+/* Team Page **** END */
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

@@ -87,7 +87,7 @@
 
 	.white {
 		background-color: $color__background-screen;
-		color: #0D0D0D;;
+		color: #0D0D0D;
 
 	}
 
@@ -123,5 +123,29 @@
 	}
 }
 
-
 /* Contact Page #### END */
+
+/* Team Page **** START */
+.page-template-page-team-php {
+	.grid-cards {
+		.rect-card {
+			margin: 0;
+		}
+
+		p { 
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.card-info  {
+		p:first-child {
+			font-weight: bold;
+		}
+
+		p:nth-child(2) {
+			font-weight: 500;
+		}
+}
+
+}
+/* Team Page **** END */

@@ -15,7 +15,7 @@ get_header(); ?>
         <header id="page-team-banner"  class="frafca-hero-image page-team-banner-header">
 			<?php get_template_part( 'template-parts/hero_banner' ); ?>
         </header><!-- #page-banner -->
-		<h2 class="contact-location-header page-team-header"><?php echo frafca_cfs('location_header') ?></h2>
+		<h2 class="contact-location-header"><?php echo frafca_cfs('meet_our_team') ?></h2>
         <section id="page-team">
             <div class="grid-cards team-cards">
 				<?php  
@@ -29,12 +29,13 @@ get_header(); ?>
                 ?>
 
                     <div class="rect-card white">
-                        <?php echo '<img src=' . $image . '">';?>
-						<p><?php echo $name;?></p>
-						<p><?php echo $title;?></p>
-						<p><?php echo $description;?></p>
-						<a href="mailto:<?php echo $contact;?>" target="_top"><?php echo $contact;?></a>
-                        
+						<?php echo '<img src=' . $image . '">';?>
+						<div class="card-info">
+							<p><?php echo $name;?></p>
+							<p><?php echo $title;?></p>
+							<p><?php echo $description;?></p>
+							<a href="mailto:<?php echo $contact;?>" target="_top"><?php echo $contact;?></a>
+						</div>
                     </div>
 
                 <?php endforeach; ?>
