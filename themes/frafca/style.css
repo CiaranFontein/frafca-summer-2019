@@ -810,7 +810,8 @@ a {
 /* Contact Page #### END */
 /* Team Page **** START */
 .page-template-page-team-php .grid-cards .rect-card {
-  margin: 0; }
+  margin: 0;
+  padding: 2rem 1.5rem 5rem 1.5rem; }
 
 .page-template-page-team-php .grid-cards p {
   margin-bottom: 1.5rem; }
@@ -820,6 +821,11 @@ a {
 
 .page-template-page-team-php .card-info p:nth-child(2) {
   font-weight: 500; }
+
+.page-template-page-team-php .page-team-header {
+  color: #323232;
+  text-align: center;
+  padding: 3rem 0 2rem 0; }
 
 /* Team Page **** END */
 /*--------------------------------------------------------------

@@ -130,6 +130,7 @@
 	.grid-cards {
 		.rect-card {
 			margin: 0;
+			padding: 2rem 1.5rem 5rem 1.5rem; 
 		}
 
 		p { 
@@ -145,7 +146,16 @@
 		p:nth-child(2) {
 			font-weight: 500;
 		}
-}
+	}
+
+	.page-team-header {
+
+		color: $color__text-sec;
+		text-align: center;
+		padding: 3rem 0 2rem 0;
+
+
+	}
 
 }
 /* Team Page **** END */
