@@ -28,8 +28,11 @@ get_header(); ?>
 							$contact = $card['member_contact'];
                 ?>
 
-                    <div class="rect-card white">
-						<?php echo '<img src=' . $image . '">';?>
+                    <div class="rect-card white grid-rect-card">
+						<div class="member-image">
+							<?php echo '<img src=' . $image . '">';?>
+						</div>
+
 						<div class="card-info">
 							<p><?php echo $name;?></p>
 							<p><?php echo $title;?></p>

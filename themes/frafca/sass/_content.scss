@@ -126,34 +126,60 @@
 /* Contact Page #### END */
 
 /* Team Page **** START */
+
 .page-template-page-team-php {
 	.grid-cards {
 		.rect-card {
 			margin: 0;
-			padding: 2rem 1.5rem 5rem 1.5rem; 
+			padding: 0rem 1.5rem 5rem 1.5rem;
+				@include desktop {
+					padding: 0rem 1.5rem 8rem 1.5rem;
+				}
 		}
-
 		p { 
 			margin-bottom: 1.5rem;
 		}
 	}
-
 	.card-info  {
+		padding: 0 2rem;
+			@include desktop {
+				text-align: left;
+				padding: 0;
+			}
+		
 		p:first-child {
 			font-weight: bold;
 		}
-
 		p:nth-child(2) {
 			font-weight: 500;
+		}
+		a {
+			color:$color__text-sec;
+			text-decoration: none;
+
+			&:hover {
+				color:$color__text-sec;
+			}
+			&:active {
+				color:$color__text-sec;
+			}
 		}
 	}
 
 	.page-team-header {
-
 		color: $color__text-sec;
 		text-align: center;
-		padding: 3rem 0 2rem 0;
+		padding: 3rem 0 3rem 0;
+			@include desktop {
+				padding: 8rem 0 8rem 0;
+			}
+	}
 
+	.grid-rect-card {
+		@include desktop {
+			display: grid;
+			grid-template-columns: 45% 55%;
+		}
 
 	}
 
