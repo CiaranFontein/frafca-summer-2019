@@ -69,17 +69,36 @@
 }
 
 .grid-cards {
+	@include desktop {
+		max-width: 1200px;
+		margin: 120px auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 	.rect-card {
+		display: flex;
+		flex-direction: column;
 		margin: 5rem 0;
 		padding: 5rem 1.5rem 2rem 1.5rem; 
 		text-align: center;
 
 		@include desktop {
-			margin: 0rem 1rem 2rem;
-			padding: 5rem 2.5rem 2rem;
+			margin: 0 1rem 2rem 0;
+			padding: 5rem 2.5rem 2rem 2.5rem;
 
+			// Adjust margins of even number of container
+			&:nth-child(2*n){
+				margin-left: 1rem;
+				margin-right: 0;
+			}
 		}
 
+		p {
+			@include desktop {
+				flex-grow: 1;
+			}
+		}
 	}
 	.purple {
 		background-color: $color__background-article;
@@ -109,7 +128,7 @@
 	.rect-card p,
 	.rect-card h3 {
 		text-align: left;
-	}
+	}	
 }
 
 .contact-location-header {
