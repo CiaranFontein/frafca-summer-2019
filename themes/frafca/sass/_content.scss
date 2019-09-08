@@ -87,6 +87,7 @@
 			margin: 0 1rem 2rem 0;
 			padding: 5rem 2.5rem 2rem 2.5rem;
 
+			// Adjust margins of even number of container
 			&:nth-child(2*n){
 				margin-left: 1rem;
 				margin-right: 0;
