@@ -146,8 +146,9 @@
 
 /* Team Page **** START */
 
-.page-template-page-team-php {
+.page-template-page-meet-our-team-php {
 	.grid-cards {
+		display: inline;
 		.rect-card {
 			margin: 0;
 			padding: 0rem 1.5rem 5rem 1.5rem;
@@ -193,7 +194,7 @@
 				padding: 8rem 0 8rem 0;
 			}
 	}
-	
+
 	.grid-rect-card {
 		@include desktop {
 			display: grid;
