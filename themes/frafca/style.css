@@ -256,6 +256,10 @@ p {
   margin-bottom: 1.5rem; }
   .hero-image-page p {
     font-size: 1.2rem; }
+    @media (min-width: 1200px) {
+      .hero-image-page p {
+        font-size: 1.5rem;
+        font-weight: 700; } }
 
 dfn, cite, em, i {
   font-style: italic; }
