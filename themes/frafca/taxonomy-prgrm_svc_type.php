@@ -40,21 +40,22 @@ get_header(); ?>
 
         <section id="prgrm_svc-categories">
             <div class="grid-cards">
-                <?php  
-                    // $prgrm_svc_categories = frafca_cfs('categories');
-                    // foreach( $prgrm_svc_categories as $category ):
-                    //     $cat = get_term($category);
-                    //         $name = $cat->name;
-                    //         $description = $cat->description;
-                ?>
-                    <!-- <div class="rect-card purple">
-                        <h3><?php // echo $name ?></h3>
+            <?php if ( have_posts() ) : ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <div class="rect-card pink">
+                        <h3><?php the_title();?></h3>
                         <p><?php // echo $description ?></p>
-                        <a href="<?php // echo get_term_link($cat) ?>" target="_self">
-                            <input class='default-btn yellow' type="button" value="View Category">
+                        <a href="<?php echo esc_url( get_permalink() ) ;?>" target="_self">
+                            <input class='default-btn yellow' type="button" value="Learn More">
                         </a>
-                    </div> -->
+                    </div>
                 <?php // endforeach ?>
+                <?php endwhile; ?>
+                <?php else : ?>
+                <div class="rect-card no-content">
+                    <h2>Nothing found!</h2>
+                </div>
+                <?php endif; ?>
             </div>
         </section><!-- #prgrm_svc-categories -->
 
