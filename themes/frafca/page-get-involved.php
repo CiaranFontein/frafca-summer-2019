@@ -4,7 +4,7 @@
  * The main template file.
  * 
  * @package FRAFCA_Theme
- * Template Name: page-programs&services
+ * Template Name: page-get-involved
  */
 
 get_header(); ?>
@@ -12,15 +12,15 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <!-- Hero Image : type 1  -->
-        <header id="prgrm_svc-banner"  class="frafca-hero-image">
+        <header id="get-involved-banner"  class="frafca-hero-image">
             <?php get_template_part( 'template-parts/hero_banner' ); ?>
         </header><!-- #front-page-banner -->
 
-        <section id="prgrm_svc-categories">
+        <section id="get-involved-categories">
             <div class="grid-cards">
                 <?php  
-                    $prgrm_svc_categories = frafca_cfs('categories');
-                    foreach( $prgrm_svc_categories as $category ):
+                    $get_involved_categories = frafca_cfs('categories');
+                    foreach( $get_involved_categories as $category ):
                         $cat = get_term($category);
                             $name = $cat->name;
                             $description = $cat->description;
