@@ -331,19 +331,22 @@ img {
     color: blue; }
 
 /* Button */
-button, input[type="button"] {
+.default-btn {
+  display: block;
   padding: 16px 8px;
   border: 0 solid transparent;
-  border-radius: 8px; }
-  button.default-btn, input[type="button"].default-btn {
-    min-width: 200px; }
-  button.yellow, input[type="button"].yellow {
+  border-radius: 8px;
+  min-width: 210px;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      align-self: center; }
+  .default-btn.yellow {
     background: #FFD400;
     color: #323232; }
-  .rect-card button, .rect-card input[type="button"] {
+  .rect-card .default-btn {
     font-size: 1rem;
     font-weight: 900; }
-    .rect-card button:hover, .rect-card input[type="button"]:hover {
+    .rect-card .default-btn:hover {
       background-color: #b39400; }
 
 /*--------------------------------------------------------------
