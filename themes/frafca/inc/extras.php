@@ -62,7 +62,7 @@ function dynamic_field_values ( $tag, $unused ) {
         $tag['values'][] = $prgrams_services_post->post_title;
         $tag['labels'][] = $prgrams_services_post->post_title;
 		
-	}
+    }
 	
     return $tag;
 	
