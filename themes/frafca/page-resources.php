@@ -17,7 +17,7 @@ get_header(); ?>
 
                 <?php get_template_part('template-parts/hero_banner'); ?>
 
-            </header><!-- #front-page-banner -->
+            </header><!-- #resources-page-banner -->
 
             <?php /* Start the Loop */ ?>
             <div class="resources-grid grid-cards">
