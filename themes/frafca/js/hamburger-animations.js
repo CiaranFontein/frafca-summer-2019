@@ -1,6 +1,7 @@
 (function($) {
   let menuOpen = false;
   let $mobileHeaderMenu = $('.mobile-header-menu');
+  let $hamburgerIcon = $('.hamburger-icon');
 
   let scrollPosition = [
     self.pageXOffset ||
@@ -14,7 +15,7 @@
   html.data('scroll-position', scrollPosition);
 
   // Header hamburger drop down menu only on mobile //
-  $('.hamburger-icon').on('click', function() {
+  $hamburgerIcon.on('click', function() {
     toggleMobileNavMenu();
   });
 
@@ -24,10 +25,12 @@
     if (menuOpen) {
       menuOpen = false;
       $mobileHeaderMenu.removeClass('mobile-header-menu--open');
+      $hamburgerIcon.removeClass('hamburger-icon--open');
       unlockScrollPosition();
     } else {
       menuOpen = true;
       $mobileHeaderMenu.addClass('mobile-header-menu--open');
+      $hamburgerIcon.addClass('hamburger-icon--open');
       lockScrollPosition();
     }
   }
@@ -46,14 +49,11 @@
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
   }
 
-  let mobileMenu = $('.mobile-header-menu');
-  let hamburgerIcon = $('.hamburger-icon');
-
   /* Close mobile-nav-menu when user //
   //     clicks outside of it        */
 
-  hamburgerIcon.click(function() {
-    mobileMenu.show();
+  $hamburgerIcon.click(function() {
+    $mobileHeaderMenu.show();
     return false;
   });
 
@@ -63,7 +63,7 @@
     }
   });
 
-  mobileMenu.click(function(e) {
+  $mobileHeaderMenu.click(function(e) {
     e.stopPropagation();
   });
 })(jQuery);

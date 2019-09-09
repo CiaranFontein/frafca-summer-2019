@@ -415,23 +415,26 @@ a {
   display: none;
   position: fixed;
   background: #fff;
-  height: 50%;
+  min-height: 100vh;
   width: 90%;
-  left: 0px;
-  top: 200px; }
+  left: 0;
+  top: 0; }
   .mobile-header-menu--open {
     display: block; }
 
 .hamburger-icon {
+  z-index: 3;
   display: block;
   color: #fff;
   padding: 0.8rem;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
   .hamburger-icon--open {
     color: #000; }
-  @media (min-width: 1200px) {
-    .hamburger-icon {
-      display: none; } }
+
+@media (min-width: 1200px) {
+  display: none; }
 
 .main-navigation {
   background: none;
