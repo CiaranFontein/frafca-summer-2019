@@ -44,7 +44,11 @@ get_header(); ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div class="rect-card pink">
                         <h3><?php the_title();?></h3>
-                        <p><?php // echo $description ?></p>
+                        <p>
+                            <?php                            
+                            echo frafca_cfs('program_services_description')[0]['about'];
+                            ?>
+                        </p>
                         <a href="<?php echo esc_url( get_permalink() ) ;?>" target="_self">
                             <input class='default-btn yellow' type="button" value="Learn More">
                         </a>
