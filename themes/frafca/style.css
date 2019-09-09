@@ -415,23 +415,42 @@ a {
   display: none;
   position: fixed;
   background: #fff;
+<<<<<<< HEAD
   height: 50%;
   width: 90%;
   left: 0px;
   top: 200px; }
+=======
+  min-height: 100vh;
+  width: 90%;
+  left: 0;
+  top: 0; }
+>>>>>>> b6d5d36d0215f9f7382408c4e827fd4817d5e652
   .mobile-header-menu--open {
     display: block; }
 
 .hamburger-icon {
+  z-index: 3;
   display: block;
   color: #fff;
   padding: 0.8rem;
+<<<<<<< HEAD
   font-size: 1.5rem; }
   .hamburger-icon--open {
     color: #000; }
   @media (min-width: 1200px) {
     .hamburger-icon {
       display: none; } }
+=======
+  font-size: 1.5rem;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+  .hamburger-icon--open {
+    color: #000; }
+
+@media (min-width: 1200px) {
+  display: none; }
+>>>>>>> b6d5d36d0215f9f7382408c4e827fd4817d5e652
 
 .main-navigation {
   background: none;

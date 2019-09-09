@@ -44,7 +44,9 @@ get_header(); ?>
 
                 <?php endforeach; ?>
             </div>
-            <input class='default-btn yellow' type="button" value="Learn More">
+            <a class='default-btn yellow'>
+                Learn More
+            </a>
         </section><!-- #front-page-about-us -->
 
         <section id="front-page-what-we-offer">
@@ -70,8 +72,8 @@ get_header(); ?>
                 <div class="containter col-2">
                     <h3><?php echo $title ?></h3>
                     <p><?php echo $description ?></p>
-                    <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
-                        <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
+                    <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                        <?php echo $button['text']; ?>
                     </a>
                 </div>
 
@@ -100,8 +102,8 @@ get_header(); ?>
                         <h3><?php echo $title; ?></h3>
                         <p><?php echo $description; ?></p>
                         
-                        <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
-                            <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
+                        <a class='default-btn yellow'  href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                            <?php echo $button['text']; ?>
                         </a>
                     </div>
 
