@@ -55,27 +55,16 @@ function dynamic_field_values ( $tag, $unused ) {
 
     $prgrams_services_posts = get_posts($args);
 
-	// var_dump($prgrams_services_posts);
-
     if ( ! $prgrams_services_posts )
         return $tag;
 
     foreach ( $prgrams_services_posts as $prgrams_services_post ) {
-		// echo $prgrams_services_post->post_title;
+		
 		$tag['raw_values'][] = $prgrams_services_post->post_title;
         $tag['values'][] = $prgrams_services_post->post_title;
-		// $tag['labels'][] = $prgrams_services_post->post_title;
 		$tag['labels'][] = $prgrams_services_post->post_title;	
 	}
-
-
-	// var_dump($tag);
 	
-	// maybe localize a script just for the page title
-	// to limit to a post type
-	// if ( is_singular( 'book' ) ) {
-    // conditional content/code
-	// }
     return $tag;
 	
 }
