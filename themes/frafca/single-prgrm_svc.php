@@ -7,26 +7,21 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+        <!-- Hero Image : type 1  -->
+        <header id="prgrm_svc_single-banner"  class="frafca-hero-image">
+            <?php get_template_part( 'template-parts/hero_banner' ); ?>
+        </header><!-- #single_prgrm_svc-banner -->
 
-		<?php while ( have_posts() ) : the_post(); ?>
+        <section id="prgrm_svc-single">
+            <div class="flex-container">
+                
+            </div>
+        </section>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

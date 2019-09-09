@@ -11,7 +11,7 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <!-- Hero Image : type 1  -->
-        <header id="prgrm_svc-banner"  class="frafca-hero-image">
+        <header id="taxonomy_prgrm_svc-banner"  class="frafca-hero-image">
             <!-- hero contents -->
                 <div class="hero-image-page" style="
                     background : 
@@ -36,9 +36,9 @@ get_header(); ?>
                     </div>
                 </div>
             <!-- end hero contents -->
-        </header><!-- #front-page-banner -->
+        </header><!-- #taxonomy_prgrm_svc-banner -->
 
-        <section id="prgrm_svc-categories">
+        <section id="prgrm_svc-taxonomies">
             <div class="grid-cards">
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>

@@ -14,7 +14,7 @@ get_header(); ?>
         <!-- Hero Image : type 1  -->
         <header id="prgrm_svc-banner"  class="frafca-hero-image">
             <?php get_template_part( 'template-parts/hero_banner' ); ?>
-        </header><!-- #front-page-banner -->
+        </header><!-- #prgrm_svc-banner -->
 
         <section id="prgrm_svc-categories">
             <div class="grid-cards">
