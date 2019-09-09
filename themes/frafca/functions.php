@@ -100,6 +100,7 @@ function frafca_theme_scripts()
 
 	wp_enqueue_script('frafca-script', get_template_directory_uri() . '/build/js/script.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-hamburger-animations', get_template_directory_uri() . '/build/js/hamburger-animations.min.js', array('jquery'), '', true);
+	wp_enqueue_script('show-sub-menu-on-hover', get_template_directory_uri() . '/build/js/show-sub-menu-on-hover.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-theme-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_style('frafca-theme-style', get_stylesheet_uri());
 
