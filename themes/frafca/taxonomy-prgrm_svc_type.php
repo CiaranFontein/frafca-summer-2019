@@ -10,7 +10,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-        <!-- Hero Image : type 1  -->
+        <!-- Hero Image : type 2 (Fixed hero-image)  -->
         <header id="taxonomy_prgrm_svc-banner"  class="frafca-hero-image">
             <!-- hero contents -->
                 <div class="hero-image-page" style="
@@ -45,12 +45,13 @@ get_header(); ?>
                     <div class="rect-card pink">
                         <h3><?php the_title();?></h3>
                         <p>
-                            <?php                            
-                            echo frafca_cfs('program_services_description')[0]['about'];
+                            <?php
+                            $limit_heros = count(frafca_cfs('banner'))-1;
+                            echo frafca_cfs('banner')[$limit_heros]['banner_description'];
                             ?>
                         </p>
-                        <a href="<?php echo esc_url( get_permalink() ) ;?>" target="_self">
-                            <input class='default-btn yellow' type="button" value="Learn More">
+                        <a href="<?php echo esc_url( get_permalink() ) ;?>" target="_self" class="default-btn yellow">
+                            Learn More
                         </a>
                     </div>
                 <?php // endforeach ?>

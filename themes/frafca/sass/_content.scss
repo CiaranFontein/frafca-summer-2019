@@ -81,6 +81,13 @@
 /* Grid Card **** START */
 .purple {
 	background-color: $color__background-article;
+
+	// Convert to pink color only for .content-type-widgets in DESKTOP version
+	.content-type-widgets & {
+		@include desktop {
+			background-color: $color__background-banner;
+		}
+	}
 }
 .pink {
 	background-color: $color__background-banner;
@@ -93,7 +100,7 @@
 
 .grid-cards {
 	@include desktop {
-		max-width: 1200px;
+		max-width: $desktop-width;
 		margin: 120px auto;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
