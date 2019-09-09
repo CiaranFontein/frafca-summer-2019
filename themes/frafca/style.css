@@ -417,11 +417,9 @@ a {
   background: #fff;
   height: 100%;
   width: 90%;
-  left: 0px;
-  top: 90px; }
+  left: 0px; }
   .mobile-header-menu--open {
-    display: block;
-    overflow: hidden; }
+    display: block; }
 
 .hamburger-icon {
   display: block;
