@@ -27,12 +27,12 @@ get_header(); ?>
                             $programs = explode('<br />', $description['program']);
                     ?>
                         <div class="content-type-text">
-                            <h2>About</h2>
+                            <h3>About</h3>
                             <p><?php echo $about ?></p>
                         </div>
                         
                         <div class="content-type-list">
-                            <h2>Objectives</h2>
+                            <h3>Objectives</h3>
                             <ul>
                                 <?php foreach($obejectives as $obejective): ?>
                                     <li><?php echo $obejective; ?></li>
@@ -41,7 +41,7 @@ get_header(); ?>
                         </div>
 
                         <div class="content-type-list">
-                            <h2>Program Services</h2>
+                            <h3>Program Services</h3>
                             <ul>
                                 <?php foreach($programs as $program): ?>
                                     <li><?php echo $program; ?></li>
@@ -69,7 +69,7 @@ get_header(); ?>
                                     $time = $de_program['time'];
                                     $location = $de_program['location'];
                             ?>
-                                <h2 class="purple">Program Information</h2>
+                                <h3 class="purple">Program Information</h3>
                                 <p>Dates: <?php echo $dates; ?></p>
                                 <p>Time: <?php echo $time; ?></p>
                                 <p>Location: <?php echo $location; ?></p>
@@ -84,7 +84,7 @@ get_header(); ?>
                                     $phone = $de_contact['phone'];
                                     $fax = $de_contact['fax'];
                             ?>
-                                <h2 class="purple">Program Information</h2>
+                                <h3 class="purple">Contact Information</h3>
                                 <p>Director: <?php echo $director; ?></p>
                                 <p>Email: <?php echo $email; ?></p>
                                 <p>P: <?php echo $phone; ?></p>

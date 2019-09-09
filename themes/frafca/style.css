@@ -253,22 +253,24 @@ h1, h2 {
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin: 1rem 0; }
   .hero-image-page p {
     font-size: 1.2rem; }
     @media (min-width: 1200px) {
       .hero-image-page p {
         font-size: 1.5rem;
         font-weight: 700; } }
+  .flex-wrap p {
+    font-size: 1.2rem; }
 
 dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5rem; }
+  margin: 0 1rem; }
 
 address {
-  margin: 0 0 1.5rem; }
+  margin: 0 0 1rem; }
 
 pre {
   background: #eee;
@@ -294,6 +296,17 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+/* Orders and Lists */
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem; }
+  .flex-wrap ul {
+    margin-bottom: 3rem; }
+
+li {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -682,12 +695,12 @@ a {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5rem; }
+  margin-right: 1rem; }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5rem; }
+  margin-left: 1rem; }
 
 .aligncenter {
   clear: both;
@@ -707,7 +720,7 @@ a {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
@@ -724,7 +737,7 @@ a {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5rem; }
+  margin: 0 0 1rem; }
 
 .updated:not(.published) {
   display: none; }
@@ -736,11 +749,11 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5rem 0 0; }
+  margin: 1rem 0 0; }
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5rem; }
+  margin: 0 0 1rem; }
 
 /* Asides */
 .blog .format-aside .entry-title,
@@ -913,7 +926,7 @@ object {
 
 /* Captions */
 .wp-caption {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   max-width: 100%; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
@@ -927,7 +940,7 @@ object {
 
 /* Galleries*/
 .gallery {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1rem; }
 
 .gallery-item {
   display: inline-block;
@@ -960,11 +973,23 @@ object {
 /* Front page */
 /* About Page */
 /* Sigle - single-prgrm_svc.php */
+.flex-container .flex-wrap h3 {
+  margin-bottom: 1rem; }
+
+.flex-container .flex-wrap p {
+  margin-bottom: 3rem; }
+
 .flex-container .flex-wrap .content-type-text, .flex-container .flex-wrap .content-type-list {
   padding: 0 2rem; }
 
-.flex-container .flex-wrap .content-type-widgets h2, .flex-container .flex-wrap .content-type-widgets p {
-  padding: 0 2rem; }
+.flex-container .flex-wrap .content-type-widgets h3, .flex-container .flex-wrap .content-type-widgets p {
+  padding: 0 2rem;
+  margin-bottom: 1rem; }
 
-.flex-container .flex-wrap .content-type-widgets h2 {
+.flex-container .flex-wrap .content-type-widgets h3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   color: #ffffff; }
+
+.flex-container .flex-wrap .content-type-widgets p:last-child {
+  margin-bottom: 3rem; }

@@ -8,16 +8,33 @@
 
 /* Sigle - single-prgrm_svc.php */
 .flex-container {
+    
     .flex-wrap {
+        h3 { 
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 3rem;
+        }
+
         .content-type-text, .content-type-list {
             padding: 0 2rem;
         }
+
         .content-type-widgets {
-            h2, p {
+            h3, p {
                 padding: 0 2rem;
+                margin-bottom: 1rem;
             }
-            h2 {
+            h3 {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
                 color: $color__text-main;
+            }
+            p {
+                &:last-child {
+                    margin-bottom: 3rem;
+                }
             }
         }
     }
