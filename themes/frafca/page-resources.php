@@ -13,27 +13,32 @@ get_header(); ?>
 
         <?php if (have_posts()) : ?>
 
-            <header id="front-page-banner" class="frafca-hero-image">
+            <header id="about-page-banner" class="frafca-hero-image">
 
                 <?php get_template_part('template-parts/hero_banner'); ?>
-
-                <!-- scroll down with the arrow -->
-                <div class="scroll-down">
-                    <p>Scroll Down</p>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
 
             </header><!-- #front-page-banner -->
 
             <?php /* Start the Loop */ ?>
-            <?php while (have_posts()) : the_post(); ?>
 
-                <?php get_template_part('template-parts/content'); ?>
+            <?php
+                $resource_cards = frafca_cfs('');
+                foreach ($resource_cards as $resource_card) :
+                    ?>
 
-            <?php endwhile; ?>
 
-            <?php the_posts_navigation(); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <div class="resources">
 
+
+
+                    </div><!-- .entry-content -->
+                </article>
+
+
+
+
+            <?php endforeach; ?>
         <?php else : ?>
 
             <?php get_template_part('template-parts/content', 'none'); ?>

@@ -9,9 +9,39 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <!-- Hero Image : type 1  -->
+        <!-- Hero Image : type 3 (title from the post)  -->
         <header id="prgrm_svc_single-banner"  class="frafca-hero-image">
-            <?php get_template_part( 'template-parts/hero_banner' ); ?>
+            <!-- hero contents -->
+            <?php 
+                $limit_heros = count(frafca_cfs('banner'))-1;
+                $heros = array( 0 => frafca_cfs('banner')[$limit_heros]);
+                foreach( $heros as $hero ) :        
+                    $hero_img = $hero['banner_image'];
+                    $hero_description = $hero['banner_description'];
+            ?>
+                <div class="hero-image-page" style="
+                    background : 
+                    linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
+                        url(<?php echo $hero_img; ?>);
+                    background-size: cover;
+                    background-position: center; 
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;                   
+                ">
+                    <h1 class="page-title screen-reader-text">
+                        <?php single_post_title(); ?>
+                    </h1>     
+                    
+                    <div class="header-meta">
+                        <h2>
+                            <?php the_title();?>
+                        </h2>
+                        <p>
+                            <?php echo $hero_description; ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach ?><!-- end hero contents -->
         </header><!-- #single_prgrm_svc-banner -->
 
         <section id="prgrm_svc-single">
@@ -23,19 +53,19 @@ get_header(); ?>
                         $descriptions = array( 0 => frafca_cfs('program_services_description')[$limit_descriptions] );    
                         foreach( $descriptions as $description):
                             $about = $description['about'];
-                            $obejectives = explode('<br />', $description['obejective']);
-                            $programs = explode('<br />', $description['program']);
+                            $obejectives = $description['obejective'];
+                            $programs = $description['program'];
                     ?>
                         <div class="content-type-text">
                             <h3>About</h3>
-                            <p><?php echo $about ?></p>
+                            <p><?php echo esc_html($about); ?></p>
                         </div>
                         
                         <div class="content-type-list">
                             <h3>Objectives</h3>
                             <ul>
                                 <?php foreach($obejectives as $obejective): ?>
-                                    <li><?php echo $obejective; ?></li>
+                                    <li><?php echo $obejective['list']; ?></li>
                                 <?php endforeach; ?><!-- end foreach $obejectives -->
                             </ul>
                         </div>
@@ -44,7 +74,7 @@ get_header(); ?>
                             <h3>Program Services</h3>
                             <ul>
                                 <?php foreach($programs as $program): ?>
-                                    <li><?php echo $program; ?></li>
+                                    <li><?php echo $program['list']; ?></li>
                                 <?php endforeach; ?><!-- end foreach $programs -->
                             </ul>
                         </div>
