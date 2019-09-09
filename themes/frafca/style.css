@@ -868,13 +868,15 @@ a {
 .page-template-page-contact .contact-cards .rect-card h3 {
   text-align: left; }
 
-@media (min-width: 1200px) {
-  .page-template-page-contact .contact-cards .rect-card {
-    margin: 0;
-    padding: 5rem 2.5rem 2rem 2.5rem; }
-    .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
-      margin-left: 0;
-      margin-right: 0; } }
+.page-template-page-contact .contact-cards .rect-card {
+  padding: 5rem 2.5rem 2rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-contact .contact-cards .rect-card {
+      margin: 0;
+      padding: 5rem 2.5rem 2rem 2.5rem; }
+      .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
+        margin-left: 0;
+        margin-right: 0; } }
 
 .page-template-page-contact .contact-location-header {
   color: #323232;
