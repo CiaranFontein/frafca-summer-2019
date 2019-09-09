@@ -70,7 +70,7 @@ get_header(); ?>
                 <div class="containter col-2">
                     <h3><?php echo $title ?></h3>
                     <p><?php echo $description ?></p>
-                    <a href="<?php echo $button['url']; ?>">
+                    <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                         <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
                     </a>
                 </div>
@@ -100,7 +100,7 @@ get_header(); ?>
                         <h3><?php echo $title; ?></h3>
                         <p><?php echo $description; ?></p>
                         
-                        <a href="<?php echo $button['url']; ?>">
+                        <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                             <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
                         </a>
                     </div>

@@ -35,9 +35,17 @@ h1, h2 {
 /* Copy */
 
 p {
-	margin-bottom: $base__space-unit;
+	margin: $base__space-unit 0;
 
 	.hero-image-page & {
+		font-size: 1.2rem;
+		@include desktop {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+	}
+
+	.flex-wrap & {
 		font-size: 1.2rem;
 	}
 }
@@ -82,4 +90,19 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+
+/* Orders and Lists */
+ul {
+	margin: $base__space-unit 0;
+	padding-left: 1.5rem;
+	.flex-wrap & {
+	}
+}
+li {
+	font-size: 1.2rem;
+	margin-bottom: 0.8rem;
+	.flex-wrap & {
+	}
 }
