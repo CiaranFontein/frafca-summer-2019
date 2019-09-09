@@ -342,19 +342,22 @@ img {
     color: blue; }
 
 /* Button */
-button, input[type="button"] {
+.default-btn {
+  display: block;
   padding: 16px 8px;
   border: 0 solid transparent;
-  border-radius: 8px; }
-  button.default-btn, input[type="button"].default-btn {
-    min-width: 200px; }
-  button.yellow, input[type="button"].yellow {
+  border-radius: 8px;
+  min-width: 210px;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      align-self: center; }
+  .default-btn.yellow {
     background: #FFD400;
     color: #323232; }
-  .rect-card button, .rect-card input[type="button"] {
+  .rect-card .default-btn {
     font-size: 1rem;
     font-weight: 900; }
-    .rect-card button:hover, .rect-card input[type="button"]:hover {
+    .rect-card .default-btn:hover {
       background-color: #b39400; }
 
 /*--------------------------------------------------------------
@@ -415,10 +418,17 @@ a {
   display: none;
   position: fixed;
   background: #fff;
+<<<<<<< HEAD
+  height: 50%;
+  width: 90%;
+  left: 0px;
+  top: 200px; }
+=======
   min-height: 100vh;
   width: 90%;
   left: 0;
   top: 0; }
+>>>>>>> b6d5d36d0215f9f7382408c4e827fd4817d5e652
   .mobile-header-menu--open {
     display: block; }
 
@@ -427,6 +437,14 @@ a {
   display: block;
   color: #fff;
   padding: 0.8rem;
+<<<<<<< HEAD
+  font-size: 1.5rem; }
+  .hamburger-icon--open {
+    color: #000; }
+  @media (min-width: 1200px) {
+    .hamburger-icon {
+      display: none; } }
+=======
   font-size: 1.5rem;
   -webkit-transition: color 0.3s;
   transition: color 0.3s; }
@@ -435,6 +453,7 @@ a {
 
 @media (min-width: 1200px) {
   display: none; }
+>>>>>>> b6d5d36d0215f9f7382408c4e827fd4817d5e652
 
 .main-navigation {
   background: none;
@@ -991,7 +1010,15 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 /* About Page */
-/* Sigle - single-prgrm_svc.php */
+/* Resources Page */
+.resources-grid {
+  max-width: 1000px; }
+  .resources-grid .resources {
+    padding: 3rem 2rem; }
+    .resources-grid .resources .cfs-hyperlink .text {
+      color: #ffffff; }
+
+/* Single - single-prgrm_svc.php */
 @media (min-width: 1200px) {
   .flex-container {
     max-width: 1200px;
@@ -1006,16 +1033,20 @@ object {
 .flex-container .flex-wrap p {
   margin-bottom: 0; }
 
-.flex-container .flex-wrap .content-type-text, .flex-container .flex-wrap .content-type-list {
+.flex-container .flex-wrap .content-type-text,
+.flex-container .flex-wrap .content-type-list {
   padding: 0 2rem;
   margin-bottom: 3rem; }
   @media (min-width: 1200px) {
-    .flex-container .flex-wrap .content-type-text, .flex-container .flex-wrap .content-type-list {
+    .flex-container .flex-wrap .content-type-text,
+    .flex-container .flex-wrap .content-type-list {
       padding: 0; }
-      .flex-container .flex-wrap .content-type-text:last-child, .flex-container .flex-wrap .content-type-list:last-child {
+      .flex-container .flex-wrap .content-type-text:last-child,
+      .flex-container .flex-wrap .content-type-list:last-child {
         margin-bottom: 0; } }
 
-.flex-container .flex-wrap .content-type-widgets h3, .flex-container .flex-wrap .content-type-widgets p {
+.flex-container .flex-wrap .content-type-widgets h3,
+.flex-container .flex-wrap .content-type-widgets p {
   padding: 0 2rem;
   margin-bottom: 1rem; }
 

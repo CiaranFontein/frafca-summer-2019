@@ -13,32 +13,25 @@ get_header(); ?>
 
         <?php if (have_posts()) : ?>
 
-            <header id="about-page-banner" class="frafca-hero-image">
+            <header id="resources-page-banner" class="frafca-hero-image">
 
                 <?php get_template_part('template-parts/hero_banner'); ?>
 
             </header><!-- #front-page-banner -->
 
             <?php /* Start the Loop */ ?>
+            <div class="resources-grid grid-cards">
+                <?php
+                    $resource_cards = frafca_cfs('resources');
+                    foreach ($resource_cards as $resource_card) :
+                        ?>
 
-            <?php
-                $resource_cards = frafca_cfs('');
-                foreach ($resource_cards as $resource_card) :
-                    ?>
-
-
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <div class="resources">
-
-
-
+                    <div class="resources rect-card purple">
+                        <?php echo $resource_card['resource_link']; ?>
                     </div><!-- .entry-content -->
-                </article>
 
-
-
-
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         <?php else : ?>
 
             <?php get_template_part('template-parts/content', 'none'); ?>
