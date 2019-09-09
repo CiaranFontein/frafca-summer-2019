@@ -16,14 +16,15 @@
 
 /* Button */
 
-button, input[type="button"] {
+.default-btn {
+    display: block;
     padding: 16px 8px;
     border: 0 solid transparent;
     border-radius: $border-radius;
+    min-width: 210px;
+    text-decoration: none;
+    align-self: center;
 
-    &.default-btn {
-        min-width: 200px;
-    }
 
     &.yellow {
         background: $color__background-button;

@@ -37,3 +37,35 @@ function frafca_cfs($make_var) {
 	return $frafca_cfs;
 }
 add_action('plugins_loaded', 'frafca_cfs');
+
+
+// Programs and Services posts drop-down menus for ContactForm 7
+function dynamic_field_values ( $tag, $unused ) {
+
+    if ( $tag['name'] != 'programs-services' ) // Field Name
+        return $tag;
+
+    $args = array (
+        'numberposts'   => -1,
+        'post_type'     => 'prgrm_svc',
+        'orderby'       => 'title',
+        'order'         => 'ASC',
+    );
+
+    $prgrams_services_posts = get_posts($args);
+
+    if ( ! $prgrams_services_posts )
+        return $tag;
+
+    foreach ( $prgrams_services_posts as $prgrams_services_post ) {
+		$tag['raw_values'][] = $prgrams_services_post->post_title;
+        $tag['values'][] = $prgrams_services_post->post_title;
+        $tag['labels'][] = $prgrams_services_post->post_title;
+		
+	}
+	
+    return $tag;
+	
+}
+
+add_filter( 'wpcf7_form_tag', 'dynamic_field_values', 10, 2);

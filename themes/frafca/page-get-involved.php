@@ -12,27 +12,40 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <!-- Hero Image : type 1  -->
-        <header id="get-involved-banner"  class="frafca-hero-image">
-            <?php get_template_part( 'template-parts/hero_banner' ); ?>
+        <header id="get-involved-banner"  class="frafca-hero-image get-involved-banner-header">
+			<?php get_template_part( 'template-parts/hero_banner' ); ?>
         </header><!-- #front-page-banner -->
-
-        <section id="get-involved-categories">
-            <div class="grid-cards">
-                <?php  
-                    $get_involved_categories = frafca_cfs('categories');
-                    foreach( $get_involved_categories as $category ):
-                        $cat = get_term($category);
-                            $name = $cat->name;
-                            $description = $cat->description;
+		<h2 class="contact-location-header"><?php echo frafca_cfs('location_header') ?></h2>
+        <section class="get-involved">
+            <div class="grid-cards contact-cards">
+				<?php  
+                    $card = frafca_cfs('cards_get_involved');
+                    foreach($card as $card) :
+                            $title = $card['get_involved_title'];
+                            $description = $card['get_involved_description'];
+                            // array of related posts
+							$learn_more = $card['get_involved_learn_more'];
                 ?>
+
                     <div class="rect-card purple">
-                        <h3><?php echo $name ?></h3>
-                        <p><?php echo $description ?></p>
-                        <a href="<?php echo get_term_link($cat) ?>" target="_blank">
-                            <input class='default-btn yellow' type="button" value="View Category">
+                        <h3><?php echo $title;?></h3>
+                        <p><?php echo $description;?></p>
+                        
+                        <?php
+                        foreach($learn_more as $post):
+                    
+                        ?>
+                        <a class="default-btn yellow" href="<?php echo get_the_permalink($post); ?>" 
+                            target="_blank">
+                            Learn More
                         </a>
+                        <?php
+                        endforeach;
+                        ?>
                     </div>
-                <?php endforeach ?>
+
+                <?php endforeach; ?>
+            
             </div>
         </section><!-- #prgrm_svc-categories -->
 
