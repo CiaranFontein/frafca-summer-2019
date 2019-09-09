@@ -69,9 +69,22 @@ a {
     left: 0;
     top: 0;
     z-index: 2;
+    padding: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &:first-child {
+        padding-top: 60px;
+    }
+
+    .sub-menu {
+        display: none;
+    }
 
     &--open {
         display: block;
+        opacity: 1;
     }
 
     a {
@@ -86,7 +99,7 @@ a {
     display: block;
     color: #fff;
     padding: 0.8rem;
-    font-size: 1.5rem;
+    font-size: $font__mobile_icon_size;
     transition: color 0.3s;
 
     &--open {
@@ -95,6 +108,7 @@ a {
 
     @include desktop {
         display: none;
+        font-size: $font__desktop_icon_size;
     }
 }
 
@@ -125,13 +139,21 @@ a {
         color: #fff;
         padding: 0.8rem;
         transform: scaleX(-1);
-        font-size: 1.5rem;
+        font-size: $font__mobile_icon_size;
+
+        @include desktop {
+            font-size: $font__desktop_icon_size;
+        }
     }
 
     ul {
         display: block;
         list-style: none;
         padding-inline-start: 0px;
+
+        .sub-menu {
+            display: none;
+        }
 
         li {
             display: inline;

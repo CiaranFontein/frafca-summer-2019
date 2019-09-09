@@ -35,8 +35,8 @@ get_header(); ?>
 						<p><?php echo $services;?></p>
 						<p><?php echo $phone;?></p>
 						<p><?php echo $fax;?></p>
-                        <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
-                            <input class='default-btn yellow' type="button" value="<?php echo $button['text']; ?>">
+                        <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                            <?php echo $button['text']; ?>
                         </a>
                     </div>
 

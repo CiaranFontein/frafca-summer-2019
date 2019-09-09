@@ -422,9 +422,19 @@ a {
   width: 93%;
   left: 0;
   top: 0;
-  z-index: 2; }
+  z-index: 2;
+  padding: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+  .mobile-header-menu:first-child {
+    padding-top: 60px; }
+  .mobile-header-menu .sub-menu {
+    display: none; }
   .mobile-header-menu--open {
-    display: block; }
+    display: block;
+    opacity: 1; }
   .mobile-header-menu a {
     text-decoration: none;
     color: #2F2B5C;
@@ -435,14 +445,15 @@ a {
   display: block;
   color: #fff;
   padding: 0.8rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   -webkit-transition: color 0.3s;
   transition: color 0.3s; }
   .hamburger-icon--open {
     color: #000; }
   @media (min-width: 1200px) {
     .hamburger-icon {
-      display: none; } }
+      display: none;
+      font-size: 1.5rem; } }
 
 .main-navigation {
   background: none;
@@ -470,12 +481,17 @@ a {
     padding: 0.8rem;
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-    font-size: 1.5rem; }
+    font-size: 2.5rem; }
+    @media (min-width: 1200px) {
+      .main-navigation i {
+        font-size: 1.5rem; } }
   .main-navigation ul {
     display: block;
     list-style: none;
     -webkit-padding-start: 0px;
             padding-inline-start: 0px; }
+    .main-navigation ul .sub-menu {
+      display: none; }
     .main-navigation ul li {
       display: inline;
       padding: 0.8rem; }
@@ -873,13 +889,15 @@ a {
 .page-template-page-contact .contact-cards .rect-card h3 {
   text-align: left; }
 
-@media (min-width: 1200px) {
-  .page-template-page-contact .contact-cards .rect-card {
-    margin: 0;
-    padding: 5rem 2.5rem 2rem 2.5rem; }
-    .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
-      margin-left: 0;
-      margin-right: 0; } }
+.page-template-page-contact .contact-cards .rect-card {
+  padding: 5rem 2.5rem 2rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-contact .contact-cards .rect-card {
+      margin: 0;
+      padding: 5rem 2.5rem 2rem 2.5rem; }
+      .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
+        margin-left: 0;
+        margin-right: 0; } }
 
 .page-template-page-contact .contact-location-header {
   color: #323232;
