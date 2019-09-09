@@ -415,9 +415,10 @@ a {
   display: none;
   position: fixed;
   background: #fff;
-  height: 100%;
+  height: 50%;
   width: 90%;
-  left: 0px; }
+  left: 0px;
+  top: 200px; }
   .mobile-header-menu--open {
     display: block; }
 
@@ -426,6 +427,8 @@ a {
   color: #fff;
   padding: 0.8rem;
   font-size: 1.5rem; }
+  .hamburger-icon--open {
+    color: #000; }
   @media (min-width: 1200px) {
     .hamburger-icon {
       display: none; } }
@@ -985,7 +988,15 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 /* About Page */
-/* Sigle - single-prgrm_svc.php */
+/* Resources Page */
+.resources-grid {
+  max-width: 1000px; }
+  .resources-grid .resources {
+    padding: 3rem 2rem; }
+    .resources-grid .resources .cfs-hyperlink .text {
+      color: #ffffff; }
+
+/* Single - single-prgrm_svc.php */
 @media (min-width: 1200px) {
   .flex-container {
     max-width: 1200px;
@@ -1000,16 +1011,20 @@ object {
 .flex-container .flex-wrap p {
   margin-bottom: 0; }
 
-.flex-container .flex-wrap .content-type-text, .flex-container .flex-wrap .content-type-list {
+.flex-container .flex-wrap .content-type-text,
+.flex-container .flex-wrap .content-type-list {
   padding: 0 2rem;
   margin-bottom: 3rem; }
   @media (min-width: 1200px) {
-    .flex-container .flex-wrap .content-type-text, .flex-container .flex-wrap .content-type-list {
+    .flex-container .flex-wrap .content-type-text,
+    .flex-container .flex-wrap .content-type-list {
       padding: 0; }
-      .flex-container .flex-wrap .content-type-text:last-child, .flex-container .flex-wrap .content-type-list:last-child {
+      .flex-container .flex-wrap .content-type-text:last-child,
+      .flex-container .flex-wrap .content-type-list:last-child {
         margin-bottom: 0; } }
 
-.flex-container .flex-wrap .content-type-widgets h3, .flex-container .flex-wrap .content-type-widgets p {
+.flex-container .flex-wrap .content-type-widgets h3,
+.flex-container .flex-wrap .content-type-widgets p {
   padding: 0 2rem;
   margin-bottom: 1rem; }
 
