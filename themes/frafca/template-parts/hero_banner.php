@@ -1,6 +1,7 @@
 <!-- hero contents -->
 <?php 
-    $heros = frafca_cfs('banner');
+    $limit_heros = count(frafca_cfs('banner'))-1;
+    $heros = array( 0 => frafca_cfs('banner')[$limit_heros]);
     foreach( $heros as $hero ) :        
         $hero_img = $hero['banner_image'];
         $hero_title = $hero['banner_title'];

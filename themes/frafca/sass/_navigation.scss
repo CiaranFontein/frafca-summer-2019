@@ -67,11 +67,9 @@ a {
     height: 100%;
     width: 90%;
     left: 0px;
-    top: 90px;
 
     &--open {
         display: block;
-        overflow: hidden;
     }
 }
 
@@ -80,6 +78,8 @@ a {
     color: #fff;
     padding: 0.8rem;
     font-size: 1.5rem;
+
+    &--open {}
 
     @include desktop {
         display: none;
