@@ -13,21 +13,21 @@ get_header(); ?>
 
         <?php if (have_posts()) : ?>
 
-            <header id="resources-page-banner" class="frafca-hero-image">
+            <header id="donate-page-banner" class="frafca-hero-image">
 
                 <?php get_template_part('template-parts/hero_banner'); ?>
 
-            </header><!-- #front-page-banner -->
+            </header><!-- #donate-page-banner -->
 
             <?php /* Start the Loop */ ?>
-            <div class="resources-grid grid-cards">
+            <div class="donate-grid">
                 <?php
-                    $resource_cards = frafca_cfs('resources');
-                    foreach ($resource_cards as $resource_card) :
+                    $donate_cards = frafca_cfs('resources');
+                    foreach ($donate_cards as $resource_card) :
                         ?>
 
-                    <div class="resources rect-card purple">
-                        <?php echo $resource_card['resource_link']; ?>
+                    <div class="donate-card">
+                        <?php echo $donate_card['resource_link']; ?>
                     </div><!-- .entry-content -->
 
                 <?php endforeach; ?>
