@@ -24,7 +24,8 @@ if (!function_exists('frafca_theme_setup')) :
 		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(array(
+		register_nav_menus(array(			
+			'Mobile-Header-Menu' => esc_html('Mobile-Header-Menu'),
 			'Header-Menu' => esc_html('Header-Menu'),
 			'Side-Header-Menu' => esc_html('Side-Header-Menu'),
 			'footer_connect' => esc_html('Footer Menu - Connect'),
