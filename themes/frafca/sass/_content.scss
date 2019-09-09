@@ -117,31 +117,53 @@
 }
 
 /* Contact Page **** START */
-.contact-cards {
 
-	@include desktop {
-		display:grid;
-		grid-template-columns: repeat(3, 1fr);
-		margin: 0rem 1rem 2rem
-
-	}
-	.rect-card p,
-	.rect-card h3 {
-		text-align: left;
-	}	
-}
-
-.contact-location-header {
-
-	color: $color__text-sec;
-    text-align: center;
-	padding: 5rem 0 0 0;
+.page-template-page-contact {
 	
+	.grid-cards {
 	@include desktop {
-		padding: 5rem 0 5rem 0;
+		display:inline;
+		max-width: 1200px;
+		margin: auto;
+		}
 	}
-}
 
+		.contact-cards {
+			@include desktop {
+				display:grid;
+				grid-template-columns: repeat(3, 1fr);
+				// margin: 2rem 1rem 5rem 1rem;
+				grid-gap: 2rem;
+
+			}
+			.rect-card p,
+			.rect-card h3 {
+				text-align: left;
+			}
+			.rect-card {@include desktop {
+				margin: 0;
+				padding: 5rem 2.5rem 2rem 2.5rem;
+	
+				// Adjust margins of even number of container
+				&:nth-child(2*n){
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+			}
+		}
+
+		.contact-location-header {
+
+			color: $color__text-sec;
+			text-align: center;
+			padding: 5rem 0 0 0;
+			
+			@include desktop {
+				padding: 5rem 0 5rem 0;
+			}
+		}
+	}
 /* Contact Page #### END */
 
 /* Team Page **** START */

@@ -493,6 +493,7 @@ a {
 
 .footer-container {
   padding-top: 30px;
+  margin-top: 5rem;
   color: #ffffff; }
 
 @media (min-width: 1200px) {
@@ -817,21 +818,35 @@ a {
 
 /* Contact Page **** START */
 @media (min-width: 1200px) {
-  .contact-cards {
+  .page-template-page-contact .grid-cards {
+    display: inline;
+    max-width: 1200px;
+    margin: auto; } }
+
+@media (min-width: 1200px) {
+  .page-template-page-contact .contact-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 0rem 1rem 2rem; } }
+    grid-gap: 2rem; } }
 
-.contact-cards .rect-card p,
-.contact-cards .rect-card h3 {
+.page-template-page-contact .contact-cards .rect-card p,
+.page-template-page-contact .contact-cards .rect-card h3 {
   text-align: left; }
 
-.contact-location-header {
+@media (min-width: 1200px) {
+  .page-template-page-contact .contact-cards .rect-card {
+    margin: 0;
+    padding: 5rem 2.5rem 2rem 2.5rem; }
+    .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
+      margin-left: 0;
+      margin-right: 0; } }
+
+.page-template-page-contact .contact-location-header {
   color: #323232;
   text-align: center;
   padding: 5rem 0 0 0; }
   @media (min-width: 1200px) {
-    .contact-location-header {
+    .page-template-page-contact .contact-location-header {
       padding: 5rem 0 5rem 0; } }
 
 /* Contact Page #### END */
