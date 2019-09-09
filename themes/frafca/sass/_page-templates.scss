@@ -5,3 +5,20 @@
 /* Front page */
 
 /* About Page */
+
+/* Sigle - single-prgrm_svc.php */
+.flex-container {
+    .flex-wrap {
+        .content-type-text, .content-type-list {
+            padding: 0 2rem;
+        }
+        .content-type-widgets {
+            h2, p {
+                padding: 0 2rem;
+            }
+            h2 {
+                color: $color__text-main;
+            }
+        }
+    }
+}
