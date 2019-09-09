@@ -128,6 +128,15 @@ get_header(); ?>
             </div>
         </section>
 
+        <section class="get-in-touch">
+            <div class="form-container purple">
+                <?php  
+                    $forms = frafca_cfs('get_in_touch');
+                    echo $forms;
+                ?>
+            </div>
+        </section>
+
     </main><!-- #main -->
 </div><!-- #primary -->
 
