@@ -28,8 +28,8 @@ get_header(); ?>
                     <div class="rect-card purple">
                         <h3><?php echo $name ?></h3>
                         <p><?php echo $description ?></p>
-                        <a href="<?php echo esc_url(get_term_link($cat));?>" target="_self">
-                            <input class='default-btn yellow' type="button" value="View Category">
+                        <a href="<?php echo esc_url(get_term_link($cat));?>" target="_self" class='default-btn yellow'>
+                            View Category
                         </a>
                     </div>
                 <?php endforeach ?>

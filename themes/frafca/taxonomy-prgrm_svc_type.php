@@ -50,8 +50,8 @@ get_header(); ?>
                             echo frafca_cfs('banner')[$limit_heros]['banner_description'];
                             ?>
                         </p>
-                        <a href="<?php echo esc_url( get_permalink() ) ;?>" target="_self">
-                            <input class='default-btn yellow' type="button" value="Learn More">
+                        <a href="<?php echo esc_url( get_permalink() ) ;?>" target="_self" class="default-btn yellow">
+                            Learn More
                         </a>
                     </div>
                 <?php // endforeach ?>

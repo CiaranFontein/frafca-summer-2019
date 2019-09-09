@@ -415,19 +415,20 @@ a {
   display: none;
   position: fixed;
   background: #fff;
-  height: 100%;
+  height: 50%;
   width: 90%;
   left: 0px;
-  top: 90px; }
+  top: 200px; }
   .mobile-header-menu--open {
-    display: block;
-    overflow: hidden; }
+    display: block; }
 
 .hamburger-icon {
   display: block;
   color: #fff;
   padding: 0.8rem;
   font-size: 1.5rem; }
+  .hamburger-icon--open {
+    color: #000; }
   @media (min-width: 1200px) {
     .hamburger-icon {
       display: none; } }
