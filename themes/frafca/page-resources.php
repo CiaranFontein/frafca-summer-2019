@@ -13,11 +13,17 @@ get_header(); ?>
 
         <?php if (have_posts()) : ?>
 
-            <?php if (is_home() && !is_front_page()) : ?>
-                <header>
-                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                </header>
-            <?php endif; ?>
+            <header id="front-page-banner" class="frafca-hero-image">
+
+                <?php get_template_part('template-parts/hero_banner'); ?>
+
+                <!-- scroll down with the arrow -->
+                <div class="scroll-down">
+                    <p>Scroll Down</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+
+            </header><!-- #front-page-banner -->
 
             <?php /* Start the Loop */ ?>
             <?php while (have_posts()) : the_post(); ?>
