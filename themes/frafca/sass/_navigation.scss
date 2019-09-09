@@ -64,9 +64,11 @@ a {
     display: none;
     position: fixed;
     background: #fff;
-    height: 100%;
+    height: 50%;
     width: 90%;
     left: 0px;
+
+    top: 200px;
 
     &--open {
         display: block;
@@ -79,7 +81,9 @@ a {
     padding: 0.8rem;
     font-size: 1.5rem;
 
-    &--open {}
+    &--open {
+        color: #000;
+    }
 
     @include desktop {
         display: none;
