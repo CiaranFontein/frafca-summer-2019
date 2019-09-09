@@ -755,7 +755,8 @@ a {
 .bypostauthor {
   display: block; }
 
-.hero-image-page {
+/* Hero Image **** START */
+.frafca-hero-image .hero-image-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,11 +770,26 @@ a {
   height: 100vh;
   text-align: center; }
   @media (min-width: 1200px) {
-    .hero-image-page {
+    .frafca-hero-image .hero-image-page {
       height: 72vh;
       padding: 5rem 24rem 5rem 24rem; } }
-  .page-template-front-page .hero-image-page {
+  .page-template-front-page .frafca-hero-image .hero-image-page {
     height: 100vh; }
+
+.single-prgrm_svc .frafca-hero-image {
+  margin-bottom: 5rem; }
+
+/* Hero Image #### END */
+/* Grid Card **** START */
+.purple {
+  background-color: #2F2B5C; }
+
+.pink {
+  background-color: #BA5357; }
+
+.white {
+  background-color: transparent;
+  color: #0D0D0D; }
 
 @media (min-width: 1200px) {
   .grid-cards {
@@ -793,6 +809,11 @@ a {
   margin: 5rem 0;
   padding: 5rem 1.5rem 2rem 1.5rem;
   text-align: center; }
+  .grid-cards .rect-card.no-content {
+    grid-column: 1/3;
+    margin: 0;
+    padding: 2rem;
+    color: #4D4E60; }
   @media (min-width: 1200px) {
     .grid-cards .rect-card {
       margin: 0 1rem 2rem 0;
@@ -806,16 +827,10 @@ a {
           -ms-flex-positive: 1;
               flex-grow: 1; } }
 
-.grid-cards .purple {
-  background-color: #2F2B5C; }
-
-.grid-cards .white {
-  background-color: #ffffff;
-  color: #0D0D0D; }
-
 .grid-cards p {
   margin-bottom: 3rem; }
 
+/* Grid Card #### END */
 /* Contact Page **** START */
 @media (min-width: 1200px) {
   .page-template-page-contact .grid-cards {
@@ -959,3 +974,12 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 /* About Page */
+/* Sigle - single-prgrm_svc.php */
+.flex-container .flex-wrap .content-type-text, .flex-container .flex-wrap .content-type-list {
+  padding: 0 2rem; }
+
+.flex-container .flex-wrap .content-type-widgets h2, .flex-container .flex-wrap .content-type-widgets p {
+  padding: 0 2rem; }
+
+.flex-container .flex-wrap .content-type-widgets h2 {
+  color: #ffffff; }

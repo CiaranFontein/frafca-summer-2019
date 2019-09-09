@@ -10,8 +10,8 @@
 function frafca_taxonomy_programs_services() {
 
 	$labels = array(
-		'name'                       => _x( 'Programs & Services', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Program & Service', 'Taxonomy Singular Name', 'text_domain' ),
+		'name'                       => _x( 'Programs & Services Type', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Program & Service Type', 'Taxonomy Singular Name', 'text_domain' ),
 		'menu_name'                  => __( 'Programs & Services Type', 'text_domain' ),
 		'all_items'                  => __( 'All Programs & Services Types', 'text_domain' ),
 		'parent_item'                => __( 'Parent Programs & Services Type', 'text_domain' ),

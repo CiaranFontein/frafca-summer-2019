@@ -11,7 +11,7 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <!-- Hero Image : type 1  -->
-        <header id="prgrm_svc-banner"  class="frafca-hero-image">
+        <header id="taxonomy_prgrm_svc-banner"  class="frafca-hero-image">
             <!-- hero contents -->
                 <div class="hero-image-page" style="
                     background : 
@@ -36,25 +36,30 @@ get_header(); ?>
                     </div>
                 </div>
             <!-- end hero contents -->
-        </header><!-- #front-page-banner -->
+        </header><!-- #taxonomy_prgrm_svc-banner -->
 
-        <section id="prgrm_svc-categories">
+        <section id="prgrm_svc-taxonomies">
             <div class="grid-cards">
-                <?php  
-                    // $prgrm_svc_categories = frafca_cfs('categories');
-                    // foreach( $prgrm_svc_categories as $category ):
-                    //     $cat = get_term($category);
-                    //         $name = $cat->name;
-                    //         $description = $cat->description;
-                ?>
-                    <!-- <div class="rect-card purple">
-                        <h3><?php // echo $name ?></h3>
-                        <p><?php // echo $description ?></p>
-                        <a href="<?php // echo get_term_link($cat) ?>" target="_self">
-                            <input class='default-btn yellow' type="button" value="View Category">
+            <?php if ( have_posts() ) : ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <div class="rect-card pink">
+                        <h3><?php the_title();?></h3>
+                        <p>
+                            <?php                            
+                            echo frafca_cfs('program_services_description')[0]['about'];
+                            ?>
+                        </p>
+                        <a href="<?php echo esc_url( get_permalink() ) ;?>" target="_self">
+                            <input class='default-btn yellow' type="button" value="Learn More">
                         </a>
-                    </div> -->
+                    </div>
                 <?php // endforeach ?>
+                <?php endwhile; ?>
+                <?php else : ?>
+                <div class="rect-card no-content">
+                    <h2>Nothing found!</h2>
+                </div>
+                <?php endif; ?>
             </div>
         </section><!-- #prgrm_svc-categories -->
 
