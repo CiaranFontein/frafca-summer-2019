@@ -119,10 +119,6 @@ a {
     align-items: center;
     padding: 0.8rem 0rem;
 
-    .sub-menu {
-        display: none;
-    }
-
     .header-menu {
         display: none;
 
@@ -154,6 +150,10 @@ a {
         display: block;
         list-style: none;
         padding-inline-start: 0px;
+
+        .sub-menu {
+            display: none;
+        }
 
         li {
             display: inline;
