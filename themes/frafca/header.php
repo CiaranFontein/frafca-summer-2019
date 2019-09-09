@@ -23,6 +23,9 @@
 
         <header id="masthead" class="site-header" role="banner">
             <div class="mobile-header-menu">
+                <div class="mobile-header-menu-container">
+                    <?php wp_nav_menu( array( 'theme_location' => 'Mobile-Header-Menu', 'Mobile-Header-Menu' => 'Mobile-Header-Menu' ) ); ?>
+                </div>
             </div>
             <div class=" hamburger-icon">
                 <i class="fas fa-bars"></i>

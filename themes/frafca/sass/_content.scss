@@ -149,6 +149,7 @@
 .page-template-page-contact {
 	
 	.grid-cards {
+		// padding: 5rem 2.5rem 2rem;
 	@include desktop {
 		display:inline;
 		max-width: 1200px;
@@ -168,7 +169,9 @@
 			.rect-card h3 {
 				text-align: left;
 			}
-			.rect-card {@include desktop {
+			.rect-card {
+				padding: 5rem 2.5rem 2rem;
+				@include desktop {
 				margin: 0;
 				padding: 5rem 2.5rem 2rem 2.5rem;
 	

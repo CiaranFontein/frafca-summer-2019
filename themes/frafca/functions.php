@@ -24,7 +24,8 @@ if (!function_exists('frafca_theme_setup')) :
 		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(array(
+		register_nav_menus(array(			
+			'Mobile-Header-Menu' => esc_html('Mobile-Header-Menu'),
 			'Header-Menu' => esc_html('Header-Menu'),
 			'Side-Header-Menu' => esc_html('Side-Header-Menu'),
 			'footer_connect' => esc_html('Footer Menu - Connect'),
@@ -96,12 +97,17 @@ function frafca_theme_scripts()
 	wp_enqueue_style('google-fonts-style', 'https://fonts.googleapis.com/css?family=Merriweather:700|Raleway:400,700&display=swap');
 	/* Font Awesome for Icons */
 	wp_enqueue_style('custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css');
-
+	
+	// Scripts for FRAFCA theme
 	wp_enqueue_script('frafca-script', get_template_directory_uri() . '/build/js/script.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-hamburger-animations', get_template_directory_uri() . '/build/js/hamburger-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-theme-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array('jquery'), '', true);
-	wp_enqueue_style('frafca-theme-style', get_stylesheet_uri());
+	// Enqueue script only for single-prgrm_svc 
+	if ( is_singular('prgrm_svc') ){
+		wp_enqueue_script('frafca-theme-cf7-set-default-option', get_template_directory_uri() . '/build/js/cf7-set-default-option.min.js', array('jquery'), '', true);
+	}
 
+	wp_enqueue_style('frafca-theme-style', get_stylesheet_uri());
 	wp_enqueue_style('flickity-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 	wp_register_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', null, null, true);
 	wp_enqueue_script('flickity');

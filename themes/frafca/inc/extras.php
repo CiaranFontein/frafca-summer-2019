@@ -42,6 +42,7 @@ add_action('plugins_loaded', 'frafca_cfs');
 // Programs and Services posts drop-down menus for ContactForm 7
 function dynamic_field_values ( $tag, $unused ) {
 
+
     if ( $tag['name'] != 'programs-services' ) // Field Name
         return $tag;
 
@@ -58,10 +59,10 @@ function dynamic_field_values ( $tag, $unused ) {
         return $tag;
 
     foreach ( $prgrams_services_posts as $prgrams_services_post ) {
+		
 		$tag['raw_values'][] = $prgrams_services_post->post_title;
         $tag['values'][] = $prgrams_services_post->post_title;
-        $tag['labels'][] = $prgrams_services_post->post_title;
-		
+		$tag['labels'][] = $prgrams_services_post->post_title;	
 	}
 	
     return $tag;
