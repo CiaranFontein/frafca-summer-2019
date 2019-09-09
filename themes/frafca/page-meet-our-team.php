@@ -4,7 +4,7 @@
  * The main template file.
  * 
  * @package FRAFCA_Theme
- * Template Name: page-team
+ * Template Name: page-meet-our-team
  */
 
 get_header(); ?>

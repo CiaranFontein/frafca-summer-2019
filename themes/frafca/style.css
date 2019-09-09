@@ -844,44 +844,45 @@ a {
 
 /* Contact Page #### END */
 /* Team Page **** START */
-.page-template-page-team-php .grid-cards .rect-card {
-  margin: 0;
-  padding: 0rem 1.5rem 5rem 1.5rem; }
-  @media (min-width: 1200px) {
-    .page-template-page-team-php .grid-cards .rect-card {
-      padding: 0rem 1.5rem 8rem 1.5rem; } }
+.page-template-page-meet-our-team-php .grid-cards {
+  display: inline; }
+  .page-template-page-meet-our-team-php .grid-cards .rect-card {
+    margin: 0;
+    padding: 0rem 1.5rem 5rem 1.5rem; }
+    @media (min-width: 1200px) {
+      .page-template-page-meet-our-team-php .grid-cards .rect-card {
+        padding: 0rem 1.5rem 8rem 1.5rem; } }
+  .page-template-page-meet-our-team-php .grid-cards p {
+    margin-bottom: 1.5rem; }
 
-.page-template-page-team-php .grid-cards p {
-  margin-bottom: 1.5rem; }
-
-.page-template-page-team-php .card-info {
+.page-template-page-meet-our-team-php .card-info {
   padding: 0 2rem; }
   @media (min-width: 1200px) {
-    .page-template-page-team-php .card-info {
+    .page-template-page-meet-our-team-php .card-info {
       text-align: left;
       padding: 0; } }
-  .page-template-page-team-php .card-info p:first-child {
+  .page-template-page-meet-our-team-php .card-info p:first-child {
     font-weight: bold; }
-  .page-template-page-team-php .card-info p:nth-child(2) {
+  .page-template-page-meet-our-team-php .card-info p:nth-child(2) {
     font-weight: 500; }
-  .page-template-page-team-php .card-info a {
+  .page-template-page-meet-our-team-php .card-info a {
     color: #323232;
     text-decoration: none; }
-    .page-template-page-team-php .card-info a:hover {
+    .page-template-page-meet-our-team-php .card-info a:hover {
       color: #323232; }
-    .page-template-page-team-php .card-info a:active {
+    .page-template-page-meet-our-team-php .card-info a:active {
       color: #323232; }
 
-.page-template-page-team-php .page-team-header {
+.page-template-page-meet-our-team-php .page-team-header {
   color: #323232;
   text-align: center;
   padding: 3rem 0 3rem 0; }
   @media (min-width: 1200px) {
-    .page-template-page-team-php .page-team-header {
+    .page-template-page-meet-our-team-php .page-team-header {
       padding: 8rem 0 8rem 0; } }
 
 @media (min-width: 1200px) {
-  .page-template-page-team-php .grid-rect-card {
+  .page-template-page-meet-our-team-php .grid-rect-card {
     display: grid;
     grid-template-columns: 45% 55%; } }
 
