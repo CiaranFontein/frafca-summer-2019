@@ -24,3 +24,7 @@ ehthumbs.db
 # =============== #
 node_modules/
 package-lock.json
+
+# Ignore style.css #
+# ================ #
+style.css
