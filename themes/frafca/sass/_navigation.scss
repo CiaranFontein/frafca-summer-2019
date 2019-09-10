@@ -118,6 +118,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 0rem;
+    position: relative;
 
     .header-menu {
         display: none;
@@ -153,6 +154,19 @@ a {
 
         .sub-menu {
             display: none;
+            position: absolute;
+            top: 50px;
+            left: 0%;
+            background: white;
+            color: black;
+
+            li {
+                display: block;
+
+                a {
+                    color: black;
+                }
+            }
         }
 
         li {
