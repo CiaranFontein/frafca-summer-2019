@@ -38,6 +38,8 @@ get_header(); ?>
                         <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                             <?php echo $button['text']; ?>
                         </a>
+                        
+
                     </div>
 
                 <?php endforeach; ?>
