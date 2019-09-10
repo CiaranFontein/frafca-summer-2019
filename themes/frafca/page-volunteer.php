@@ -37,8 +37,9 @@ get_header(); ?>
 
 						<?php endforeach; ?>
 					
-					</div>
-					<div class="grid-cards volunteer-cards">
+				</div>
+
+				<div class="flex-wrap single-description">
 						<?php  
 							$card = frafca_cfs('how_to_apply');
 							foreach($card as $card) :
@@ -46,18 +47,18 @@ get_header(); ?>
 									$description = $card['how_to_apply_description'];
 						?>
 
-							<div class="rect-card white">
-								<div class="card-info">
-									<h2><?php echo $header;?></h2>
+							<div class="content-type-text">
+								
+									<h3><?php echo $header;?></h3>
 									<p><?php echo $description;?></p>
-								</div>
+								
 							</div>
 
 						<?php endforeach; ?>
 				</div>				
 			</div>
 			
-			<div class="grid-cards volunteer-cards">
+			<div class="flex-wrap single-details">
 				<?php  
                     $card = frafca_cfs('contact_information');
                     foreach($card as $card) :
@@ -68,14 +69,16 @@ get_header(); ?>
 							$fax = $card['fax'];
                 ?>
 
-                    <div class="rect-card purple">
-						<div class="card-info">
-							<p><?php echo $header;?></p>
-							<p><?php echo $title;?></p>
-							<a href="mailto:<?php echo $email;?>" target="_top"><?php echo $email;?></a>
-							<p><?php echo $phone;?></p>
-							<p><?php echo $fax;?></p>
-						</div>
+                    <div class="content-type-widgets">
+						
+							<h3 class="purple"><?php echo $header;?></h3>
+							<div class="white">
+								<p><?php echo $title;?></p>
+								<span>Email: </span><a href="mailto:<?php echo $email;?>" target="_top"><?php echo $email;?></a>
+								<p><span>Phone: </span> <?php echo $phone;?></p>
+								<p><span>Fax: </span> <?php echo $fax;?></p>
+							</div>
+						
                     </div>
 
                 <?php endforeach; ?>
