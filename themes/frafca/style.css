@@ -360,6 +360,14 @@ img {
     .rect-card .default-btn:hover {
       background-color: #b39400; }
 
+/* Contact Form 7 */
+div.wpcf7 {
+  padding: 3.75rem 2rem; }
+  div.wpcf7 h3 {
+    text-align: center; }
+  div.wpcf7 input, div.wpcf7 textarea, div.wpcf7 select {
+    width: 100%; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/

@@ -39,3 +39,15 @@
         }
     }
 }
+
+/* Contact Form 7 */
+div.wpcf7 { // used div to override
+    padding: 3.75rem 2rem;
+
+    h3 {
+        text-align: center;
+    }
+    input, textarea, select {
+        width: 100%;
+    }
+}
