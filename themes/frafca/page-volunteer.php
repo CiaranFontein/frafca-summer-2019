@@ -15,45 +15,46 @@ get_header(); ?>
         <header id="page-volunteer-banner"  class="frafca-hero-image page-volunteer-banner-header">
 			<?php get_template_part( 'template-parts/hero_banner' ); ?>
         </header><!-- #page-banner -->
-		<h2 class="page-volunteer-header"><?php echo frafca_cfs('meet_our_team') ?></h2>
+		<!-- <h2 class="page-volunteer-header"><?php echo frafca_cfs('meet_our_team') ?></h2> -->
+
         <section id="page-volunteer">
-            <div class="grid-cards volunteer-cards">
-				<?php  
-                    $card = frafca_cfs('why_volunteer');
-                    foreach($card as $card) :
-							$header = $card['why_volunteer_header'];
-							$description = $card['why_volunteer_description'];
-                ?>
+            <div class="flex-container white">
 
-                    <div class="rect-card white">
-						<div class="card-info">
-							<h2><?php echo $header;?></h2>
-							<p><?php echo $description;?></p>
-						</div>
-                    </div>
+				<div class="flex-wrap single-description">
+						<?php  
+							$card = frafca_cfs('why_volunteer');
+							foreach($card as $card) :
+									$header = $card['why_volunteer_header'];
+									$description = $card['why_volunteer_description'];
+						?>
 
-                <?php endforeach; ?>
-            
-			</div>
+							<div class="content-type-text">
+	
+									<h3><?php echo $header;?></h3>
+									<p><?php echo $description;?></p>
+								
+							</div>
 
+						<?php endforeach; ?>
+					
+					</div>
+					<div class="grid-cards volunteer-cards">
+						<?php  
+							$card = frafca_cfs('how_to_apply');
+							foreach($card as $card) :
+									$header = $card['how_to_apply_header'];
+									$description = $card['how_to_apply_description'];
+						?>
 
-			<div class="grid-cards volunteer-cards">
-				<?php  
-                    $card = frafca_cfs('how_to_apply');
-                    foreach($card as $card) :
-							$header = $card['how_to_apply_header'];
-							$description = $card['how_to_apply_description'];
-                ?>
+							<div class="rect-card white">
+								<div class="card-info">
+									<h2><?php echo $header;?></h2>
+									<p><?php echo $description;?></p>
+								</div>
+							</div>
 
-                    <div class="rect-card white">
-						<div class="card-info">
-							<h2><?php echo $header;?></h2>
-							<p><?php echo $description;?></p>
-						</div>
-                    </div>
-
-                <?php endforeach; ?>
-            
+						<?php endforeach; ?>
+				</div>				
 			</div>
 			
 			<div class="grid-cards volunteer-cards">
@@ -67,7 +68,7 @@ get_header(); ?>
 							$fax = $card['fax'];
                 ?>
 
-                    <div class="rect-card white grid-rect-card">
+                    <div class="rect-card purple">
 						<div class="card-info">
 							<p><?php echo $header;?></p>
 							<p><?php echo $title;?></p>
