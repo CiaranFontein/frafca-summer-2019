@@ -17,11 +17,11 @@ get_header(); ?>
                     $heros = array( 0 => frafca_cfs('banner')[$limit_heros]);
                     foreach( $heros as $hero ) :        
                         $hero_img = $hero['banner_image'];
+
                         $hero_description = $hero['banner_description'];
                 ?>
                 
-                <?php if ( trim(strlen( $hero_img )) > 0 ): ?>
-                    
+                <?php if (  !empty($hero_img) ): ?>
                     <div class="hero-image-page" style="
                         background : 
                         linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
