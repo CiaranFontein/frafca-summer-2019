@@ -437,6 +437,12 @@ div.wpcf7 {
     color: #ffffff;
     background-color: #BA5357;
     text-align: center; }
+  @media (min-width: 1200px) {
+    div.wpcf7 form, div.wpcf7 .wpcf7-validation-errors {
+      width: 460px;
+      margin: 0 auto; }
+    div.wpcf7 .wpcf7-validation-errors {
+      bottom: 1.5rem; } }
 
 /*--------------------------------------------------------------
 # Navigation
