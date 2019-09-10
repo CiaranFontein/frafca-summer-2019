@@ -133,4 +133,14 @@ div.wpcf7 { // use div+classname to override
         background-color: $color__background-banner;
         text-align: center;
     }
+
+    @include desktop {
+        form, .wpcf7-validation-errors {
+            width: 460px;
+            margin: 0 auto;
+        }
+        .wpcf7-validation-errors {
+            bottom: 1.5rem;
+        }
+    }
 }
