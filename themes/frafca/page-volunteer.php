@@ -20,7 +20,7 @@ get_header(); ?>
         <section id="page-volunteer">
             <div class="flex-container white page-volunteer-container">
 
-				<div class="flex-wrap single-description">
+				<div class="flex-wrap single-details">
 						<?php  
 							$card = frafca_cfs('why_volunteer');
 							foreach($card as $card) :
@@ -47,7 +47,7 @@ get_header(); ?>
 									$description = $card['how_to_apply_description'];
 						?>
 
-							<div class="content-type-text volunteer-info">
+							<div class="content-type-text volunteer-apply-info">
 								
 									<h3><?php echo $header;?></h3>
 									<p><?php echo $description;?></p>
@@ -74,7 +74,7 @@ get_header(); ?>
 							<h3 class="purple"><?php echo $header;?></h3>
 							<div class="white ">
 								<p><?php echo $title;?></p>
-								<span>Email: </span><a href="mailto:<?php echo $email;?>" target="_top"><?php echo $email;?></a>
+								<p><span>Email: </span><a href="mailto:<?php echo $email;?>" target="_top"><?php echo $email;?></a></p>
 								<p><span>Phone: </span> <?php echo $phone;?></p>
 								<p><span>Fax: </span> <?php echo $fax;?></p>
 							</div>
