@@ -115,6 +115,7 @@ get_header(); ?>
                                     $fax = $de_contact['fax'];
                             ?>
                                 <h3 class="purple">Contact Information</h3>
+                                    
                                 <p>Director: <?php echo $director; ?></p>
                                 <p>Email: <?php echo $email; ?></p>
                                 <p>P: <?php echo $phone; ?></p>

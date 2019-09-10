@@ -9,14 +9,16 @@
 get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
-        <!-- Hero Image : type 2 (Fixed hero-image)  -->
+        <!-- Hero Image : type 2 (CMB2 hero-image)  -->
         <header id="taxonomy_prgrm_svc-banner"  class="frafca-hero-image">
             <!-- hero contents -->
+                <?php 
+                    $term_banner = get_term_meta( get_queried_object_id(), '_frafca_term_banner', true);
+                ?>
                 <div class="hero-image-page" style="
                     background : 
                     linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
-                        url(<?php echo get_template_directory_uri() . '/images/hero-images/hero_image-default.png' ;?>);
+                        url(<?php $term_banner ;?>);
                     background-size: cover;
                     background-position: center; 
                     background-attachment: fixed;
