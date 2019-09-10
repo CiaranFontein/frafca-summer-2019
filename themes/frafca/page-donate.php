@@ -15,7 +15,8 @@ get_header(); ?>
 
             <header id="donate-page-banner" class="frafca-hero-image">
 
-                <?php get_template_part('template-parts/hero_banner'); ?>
+                <?php get_template_part('template-parts/hero_banner_button'); ?>
+
 
             </header><!-- #donate-page-banner -->
 
