@@ -18,9 +18,9 @@ get_header(); ?>
 		<!-- <h2 class="page-volunteer-header"><?php echo frafca_cfs('meet_our_team') ?></h2> -->
 
         <section id="page-volunteer">
-            <div class="flex-container white page-volunteer-container">
+        <div class="flex-container white page-volunteer-container">
 
-				<div class="flex-wrap single-details">
+				<div class="flex-wrap single-description">
 						<?php  
 							$card = frafca_cfs('why_volunteer');
 							foreach($card as $card) :
@@ -37,9 +37,9 @@ get_header(); ?>
 
 						<?php endforeach; ?>
 					
-				</div>
+				<!-- </div>
 
-				<div class="flex-wrap single-description">
+				<div class="flex-wrap single-description"> -->
 						<?php  
 							$card = frafca_cfs('how_to_apply');
 							foreach($card as $card) :
@@ -56,7 +56,6 @@ get_header(); ?>
 
 						<?php endforeach; ?>
 				</div>				
-			</div>
 			
 			<div class="flex-wrap single-details">
 				<?php  
@@ -83,7 +82,8 @@ get_header(); ?>
 
                 <?php endforeach; ?>
             
-            </div>
+			</div>
+		</div>
         </section><!-- #prgrm_svc-categories -->
 
     </main><!-- #main -->

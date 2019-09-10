@@ -266,6 +266,10 @@
 		.volunteer-info {
 			margin: 5rem 2rem 0rem 2rem;
 			text-align: center;
+				@include desktop {
+					text-align: left;
+					margin-top: 0;
+				}
 			
 		}
 
@@ -274,7 +278,7 @@
 			margin-bottom: 5rem;
 				h3 {
 					padding: 2rem 0;
-					margin-bottom: 2.5rem;
+					margin-bottom: 3rem;
 				}
 				
 				a {	color:$color__text-sec;
@@ -287,10 +291,16 @@
 						color:$color__text-sec;
 					}
 				}
+				@include desktop {
+					text-align: left;
+				}
 		}
 		.volunteer-apply-info {
 			text-align: center;
 			margin: 0rem 2rem 5rem 2rem;
+			@include desktop {
+				text-align: left;
+			}
 
 		}
 	}
@@ -319,6 +329,7 @@
 
 					@include desktop {
 						padding: 0;
+						margin-top:0;
 
 						&:last-child {
 							margin-bottom: 0;
@@ -350,6 +361,7 @@
 				@include desktop {
 					&.single-description {
 						order: 1;
+						text-align: left;
 					}
 
 					&.single-details {
