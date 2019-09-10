@@ -149,7 +149,7 @@
 .page-template-page-contact {
 	
 	.grid-cards {
-		// padding: 5rem 2.5rem 2rem;
+		padding-bottom: 5rem;
 	@include desktop {
 		display:inline;
 		max-width: 1200px;
@@ -217,7 +217,7 @@
 		padding: 0 2rem;
 			@include desktop {
 				text-align: left;
-				padding: 0;
+				padding-top: 80px;
 			}
 		
 		p:first-child {
@@ -252,9 +252,135 @@
 		@include desktop {
 			display: grid;
 			grid-template-columns: 45% 55%;
+			grid-gap: 2rem;
 		}
 
 	}
 
 }
 /* Team Page **** END */
+
+/* Volunteer page **** Start */
+	.page-template-page-volunteer {
+		
+		.volunteer-info {
+			margin: 5rem 2rem 0rem 2rem;
+			text-align: center;
+			
+		}
+
+		.volunteer-info-container {
+			text-align: center;
+			margin-bottom: 5rem;
+				h3 {
+					padding: 2rem 0;
+					margin-bottom: 2.5rem;
+				}
+				
+				a {	color:$color__text-sec;
+					text-decoration: none;
+		
+					&:hover {
+						color:$color__text-sec;
+					}
+					&:active {
+						color:$color__text-sec;
+					}
+				}
+		}
+		.volunteer-apply-info {
+			text-align: center;
+			margin: 0rem 2rem 5rem 2rem;
+
+		}
+	}
+
+		.flex-container {
+			@include desktop {
+				max-width: $desktop-width;
+				margin: 120px auto 100px auto;
+				display: flex;
+			}
+
+
+			.flex-wrap {
+
+				h3 {
+					margin-bottom: 1rem;
+				}
+
+				p {
+					margin-bottom: 0;
+				}
+
+				.content-type-text
+				{
+					margin-top: 5rem;
+
+					@include desktop {
+						padding: 0;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				.content-type-widgets {
+
+					h3,
+					p {
+						padding: 0 2rem;
+						margin-bottom: 1rem;
+					}
+
+					h3 {
+						padding-top: 2rem;
+						padding-bottom: 2rem;
+						color: $color__text-main;
+					}
+
+					p {
+						&:last-child {
+							margin-bottom: 3rem;
+						}
+					}
+				}
+
+				@include desktop {
+					&.single-description {
+						order: 1;
+					}
+
+					&.single-details {
+						flex: none;
+						order: 2;
+						width: 350px;
+						margin-right: 120px;
+
+						.content-type-widgets {
+							border: 1px solid $color__border;
+							margin-bottom: 30px;
+
+							&:last-child {
+								margin-bottom: 0;
+							}
+
+							&>* {
+								margin: 0;
+								margin-bottom: 1.5rem;
+
+								&:last-child {
+									margin-bottom: 1.5rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+
+/* Volunteer page **** End */
+
