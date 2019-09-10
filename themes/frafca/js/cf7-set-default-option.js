@@ -4,7 +4,7 @@
     const $cf7_options = $('select[name="programs-services"]').children();
     let $post_title;
     
-    if ( $('.frafca-hero-image').find('.header-meta h2') ){
+    if ( $('.frafca-hero-image').find('.header-meta h2').length > 0 ){
         $post_title = $('.frafca-hero-image').find('.header-meta h2').text().trim();
         
         $cf7_options.each(function(index, value){
@@ -15,11 +15,11 @@
         });
     }
     
-    // Change the linebreak between the heading according to browser width
+    // Change the linebreak between the heading according to the browser width
     const $desktop_width = 1200;
     let $heading, $heading_text;
-
-    if ( $('#heading-get-in-touch') ){
+    
+    if ( $('#heading-get-in-touch').length > 0 ){
         $heading = $('#heading-get-in-touch');
         $heading_text = $('#heading-get-in-touch').html();
         
