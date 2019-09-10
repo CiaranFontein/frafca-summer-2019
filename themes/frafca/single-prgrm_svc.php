@@ -12,36 +12,45 @@ get_header(); ?>
         <!-- Hero Image : type 3 (title from the post)  -->
         <header id="prgrm_svc_single-banner"  class="frafca-hero-image">
             <!-- hero contents -->
-            <?php 
-                $limit_heros = count(frafca_cfs('banner'))-1;
-                $heros = array( 0 => frafca_cfs('banner')[$limit_heros]);
-                foreach( $heros as $hero ) :        
-                    $hero_img = $hero['banner_image'];
-                    $hero_description = $hero['banner_description'];
-            ?>
-                <div class="hero-image-page" style="
-                    background : 
-                    linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
-                        url(<?php echo $hero_img; ?>);
-                    background-size: cover;
-                    background-position: center; 
-                    background-attachment: fixed;
-                    background-repeat: no-repeat;                   
-                ">
-                    <h1 class="page-title screen-reader-text">
-                        <?php single_post_title(); ?>
-                    </h1>     
+                <?php 
+                    $limit_heros = count(frafca_cfs('banner'))-1;
+                    $heros = array( 0 => frafca_cfs('banner')[$limit_heros]);
+                    foreach( $heros as $hero ) :        
+                        $hero_img = $hero['banner_image'];
+                        $hero_description = $hero['banner_description'];
+                ?>
+                
+                <?php if ( trim(strlen( $hero_img )) > 0 ): ?>
                     
-                    <div class="header-meta">
-                        <h2>
-                            <?php the_title();?>
-                        </h2>
-                        <p>
-                            <?php echo $hero_description; ?>
-                        </p>
-                    </div>
-                </div>
-            <?php endforeach ?><!-- end hero contents -->
+                    <div class="hero-image-page" style="
+                        background : 
+                        linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
+                            url(<?php echo $hero_img; ?>);
+                        background-size: cover;
+                        background-position: center; 
+                        background-attachment: fixed;
+                        background-repeat: no-repeat;                   
+                    ">
+                <?php else: ?>
+                    <div class="hero-image-page" style="
+                        background: rgba(47,43,92,1);
+                    ">
+                <?php endif; ?>
+                        <h1 class="page-title screen-reader-text">
+                            <?php single_post_title(); ?>
+                        </h1>     
+                        
+                        <div class="header-meta">
+                            <h2>
+                                <?php the_title();?>
+                            </h2>
+                            <p>
+                                <?php echo $hero_description; ?>
+                            </p>
+                        </div>
+                    </div><!-- .hero-image-page -->
+
+                <?php endforeach ?><!-- end hero contents -->
         </header><!-- #single_prgrm_svc-banner -->
 
         <section id="prgrm_svc-single">
