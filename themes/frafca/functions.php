@@ -99,7 +99,6 @@ function frafca_theme_scripts()
 	wp_enqueue_style('custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css');
 	
 	// Scripts for FRAFCA theme
-	wp_enqueue_script('frafca-script', get_template_directory_uri() . '/build/js/script.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-hamburger-animations', get_template_directory_uri() . '/build/js/hamburger-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-footer-navigation-animations', get_template_directory_uri() . '/build/js/footer-navigation-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-show-sub-menu-on-hover', get_template_directory_uri() . '/build/js/show-sub-menu-on-hover.min.js', array('jquery'), '', true);

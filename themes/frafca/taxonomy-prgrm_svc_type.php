@@ -18,7 +18,7 @@ get_header(); ?>
                 <div class="hero-image-page" style="
                     background : 
                     linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
-                        url(<?php $term_banner ;?>);
+                        url(<?php echo $term_banner ;?>);
                     background-size: cover;
                     background-position: center; 
                     background-attachment: fixed;

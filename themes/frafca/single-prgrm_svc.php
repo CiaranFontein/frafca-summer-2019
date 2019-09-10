@@ -109,17 +109,19 @@ get_header(); ?>
                         <div class="content-type-widgets">
                             <?php 
                                 foreach($de_contacts as $de_contact):
-                                    $director = $de_contact['director'];
-                                    $email = $de_contact['email'];
-                                    $phone = $de_contact['phone'];
-                                    $fax = $de_contact['fax'];
+                                    $keys = array_keys($de_contact);
+                                    $count_arr = count($de_contact);
+                                    $i = 0;
                             ?>
                                 <h3 class="purple">Contact Information</h3>
-                                    
-                                <p>Director: <?php echo $director; ?></p>
-                                <p>Email: <?php echo $email; ?></p>
-                                <p>P: <?php echo $phone; ?></p>
-                                <p>F: <?php echo $fax; ?></p>
+                                    <?php 
+                                    while( $i < $count_arr ):
+                                        $key_info = $keys[$i];
+                                        $val_info = $de_contact[$key_info];
+                                    ?>
+
+                                        <p><strong><?php echo ucfirst($key_info); ?></strong> : <?php echo $val_info ;?></p>
+                                    <?php $i++; endwhile;?>
                             <?php endforeach; ?><!-- end foreach $programs -->
                         </div>
                     <?php endforeach; ?><!-- end foreach $details -->
