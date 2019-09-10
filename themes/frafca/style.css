@@ -881,11 +881,13 @@ a {
 
 /* Grid Card #### END */
 /* Contact Page **** START */
-@media (min-width: 1200px) {
-  .page-template-page-contact .grid-cards {
-    display: inline;
-    max-width: 1200px;
-    margin: auto; } }
+.page-template-page-contact .grid-cards {
+  padding-bottom: 5rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-contact .grid-cards {
+      display: inline;
+      max-width: 1200px;
+      margin: auto; } }
 
 @media (min-width: 1200px) {
   .page-template-page-contact .contact-cards {
@@ -933,7 +935,7 @@ a {
   @media (min-width: 1200px) {
     .page-template-page-meet-our-team-php .card-info {
       text-align: left;
-      padding: 0; } }
+      padding-top: 80px; } }
   .page-template-page-meet-our-team-php .card-info p:first-child {
     font-weight: bold; }
   .page-template-page-meet-our-team-php .card-info p:nth-child(2) {
@@ -957,9 +959,12 @@ a {
 @media (min-width: 1200px) {
   .page-template-page-meet-our-team-php .grid-rect-card {
     display: grid;
-    grid-template-columns: 45% 55%; } }
+    grid-template-columns: 45% 55%;
+    grid-gap: 2rem; } }
 
 /* Team Page **** END */
+/* Volunteer page **** Start */
+/* Volunteer page **** End */
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

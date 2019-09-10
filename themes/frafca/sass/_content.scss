@@ -149,7 +149,7 @@
 .page-template-page-contact {
 	
 	.grid-cards {
-		// padding: 5rem 2.5rem 2rem;
+		padding-bottom: 5rem;
 	@include desktop {
 		display:inline;
 		max-width: 1200px;
@@ -217,7 +217,7 @@
 		padding: 0 2rem;
 			@include desktop {
 				text-align: left;
-				padding: 0;
+				padding-top: 80px;
 			}
 		
 		p:first-child {
@@ -252,9 +252,18 @@
 		@include desktop {
 			display: grid;
 			grid-template-columns: 45% 55%;
+			grid-gap: 2rem;
 		}
 
 	}
 
 }
 /* Team Page **** END */
+
+/* Volunteer page **** Start */
+
+
+
+
+/* Volunteer page **** End */
+
