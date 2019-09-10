@@ -18,7 +18,7 @@ get_header(); ?>
 		<!-- <h2 class="page-volunteer-header"><?php echo frafca_cfs('meet_our_team') ?></h2> -->
 
         <section id="page-volunteer">
-            <div class="flex-container white">
+            <div class="flex-container white page-volunteer-container">
 
 				<div class="flex-wrap single-description">
 						<?php  
@@ -28,7 +28,7 @@ get_header(); ?>
 									$description = $card['why_volunteer_description'];
 						?>
 
-							<div class="content-type-text">
+							<div class="content-type-text volunteer-info">
 	
 									<h3><?php echo $header;?></h3>
 									<p><?php echo $description;?></p>
@@ -47,7 +47,7 @@ get_header(); ?>
 									$description = $card['how_to_apply_description'];
 						?>
 
-							<div class="content-type-text">
+							<div class="content-type-text volunteer-info">
 								
 									<h3><?php echo $header;?></h3>
 									<p><?php echo $description;?></p>
@@ -69,10 +69,10 @@ get_header(); ?>
 							$fax = $card['fax'];
                 ?>
 
-                    <div class="content-type-widgets">
+                    <div class="content-type-widgets volunteer-info-container">
 						
 							<h3 class="purple"><?php echo $header;?></h3>
-							<div class="white">
+							<div class="white ">
 								<p><?php echo $title;?></p>
 								<span>Email: </span><a href="mailto:<?php echo $email;?>" target="_top"><?php echo $email;?></a>
 								<p><span>Phone: </span> <?php echo $phone;?></p>
