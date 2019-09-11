@@ -12,7 +12,7 @@ foreach ($heros as $hero) :
         background : 
         linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
             url(<?php echo $hero_img; ?>);
-        background-size: cover;
+        background-size: ;
         background-position: center; 
         background-attachment: fixed;
         background-repeat: no-repeat;                   
@@ -22,13 +22,13 @@ foreach ($heros as $hero) :
         </h1>
 
         <div class="header-meta">
-            <h2>
+            <h2 class="banner-title">
                 <?php echo $hero_title; ?>
             </h2>
             <p>
                 <?php echo $hero_description; ?>
             </p>
-            <div>
+            <div class="banner-button">
                 <?php echo $hero_button; ?>
             </div>
         </div>

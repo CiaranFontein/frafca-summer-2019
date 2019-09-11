@@ -968,7 +968,7 @@ a {
 .grid-cards p {
   margin-bottom: 3rem; }
 
-/* Grid Card #### END */
+/* Grid Card **** END */
 /* Contact Page **** START */
 .page-template-page-contact .grid-cards {
   padding-bottom: 5rem; }
@@ -1006,7 +1006,7 @@ a {
     .page-template-page-contact .contact-location-header {
       padding: 5rem 0 5rem 0; } }
 
-/* Contact Page #### END */
+/* Contact Page **** END */
 /* Team Page **** START */
 .page-template-page-meet-our-team-php .grid-cards {
   display: inline; }
@@ -1224,6 +1224,49 @@ object {
     padding: 3rem 2rem; }
     .resources-grid .resources .cfs-hyperlink .text {
       color: #ffffff; }
+
+/* Donate Page */
+#donate-page-banner .banner-title {
+  margin-top: 7.5rem; }
+
+#donate-page-banner .banner-button {
+  margin: 2rem auto;
+  padding: 0.75rem 0;
+  width: 205px;
+  border-radius: 10px;
+  background-color: #FFD400; }
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  margin: 0 auto;
+  width: 75%; }
+  .donate-grid .donate-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 7rem auto;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    border: 1px solid black;
+    background: #2F2B5C;
+    height: 55vh; }
+    .donate-grid .donate-card h3 {
+      width: 80%;
+      margin: 0 auto; }
+    .donate-grid .donate-card p {
+      font-size: 1.2rem;
+      width: 80%;
+      margin: 1rem auto; }
 
 /* Single - single-prgrm_svc.php */
 @media (min-width: 1200px) {
