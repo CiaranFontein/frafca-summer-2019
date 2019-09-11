@@ -5,50 +5,49 @@
 /* Posts and pages */
 
 .sticky {
-    display: block;
+	display: block;
 }
 
 .hentry {
-    margin: 0 0 $base__space-unit;
+	margin: 0 0 $base__space-unit;
 }
 
 .updated:not(.published) {
-    display: none;
+	display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-    display: inline;
+	display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-    margin: $base__space-unit 0 0;
+	margin: $base__space-unit 0 0;
 }
 
 .page-links {
-    clear: both;
-    margin: 0 0 $base__space-unit;
+	clear: both;
+	margin: 0 0 $base__space-unit;
 }
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-    display: none;
+	display: none;
 }
 
 /* Comments */
 
 .comment-content a {
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .bypostauthor {
-    display: block;
+	display: block;
 }
-
 
 /* Hero Image **** START */
 .frafca-hero-image {
@@ -60,22 +59,23 @@
 		padding: 5rem 1rem 1rem 1rem;
 		height: 100vh;
 		text-align: center;
-	
+
 		@include desktop {
 			height: 72vh;
 			padding: 5rem 24rem 5rem 24rem;
 		}
-	
+
 		.page-template-front-page & {
 			height: 100vh;
 		}
-		
-	} 
+
+	}
 
 	.single-prgrm_svc & {
 		margin-bottom: 5rem;
 	}
 }
+
 /* Hero Image #### END */
 
 /* Grid Card **** START */
@@ -89,6 +89,7 @@
 		}
 	}
 }
+
 .pink {
 	background-color: $color__background-banner;
 }
@@ -114,7 +115,7 @@
 		display: flex;
 		flex-direction: column;
 		margin: 5rem 0;
-		padding: 5rem 1.5rem 2rem 1.5rem; 
+		padding: 5rem 1.5rem 2rem 1.5rem;
 		text-align: center;
 
 		&.no-content {
@@ -129,7 +130,7 @@
 			padding: 5rem 2.5rem 2rem 2.5rem;
 
 			// Adjust margins of even number of container
-			&:nth-child(2*n){
+			&:nth-child(2*n) {
 				margin-left: 1rem;
 				margin-right: 0;
 			}
@@ -146,110 +147,124 @@
 		margin-bottom: 3rem;
 	}
 }
-/* Grid Card #### END */
+
+/* Grid Card **** END */
 
 /* Contact Page **** START */
 
 .page-template-page-contact {
-	
+
 	.grid-cards {
 		padding-bottom: 5rem;
-	@include desktop {
-		display:inline;
-		max-width: 1200px;
-		margin: auto;
+
+		@include desktop {
+			display: inline;
+			max-width: 1200px;
+			margin: auto;
 		}
 	}
 
-		.contact-cards {
-			@include desktop {
-				display:grid;
-				grid-template-columns: repeat(3, 1fr);
-				// margin: 2rem 1rem 5rem 1rem;
-				grid-gap: 2rem;
+	.contact-cards {
+		@include desktop {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			// margin: 2rem 1rem 5rem 1rem;
+			grid-gap: 2rem;
 
-			}
-			.rect-card p,
-			.rect-card h3 {
-				text-align: left;
-			}
-			.rect-card {
-				padding: 5rem 2.5rem 2rem;
-				@include desktop {
+		}
+
+		.rect-card p,
+		.rect-card h3 {
+			text-align: left;
+		}
+
+		.rect-card {
+			padding: 5rem 2.5rem 2rem;
+
+			@include desktop {
 				margin: 0;
 				padding: 5rem 2.5rem 2rem 2.5rem;
-	
+
 				// Adjust margins of even number of container
-				&:nth-child(2*n){
+				&:nth-child(2*n) {
 					margin-left: 0;
 					margin-right: 0;
 				}
 			}
-			}
-		}
-
-		.contact-location-header {
-
-			color: $color__text-sec;
-			text-align: center;
-			padding: 5rem 0 0 0;
-			
-			@include desktop {
-				padding: 5rem 0 5rem 0;
-			}
 		}
 	}
-/* Contact Page #### END */
+
+	.contact-location-header {
+
+		color: $color__text-sec;
+		text-align: center;
+		padding: 5rem 0 0 0;
+
+		@include desktop {
+			padding: 5rem 0 5rem 0;
+		}
+	}
+}
+
+/* Contact Page **** END */
 
 /* Team Page **** START */
-
 .page-template-page-meet-our-team-php {
 	.grid-cards {
 		display: inline;
+
 		.rect-card {
 			margin: 0;
 			padding: 0rem 1.5rem 5rem 1.5rem;
-				@include desktop {
-					padding: 0rem 1.5rem 8rem 1.5rem;
-				}
+
+			@include desktop {
+				padding: 0rem 1.5rem 8rem 1.5rem;
+			}
 		}
-		p { 
+
+		p {
 			margin-bottom: 1.5rem;
 		}
 	}
-	.card-info  {
+
+	.card-info {
 		padding: 0 2rem;
-			@include desktop {
-				text-align: left;
-				padding-top: 80px;
-			}
-		
+
+		@include desktop {
+			text-align: left;
+			padding-top: 80px;
+		}
+
 		p:first-child {
 			font-weight: bold;
 		}
+
 		p:nth-child(2) {
 			font-weight: 500;
 		}
+
 		a {
-			color:$color__text-sec;
+			color: $color__text-sec;
 			text-decoration: none;
 
 			&:hover {
-				color:$color__text-sec;
+				color: $color__text-sec;
 			}
+
 			&:active {
-				color:$color__text-sec;
+				color: $color__text-sec;
 			}
 		}
 	}
-	
+
 	.page-team-header {
 		color: $color__text-sec;
 		text-align: center;
 		padding: 3rem 0 3rem 0;
-			@include desktop {
-				padding: 8rem 0 8rem 0;
-			}
+
+		@include desktop {
+			padding: 8rem 0 8rem 0;
+		}
 	}
 
 	.grid-rect-card {
@@ -262,139 +277,146 @@
 	}
 
 }
+
 /* Team Page **** END */
 
 /* Volunteer page **** Start */
-	.page-template-page-volunteer {
-		
-		.volunteer-info {
-			margin: 5rem 2rem 0rem 2rem;
-			text-align: center;
-				@include desktop {
-					text-align: left;
-					margin-top: 0;
-				}
-			
+.page-template-page-volunteer {
+
+	.volunteer-info {
+		margin: 5rem 2rem 0rem 2rem;
+		text-align: center;
+
+		@include desktop {
+			text-align: left;
+			margin-top: 0;
 		}
 
-		.volunteer-info-container {
-			text-align: center;
-			margin-bottom: 5rem;
-				h3 {
-					padding: 2rem 0;
-					margin-bottom: 3rem;
-				}
-				
-				a {	color:$color__text-sec;
-					text-decoration: none;
-		
-					&:hover {
-						color:$color__text-sec;
-					}
-					&:active {
-						color:$color__text-sec;
-					}
-				}
-				@include desktop {
-					text-align: left;
-				}
+	}
+
+	.volunteer-info-container {
+		text-align: center;
+		margin-bottom: 5rem;
+
+		h3 {
+			padding: 2rem 0;
+			margin-bottom: 3rem;
 		}
-		.volunteer-apply-info {
-			text-align: center;
-			margin: 0rem 2rem 5rem 2rem;
-			@include desktop {
-				text-align: left;
+
+		a {
+			color: $color__text-sec;
+			text-decoration: none;
+
+			&:hover {
+				color: $color__text-sec;
 			}
 
+			&:active {
+				color: $color__text-sec;
+			}
+		}
+
+		@include desktop {
+			text-align: left;
 		}
 	}
 
-		.flex-container {
+	.volunteer-apply-info {
+		text-align: center;
+		margin: 0rem 2rem 5rem 2rem;
+
+		@include desktop {
+			text-align: left;
+		}
+
+	}
+}
+
+.flex-container {
+	@include desktop {
+		max-width: $desktop-width;
+		margin: 120px auto 100px auto;
+		display: flex;
+	}
+
+
+	.flex-wrap {
+
+		h3 {
+			margin-bottom: 1rem;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		.content-type-text {
+			margin-top: 5rem;
+
 			@include desktop {
-				max-width: $desktop-width;
-				margin: 120px auto 100px auto;
-				display: flex;
-			}
+				padding: 0;
+				margin-top: 0;
 
-
-			.flex-wrap {
-
-				h3 {
-					margin-bottom: 1rem;
-				}
-
-				p {
+				&:last-child {
 					margin-bottom: 0;
 				}
+			}
+		}
 
-				.content-type-text
-				{
-					margin-top: 5rem;
+		.content-type-widgets {
 
-					@include desktop {
-						padding: 0;
-						margin-top:0;
+			h3,
+			p {
+				padding: 0 2rem;
+				margin-bottom: 1rem;
+			}
 
-						&:last-child {
-							margin-bottom: 0;
-						}
-					}
+			h3 {
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+				color: $color__text-main;
+			}
+
+			p {
+				&:last-child {
+					margin-bottom: 3rem;
 				}
+			}
+		}
+
+		@include desktop {
+			&.single-description {
+				order: 1;
+				text-align: left;
+			}
+
+			&.single-details {
+				flex: none;
+				order: 2;
+				width: 350px;
+				margin-right: 120px;
 
 				.content-type-widgets {
+					border: 1px solid $color__border;
+					margin-bottom: 30px;
 
-					h3,
-					p {
-						padding: 0 2rem;
-						margin-bottom: 1rem;
+					&:last-child {
+						margin-bottom: 0;
 					}
 
-					h3 {
-						padding-top: 2rem;
-						padding-bottom: 2rem;
-						color: $color__text-main;
-					}
+					&>* {
+						margin: 0;
+						margin-bottom: 1.5rem;
 
-					p {
 						&:last-child {
-							margin-bottom: 3rem;
-						}
-					}
-				}
-
-				@include desktop {
-					&.single-description {
-						order: 1;
-						text-align: left;
-					}
-
-					&.single-details {
-						flex: none;
-						order: 2;
-						width: 350px;
-						margin-right: 120px;
-
-						.content-type-widgets {
-							border: 1px solid $color__border;
-							margin-bottom: 30px;
-
-							&:last-child {
-								margin-bottom: 0;
-							}
-
-							&>* {
-								margin: 0;
-								margin-bottom: 1.5rem;
-
-								&:last-child {
-									margin-bottom: 1.5rem;
-								}
-							}
+							margin-bottom: 1.5rem;
 						}
 					}
 				}
 			}
 		}
+	}
+}
 
 
 
@@ -403,6 +425,7 @@
 /* Single Event page **** Start*/
 
 .tribe-events-single {
+<<<<<<< HEAD
 	color:black;
 }
 
@@ -423,4 +446,7 @@
 .single-event-header {
 	background-color: #2F2B5C;
 	// color: white;
+=======
+	color: black;
+>>>>>>> 97fe9c4931cdf932028ead3ca4f9f2f935367848
 }

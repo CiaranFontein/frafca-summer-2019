@@ -22,31 +22,34 @@
         <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
         <header id="masthead" class="site-header" role="banner">
-            <div class="mobile-header-menu">
-                <div class="mobile-header-menu-container">
-                    <?php wp_nav_menu( array( 'theme_location' => 'Mobile-Header-Menu', 'Mobile-Header-Menu' => 'Mobile-Header-Menu' ) ); ?>
+            <div class="header-container">
+                <div class="mobile-header-menu">
+                    <div class="mobile-header-menu-container">
+                        <?php wp_nav_menu( array( 'theme_location' => 'Mobile-Header-Menu', 'Mobile-Header-Menu' => 'Mobile-Header-Menu' ) ); ?>
+                    </div>
                 </div>
-            </div>
-            <div class=" hamburger-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="site-branding header-logo">
-                <h1 class=" site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                        rel="home"><?php bloginfo( 'name' ); ?></a>
-                </h1>
-            </div><!-- .site-branding -->
-
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-                <div class="header-menu">
-                    <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
+                <div class=" hamburger-icon">
+                    <i class="fas fa-bars"></i>
                 </div>
-                <a href="#">
-                    <i class="fas fa-search"></i>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <div class="site-branding header-logo">
+                        <h1 class="site-title screen-reader-text">
+                            <?php bloginfo( 'name' ); ?>
+                        </h1>
+                    </div><!-- .site-branding -->
                 </a>
-                <div class="side-header-menu">
-                    <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
-                </div>
-            </nav><!-- #site-navigation -->
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <div class="header-menu">
+                        <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
+                    </div>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="side-header-menu">
+                        <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
+                    </div>
+                </nav><!-- #site-navigation -->
+            </div>
         </header><!-- #masthead -->
 
         <div id="content" class="site-content">
