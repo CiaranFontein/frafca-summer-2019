@@ -1145,6 +1145,10 @@ a {
           margin-bottom: 1.5rem; } }
 
 /* Volunteer page **** End */
+/* Single Event page **** Start*/
+.tribe-events-single {
+  color: black; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
