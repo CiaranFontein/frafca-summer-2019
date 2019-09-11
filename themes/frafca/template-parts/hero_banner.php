@@ -1,8 +1,6 @@
 <!-- hero contents -->
 <?php 
-
     $heros = last_frafca_cfs('banner');
-     
         $hero_img = $heros['banner_image'];
         $hero_title = $heros['banner_title'];
         $hero_description = $heros['banner_description'];
