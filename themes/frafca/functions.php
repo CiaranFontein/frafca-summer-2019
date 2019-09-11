@@ -107,6 +107,8 @@ function frafca_theme_scripts()
 	if ( is_singular('prgrm_svc') ){
 		wp_enqueue_script('frafca-theme-cf7-set-default-option', get_template_directory_uri() . '/build/js/cf7-set-default-option.min.js', array('jquery'), '', true);
 	}
+	// Enqueue CF7 script after submit button is clicked
+	wp_enqueue_script('frafca-theme-cf7-event-submit', get_template_directory_uri() . '/build/js/cf7-event-submit.min.js', array('jquery'), '', true);
 
 	wp_enqueue_style('frafca-theme-style', get_stylesheet_uri());
 	wp_enqueue_style('flickity-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
