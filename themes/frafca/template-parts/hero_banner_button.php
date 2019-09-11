@@ -6,7 +6,7 @@ foreach ($heros as $hero) :
     $hero_img = $hero['banner_image'];
     $hero_title = $hero['banner_title'];
     $hero_description = $hero['banner_description'];
-    $hero_button = $hero('banner_button')
+    $hero_button = $hero['banner_button'];
     ?>
     <div class="hero-image-page" style="
         background : 
