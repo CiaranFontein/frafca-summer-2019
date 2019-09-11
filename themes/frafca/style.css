@@ -1227,7 +1227,11 @@ object {
 
 /* Donate Page */
 #donate-page-banner .banner-title {
-  margin-top: 7.5rem; }
+  margin-top: 0rem; }
+
+@media (min-width: 1200px) {
+  #donate-page-banner .banner-title {
+    margin-top: 7.5rem; } }
 
 #donate-page-banner .banner-button {
   margin: 2rem auto;
@@ -1242,11 +1246,11 @@ object {
 
 .donate-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   margin: 0 auto;
-  width: 75%; }
+  margin-top: 2rem;
+  width: 22rem; }
   .donate-grid .donate-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1258,7 +1262,7 @@ object {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 7rem auto;
+    margin-bottom: 2rem;
     padding: 1rem 1rem 1rem 1rem;
     text-align: center;
     border: 1px solid black;
@@ -1271,6 +1275,40 @@ object {
       font-size: 1.2rem;
       width: 80%;
       margin: 1rem auto; }
+
+@media (min-width: 1200px) {
+  .donate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+    margin: 0 auto;
+    width: 70rem; }
+    .donate-grid .donate-card {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-bottom: 2rem;
+      margin: 7rem auto;
+      padding: 1rem 1rem 1rem 1rem;
+      text-align: center;
+      border: 1px solid black;
+      background: #2F2B5C;
+      height: 55vh; }
+      .donate-grid .donate-card h3 {
+        width: 80%;
+        margin: 0 auto; }
+      .donate-grid .donate-card p {
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 1rem auto; } }
 
 /* Single - single-prgrm_svc.php */
 @media (min-width: 1200px) {
