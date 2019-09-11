@@ -30,6 +30,12 @@ a {
 /* Search Field */
 .search-field-container {
     display: none;
+    background: #fff;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    position: absolute;
+    z-index: 10;
 
     &--active {
         display: block;
@@ -79,7 +85,7 @@ a {
         height: 60px;
         width: 60px;
         z-index: 1;
-
+        position: relative;
     }
 
     @include desktop {
