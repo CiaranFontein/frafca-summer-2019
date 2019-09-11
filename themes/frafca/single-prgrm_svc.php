@@ -6,22 +6,18 @@
  */
 
 get_header(); ?>
-
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
         <!-- Hero Image : type 3 (title from the post)  -->
         <header id="prgrm_svc_single-banner"  class="frafca-hero-image">
             <!-- hero contents -->
                 <?php 
-                    $limit_heros = count(frafca_cfs('banner'))-1;
-                    $heros = array( 0 => frafca_cfs('banner')[$limit_heros]);
-                    foreach( $heros as $hero ) :        
-                        $hero_img = $hero['banner_image'];
-                        $hero_description = $hero['banner_description'];
+                    $heros = last_frafca_cfs('banner');
+                    $hero_img = $heros['banner_image'];
+                    $hero_description = $heros['banner_description'];
                 ?>
                 
-                <?php if ( trim(strlen( $hero_img )) > 0 ): ?>
-                    
+                <?php if (  !empty($hero_img) ): ?>
                     <div class="hero-image-page" style="
                         background : 
                         linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
@@ -50,90 +46,142 @@ get_header(); ?>
                         </div>
                     </div><!-- .hero-image-page -->
 
-                <?php endforeach ?><!-- end hero contents -->
         </header><!-- #single_prgrm_svc-banner -->
 
         <section id="prgrm_svc-single">
             <div class="flex-container white">
 
                 <div class="flex-wrap single-description">
-                    <?php 
-                        $limit_descriptions = count(frafca_cfs('program_services_description'))-1;
-                        $descriptions = array( 0 => frafca_cfs('program_services_description')[$limit_descriptions] );    
-                        foreach( $descriptions as $description):
-                            $about = $description['about'];
-                            $obejectives = $description['obejective'];
-                            $programs = $description['program'];
-                    ?>
-                        <div class="content-type-text">
-                            <h3>About</h3>
-                            <p><?php echo esc_html($about); ?></p>
-                        </div>
-                        
-                        <div class="content-type-list">
-                            <h3>Objectives</h3>
-                            <ul>
-                                <?php foreach($obejectives as $obejective): ?>
-                                    <li><?php echo $obejective['list']; ?></li>
-                                <?php endforeach; ?><!-- end foreach $obejectives -->
-                            </ul>
-                        </div>
+                    <?php if ( !empty( frafca_cfs('program_services_description') ) ): ?>
 
-                        <div class="content-type-list">
-                            <h3>Program Services</h3>
-                            <ul>
-                                <?php foreach($programs as $program): ?>
-                                    <li><?php echo $program['list']; ?></li>
-                                <?php endforeach; ?><!-- end foreach $programs -->
-                            </ul>
+                        <?php 
+                            $descriptions = last_frafca_cfs('program_services_description');
+                        ?>
+                            <div class="content-type-text">
+                                <h3>About</h3>
+                                <?php if ( !empty($descriptions['about']) ):
+                                    $about = $descriptions['about'];
+                                ?>
+                                    <p><?php echo esc_html($about); ?></p>
+                                <?php else: ?>
+                                    <p class="error-no-data">No information yet</p>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <div class="content-type-list">
+                                <h3>Objectives</h3>
+                                <?php if ( !empty( $descriptions['obejective'] )): 
+                                    $obejectives = $descriptions['obejective'];
+                                ?>
+                                    <ul>
+                                        <?php foreach($obejectives as $obejective): ?>
+                                            <li><?php echo esc_html($obejective['list']); ?></li>
+                                        <?php endforeach; ?><!-- end foreach $obejectives -->
+                                    </ul>
+                                <?php else: ?>
+                                    <p class="error-no-data">No information yet</p>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="content-type-list">
+                                <h3>Program Services</h3>
+
+                                <?php if ( !empty( $descriptions['program'] )): 
+                                    $programs = $descriptions['program'];
+                                ?>
+                                    <ul>
+                                        <?php foreach($programs as $program): ?>
+                                            <li><?php echo esc_html($program['list']); ?></li>
+                                        <?php endforeach; ?><!-- end foreach $programs -->
+                                    </ul>
+                                <?php else: ?>
+                                    <p class="error-no-data">No information yet</p>
+                                <?php endif; ?>
+                            </div>
+
+                    <?php else: ?>
+                        <div class="content-type-text">
+                            <p class="error-no-data">No information yet</p>
                         </div>
-                    <?php endforeach; ?><!-- end foreach $descriptions -->
+                    <?php endif; ?>
+                    <!-- endif empty(program_services_description) -->
                 </div>
 
                 <div class="flex-wrap single-details">
                     <?php 
-                        $limit_details = count(frafca_cfs('program_services_details')) -1;
-                        $details = array ( 0 => frafca_cfs('program_services_details')[$limit_details] );
-                        foreach( $details as $detail ):
-                            $limit_de_programs = count($detail['program']) -1;
-                            $de_programs = array( 0 => $detail['program'][$limit_de_programs]);
-
-                            $limit_de_contacts = count($detail['contact_information']) -1;
-                            $de_contacts = array( 0 => $detail['contact_information'][$limit_de_contacts]);
+                    if ( !empty(frafca_cfs('program_services_details')) ):
                     ?>
-                        <div class="content-type-widgets">
-                            <?php 
-                                foreach($de_programs as $de_program):
-                                    $dates = $de_program['dates'];
-                                    $time = $de_program['time'];
-                                    $location = $de_program['location'];
+                        <?php 
+                            $details = last_frafca_cfs('program_services_details');
+                        ?>
+                            <?php
+                                if ( !empty($details['program']) ) :
+                                    $last_key = array_key_last($details['program']);
+                                    $de_programs = $details['program'][$last_key];
                             ?>
-                                <h3 class="purple">Program Information</h3>
-                                <p>Dates: <?php echo $dates; ?></p>
-                                <p>Time: <?php echo $time; ?></p>
-                                <p>Location: <?php echo $location; ?></p>
-                            <?php endforeach; ?><!-- end foreach $programs -->
-                        </div>
-
-                        <div class="content-type-widgets">
-                            <?php 
-                                foreach($de_contacts as $de_contact):
-                                    $keys = array_keys($de_contact);
-                                    $count_arr = count($de_contact);
-                                    $i = 0;
-                            ?>
-                                <h3 class="purple">Contact Information</h3>
+                                <div class="content-type-widgets">
                                     <?php 
-                                    while( $i < $count_arr ):
-                                        $key_info = $keys[$i];
-                                        $val_info = $de_contact[$key_info];
+                                            $keys = array_keys($de_programs);
+                                            $count_arr = count($de_programs);
+                                            $i = 0;
                                     ?>
+                                        <h3 class="purple">Program Information</h3>
+                                        <?php 
+                                            while( $i < $count_arr ):
+                                                $key_info = $keys[$i];
+                                                $val_info = $de_programs[$key_info];
+                                            ?>
+                                                <p><strong><?php echo ucfirst($key_info); ?></strong> : <?php echo $val_info ;?></p>
+                                            <?php $i++; 
+                                            endwhile;?>
+                                </div>
+                            <?php else: ?>
+                                <div class="content-type-widgets">
+                                    <h3 class="purple">Program Information</h3>
+                                    <p class="error-no-data">No information yet</p>
+                                </div>
+                            <?php endif; ?>
 
-                                        <p><strong><?php echo ucfirst($key_info); ?></strong> : <?php echo $val_info ;?></p>
-                                    <?php $i++; endwhile;?>
-                            <?php endforeach; ?><!-- end foreach $programs -->
+                            <?php 
+                                if ( !empty( $details['contact_information'] ) ) :
+                                    $last_key = array_key_last($details['contact_information']);
+                                    $de_contacts = $details['contact_information'][$last_key];
+                            ?>
+                                <div class="content-type-widgets">
+                                    <?php 
+                                        
+                                            $keys = array_keys($de_contacts);
+                                            $count_arr = count($de_contacts);
+                                            $i = 0;
+                                    ?>
+                                        <h3 class="purple">Contact Information</h3>
+                                            <?php 
+                                            while( $i < $count_arr ):
+                                                $key_info = $keys[$i];
+                                                $val_info = $de_contacts[$key_info];
+                                            ?>
+                                                <p><strong><?php echo ucfirst($key_info); ?></strong> : <?php echo $val_info ;?></p>
+                                            <?php $i++; 
+                                            endwhile;?>
+                                </div>
+                            <?php else: ?>
+                                <div class="content-type-widgets">
+                                    <h3 class="purple">Contact Information</h3>
+                                    <p class="error-no-data">No information yet</p>
+                                </div>
+                            <?php endif; ?>
+
+                        <?php else: ?>
+                        <div class="content-type-widgets">
+                            <h3 class="purple">Program Information</h3>
+                            <p class="error-no-data">No information yet</p>
                         </div>
-                    <?php endforeach; ?><!-- end foreach $details -->
+                        <div class="content-type-widgets">
+                            <h3 class="purple">Contact Information</h3>
+                            <p class="error-no-data">No information yet</p>
+                        </div>
+
+                    <?php endif; ?>
                 </div>
 
                 
