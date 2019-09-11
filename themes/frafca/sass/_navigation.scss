@@ -27,6 +27,23 @@ a {
     }
 }
 
+/* Search Field */
+.search-field-container {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+
+    @include desktop {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}
+
 /* Header Menus */
 .site-header {
     display: flex;
@@ -219,6 +236,8 @@ a {
         }
     }
 }
+
+
 
 .hidden {
     display: none;

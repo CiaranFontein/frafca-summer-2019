@@ -437,6 +437,10 @@ div.wpcf7 {
     color: #ffffff;
     background-color: #BA5357;
     text-align: center; }
+  div.wpcf7 .wpcf7-mail-sent-ok {
+    border: 0 solid transparent;
+    background-color: #398f14;
+    text-align: center; }
   @media (min-width: 1200px) {
     div.wpcf7 form, div.wpcf7 .wpcf7-validation-errors {
       width: 460px;
@@ -1177,12 +1181,19 @@ a {
     padding: 0;
     font-size: 1rem;
     font-weight: 300; }
+<<<<<<< HEAD
     .single-tribe_events .single-event-purple span {
       font-weight: 300; }
     .single-tribe_events .single-event-purple .tribe-events-pg-template {
       padding: 0px; }
     .single-tribe_events .single-event-purple .tribe-events-single-event-description {
       padding: 5rem 2rem; }
+=======
+
+.single-event-header {
+  background-color: #2F2B5C;
+  color: black; }
+>>>>>>> 1cd13b22cb0059ff883117502b3780e3b97daf22
 
 /*--------------------------------------------------------------
 # Media

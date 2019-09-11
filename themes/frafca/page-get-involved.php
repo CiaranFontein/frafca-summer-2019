@@ -12,19 +12,19 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <!-- Hero Image : type 1  -->
-        <header id="get-involved-banner"  class="frafca-hero-image get-involved-banner-header">
+        <header id="get-involved-banner"  class="frafca-hero-image">
 			<?php get_template_part( 'template-parts/hero_banner' ); ?>
         </header><!-- #front-page-banner -->
 		<h2 class="contact-location-header"><?php echo frafca_cfs('location_header') ?></h2>
         <section class="get-involved">
             <div class="grid-cards contact-cards">
 				<?php  
-                    $card = frafca_cfs('cards_get_involved');
-                    foreach($card as $card) :
-                            $title = $card['get_involved_title'];
-                            $description = $card['get_involved_description'];
+                    $cards = frafca_cfs('cards_get_involved');
+                    foreach($cards as $card) :
+                            $title = $card['title'];
+                            $description = $card['description'];
                             // array of related posts
-							$learn_more = $card['get_involved_learn_more'];
+							$learn_more = $card['button'];
                 ?>
 
                     <div class="rect-card purple">
@@ -35,8 +35,7 @@ get_header(); ?>
                         foreach($learn_more as $post):
                     
                         ?>
-                        <a class="default-btn yellow" href="<?php echo get_the_permalink($post); ?>" 
-                            target="_blank">
+                        <a class="default-btn yellow" href="<?php echo get_the_permalink($post); ?>" >
                             Learn More
                         </a>
                         <?php
