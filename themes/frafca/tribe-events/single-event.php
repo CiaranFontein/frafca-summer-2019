@@ -24,7 +24,11 @@ $event_id = get_the_ID();
 
 ?>
 
+<<<<<<< HEAD
+<?php get_template_part('template-parts/hero_banner'); ?>
+=======
 
+>>>>>>> 1cd13b22cb0059ff883117502b3780e3b97daf22
 
 
 
@@ -34,13 +38,14 @@ $event_id = get_the_ID();
 	<?php tribe_the_notices() ?>
 
 	<div class="single-event-header">
+		
 		<?php the_title('<h1 class="tribe-events-single-event-title">', '</h1>'); ?>
 
-		<div class="tribe-events-schedule tribe-clearfix">
+		<div class="tribe-events-schedule tribe-clearfix single-event-purple">
 			<?php echo tribe_events_event_schedule_details($event_id, '<h2>', '</h2>'); ?>
-			<?php if (tribe_get_cost()) : ?>
-				<span class="tribe-events-cost"><?php echo tribe_get_cost(null, true) ?></span>
-			<?php endif; ?>
+			<!-- <?php //if (tribe_get_cost()) : ?> -->
+				<!-- <span class="tribe-events-cost"><?php echo tribe_get_cost(null, true) ?></span> -->
+			<!-- <?php //endif; ?> -->
 		</div>
 		<p class="tribe-events-back">
 			<a href="<?php echo esc_url(tribe_get_events_link()); ?>"> <?php printf('&laquo; ' . esc_html_x('All %s', '%s Events plural label', 'the-events-calendar'), $events_label_plural); ?></a>
