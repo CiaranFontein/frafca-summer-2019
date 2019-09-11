@@ -16,6 +16,7 @@ if (!defined('ABSPATH')) {
 	die('-1');
 }
 
+
 $events_label_singular = tribe_get_event_label_singular();
 $events_label_plural   = tribe_get_event_label_plural();
 
@@ -23,7 +24,7 @@ $event_id = get_the_ID();
 
 ?>
 
-<?php get_template_part('/template-parts/hero_banner_image.php'); ?>
+
 
 
 

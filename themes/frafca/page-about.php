@@ -22,7 +22,11 @@ get_header(); ?>
             <?php /* Start the Loop */ ?>
             <?php while (have_posts()) : the_post(); ?>
 
-                <?php get_template_part('template-parts/content'); ?>
+                <header id="about-page-banner" class="frafca-hero-image">
+
+                    <?php get_template_part('template-parts/hero_banner'); ?>
+
+                </header><!-- #about-page-banner -->
 
             <?php endwhile; ?>
 
