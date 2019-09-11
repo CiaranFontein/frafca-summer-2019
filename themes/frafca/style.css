@@ -926,6 +926,9 @@ a {
   background-color: transparent;
   color: #0D0D0D; }
 
+.error-no-data {
+  color: #BBBBBB; }
+
 @media (min-width: 1200px) {
   .grid-cards {
     max-width: 1200px;

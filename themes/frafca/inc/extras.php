@@ -38,6 +38,13 @@ function frafca_cfs($make_var) {
 }
 add_action('plugins_loaded', 'frafca_cfs');
 
+// Restrain CFS Loop in shorthand to return only the last array 
+function last_frafca_cfs($field_name) {
+    $last_key = array_key_last( frafca_cfs($field_name) );
+    $return_last_arr = frafca_cfs($field_name)[$last_key];
+    return $return_last_arr;
+}
+
 
 // Programs and Services posts drop-down menus for ContactForm 7
 function dynamic_field_values ( $tag, $unused ) {
