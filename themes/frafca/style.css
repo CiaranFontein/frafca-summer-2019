@@ -565,8 +565,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.8rem 0rem;
-  position: relative; }
+  padding: 0.8rem 0rem; }
   .main-navigation .header-menu {
     display: none; }
     @media (min-width: 1200px) {
@@ -594,11 +593,14 @@ a {
       display: none;
       position: absolute;
       top: 50px;
-      left: 0%;
+      left: auto;
       background: white;
-      color: black; }
+      color: black;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%); }
       .main-navigation ul .sub-menu li {
-        display: block; }
+        display: block;
+        position: relative; }
         .main-navigation ul .sub-menu li a {
           color: black; }
     .main-navigation ul li {
@@ -1177,7 +1179,8 @@ a {
     font-weight: 300; }
 
 .single-event-header {
-  background-color: #2F2B5C; }
+  background-color: #2F2B5C;
+  color: black; }
 
 /*--------------------------------------------------------------
 # Media
