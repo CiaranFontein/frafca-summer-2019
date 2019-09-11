@@ -134,7 +134,9 @@ div.wpcf7 { // use div+classname to override
         text-align: center;
     }
     .wpcf7-mail-sent-ok {
-        
+        border: 0 solid transparent;
+        background-color: $color__confirm;
+        text-align: center;
     }
 
     @include desktop {

@@ -437,6 +437,10 @@ div.wpcf7 {
     color: #ffffff;
     background-color: #BA5357;
     text-align: center; }
+  div.wpcf7 .wpcf7-mail-sent-ok {
+    border: 0 solid transparent;
+    background-color: #398f14;
+    text-align: center; }
   @media (min-width: 1200px) {
     div.wpcf7 form, div.wpcf7 .wpcf7-validation-errors {
       width: 460px;
