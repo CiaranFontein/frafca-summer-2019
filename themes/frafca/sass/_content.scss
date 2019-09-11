@@ -406,3 +406,21 @@
 	color:black;
 }
 
+.tribe-events-schedule,
+.tribe-clearfix,
+.tribe-events-cost
+ {
+	background: #2F2B5C;
+	// color:white;
+		h2,
+		span
+		{
+			font-size: 1rem;
+			font-weight: 300;
+		}
+}
+
+.single-event-header {
+	background-color: #2F2B5C;
+	// color: white;
+}

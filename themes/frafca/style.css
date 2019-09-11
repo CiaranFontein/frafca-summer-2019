@@ -1152,6 +1152,22 @@ a {
 .tribe-events-single {
   color: black; }
 
+.tribe-events-schedule,
+.tribe-clearfix,
+.tribe-events-cost {
+  background: #2F2B5C; }
+  .tribe-events-schedule h2,
+  .tribe-events-schedule span,
+  .tribe-clearfix h2,
+  .tribe-clearfix span,
+  .tribe-events-cost h2,
+  .tribe-events-cost span {
+    font-size: 1rem;
+    font-weight: 300; }
+
+.single-event-header {
+  background-color: #2F2B5C; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
