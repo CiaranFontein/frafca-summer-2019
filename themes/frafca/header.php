@@ -48,6 +48,9 @@
                     <div class="side-header-menu">
                         <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
                     </div>
+                    <div class="search-field-container">
+
+                    </div>
                 </nav><!-- #site-navigation -->
             </div>
         </header><!-- #masthead -->
