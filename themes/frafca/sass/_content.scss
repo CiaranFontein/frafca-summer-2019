@@ -99,6 +99,10 @@
 	color: #0D0D0D;
 }
 
+.error-no-data {
+	color: $color__no-data;
+}
+
 .grid-cards {
 	@include desktop {
 		max-width: $desktop-width;
@@ -252,7 +256,7 @@
 			}
 		}
 	}
-
+	
 	.page-team-header {
 		color: $color__text-sec;
 		text-align: center;
@@ -414,4 +418,17 @@
 	}
 }
 
+<<<<<<< HEAD
 /* Volunteer page **** End */
+=======
+
+
+/* Volunteer page **** End */
+
+/* Single Event page **** Start*/
+
+.tribe-events-single {
+	color:black;
+}
+
+>>>>>>> 6740a2a0a2db3fd5f2c8212496b93aad8fa91ebf

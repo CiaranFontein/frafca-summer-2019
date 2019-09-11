@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The main template file.
  * 
@@ -15,28 +14,34 @@ get_header(); ?>
                 <?php 
                     $term_banner = get_term_meta( get_queried_object_id(), '_frafca_term_banner', true);
                 ?>
-                <div class="hero-image-page" style="
-                    background : 
-                    linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
-                        url(<?php echo $term_banner ;?>);
-                    background-size: cover;
-                    background-position: center; 
-                    background-attachment: fixed;
-                    background-repeat: no-repeat;                   
-                ">
-                    <h1 class="page-title screen-reader-text">
-                        <?php single_post_title(); ?>
-                    </h1>     
-                    
-                    <div class="header-meta">
-                        <h2>
-                            <?php single_term_title(); ?>
-                        </h2>
-                        <p>
-                            <?php echo term_description();?>
-                        </p>
+                <?php if ( !empty($term_banner)): ?>
+                    <div class="hero-image-page" style="
+                        background : 
+                        linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
+                            url(<?php echo $term_banner ;?>);
+                        background-size: cover;
+                        background-position: center; 
+                        background-attachment: fixed;
+                        background-repeat: no-repeat;                   
+                    ">
+                <?php else: ?>
+                    <div class="hero-image-page" style="
+                        background: rgba(47,43,92,1);
+                    ">
+                <?php endif;?>
+                        <h1 class="page-title screen-reader-text">
+                            <?php single_post_title(); ?>
+                        </h1>     
+                        
+                        <div class="header-meta">
+                            <h2>
+                                <?php single_term_title(); ?>
+                            </h2>
+                            <p>
+                                <?php echo term_description();?>
+                            </p>
+                        </div>
                     </div>
-                </div>
             <!-- end hero contents -->
         </header><!-- #taxonomy_prgrm_svc-banner -->
 
