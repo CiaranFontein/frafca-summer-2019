@@ -424,29 +424,37 @@
 
 /* Single Event page **** Start*/
 
-.tribe-events-single {
-<<<<<<< HEAD
-	color:black;
-}
+.single-tribe_events {
+	
+	color: #323232;
+	padding: 0rem;
 
-.tribe-events-schedule,
-.tribe-clearfix,
-.tribe-events-cost
- {
-	background: #2F2B5C;
-	// color:white;
-		h2,
-		span
-		{
-			font-size: 1rem;
-			font-weight: 300;
-		}
-}
+			.single-event-header {
+				background-color: $color__background-article;
+				color: white;
+				padding: 1rem;
+			}
 
-.single-event-header {
-	background-color: #2F2B5C;
-	// color: white;
-=======
-	color: black;
->>>>>>> 97fe9c4931cdf932028ead3ca4f9f2f935367848
+			.tribe-events-single-event-title {
+				font-size: 1.5rem;
+			}
+			.single-event-purple {
+				background-color: $color__background-article;
+				border: none;
+				padding: 0;
+				font-size: 1rem;
+				font-weight: 300;
+					span {
+						font-weight: 300;
+					}
+			.tribe-events-pg-template {
+				padding: 0px;
+			}
+
+			.tribe-events-single-event-description {
+				padding: 5rem 2rem;
+			}
+			
+			}
+
 }

@@ -565,8 +565,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.8rem 0rem;
-  position: relative; }
+  padding: 0.8rem 0rem; }
   .main-navigation .header-menu {
     display: none; }
     @media (min-width: 1200px) {
@@ -594,11 +593,14 @@ a {
       display: none;
       position: absolute;
       top: 50px;
-      left: 0%;
+      left: auto;
       background: white;
-      color: black; }
+      color: black;
+      -webkit-transform: translateX(50%);
+              transform: translateX(50%); }
       .main-navigation ul .sub-menu li {
-        display: block; }
+        display: block;
+        position: relative; }
         .main-navigation ul .sub-menu li a {
           color: black; }
     .main-navigation ul li {
@@ -1160,24 +1162,27 @@ a {
 
 /* Volunteer page **** End */
 /* Single Event page **** Start*/
-.tribe-events-single {
-  color: black; }
-
-.tribe-events-schedule,
-.tribe-clearfix,
-.tribe-events-cost {
-  background: #2F2B5C; }
-  .tribe-events-schedule h2,
-  .tribe-events-schedule span,
-  .tribe-clearfix h2,
-  .tribe-clearfix span,
-  .tribe-events-cost h2,
-  .tribe-events-cost span {
+.single-tribe_events {
+  color: #323232;
+  padding: 0rem; }
+  .single-tribe_events .single-event-header {
+    background-color: #2F2B5C;
+    color: white;
+    padding: 1rem; }
+  .single-tribe_events .tribe-events-single-event-title {
+    font-size: 1.5rem; }
+  .single-tribe_events .single-event-purple {
+    background-color: #2F2B5C;
+    border: none;
+    padding: 0;
     font-size: 1rem;
     font-weight: 300; }
-
-.single-event-header {
-  background-color: #2F2B5C; }
+    .single-tribe_events .single-event-purple span {
+      font-weight: 300; }
+    .single-tribe_events .single-event-purple .tribe-events-pg-template {
+      padding: 0px; }
+    .single-tribe_events .single-event-purple .tribe-events-single-event-description {
+      padding: 5rem 2rem; }
 
 /*--------------------------------------------------------------
 # Media
