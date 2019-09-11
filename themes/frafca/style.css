@@ -1235,6 +1235,10 @@ object {
   width: 205px;
   border-radius: 10px;
   background-color: #FFD400; }
+  #donate-page-banner .banner-button a {
+    color: #2d2d2d;
+    text-decoration: none;
+    font-weight: bold; }
 
 .donate-grid {
   display: grid;
