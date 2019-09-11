@@ -3,7 +3,6 @@
  * The template for displaying all pages.
  *
  * @package FRAFCA_Theme
- * Template Name: page-single-event
  */
 
 get_header(); ?>
@@ -13,12 +12,12 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part('tribe-events/single-event'); ?>
+				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
