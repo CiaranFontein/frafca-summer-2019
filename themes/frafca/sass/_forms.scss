@@ -133,6 +133,9 @@ div.wpcf7 { // use div+classname to override
         background-color: $color__background-banner;
         text-align: center;
     }
+    .wpcf7-mail-sent-ok {
+        
+    }
 
     @include desktop {
         form, .wpcf7-validation-errors {

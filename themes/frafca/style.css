@@ -464,36 +464,51 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: auto;
   position: absolute;
   width: 100%;
-  padding: 20px;
   top: 0;
   left: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .site-header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1300px;
+    max-width: 1400px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (min-width: 1200px) {
+      .site-header .header-container {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
   @media (min-width: 1200px) {
     .site-header {
       background: rgba(255, 255, 255, 0.3);
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; } }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   .site-header .header-logo {
     background: url(../../images/logos/2018_frafca_logo_final.png) no-repeat;
-    background-size: 40px 40px;
-    height: 40px;
-    width: 40px;
-    z-index: 1;
-    margin: 0 2rem; }
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+    z-index: 1; }
   @media (min-width: 1200px) {
     .site-header {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
@@ -598,11 +613,7 @@ a {
     @media (min-width: 1200px) {
       .main-navigation .side-header-menu {
         display: block;
-        color: #000;
-        padding-right: 1rem; }
-        .main-navigation .side-header-menu ul {
-          margin: 0.15rem;
-          margin-right: 1.7rem; }
+        color: #000; }
         .main-navigation .side-header-menu li {
           padding: 0.8rem 1.5rem;
           border-radius: 0.65rem;
@@ -1151,6 +1162,22 @@ a {
 /* Single Event page **** Start*/
 .tribe-events-single {
   color: black; }
+
+.tribe-events-schedule,
+.tribe-clearfix,
+.tribe-events-cost {
+  background: #2F2B5C; }
+  .tribe-events-schedule h2,
+  .tribe-events-schedule span,
+  .tribe-clearfix h2,
+  .tribe-clearfix span,
+  .tribe-events-cost h2,
+  .tribe-events-cost span {
+    font-size: 1rem;
+    font-weight: 300; }
+
+.single-event-header {
+  background-color: #2F2B5C; }
 
 /*--------------------------------------------------------------
 # Media
