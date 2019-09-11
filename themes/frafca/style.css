@@ -464,36 +464,51 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: auto;
   position: absolute;
   width: 100%;
-  padding: 20px;
   top: 0;
   left: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .site-header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1300px;
+    max-width: 1400px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (min-width: 1200px) {
+      .site-header .header-container {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
   @media (min-width: 1200px) {
     .site-header {
       background: rgba(255, 255, 255, 0.3);
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; } }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   .site-header .header-logo {
     background: url(../../images/logos/2018_frafca_logo_final.png) no-repeat;
-    background-size: 40px 40px;
-    height: 40px;
-    width: 40px;
-    z-index: 1;
-    margin: 0 2rem; }
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+    z-index: 1; }
   @media (min-width: 1200px) {
     .site-header {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
@@ -598,11 +613,7 @@ a {
     @media (min-width: 1200px) {
       .main-navigation .side-header-menu {
         display: block;
-        color: #000;
-        padding-right: 1rem; }
-        .main-navigation .side-header-menu ul {
-          margin: 0.15rem;
-          margin-right: 1.7rem; }
+        color: #000; }
         .main-navigation .side-header-menu li {
           padding: 0.8rem 1.5rem;
           border-radius: 0.65rem;
@@ -968,7 +979,7 @@ a {
 .grid-cards p {
   margin-bottom: 3rem; }
 
-/* Grid Card #### END */
+/* Grid Card **** END */
 /* Contact Page **** START */
 .page-template-page-contact .grid-cards {
   padding-bottom: 5rem; }
@@ -1006,7 +1017,7 @@ a {
     .page-template-page-contact .contact-location-header {
       padding: 5rem 0 5rem 0; } }
 
-/* Contact Page #### END */
+/* Contact Page **** END */
 /* Team Page **** START */
 .page-template-page-meet-our-team-php .grid-cards {
   display: inline; }
@@ -1148,6 +1159,10 @@ a {
           margin-bottom: 1.5rem; } }
 
 /* Volunteer page **** End */
+/* Single Event page **** Start*/
+.tribe-events-single {
+  color: black; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1220,6 +1235,91 @@ object {
     padding: 3rem 2rem; }
     .resources-grid .resources .cfs-hyperlink .text {
       color: #ffffff; }
+
+/* Donate Page */
+#donate-page-banner .banner-title {
+  margin-top: 0rem; }
+
+@media (min-width: 1200px) {
+  #donate-page-banner .banner-title {
+    margin-top: 7.5rem; } }
+
+#donate-page-banner .banner-button {
+  margin: 2rem auto;
+  padding: 0.75rem 0;
+  width: 205px;
+  border-radius: 10px;
+  background-color: #FFD400; }
+  #donate-page-banner .banner-button a {
+    color: #2d2d2d;
+    text-decoration: none;
+    font-weight: bold; }
+
+.donate-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 22rem; }
+  .donate-grid .donate-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    border: 1px solid black;
+    background: #2F2B5C;
+    height: 55vh; }
+    .donate-grid .donate-card h3 {
+      width: 80%;
+      margin: 0 auto; }
+    .donate-grid .donate-card p {
+      font-size: 1.2rem;
+      width: 80%;
+      margin: 1rem auto; }
+
+@media (min-width: 1200px) {
+  .donate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+    margin: 0 auto;
+    width: 70rem; }
+    .donate-grid .donate-card {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-bottom: 2rem;
+      margin: 7rem auto;
+      padding: 1rem 1rem 1rem 1rem;
+      text-align: center;
+      border: 1px solid black;
+      background: #2F2B5C;
+      height: 55vh; }
+      .donate-grid .donate-card h3 {
+        width: 80%;
+        margin: 0 auto; }
+      .donate-grid .donate-card p {
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 1rem auto; } }
 
 /* Single - single-prgrm_svc.php */
 @media (min-width: 1200px) {

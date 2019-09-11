@@ -30,32 +30,43 @@ a {
 /* Header Menus */
 .site-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: auto;
     position: absolute;
     width: 100%;
-    padding: 20px;
     top: 0;
     left: 0;
     align-items: center;
 
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        width: 1300px;
+        max-width: 1400px;
+        align-items: center;
+
+        @include desktop {
+            justify-content: space-between;
+        }
+    }
+
 
     @include desktop {
         background: rgba(255, 255, 255, 0.3);
-        justify-content: flex-end;
+        justify-content: center;
     }
 
     .header-logo {
         background: url(../../images/logos/2018_frafca_logo_final.png) no-repeat;
-        background-size: 40px 40px;
-        height: 40px;
-        width: 40px;
+        background-size: 60px 60px;
+        height: 60px;
+        width: 60px;
         z-index: 1;
-        margin: 0 2rem;
+
     }
 
     @include desktop {
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
 }
@@ -188,12 +199,6 @@ a {
         @include desktop {
             display: block;
             color: #000;
-            padding-right: 1rem;
-
-            ul {
-                margin: 0.15rem;
-                margin-right: 1.7rem;
-            }
 
             li {
                 padding: 0.8rem 1.5rem;
