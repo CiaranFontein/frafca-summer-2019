@@ -58,33 +58,43 @@ get_header(); ?>
 				</div>				
 			
 			<div class="flex-wrap single-details">
-				<?php  
-                    $card = frafca_cfs('contact_information');
-                    foreach($card as $card) :
-                            $header = $card['contact_header'];
-							$title = $card['contact_title'];
-							$email = $card['email'];
-							$phone = $card['phone'];
-							$fax = $card['fax'];
-                ?>
-
+					<?php 
+                        $limit_information = count(frafca_cfs('contact_information')) -1;
+						$information = array ( 0 => frafca_cfs('contact_information')[$limit_information] );
+                        foreach( $information as $info ):      
+					?>
+					
                     <div class="content-type-widgets volunteer-info-container">
-						
-							<h3 class="purple"><?php echo $header;?></h3>
-							<div class="white ">
-								<p><?php echo $title;?></p>
-								<p><span>Email: </span><a href="mailto:<?php echo $email;?>" target="_top"><?php echo $email;?></a></p>
-								<p><span>Phone: </span> <?php echo $phone;?></p>
-								<p><span>Fax: </span> <?php echo $fax;?></p>
-							</div>
-						
-                    </div>
+					<?php 
+						// foreach($de_contacts as $de_contact):
+						$keys = array_keys($info);
+						$count_arr = count($info);
+						$i = 0;
+					?>
+						<h3 class="purple">Contact Information</h3>
+							<?php 
+							while( $i < $count_arr ):
+								$key_info = $keys[$i];
+								$val_info = $info[$key_info];
+							?>
 
+								<p><strong><?php echo ucfirst($key_info); ?></strong> : <?php echo $val_info ;?></p>
+							<?php $i++; endwhile;?>					
+                    </div>
                 <?php endforeach; ?>
             
 			</div>
 		</div>
-        </section><!-- #prgrm_svc-categories -->
+		</section><!-- #page-volunteer -->
+		
+		<section class="get-in-touch">
+            <div class="form-container purple">
+                <?php  
+                    $forms = frafca_cfs('get_in_touch');
+                    echo $forms;
+                ?>
+            </div>
+        </section>
 
     </main><!-- #main -->
 </div><!-- #primary -->
