@@ -135,7 +135,7 @@ a {
     padding-top: 80px;
     // white-space: nowrap;
     opacity: 0;
-    transition: 0.35s;
+    transition: $time__transition;
     overflow: hidden;
 
     .sub-menu {
@@ -148,6 +148,15 @@ a {
         color: $color__link-visited;
         width: 100%;
         padding: 1.5rem 0;
+        &:active {
+            color: white;
+            background-color: $color__link-visited;
+        }
+        &:focus {
+            color: $color__background-banner;
+            background-color: transparent;
+            text-decoration: underline;
+        }
     }
     &--open {
         display: block;
@@ -188,12 +197,16 @@ a {
                 .fa, .fas {
                     width: 32px; height: 32px;
                     position: absolute;
-                    top: 50%;
+                    top: 20px;
                     right: .5rem;
-                    transform: translateY(-50%);
                     text-align: center;
                     line-height: 32px;
                     color: $color__link-visited;
+                    transition: transform $time__transition;
+                    transform-origin: center;
+                    &.open {
+                        transform: rotate(180deg);
+                    }
                 }
                 ul {
                     padding: 0 0.8rem;
@@ -216,7 +229,7 @@ a {
     color: #fff;
     padding: 0.8rem;
     font-size: $font__mobile_icon_size;
-    transition: color 0.3s;
+    transition: color $time__transition;
 
     &--open {
         color: #000;

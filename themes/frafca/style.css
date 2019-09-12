@@ -576,8 +576,8 @@ a {
   z-index: 2;
   padding-top: 80px;
   opacity: 0;
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   overflow: hidden; }
   .mobile-header-menu .sub-menu {
     display: none; }
@@ -587,6 +587,13 @@ a {
     color: #2F2B5C;
     width: 100%;
     padding: 1.5rem 0; }
+    .mobile-header-menu a:active {
+      color: white;
+      background-color: #2F2B5C; }
+    .mobile-header-menu a:focus {
+      color: #BA5357;
+      background-color: transparent;
+      text-decoration: underline; }
   .mobile-header-menu--open {
     display: block;
     left: 0;
@@ -621,13 +628,20 @@ a {
           width: 32px;
           height: 32px;
           position: absolute;
-          top: 50%;
+          top: 20px;
           right: .5rem;
-          -webkit-transform: translateY(-50%);
-                  transform: translateY(-50%);
           text-align: center;
           line-height: 32px;
-          color: #2F2B5C; }
+          color: #2F2B5C;
+          -webkit-transition: -webkit-transform 0.4s;
+          transition: -webkit-transform 0.4s;
+          transition: transform 0.4s;
+          transition: transform 0.4s, -webkit-transform 0.4s;
+          -webkit-transform-origin: center;
+                  transform-origin: center; }
+          .mobile-header-menu-container ul li .fa.open, .mobile-header-menu-container ul li .fas.open {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg); }
         .mobile-header-menu-container ul li ul {
           padding: 0 0.8rem;
           font-weight: 500; }
@@ -640,8 +654,8 @@ a {
   color: #fff;
   padding: 0.8rem;
   font-size: 2.5rem;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s; }
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s; }
   .hamburger-icon--open {
     color: #000; }
   @media (min-width: 1200px) {
