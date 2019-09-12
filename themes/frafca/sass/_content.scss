@@ -426,12 +426,17 @@
 	padding: 0px;
 }
 #tribe-events {
+	p:last-child {
+		margin-bottom: 2rem;
+	}
 	div {
 		&.tribe-events-single-event-description {
-			padding: 3rem;
+			padding: 0rem 3rem;
 		}
 	}
 }
+
+
 .single-tribe_events {
 	
 	color: #323232;
@@ -445,7 +450,11 @@
 			.single-event-header {
 				background-color: $color__background-article;
 				color: white;
-				padding: 1rem;
+				padding: 2rem;
+				transform: translateY(-38px);
+				width: 90%;
+				margin: 0 auto;
+				
 			}
 
 			.tribe-events-single-event-title {
@@ -462,6 +471,17 @@
 					}
 			}
 
+			.tribe-events-single-event-description
+			.tribe-events-content {
+
+				p:last-child {
+					margin-bottom: 2rem;
+				}
+				
+				
+
+			}
+
 			.single-event-date-details {
 				display: none;
 			}
@@ -475,15 +495,11 @@
 				display: none;
 			}
 
-			.secondary,
-			.tribe-events-venue-map,
-			.single-event-map {
-				width: 100%;
-				margin: 2rem 2rem; 
-						@media only screen and (max-width: 970px)
-						{ width: 100%;
-						 margin: 2rem 2rem; 
-						}
+
+			.secondary .tribe-events-venue-map {
+				width: 90%;
+				margin: 2rem 5%; 
+						
 			}
 
 			.tribe-events-meta-group-organizer {
@@ -502,11 +518,33 @@
 			.secondary,
 			.tribe-clearfix {
 				width: 100%;
-
 			}
 
 			.fa-calendar-alt {
-				color:yellow;
+				font-size: 1.5rem;
 			}
-		
+
+			.get-ticket-header {
+				display: none;
+				@include desktop {
+					display: block;
+				}
+			}
+
+			.get-ticket-footer {
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-evenly;
+				padding: 0 1rem;
+					a {
+						text-align: center;
+						margin: 1rem;
+					}
+				@include desktop {
+					display: none;
+				}
+
+
+			}
+			
 }

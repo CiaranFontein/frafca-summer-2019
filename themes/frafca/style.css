@@ -1293,8 +1293,11 @@ a {
 #tribe-events-pg-template {
   padding: 0px; }
 
+#tribe-events p:last-child {
+  margin-bottom: 2rem; }
+
 #tribe-events div.tribe-events-single-event-description {
-  padding: 3rem; }
+  padding: 0rem 3rem; }
 
 .single-tribe_events {
   color: #323232;
@@ -1305,7 +1308,11 @@ a {
   .single-tribe_events .single-event-header {
     background-color: #2F2B5C;
     color: white;
-    padding: 1rem; }
+    padding: 2rem;
+    -webkit-transform: translateY(-38px);
+            transform: translateY(-38px);
+    width: 90%;
+    margin: 0 auto; }
   .single-tribe_events .tribe-events-single-event-title {
     font-size: 1.5rem; }
   .single-tribe_events .single-event-purple {
@@ -1316,6 +1323,9 @@ a {
     font-weight: 300; }
     .single-tribe_events .single-event-purple span {
       font-weight: 300; }
+  .single-tribe_events .tribe-events-single-event-description
+.tribe-events-content p:last-child {
+    margin-bottom: 2rem; }
   .single-tribe_events .single-event-date-details {
     display: none; }
   .single-tribe_events .single-tribe_events,
@@ -1323,17 +1333,9 @@ a {
     text-align: center; }
   .single-tribe_events .single-event-venue {
     display: none; }
-  .single-tribe_events .secondary,
-  .single-tribe_events .tribe-events-venue-map,
-  .single-tribe_events .single-event-map {
-    width: 100%;
-    margin: 2rem 2rem; }
-    @media only screen and (max-width: 970px) {
-      .single-tribe_events .secondary,
-      .single-tribe_events .tribe-events-venue-map,
-      .single-tribe_events .single-event-map {
-        width: 100%;
-        margin: 2rem 2rem; } }
+  .single-tribe_events .secondary .tribe-events-venue-map {
+    width: 90%;
+    margin: 2rem 5%; }
   .single-tribe_events .tribe-events-meta-group-organizer {
     padding: 0 3rem; }
   .single-tribe_events .single-tribe_events,
@@ -1347,7 +1349,30 @@ a {
   .single-tribe_events .tribe-clearfix {
     width: 100%; }
   .single-tribe_events .fa-calendar-alt {
-    color: yellow; }
+    font-size: 1.5rem; }
+  .single-tribe_events .get-ticket-header {
+    display: none; }
+    @media (min-width: 1200px) {
+      .single-tribe_events .get-ticket-header {
+        display: block; } }
+  .single-tribe_events .get-ticket-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0 1rem; }
+    .single-tribe_events .get-ticket-footer a {
+      text-align: center;
+      margin: 1rem; }
+    @media (min-width: 1200px) {
+      .single-tribe_events .get-ticket-footer {
+        display: none; } }
 
 /*--------------------------------------------------------------
 # Media
@@ -1413,6 +1438,13 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.page-template-front-page .scroll-down {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  left: 50%; }
+
 .front-page-about-us {
   color: #2d2d2d;
   text-align: center; }
@@ -1421,16 +1453,38 @@ object {
     width: -moz-max-content;
     width: max-content;
     margin: 0 auto; }
+  .front-page-about-us h2 {
+    margin: 2rem auto;
+    font-size: 2.625rem; }
   .front-page-about-us .grid-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
     color: #ffffff; }
+    .front-page-about-us .grid-cards p {
+      margin: 0; }
     .front-page-about-us .grid-cards .round-rect-card {
       text-align: center;
       padding: 0 1rem;
-      border-radius: 8px; }
+      border-radius: 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 300px;
+      height: 460px; }
+      .front-page-about-us .grid-cards .round-rect-card .card-icon {
+        width: 150px; }
 
 /* About Page */
 .about-page-banner .header-meta {

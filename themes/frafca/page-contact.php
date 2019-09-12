@@ -45,7 +45,7 @@ get_header(); ?>
                 <?php endforeach; ?>
             
             </div>
-        </section><!-- #prgrm_svc-categories -->
+        </section><!-- #page-contact -->
 
     </main><!-- #main -->
 </div><!-- #primary -->
