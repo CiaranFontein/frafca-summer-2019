@@ -582,6 +582,8 @@ a {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   overflow: hidden; }
+  .mobile-header-menu .menu-mobile-header-menu-container {
+    padding-bottom: 9rem; }
   .mobile-header-menu .sub-menu {
     display: none; }
   .mobile-header-menu a {
@@ -599,7 +601,7 @@ a {
   .mobile-header-menu--open {
     display: block;
     left: 0;
-    width: 93%;
+    width: 90vw;
     opacity: 1; }
   .mobile-header-menu-container {
     position: relative;
@@ -615,11 +617,12 @@ a {
         position: relative;
         margin: 0;
         padding: 0 0.8rem;
+        width: 85%;
         font-size: 1rem; }
         .mobile-header-menu-container ul li::before {
           position: absolute;
           content: '';
-          width: 100%;
+          width: 90vw;
           height: 1px;
           left: 0;
           bottom: 0;
@@ -632,7 +635,7 @@ a {
           height: 32px;
           position: absolute;
           top: 20px;
-          right: .5rem;
+          right: -2.8rem;
           text-align: center;
           line-height: 32px;
           color: #2F2B5C; }
@@ -674,10 +677,6 @@ a {
     @media (min-width: 1200px) {
       .main-navigation .header-menu {
         display: block; } }
-  .main-navigation ul {
-    display: none; }
-    .main-navigation ul li {
-      display: none; }
   .main-navigation i {
     color: #fff;
     padding: 0.8rem;
@@ -689,9 +688,7 @@ a {
         font-size: 1.5rem; } }
   .main-navigation ul {
     display: block;
-    list-style: none;
-    -webkit-padding-start: 0px;
-            padding-inline-start: 0px; }
+    list-style: none; }
     .main-navigation ul .sub-menu {
       display: none;
       position: absolute;
