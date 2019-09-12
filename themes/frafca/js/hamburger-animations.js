@@ -6,20 +6,32 @@
   let lockScroll;
 
   // Toggle the mobile-navigation
-  $(document).on('click', function(e){
-    let clicked_ele = e.target;
-    let checkIsInNav = $mobileHeaderMenu[0].contains(clicked_ele);
+  $(document).on('click touchstart', function(e){
 
-    if ($hamburgerIcon[0].contains(clicked_ele)) {
-      toggleMobileNavMenu();
-      return
+    if (e.type === 'click' && $(window).width() > 1200 ){
+      checkEvent();
     }
-    
-    // Close the navigation when it's opened and clicked outside of the navigation
-    if (!checkIsInNav && menuOpen ){
-      toggleMobileNavMenu();
+
+    if (e.type === 'touchstart' && $(window).width() <= 1200 ){
+      checkEvent();
     }
-  });
+
+    function checkEvent() {
+      let clicked_ele = e.target;
+      let checkIsInNav = $mobileHeaderMenu[0].contains(clicked_ele);
+  
+      if ($hamburgerIcon[0].contains(clicked_ele)) {
+        toggleMobileNavMenu();
+        return
+      }
+      
+      // Close the navigation when it's opened and clicked outside of the navigation
+      if (!checkIsInNav && menuOpen ){
+        toggleMobileNavMenu();
+      }
+    }
+
+  }); // end click, touchstart events
 
   function toggleMobileNavMenu() {
     $mobileHeaderMenu.toggleClass('mobile-header-menu--open');
@@ -29,16 +41,18 @@
     lockScroll = $(window).scrollTop();
   }
   
+
   $(window).on('scroll', function(){
 
     // lock scroll position, but retain settings for later
     if (menuOpen){
-      $(window).scrollTop(lockScroll);
+      $(window).scrollTop(lockScroll);      
     }
 
     // Toggle darkmode when the header is scrolled
     toggleDarkMode();
-  });
+
+  }); // end 'scroll' event
 
   toggleDarkMode();
 
