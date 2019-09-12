@@ -44,6 +44,30 @@ $event_id = get_the_ID();
 		<!-- <p class="tribe-events-back">
 			<a href="<?php echo esc_url(tribe_get_events_link()); ?>"> <?php printf('&laquo; ' . esc_html_x('All %s', '%s Events plural label', 'the-events-calendar'), $events_label_plural); ?></a>
 		</p> -->
+		<section id="page-contact">
+            <div class="grid-cards contact-cards">
+				<?php  
+                    $ticket = frafca_cfs('ticket');
+                    foreach($ticket as $ticket) :
+                            $getticket = $ticket['get_ticket'];
+                            $price = $ticket['ticket_price'];
+							$description = $ticket['ticket_description'];
+                ?>
+
+                    <div class="purple get-ticket-header">
+                        <a class='default-btn yellow' href="<?php echo $getticket['url']; ?>" target="<?php echo $getticket['target']; ?>">
+                            <?php echo $getticket['text']; ?>
+						</a>
+						<p><?php echo $price;?></p>
+						<p><?php echo $description;?></p>
+                        
+
+                    </div>
+
+                <?php endforeach; ?>
+            
+            </div>
+        </section>
 	</div>
 
 	<!-- Event header -->
@@ -80,7 +104,31 @@ $event_id = get_the_ID();
 		<?php if (get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option('showComments', false)) comments_template() ?>
 	<?php endwhile; ?>
 
-
+	<!-- #page-contact -->
 	<!-- #tribe-events-footer -->
+
+				<?php  
+                    $ticket = frafca_cfs('ticket');
+                    foreach($ticket as $ticket) :
+                            $getticket = $ticket['get_ticket'];
+                            $price = $ticket['ticket_price'];
+							$description = $ticket['ticket_description'];
+                ?>
+
+                    <div class="rect-card white get-ticket-footer">
+                        <a class='default-btn yellow' href="<?php echo $getticket['url']; ?>" target="<?php echo $getticket['target']; ?>">
+                            <?php echo $getticket['text']; ?>
+						</a>
+
+						<div class="get-ticket-footer-desc">
+							<p><?php echo $price;?></p>
+							<p><?php echo $description;?></p>
+						</div>
+                        
+ 
+                    </div>
+
+                <?php endforeach; ?>
+	
 
 </div><!-- #tribe-events-content -->
