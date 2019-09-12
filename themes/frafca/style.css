@@ -605,8 +605,7 @@ a {
       background-color: #2F2B5C; }
     .mobile-header-menu a:focus {
       color: #BA5357;
-      background-color: transparent;
-      text-decoration: underline; }
+      background-color: transparent; }
   .mobile-header-menu--open {
     display: block;
     left: 0;
