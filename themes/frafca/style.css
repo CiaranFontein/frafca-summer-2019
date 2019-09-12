@@ -346,7 +346,7 @@ img {
   display: block;
   padding: 16px 8px;
   border: 0 solid transparent;
-  border-radius: 10px;
+  border-radius: 8px;
   min-width: 210px;
   text-decoration: none;
   -ms-flex-item-align: center;
@@ -1086,7 +1086,6 @@ a {
   padding: 5rem 1.5rem 2rem 1.5rem;
   text-align: center; }
   .grid-cards .rect-card.no-content {
-    grid-column: 1/3;
     margin: 0;
     padding: 2rem;
     color: #4D4E60; }
@@ -1313,12 +1312,6 @@ a {
     font-weight: 300; }
     .single-tribe_events .single-event-purple span {
       font-weight: 300; }
-<<<<<<< HEAD
-    .single-tribe_events .single-event-purple .tribe-events-pg-template {
-      padding: 0px; }
-    .single-tribe_events .single-event-purple .tribe-events-single-event-description {
-      padding: 5rem 2rem; }
-=======
   .single-tribe_events .single-event-date-details {
     display: none; }
   .single-tribe_events .single-tribe_events,
@@ -1336,7 +1329,6 @@ a {
     background: none;
     border: none;
     margin: 0; }
->>>>>>> 53d2d3dc138110f95c8834a1600afef9aeec2fa6
 
 /*--------------------------------------------------------------
 # Media
@@ -1405,23 +1397,21 @@ object {
 .front-page-about-us {
   color: #2d2d2d;
   text-align: center; }
-
-.yellow {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto; }
-
-.grid-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 50px;
-  color: #ffffff; }
-  .grid-cards .round-rect-card {
-    text-align: center;
-    padding: 0 1rem;
-    border-radius: 10px; }
+  .front-page-about-us .yellow {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto; }
+  .front-page-about-us .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    color: #ffffff; }
+    .front-page-about-us .grid-cards .round-rect-card {
+      text-align: center;
+      padding: 0 1rem;
+      border-radius: 8px; }
 
 /* About Page */
 .about-page-banner .header-meta {
