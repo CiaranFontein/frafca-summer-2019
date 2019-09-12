@@ -89,6 +89,20 @@ a {
     top: 0;
     left: 0;
     align-items: center;
+    transition: $time__transition;
+    &.darkmode {
+        z-index: 1;
+        background-color: rgba(47,43,92,.6);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+        backdrop-filter: blur(4px);
+
+        .hamburger-icon, .main-navigation i {
+            color: $color__background-screen;
+        }
+        .hamburger-icon--open {
+            color: $color__text-sec;
+        }
+    }
 
     .header-container {
         display: flex;
@@ -135,7 +149,7 @@ a {
     padding-top: 80px;
     // white-space: nowrap;
     opacity: 0;
-    transition: 0.35s;
+    transition: $time__transition;
     overflow: hidden;
 
     .sub-menu {
@@ -148,6 +162,15 @@ a {
         color: $color__link-visited;
         width: 100%;
         padding: 1.5rem 0;
+        &:active {
+            color: white;
+            background-color: $color__link-visited;
+        }
+        &:focus {
+            color: $color__background-banner;
+            background-color: transparent;
+            text-decoration: underline;
+        }
     }
     &--open {
         display: block;
@@ -178,12 +201,21 @@ a {
                     height: 1px;
                     left: 0;
                     bottom: 0;
-                    border-bottom: 1px solid $color__background-article;
+                    border-bottom: 1px solid $color__link-visited;
                 }
                 &:last-child {
                     &::before {
                         display: none;
                     }
+                }
+                .fa, .fas {
+                    width: 32px; height: 32px;
+                    position: absolute;
+                    top: 20px;
+                    right: .5rem;
+                    text-align: center;
+                    line-height: 32px;
+                    color: $color__link-visited;
                 }
                 ul {
                     padding: 0 0.8rem;
@@ -206,10 +238,10 @@ a {
     color: #fff;
     padding: 0.8rem;
     font-size: $font__mobile_icon_size;
-    transition: color 0.3s;
+    transition: color $time__transition;
 
     &--open {
-        color: #000;
+        color: $color__text-sec;
     }
 
     @include desktop {
@@ -316,4 +348,11 @@ a {
 
 .hidden {
     display: none;
+}
+.fa, .fas, .footer-arrow-down-icon {
+    transition: transform $time__transition;
+    transform-origin: center;
+}
+.open {
+    transform: rotate(180deg);
 }

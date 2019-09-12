@@ -31,7 +31,7 @@ $color__link-hover: darken($color__link, 15%);
 
 $color__warning: #FF18FF;
 $color__confirm: #398f14;
-$color__no-data:  #BBBBBB;
+$color__no-data: #BBBBBB;
 
 // Typography
 
@@ -58,3 +58,6 @@ $font__desktop_icon_size: 1.5rem;
 // Border 
 $color__border: #BBBBBB;
 $border-radius: 8px;
+
+// Animation time
+$time__transition: .4s;
