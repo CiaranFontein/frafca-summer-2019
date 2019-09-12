@@ -208,9 +208,14 @@
 /* Contact Page **** END */
 
 /* Team Page **** START */
-.page-template-page-meet-our-team-php {
+.page-template-page-meet-our-team {
 	.grid-cards {
-		display: inline;
+		display: block;
+		
+		@include desktop {
+			max-width: $desktop-width;
+			margin: 0  auto;
+		}
 
 		.rect-card {
 			margin: 0;
@@ -233,13 +238,28 @@
 			text-align: left;
 			padding-top: 80px;
 		}
-
-		p:first-child {
-			font-weight: bold;
+		p, a {
+			display: block;
+			font-weight: 500;
+			font-size: 1rem;
 		}
 
-		p:nth-child(2) {
-			font-weight: 500;
+		p:nth-child(1), p:nth-child(2) {
+			font-weight: 900;
+
+		}
+		p:first-child {
+			font-size: 22px;
+			@include desktop {
+				font-size: 2rem;
+			}
+		}
+		p:nth-child(2){
+			@include desktop {
+				
+				font-size: 1.5rem;
+				
+			}
 		}
 
 		a {
