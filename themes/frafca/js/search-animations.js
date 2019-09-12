@@ -13,15 +13,13 @@
   });
 
   function openSearchField() {
-    $container.fadeIn();
+    $container.stop().fadeIn(300);
     $container.addClass('search-field-container--active');
     $container.css({ height: $header.height() + 'px' });
-    $logo.css('z-index', '10');
   }
 
   function closeSearchField() {
-    $container.fadeOut();
-    $logo.css('z-index', '1');
+    $container.stop().fadeOut(300);
     $container.removeClass('search-field-container--active');
   }
 })(jQuery);
