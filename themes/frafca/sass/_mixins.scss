@@ -12,3 +12,12 @@
         @content;
     }
 }
+
+// Button Style
+
+@mixin white-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.65rem;
+    background: #fff;
+    margin: 0.15rem;
+}
