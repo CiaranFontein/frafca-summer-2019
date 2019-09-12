@@ -6,7 +6,7 @@
   let lockScroll;
 
   // Toggle the mobile-navigation
-  $(document).on('click', function(e){
+  $(document).on('click touchstart', function(e){
     let clicked_ele = e.target;
     let checkIsInNav = $mobileHeaderMenu[0].contains(clicked_ele);
 
