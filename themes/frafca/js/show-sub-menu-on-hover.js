@@ -11,7 +11,7 @@
       // MOBILE functions
       
       // Toggle the submenu and rotate the arrow icon
-      if ( (e.type === 'click' || e.type === 'touchstart' ) && 
+      if ( (e.type === 'touchstart' ) && 
           $(targetEle).hasClass('fa-chevron-down') ){
 
         let $mobileSubMenu = $(targetEle).siblings('ul');
