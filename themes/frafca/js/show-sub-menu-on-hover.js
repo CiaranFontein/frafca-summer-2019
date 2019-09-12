@@ -4,10 +4,14 @@
   const $navSecondUL = $('#masthead').find('.menu-mobile-header-menu-container').children('ul').find('ul');
   $navSecondUL.before(`<i class="fas fa-chevron-down"></i>`);
 
-  $(window).on('click hover', function(){
-
+  $(window).on('click mouseenter', function(e){
+    let targetEle = e.target;
     if ( $(window).width() < 1200 ){
       // MOBILE functions
+      if ($(targetEle).hasClass('fa-chevron-down') ){
+        console.log(targetEle);
+      }
+            
 
     } else {
       // DESKTOP functions

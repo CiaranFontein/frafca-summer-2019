@@ -36,17 +36,46 @@ a {
     width: 100vw;
     position: absolute;
     z-index: 10;
+    opacity: 0;
 
     &--active {
         display: block;
+        opacity: 1;
     }
 
     @include desktop {
         display: none;
+        opacity: 0;
 
         &--active {
             display: block;
+            opacity: 1;
         }
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .search-label {
+            width: 600px;
+        }
+
+        .search-field {
+            padding: 0 20px;
+            outline: none;
+            width: 100%;
+            border: 2px solid black;
+        }
+    }
+
+    .search-button {
+        @include white-button;
+        color: #000;
+        font-weight: bold;
+        background: $color__link;
+        margin: 0px 50px;
     }
 }
 
@@ -278,10 +307,7 @@ a {
             color: #000;
 
             li {
-                padding: 0.8rem 1.5rem;
-                border-radius: 0.65rem;
-                background: #fff;
-                margin: 0.15rem;
+                @include white-button;
 
                 a {
                     color: #000;
