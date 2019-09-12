@@ -13,14 +13,14 @@
   });
 
   function openSearchField() {
+    $container.fadeIn();
     $container.addClass('search-field-container--active');
     $container.css({ height: $header.height() + 'px' });
-    $logo.css('z-index', '100');
-    console.log('opening');
+    $logo.css('z-index', '10');
   }
 
   function closeSearchField() {
-    console.log('closing');
+    $container.fadeOut();
     $logo.css('z-index', '1');
     $container.removeClass('search-field-container--active');
   }
