@@ -465,14 +465,50 @@ a {
 
 /* Search Field */
 .search-field-container {
-  display: none; }
+  display: none;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  position: absolute;
+  z-index: 10;
+  opacity: 0; }
   .search-field-container--active {
-    display: block; }
+    display: block;
+    opacity: 1; }
   @media (min-width: 1200px) {
     .search-field-container {
-      display: none; }
+      display: none;
+      opacity: 0; }
       .search-field-container--active {
-        display: block; } }
+        display: block;
+        opacity: 1; } }
+  .search-field-container .search-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .search-field-container .search-form .search-label {
+      width: 600px; }
+    .search-field-container .search-form .search-field {
+      padding: 0 20px;
+      outline: none;
+      width: 100%;
+      border: 2px solid black; }
+  .search-field-container .search-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.65rem;
+    background: #fff;
+    margin: 0.15rem;
+    color: #000;
+    font-weight: bold;
+    background: #FFD400;
+    margin: 0px 50px; }
 
 /* Header Menus */
 .site-header {
@@ -518,7 +554,8 @@ a {
     background-size: 60px 60px;
     height: 60px;
     width: 60px;
-    z-index: 1; }
+    z-index: 1;
+    position: relative; }
   @media (min-width: 1200px) {
     .site-header {
       -webkit-box-pack: center;
@@ -1242,9 +1279,17 @@ a {
     text-align: center; }
   .single-tribe_events .single-event-venue {
     display: none; }
+  .single-tribe_events .secondary,
+  .single-tribe_events .tribe-events-venue-map,
   .single-tribe_events .single-event-map {
     width: 100%;
-    margin: 0; }
+    margin: 2rem 2rem; }
+    @media only screen and (max-width: 970px) {
+      .single-tribe_events .secondary,
+      .single-tribe_events .tribe-events-venue-map,
+      .single-tribe_events .single-event-map {
+        width: 100%;
+        margin: 2rem 2rem; } }
   .single-tribe_events .tribe-events-meta-group-organizer {
     padding: 0 3rem; }
   .single-tribe_events .single-tribe_events,
@@ -1252,6 +1297,13 @@ a {
     background: none;
     border: none;
     margin: 0; }
+  .single-tribe_events .tribe-events-single-section,
+  .single-tribe_events .tribe-events-event-meta,
+  .single-tribe_events .secondary,
+  .single-tribe_events .tribe-clearfix {
+    width: 100%; }
+  .single-tribe_events .fa-calendar-alt {
+    color: yellow; }
 
 /*--------------------------------------------------------------
 # Media
