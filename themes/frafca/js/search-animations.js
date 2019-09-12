@@ -1,5 +1,5 @@
 (function($) {
-  let $logo = $('.header-logo');
+  // let $logo = $('.header-logo');
   let $header = $('.site-header');
   let $container = $('.search-field-container');
   let $searchIcon = $('.search-icon');
