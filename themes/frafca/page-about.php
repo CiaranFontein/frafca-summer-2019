@@ -47,6 +47,8 @@ get_header(); ?>
                         <p><?php echo $description; ?></p>
                     </div>
 
+
+
                 <?php endforeach; ?>
             </div>
 
@@ -55,9 +57,92 @@ get_header(); ?>
                 <p><?php echo $description; ?></p>
             </div>
 
-            <div class=>
+            <div class="our-history-grid">
+                <?php
+                    $loop = frafca_cfs('our_history');
+                    foreach ($loop as $content) :
+                        $image = $content['our_history_image'];
+                        $title = $content['our_history_title'];
+                        $description = $content['our_history_description'];
+                        ?>
+
+                    <div class="our-history-image">
+                        <?php echo '<img src=' . $image . '">'; ?>
+                    </div>
+
+                    <div class="our-history-info">
+                        <h3><?php echo $title; ?></h3>
+                        <br>
+                        <p><?php echo $description; ?></p>
+                    </div>
+
+                <?php endforeach; ?>
             </div>
 
+            <div class="friendship-center-grid">
+                <?php
+                    $loop = frafca_cfs('friendship_center');
+                    foreach ($loop as $content) :
+                        $image = $content['fc_image'];
+                        $title = $content['fc_title'];
+                        $description = $content['fc_description'];
+                        ?>
+
+                    <div class="fc-image">
+                        <?php echo '<img src=' . $image . '">'; ?>
+                    </div>
+
+                    <div class="fc-info">
+                        <h3><?php echo $title; ?></h3>
+                        <br>
+                        <p><?php echo $description; ?></p>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
+
+            <div class="friendship-center-grid">
+                <?php
+                    $loop = frafca_cfs('friendship_center');
+                    foreach ($loop as $content) :
+                        $image = $content['fc_image'];
+                        $title = $content['fc_title'];
+                        $description = $content['fc_description'];
+                        ?>
+
+                    <div class="fc-image">
+                        <?php echo '<img src=' . $image . '">'; ?>
+                    </div>
+
+                    <div class="fc-info">
+                        <h3><?php echo $title; ?></h3>
+                        <br>
+                        <p><?php echo $description; ?></p>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
+            <div class="friendship-center-grid">
+                <?php
+                    $loop = frafca_cfs('friendship_center');
+                    foreach ($loop as $content) :
+                        $image = $content['fc_image'];
+                        $title = $content['fc_title'];
+                        $description = $content['fc_description'];
+                        ?>
+
+                    <div class="fc-image">
+                        <?php echo '<img src=' . $image . '">'; ?>
+                    </div>
+
+                    <div class="fc-info">
+                        <h3><?php echo $title; ?></h3>
+                        <br>
+                        <p><?php echo $description; ?></p>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
         <?php else : ?>
 
             <?php get_template_part('template-parts/content', 'none'); ?>
