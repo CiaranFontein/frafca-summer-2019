@@ -133,3 +133,15 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+add_action( 'tribe_events_mobile_breakpoint', 'mobile_breakpoint' );
+
+			function mobile_breakpoint() {
+				return 970;
+			}
+
+			function customize_tribe_events_breakpoint() {
+			return 970;
+			}
+			add_filter( 'tribe_events_mobile_breakpoint', 'customize_tribe_events_breakpoint' );

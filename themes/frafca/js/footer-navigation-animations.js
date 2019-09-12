@@ -7,6 +7,10 @@
       $(this)
         .children('.footer-menu-container')
         .slideToggle(transitionTime);
+
+      $(this)
+        .find('.footer-arrow-down-icon')
+        .toggleClass('open');
     }
   });
 })(jQuery);

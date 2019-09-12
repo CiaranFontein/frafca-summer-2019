@@ -119,7 +119,6 @@
 		text-align: center;
 
 		&.no-content {
-			grid-column: 1/3;
 			margin: 0;
 			padding: 2rem;
 			color: $color__background-body;
@@ -476,9 +475,15 @@
 				display: none;
 			}
 
+			.secondary,
+			.tribe-events-venue-map,
 			.single-event-map {
 				width: 100%;
-    			margin: 0;
+				margin: 2rem 2rem; 
+						@media only screen and (max-width: 970px)
+						{ width: 100%;
+						 margin: 2rem 2rem; 
+						}
 			}
 
 			.tribe-events-meta-group-organizer {
@@ -490,9 +495,18 @@
 				background: none;
 				border: none;
 				margin: 0;
-				
+			}
+
+			.tribe-events-single-section,
+			.tribe-events-event-meta,
+			.secondary,
+			.tribe-clearfix {
+				width: 100%;
 
 			}
 
+			.fa-calendar-alt {
+				color:yellow;
+			}
 		
 }

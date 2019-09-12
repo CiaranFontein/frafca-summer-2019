@@ -35,23 +35,7 @@ a {
     left: 0;
     width: 100vw;
     position: absolute;
-    z-index: 10;
-    opacity: 0;
-
-    &--active {
-        display: block;
-        opacity: 1;
-    }
-
-    @include desktop {
-        display: none;
-        opacity: 0;
-
-        &--active {
-            display: block;
-            opacity: 1;
-        }
-    }
+    z-index: 4;
 
     .search-form {
         display: flex;
@@ -90,15 +74,18 @@ a {
     left: 0;
     align-items: center;
     transition: $time__transition;
+
     &.darkmode {
         z-index: 1;
-        background-color: rgba(47,43,92,.6);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+        background-color: rgba(47, 43, 92, .6);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
         backdrop-filter: blur(4px);
 
-        .hamburger-icon, .main-navigation i {
+        .hamburger-icon,
+        .main-navigation i {
             color: $color__background-screen;
         }
+
         .hamburger-icon--open {
             color: $color__text-sec;
         }
@@ -127,7 +114,7 @@ a {
         background-size: 60px 60px;
         height: 60px;
         width: 60px;
-        z-index: 1;
+        z-index: 5;
         position: relative;
     }
 
@@ -155,23 +142,25 @@ a {
     .sub-menu {
         display: none;
     }
-    
+
     a {
         display: block;
         text-decoration: none;
         color: $color__link-visited;
         width: 100%;
         padding: 1.5rem 0;
+
         &:active {
             color: white;
             background-color: $color__link-visited;
         }
+
         &:focus {
             color: $color__background-banner;
             background-color: transparent;
-            text-decoration: underline;
         }
     }
+
     &--open {
         display: block;
         left: 0;
@@ -184,16 +173,19 @@ a {
         height: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
+
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             font-weight: 900;
+
             li {
                 position: relative;
-                margin:  0;
+                margin: 0;
                 padding: 0 0.8rem;
                 font-size: 1rem;
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -203,30 +195,32 @@ a {
                     bottom: 0;
                     border-bottom: 1px solid $color__link-visited;
                 }
+
                 &:last-child {
                     &::before {
                         display: none;
                     }
                 }
-                .fa, .fas {
-                    width: 32px; height: 32px;
+
+                .fa,
+                .fas {
+                    width: 32px;
+                    height: 32px;
                     position: absolute;
                     top: 20px;
                     right: .5rem;
                     text-align: center;
                     line-height: 32px;
                     color: $color__link-visited;
-                    transition: transform $time__transition;
-                    transform-origin: center;
-                    &.open {
-                        transform: rotate(180deg);
-                    }
                 }
+
                 ul {
                     padding: 0 0.8rem;
                     font-weight: 500;
+
                     li {
                         padding: 0;
+
                         &:first-child {
                             // a {padding-top: 0;}
                         }
@@ -353,4 +347,15 @@ a {
 
 .hidden {
     display: none;
+}
+
+.fa,
+.fas,
+.footer-arrow-down-icon {
+    transition: transform $time__transition;
+    transform-origin: center;
+}
+
+.open {
+    transform: rotate(180deg);
 }

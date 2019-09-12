@@ -32,11 +32,11 @@ $event_id = get_the_ID();
 	<?php tribe_the_notices() ?>
 
 	<div class="single-event-header">
-		
+	
 		<?php the_title('<h1 class="tribe-events-single-event-title">', '</h1>'); ?>
-
+		
 		<div class="tribe-events-schedule tribe-clearfix single-event-purple">
-			<?php echo tribe_events_event_schedule_details($event_id, '<h2>', '</h2>'); ?>
+			<?php echo tribe_events_event_schedule_details($event_id, '<i class="far fa-calendar-alt"></i>'," ", '<h2>', '</h2>'); ?>
 			<!-- <?php //if (tribe_get_cost()) : ?> -->
 				<!-- <span class="tribe-events-cost"><?php echo tribe_get_cost(null, true) ?></span> -->
 			<!-- <?php //endif; ?> -->
