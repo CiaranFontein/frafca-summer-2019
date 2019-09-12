@@ -1415,35 +1415,6 @@ object {
   .front-page-about-us h2 {
     margin: 2rem auto;
     font-size: 2.625rem; }
-  .front-page-about-us .grid-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
-    color: #ffffff; }
-    .front-page-about-us .grid-cards p {
-      margin: 0; }
-    .front-page-about-us .grid-cards .round-rect-card {
-      text-align: center;
-      padding: 0 1rem;
-      border-radius: 8px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column wrap;
-              flex-flow: column wrap;
-      -webkit-box-pack: space-evenly;
-          -ms-flex-pack: space-evenly;
-              justify-content: space-evenly;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      width: 300px;
-      height: 460px; }
-      .front-page-about-us .grid-cards .round-rect-card .card-icon {
-        width: 150px; }
 
 /* About Page */
 .about-page-banner .header-meta {
