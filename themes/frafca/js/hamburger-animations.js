@@ -1,4 +1,5 @@
 (function($) {
+  const $header = $('#masthead');
   let menuOpen = false;
   let $mobileHeaderMenu = $('.mobile-header-menu');
   let $hamburgerIcon = $('.hamburger-icon');
@@ -28,11 +29,25 @@
     lockScroll = $(window).scrollTop();
   }
   
-  // lock scroll position, but retain settings for later
   $(window).on('scroll', function(){
+
+    // lock scroll position, but retain settings for later
     if (menuOpen){
       $(window).scrollTop(lockScroll);
     }
+
+    // Toggle darkmode when the header is scrolled
+    toggleDarkMode();
   });
+
+  toggleDarkMode();
+
+  function toggleDarkMode() {  
+    if ( $(window).scrollTop() > 0 && $(window).width() < 1200 ){
+      $header.addClass('darkmode');
+    } else {
+      $header.removeClass('darkmode');
+    }
+  }
 
 })(jQuery);

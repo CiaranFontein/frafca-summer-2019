@@ -89,6 +89,20 @@ a {
     top: 0;
     left: 0;
     align-items: center;
+    transition: $time__transition;
+    &.darkmode {
+        z-index: 1;
+        background-color: rgba(47,43,92,.6);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+        backdrop-filter: blur(4px);
+
+        .hamburger-icon, .main-navigation i {
+            color: $color__background-screen;
+        }
+        .hamburger-icon--open {
+            color: $color__text-sec;
+        }
+    }
 
     .header-container {
         display: flex;
@@ -232,7 +246,7 @@ a {
     transition: color $time__transition;
 
     &--open {
-        color: #000;
+        color: $color__text-sec;
     }
 
     @include desktop {
