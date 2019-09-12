@@ -42,14 +42,14 @@
                     <div class="header-menu">
                         <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
                     </div>
-                    <a href="#">
+                    <a class="search-icon" href="#">
                         <i class="fas fa-search"></i>
                     </a>
                     <div class="side-header-menu">
                         <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
                     </div>
                     <div class="search-field-container">
-
+                        <?php get_search_form(); ?>
                     </div>
                 </nav><!-- #site-navigation -->
             </div>

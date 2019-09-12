@@ -24,13 +24,7 @@ $event_id = get_the_ID();
 
 ?>
 
-<<<<<<< HEAD
 <?php get_template_part('template-parts/hero_banner'); ?>
-=======
-
->>>>>>> 1cd13b22cb0059ff883117502b3780e3b97daf22
-
-
 
 <div id="tribe-events-content" class="tribe-events-single">
 

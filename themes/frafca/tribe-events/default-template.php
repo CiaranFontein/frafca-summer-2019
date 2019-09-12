@@ -18,7 +18,6 @@ if (!defined('ABSPATH')) {
 
 get_header();
 ?>
-<h1>HELLO</h1>
 <?php get_template_part('template-parts/hero_banner_image'); ?>
 
 <main id="tribe-events-pg-template" class="tribe-events-pg-template">
