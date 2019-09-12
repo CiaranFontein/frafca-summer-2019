@@ -1209,25 +1209,34 @@ a {
 
 /* Volunteer page **** End */
 /* Single Event page **** Start*/
-.tribe-events-single {
-  color: black; }
-
-.tribe-events-schedule,
-.tribe-clearfix,
-.tribe-events-cost {
-  background: #2F2B5C; }
-  .tribe-events-schedule h2,
-  .tribe-events-schedule span,
-  .tribe-clearfix h2,
-  .tribe-clearfix span,
-  .tribe-events-cost h2,
-  .tribe-events-cost span {
+.single-tribe_events {
+  color: #323232;
+  padding: 0rem; }
+  .single-tribe_events .single-event-header {
+    background-color: #2F2B5C;
+    color: white;
+    padding: 1rem; }
+  .single-tribe_events .tribe-events-single-event-title {
+    font-size: 1.5rem; }
+  .single-tribe_events .single-event-purple {
+    background-color: #2F2B5C;
+    border: none;
+    padding: 0;
     font-size: 1rem;
     font-weight: 300; }
+<<<<<<< HEAD
+    .single-tribe_events .single-event-purple span {
+      font-weight: 300; }
+    .single-tribe_events .single-event-purple .tribe-events-pg-template {
+      padding: 0px; }
+    .single-tribe_events .single-event-purple .tribe-events-single-event-description {
+      padding: 5rem 2rem; }
+=======
 
 .single-event-header {
   background-color: #2F2B5C;
   color: black; }
+>>>>>>> 1cd13b22cb0059ff883117502b3780e3b97daf22
 
 /*--------------------------------------------------------------
 # Media
@@ -1294,6 +1303,43 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 /* About Page */
+.about-page-banner .header-meta {
+  width: 60%; }
+
+.who-we-are-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr;
+  grid-row-gap: 2rem;
+  margin: 3rem 0; }
+  .who-we-are-grid .about-content-image {
+    grid-area: 1 / 1 / 2 / 2; }
+    .who-we-are-grid .about-content-image img {
+      -o-object-fit: contain;
+         object-fit: contain;
+      width: 100%;
+      height: 100%; }
+  .who-we-are-grid .about-content-info {
+    color: #2d2d2d;
+    grid-area: 2 / 1 / 3 / 2;
+    text-align: center; }
+
+@media (min-width: 1200px) {
+  .who-we-are-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+    margin: 3rem 0; }
+    .who-we-are-grid .about-content-image {
+      grid-area: 1 / 1 / 2 / 2; }
+      .who-we-are-grid .about-content-image img {
+        height: 85%; }
+    .who-we-are-grid .about-content-info {
+      color: #2d2d2d;
+      grid-area: 1 / 2 / 2 / 3;
+      text-align: left; } }
+
 /* Resources Page */
 .resources-grid {
   max-width: 1000px; }

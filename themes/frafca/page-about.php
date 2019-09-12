@@ -20,13 +20,38 @@ get_header(); ?>
             <?php endif; ?>
 
             <?php /* Start the Loop */ ?>
-            <?php while (have_posts()) : the_post(); ?>
 
-                <?php get_template_part('template-parts/content'); ?>
 
-            <?php endwhile; ?>
+            <header id="about-page-banner" class="frafca-hero-image about-page-banner">
 
-            <?php the_posts_navigation(); ?>
+                <?php get_template_part('template-parts/hero_banner'); ?>
+
+            </header><!-- #about-page-banner -->
+
+            <div class="who-we-are-grid">
+                <?php
+                    $loop = frafca_cfs('who_we_are');
+                    foreach ($loop as $content) :
+                        $image = $content['who_we_are_image'];
+                        $title = $content['who_we_are_title'];
+                        $description = $content['who_we_are_description'];
+                        ?>
+
+                    <div class="about-content-image">
+                        <?php echo '<img src=' . $image . '">'; ?>
+                    </div>
+
+                    <div class="about-content-info">
+                        <h3><?php echo $title; ?></h3>
+                        <br>
+                        <p><?php echo $description; ?></p>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
+
+            <div class="location-history">
+            </div>
 
         <?php else : ?>
 
