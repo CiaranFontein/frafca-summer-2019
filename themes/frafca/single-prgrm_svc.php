@@ -24,7 +24,7 @@ get_header(); ?>
                             url(<?php echo $hero_img; ?>);
                         background-size: cover;
                         background-position: center; 
-                        background-attachment: fixed;
+                        
                         background-repeat: no-repeat;                   
                     ">
                 <?php else: ?>

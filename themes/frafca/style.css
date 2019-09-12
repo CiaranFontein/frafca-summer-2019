@@ -587,10 +587,12 @@ a {
   .mobile-header-menu .sub-menu {
     display: none; }
   .mobile-header-menu a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: #2F2B5C;
-    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     padding: 1.5rem 0; }
     .mobile-header-menu a:active {
       color: white;
@@ -617,8 +619,13 @@ a {
         position: relative;
         margin: 0;
         padding: 0 0.8rem;
-        width: 85%;
-        font-size: 1rem; }
+        width: 100%;
+        font-size: 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
         .mobile-header-menu-container ul li::before {
           position: absolute;
           content: '';
@@ -631,19 +638,27 @@ a {
           display: none; }
         .mobile-header-menu-container ul li .fa,
         .mobile-header-menu-container ul li .fas {
-          width: 32px;
-          height: 32px;
-          position: absolute;
+          -webkit-box-flex: 0;
+              -ms-flex: none;
+                  flex: none;
+          width: 3rem;
           top: 20px;
-          right: -2.8rem;
+          right: .5rem;
+          line-height: 72px;
           text-align: center;
-          line-height: 32px;
-          color: #2F2B5C; }
+          color: #2F2B5C;
+          z-index: 300; }
         .mobile-header-menu-container ul li ul {
+          -webkit-box-flex: 0;
+              -ms-flex: none;
+                  flex: none;
+          width: 100%;
           padding: 0 0.8rem;
           font-weight: 500; }
           .mobile-header-menu-container ul li ul li {
             padding: 0; }
+            .mobile-header-menu-container ul li ul li a {
+              width: 100%; }
 
 .hamburger-icon {
   z-index: 3;
@@ -1278,6 +1293,9 @@ a {
 #tribe-events-pg-template {
   padding: 0px; }
 
+#tribe-events p:last-child {
+  margin-bottom: 2rem; }
+
 #tribe-events div.tribe-events-single-event-description {
   padding: 0rem 3rem; }
 
@@ -1305,9 +1323,9 @@ a {
     font-weight: 300; }
     .single-tribe_events .single-event-purple span {
       font-weight: 300; }
-  .single-tribe_events .tribe-events-single-event-description img,
-  .single-tribe_events .tribe-events-content a img {
-    width: 10px; }
+  .single-tribe_events .tribe-events-single-event-description
+.tribe-events-content p:last-child {
+    margin-bottom: 2rem; }
   .single-tribe_events .single-event-date-details {
     display: none; }
   .single-tribe_events .single-tribe_events,
@@ -1332,6 +1350,29 @@ a {
     width: 100%; }
   .single-tribe_events .fa-calendar-alt {
     font-size: 1.5rem; }
+  .single-tribe_events .get-ticket-header {
+    display: none; }
+    @media (min-width: 1200px) {
+      .single-tribe_events .get-ticket-header {
+        display: block; } }
+  .single-tribe_events .get-ticket-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0 1rem; }
+    .single-tribe_events .get-ticket-footer a {
+      text-align: center;
+      margin: 1rem; }
+    @media (min-width: 1200px) {
+      .single-tribe_events .get-ticket-footer {
+        display: none; } }
 
 /*--------------------------------------------------------------
 # Media
