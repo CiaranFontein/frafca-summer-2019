@@ -51,6 +51,11 @@ get_header(); ?>
             </div>
 
             <div class="location-history">
+                <?php $description = frafca_cfs('location_history'); ?>
+                <p><?php echo $description; ?></p>
+            </div>
+
+            <div class=>
             </div>
 
         <?php else : ?>
