@@ -33,7 +33,6 @@
     if (menuOpen){
       $(window).scrollTop(lockScroll);
     }
-    
   });
 
 })(jQuery);
