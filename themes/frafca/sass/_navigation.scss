@@ -216,11 +216,6 @@ a {
                     text-align: center;
                     line-height: 32px;
                     color: $color__link-visited;
-                    transition: transform $time__transition;
-                    transform-origin: center;
-                    &.open {
-                        transform: rotate(180deg);
-                    }
                 }
                 ul {
                     padding: 0 0.8rem;
@@ -353,4 +348,11 @@ a {
 
 .hidden {
     display: none;
+}
+.fa, .fas, .footer-arrow-down-icon {
+    transition: transform $time__transition;
+    transform-origin: center;
+}
+.open {
+    transform: rotate(180deg);
 }

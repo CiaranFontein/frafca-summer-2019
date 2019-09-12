@@ -645,16 +645,7 @@ a {
           right: .5rem;
           text-align: center;
           line-height: 32px;
-          color: #2F2B5C;
-          -webkit-transition: -webkit-transform 0.4s;
-          transition: -webkit-transform 0.4s;
-          transition: transform 0.4s;
-          transition: transform 0.4s, -webkit-transform 0.4s;
-          -webkit-transform-origin: center;
-                  transform-origin: center; }
-          .mobile-header-menu-container ul li .fa.open, .mobile-header-menu-container ul li .fas.open {
-            -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg); }
+          color: #2F2B5C; }
         .mobile-header-menu-container ul li ul {
           padding: 0 0.8rem;
           font-weight: 500; }
@@ -751,6 +742,18 @@ a {
 
 .hidden {
   display: none; }
+
+.fa, .fas, .footer-arrow-down-icon {
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transform-origin: center;
+          transform-origin: center; }
+
+.open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
 
 /*--------------------------------------------------------------
 # Footer
