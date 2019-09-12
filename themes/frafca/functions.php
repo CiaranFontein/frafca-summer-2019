@@ -24,7 +24,7 @@ if (!function_exists('frafca_theme_setup')) :
 		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(array(			
+		register_nav_menus(array(
 			'Mobile-Header-Menu' => esc_html('Mobile-Header-Menu'),
 			'Header-Menu' => esc_html('Header-Menu'),
 			'Side-Header-Menu' => esc_html('Side-Header-Menu'),
@@ -97,19 +97,19 @@ function frafca_theme_scripts()
 	wp_enqueue_style('google-fonts-style', 'https://fonts.googleapis.com/css?family=Merriweather:700|Raleway:400,700&display=swap');
 	/* Font Awesome for Icons */
 	wp_enqueue_style('custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css');
-	
+
 	// Scripts for FRAFCA theme
 	wp_enqueue_script('frafca-hamburger-animations', get_template_directory_uri() . '/build/js/hamburger-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-footer-navigation-animations', get_template_directory_uri() . '/build/js/footer-navigation-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-show-sub-menu-on-hover', get_template_directory_uri() . '/build/js/show-sub-menu-on-hover.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array('jquery'), '', true);
 	// Enqueue script only for single-prgrm_svc 
-	if ( is_singular('prgrm_svc') ){
+	if (is_singular('prgrm_svc')) {
 		wp_enqueue_script('frafca-theme-cf7-set-default-option', get_template_directory_uri() . '/build/js/cf7-set-default-option.min.js', array('jquery'), '', true);
 	}
 	// Enqueue CF7 script after submit button is clicked
 	wp_enqueue_script('frafca-theme-cf7-event-submit', get_template_directory_uri() . '/build/js/cf7-event-submit.min.js', array('jquery'), '', true);
-
+	// Scripts for Carousels - flickity
 	wp_enqueue_style('frafca-theme-style', get_stylesheet_uri());
 	wp_enqueue_style('flickity-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 	wp_register_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', null, null, true);
@@ -135,13 +135,15 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-add_action( 'tribe_events_mobile_breakpoint', 'mobile_breakpoint' );
+add_action('tribe_events_mobile_breakpoint', 'mobile_breakpoint');
 
-			function mobile_breakpoint() {
-				return 970;
-			}
+function mobile_breakpoint()
+{
+	return 970;
+}
 
-			function customize_tribe_events_breakpoint() {
-			return 970;
-			}
-			add_filter( 'tribe_events_mobile_breakpoint', 'customize_tribe_events_breakpoint' );
+function customize_tribe_events_breakpoint()
+{
+	return 970;
+}
+add_filter('tribe_events_mobile_breakpoint', 'customize_tribe_events_breakpoint');
