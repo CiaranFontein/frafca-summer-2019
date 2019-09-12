@@ -1401,6 +1401,13 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.page-template-front-page .scroll-down {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  left: 50%; }
+
 .front-page-about-us {
   color: #2d2d2d;
   text-align: center; }
@@ -1415,10 +1422,28 @@ object {
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
     color: #ffffff; }
+    .front-page-about-us .grid-cards p {
+      margin: 0; }
     .front-page-about-us .grid-cards .round-rect-card {
       text-align: center;
       padding: 0 1rem;
-      border-radius: 8px; }
+      border-radius: 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 300px;
+      height: 450px; }
+      .front-page-about-us .grid-cards .round-rect-card .card-icon {
+        width: 150px; }
 
 /* About Page */
 .about-page-banner .header-meta {
