@@ -3,9 +3,17 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+.page-template-front-page {
+    .scroll-down {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        text-align: center;
+        left: 50%;
+    }
+}
+
 .front-page-about-us {
-
-
     color: #2d2d2d;
     text-align: center;
 
@@ -13,33 +21,51 @@
         width: max-content;
         margin: 0 auto;
     }
-    
+
+    h2 {
+        margin: $base__space-unit * 2 auto;
+        font-size: $font__desktop_icon_size * 1.75;
+    }
+
+
+
     .grid-cards {
-    
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 50px;
-    
+
         color: $color__text-main;
-    
+
+        p {
+            margin: 0;
+        }
+
         .round-rect-card {
             text-align: center;
             padding: 0 $base__space-unit;
             border-radius: $border-radius;
-    
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 300px;
+            height: 460px;
+
+
+            .card-icon {
+                width: 150px;
+            }
         }
-
-}
-
-
-
+    }
 }
 
 /* About Page */
 
 .about-page-banner {
-
 
     .header-meta {
         width: 60%;
@@ -52,8 +78,6 @@
             width: 95%;
         }
     }
-
-
 }
 
 
@@ -73,7 +97,6 @@
             width: 100%;
             height: 100%;
         }
-
     }
 
     .about-content-info {
@@ -145,9 +168,6 @@
 /* Donate Page */
 
 #donate-page-banner {
-
-
-
     .banner-title {
         margin-top: 0rem;
     }

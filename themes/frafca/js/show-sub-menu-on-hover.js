@@ -5,17 +5,18 @@
   const $navSecondUL = $('#masthead').find('.menu-mobile-header-menu-container').children('ul').find('ul');
   $navSecondUL.before(`<i class="fas fa-chevron-down"></i>`);
 
-  $(window).on('click mouseenter', function(e){
+  $(window).on('click mouseenter touchstart', function(e){
     let targetEle = e.target;
     if ( $(window).width() < 1200 ){
       // MOBILE functions
       
       // Toggle the submenu and rotate the arrow icon
-      if ( e.type === 'click' && $(targetEle).hasClass('fa-chevron-down') ){
+      if ( (e.type === 'click' || e.type === 'touchstart' ) && 
+          $(targetEle).hasClass('fa-chevron-down') ){
+
         let $mobileSubMenu = $(targetEle).siblings('ul');
         $(targetEle).toggleClass('open');
         $mobileSubMenu.slideToggle(animateTime);
-
       }
 
     } else {
