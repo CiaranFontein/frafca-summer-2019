@@ -149,12 +149,22 @@ a {
                     height: 1px;
                     left: 0;
                     bottom: 0;
-                    border-bottom: 1px solid $color__background-article;
+                    border-bottom: 1px solid $color__link-visited;
                 }
                 &:last-child {
                     &::before {
                         display: none;
                     }
+                }
+                .fa, .fas {
+                    width: 32px; height: 32px;
+                    position: absolute;
+                    top: 50%;
+                    right: .5rem;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    line-height: 32px;
+                    color: $color__link-visited;
                 }
                 ul {
                     padding: 0 0.8rem;
