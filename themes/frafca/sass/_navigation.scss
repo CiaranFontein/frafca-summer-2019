@@ -36,33 +36,40 @@ a {
     width: 100vw;
     position: absolute;
     z-index: 4;
+    padding: 0 10px;
+
+    @include desktop {
+        padding: 0;
+    }
 
     .search-form {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         border: 2px solid black;
         margin: 20px 0px;
 
         @include desktop {
             border: 0;
+            justify-content: center;
         }
 
         .search-label {
-            width: 500px;
 
             @include desktop {
                 border: 0;
                 width: 600px;
+                margin-right: 50px;
             }
         }
 
         .search-field {
             padding: 0 20px;
             outline: none;
+            color: #000;
 
             @include desktop {
-                border: 2px solid black;
+                border: 2px solid #000;
                 width: 550px;
             }
 
@@ -75,7 +82,7 @@ a {
         font-weight: bold;
         background: $color__link;
         margin: 0;
-        background: yellow;
+        background: $color__background-button;
         border: none;
         border-radius: 0;
 
@@ -86,8 +93,7 @@ a {
 
         @include desktop {
             padding: 0.8rem 2.5rem;
-            border: 2px solid black;
-            background: yellow;
+            background: $color__background-button;
             border-radius: 0.65rem;
 
             &:after {
@@ -180,6 +186,7 @@ a {
 
     .sub-menu {
         display: none;
+        z-index: 3;
     }
 
     a {
@@ -375,7 +382,7 @@ a {
                 }
 
                 &:nth-child(2n) {
-                    background: yellow;
+                    background: $color__background-button;
                     text-transform: uppercase;
                 }
             }
