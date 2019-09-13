@@ -101,13 +101,13 @@ get_header(); ?>
                 <?php endforeach; ?>
             </div>
 
-            <div class="friendship-center-grid">
+            <div class="card-grid">
                 <?php
-                    $loop = frafca_cfs('friendship_center');
+                    $loop = frafca_cfs('cards_about_us_page');
                     foreach ($loop as $content) :
-                        $image = $content['fc_image'];
-                        $title = $content['fc_title'];
-                        $description = $content['fc_description'];
+                        $image = $content['card_logo'];
+                        $url = $content['card_url'];
+                        $description = $content['card_description'];
                         ?>
 
                     <div class="fc-image">
@@ -122,27 +122,7 @@ get_header(); ?>
 
                 <?php endforeach; ?>
             </div>
-            <div class="friendship-center-grid">
-                <?php
-                    $loop = frafca_cfs('friendship_center');
-                    foreach ($loop as $content) :
-                        $image = $content['fc_image'];
-                        $title = $content['fc_title'];
-                        $description = $content['fc_description'];
-                        ?>
 
-                    <div class="fc-image">
-                        <?php echo '<img src=' . $image . '">'; ?>
-                    </div>
-
-                    <div class="fc-info">
-                        <h3><?php echo $title; ?></h3>
-                        <br>
-                        <p><?php echo $description; ?></p>
-                    </div>
-
-                <?php endforeach; ?>
-            </div>
         <?php else : ?>
 
             <?php get_template_part('template-parts/content', 'none'); ?>
