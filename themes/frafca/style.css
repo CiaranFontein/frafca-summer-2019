@@ -1345,8 +1345,14 @@ a {
             transform: translateY(-38px);
     width: 90%;
     margin: 0 auto; }
+    @media (min-width: 1200px) {
+      .single-tribe_events .single-event-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
   .single-tribe_events .tribe-events-single-event-title {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
   .single-tribe_events .single-event-purple {
     background-color: #2F2B5C;
     border: none;
@@ -1358,6 +1364,9 @@ a {
   .single-tribe_events .tribe-events-single-event-description
 .tribe-events-content p:last-child {
     margin-bottom: 2rem; }
+  .single-tribe_events .tribe-events-single-event-description
+.tribe-events-content span {
+    padding: 2rem; }
   .single-tribe_events .single-event-date-details {
     display: none; }
   .single-tribe_events .single-tribe_events,
@@ -1386,7 +1395,8 @@ a {
     display: none; }
     @media (min-width: 1200px) {
       .single-tribe_events .get-ticket-header {
-        display: block; } }
+        display: block;
+        text-align: center; } }
   .single-tribe_events .get-ticket-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1405,6 +1415,12 @@ a {
     @media (min-width: 1200px) {
       .single-tribe_events .get-ticket-footer {
         display: none; } }
+  .single-tribe_events .get-ticket-price {
+    font-size: 19px;
+    font-weight: bold; }
+  .single-tribe_events .get-ticket-description {
+    font-size: 1rem;
+    margin-bottom: 0rem; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1475,7 +1491,8 @@ object {
   bottom: 0;
   margin: 0 auto;
   text-align: center;
-  left: 50%; }
+  right: 40%;
+  left: 40%; }
 
 .front-page-about-us {
   color: #2d2d2d;
@@ -1488,6 +1505,28 @@ object {
   .front-page-about-us h2 {
     margin: 2rem auto;
     font-size: 2.625rem; }
+  .front-page-about-us .fp-about-us-cell {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 460px; }
+    .front-page-about-us .fp-about-us-cell .card-icon {
+      width: 150px; }
 
 /* About Page */
 .about-page-banner .header-meta {

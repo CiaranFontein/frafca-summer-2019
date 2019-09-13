@@ -35,7 +35,7 @@ get_header(); ?>
                     $description = $card['card_description'];
                     ?>
 
-                    <div class="round-rect-card pink">
+                    <div class="round-rect-card pink fp-about-us-cell">
                         <div class="card-icon">
                             <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
                         </div>

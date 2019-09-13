@@ -9,7 +9,8 @@
         bottom: 0;
         margin: 0 auto;
         text-align: center;
-        left: 50%;
+        right: 40%;
+        left: 40%
     }
 }
 
@@ -29,41 +30,30 @@
 
 
 
-    // .front-page-grid-cards {
-
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 0.2fr);
-    //     grid-template-rows: 1fr;
-    //     grid-column-gap: 50px;
-    //     justify-items: center;
 
 
+    .fp-about-us-cell {
+        width: 100%;
+        margin: 0 auto;
 
-    //     color: $color__text-main;
+        text-align: center;
+        padding: 0 $base__space-unit;
+        border-radius: $border-radius;
 
-    //     p {
-    //         margin: 0;
-    //     }
-
-    //     .round-rect-card {
-    //         text-align: center;
-    //         padding: 0 $base__space-unit;
-    //         border-radius: $border-radius;
-
-    //         display: flex;
-    //         flex-flow: column wrap;
-    //         justify-content: space-evenly;
-    //         align-items: center;
-
-    //         width: 300px;
-    //         height: 460px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
 
 
-    //         .card-icon {
-    //             width: 150px;
-    //         }
-    //     }
-    // }
+        height: 460px;
+
+
+        .card-icon {
+            width: 150px;
+        }
+    }
+
 }
 
 /* About Page */
@@ -202,7 +192,7 @@
     display: grid;
     margin: 0 auto;
     margin-top: $base__space-unit * 2;
-    
+
     .donate-card {
         margin-bottom: $base__space-unit * 2;
         padding: 3rem;
