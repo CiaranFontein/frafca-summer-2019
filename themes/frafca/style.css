@@ -336,8 +336,6 @@ img {
   font-size: 1.5em; }
   .search-form::-webkit-input-placeholder {
     color: blue; }
-  .search-form::-moz-placeholder {
-    color: blue; }
   .search-form::-ms-input-placeholder {
     color: blue; }
   .search-form::placeholder {
