@@ -483,14 +483,18 @@ a {
   left: 0;
   width: 100vw;
   position: absolute;
-  z-index: 4; }
+  z-index: 4;
+  padding: 0 10px; }
+  @media (min-width: 1200px) {
+    .search-field-container {
+      padding: 0; } }
   .search-field-container .search-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -498,19 +502,22 @@ a {
     margin: 20px 0px; }
     @media (min-width: 1200px) {
       .search-field-container .search-form {
-        border: 0; } }
-    .search-field-container .search-form .search-label {
-      width: 500px; }
-      @media (min-width: 1200px) {
-        .search-field-container .search-form .search-label {
-          border: 0;
-          width: 600px; } }
+        border: 0;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    @media (min-width: 1200px) {
+      .search-field-container .search-form .search-label {
+        border: 0;
+        width: 600px;
+        margin-right: 50px; } }
     .search-field-container .search-form .search-field {
       padding: 0 20px;
-      outline: none; }
+      outline: none;
+      color: #000; }
       @media (min-width: 1200px) {
         .search-field-container .search-form .search-field {
-          border: 2px solid black;
+          border: 2px solid #000;
           width: 550px; } }
   .search-field-container .search-button {
     padding: 0.8rem 1.5rem;
@@ -521,7 +528,7 @@ a {
     font-weight: bold;
     background: #FFD400;
     margin: 0;
-    background: yellow;
+    background: #FFD400;
     border: none;
     border-radius: 0; }
     .search-field-container .search-button:after {
@@ -530,8 +537,7 @@ a {
     @media (min-width: 1200px) {
       .search-field-container .search-button {
         padding: 0.8rem 2.5rem;
-        border: 2px solid black;
-        background: yellow;
+        background: #FFD400;
         border-radius: 0.65rem; }
         .search-field-container .search-button:after {
           font-family: "Raleway", sans-serif;
@@ -626,7 +632,8 @@ a {
   .mobile-header-menu .menu-mobile-header-menu-container {
     padding-bottom: 9rem; }
   .mobile-header-menu .sub-menu {
-    display: none; }
+    display: none;
+    z-index: 3; }
   .mobile-header-menu a {
     display: inline-block;
     text-decoration: none;
@@ -778,16 +785,15 @@ a {
       .main-navigation .side-header-menu {
         display: block;
         color: #000; }
-        .main-navigation .side-header-menu li {
+        .main-navigation .side-header-menu li a {
           padding: 0.8rem 1.5rem;
           border-radius: 0.65rem;
           background: #fff;
-          margin: 0.15rem; }
-          .main-navigation .side-header-menu li a {
-            color: #000; }
-          .main-navigation .side-header-menu li:nth-child(2n) {
-            background: yellow;
-            text-transform: uppercase; } }
+          margin: 0.15rem;
+          color: #000; }
+        .main-navigation .side-header-menu li:nth-child(2n) a {
+          background: #FFD400;
+          text-transform: uppercase; } }
 
 .hidden {
   display: none; }
@@ -1075,28 +1081,41 @@ a {
   display: block; }
 
 /* Hero Image **** START */
-.frafca-hero-image .hero-image-page {
+.frafca-hero-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5rem 1rem 1rem 1rem;
-  height: 100vh;
-  text-align: center; }
-  @media (min-width: 1200px) {
-    .frafca-hero-image .hero-image-page {
-      height: 72vh;
-      padding: 5rem 24rem 5rem 24rem; } }
-  .page-template-front-page .frafca-hero-image .hero-image-page {
-    height: 100vh; }
-
-.single-prgrm_svc .frafca-hero-image {
-  margin-bottom: 5rem; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .frafca-hero-image .hero-image-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5rem 1rem 1rem 1rem;
+    height: 100vh;
+    text-align: center; }
+    @media (min-width: 1200px) {
+      .frafca-hero-image .hero-image-page {
+        height: 72vh;
+        padding: 5rem 24rem 5rem 24rem; } }
+    .page-template-front-page .frafca-hero-image .hero-image-page {
+      height: 100vh; }
+  .single-prgrm_svc .frafca-hero-image {
+    margin-bottom: 5rem; }
 
 /* Hero Image #### END */
 /* Grid Card **** START */
@@ -1199,7 +1218,7 @@ a {
   @media (min-width: 1200px) {
     .page-template-page-meet-our-team .grid-cards {
       max-width: 1200px;
-      margin: 0  auto; } }
+      margin: 0 auto; } }
   .page-template-page-meet-our-team .grid-cards .rect-card {
     margin: 0;
     padding: 0rem 1.5rem 5rem 1.5rem; }
@@ -1215,11 +1234,13 @@ a {
     .page-template-page-meet-our-team .card-info {
       text-align: left;
       padding-top: 80px; } }
-  .page-template-page-meet-our-team .card-info p, .page-template-page-meet-our-team .card-info a {
+  .page-template-page-meet-our-team .card-info p,
+  .page-template-page-meet-our-team .card-info a {
     display: block;
     font-weight: 500;
     font-size: 1rem; }
-  .page-template-page-meet-our-team .card-info p:nth-child(1), .page-template-page-meet-our-team .card-info p:nth-child(2) {
+  .page-template-page-meet-our-team .card-info p:nth-child(1),
+  .page-template-page-meet-our-team .card-info p:nth-child(2) {
     font-weight: 900; }
   .page-template-page-meet-our-team .card-info p:first-child {
     font-size: 22px; }
@@ -1575,10 +1596,19 @@ object {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 2rem; }
   .front-page-about-us h2 {
     margin: 2rem auto;
     font-size: 2.625rem; }
+  .front-page-about-us .flickity-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
   .front-page-about-us .fp-about-us-cell {
     width: 100%;
     margin: 0 auto;
@@ -1601,6 +1631,14 @@ object {
     height: 460px; }
     .front-page-about-us .fp-about-us-cell .card-icon {
       width: 150px; }
+
+.what-we-offer .wwo_image {
+  margin: 10rem auto;
+  width: 100vw;
+  height: 100vw; }
+
+.what-we-offer .wwo_meta {
+  background: #323232; }
 
 /* About Page */
 .page-template-page-about section {
