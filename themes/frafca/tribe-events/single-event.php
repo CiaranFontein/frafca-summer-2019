@@ -24,7 +24,6 @@ $event_id = get_the_ID();
 
 ?>
 
-<?php get_template_part('template-parts/hero_banner_image'); ?>
 
 <div id="tribe-events-content" class="tribe-events-single">
 
@@ -71,6 +70,7 @@ $event_id = get_the_ID();
 						<?php do_action('tribe_events_single_event_before_the_content') ?>
 				</div>
 							<div class="tribe-events-single-event-description tribe-events-content single-event-content">
+								<h1> Details </h1>
 								<?php the_content(); ?>
 							</div>
 						<!-- .tribe-events-single-event-description -->
