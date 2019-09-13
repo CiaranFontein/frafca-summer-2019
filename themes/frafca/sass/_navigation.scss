@@ -334,6 +334,15 @@ a {
 
         @include desktop {
             font-size: $font__desktop_icon_size;
+
+            &:hover {
+                //box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+                font-size: 1.5rem;
+                border-radius: 10px;
+                transform: scaleX(1.25);
+                transform: scaleY(1.1);
+                text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+            }
         }
     }
 
@@ -385,6 +394,12 @@ a {
                 a {
                     @include white-button;
                     color: #000;
+                    transition: 0.1s all ease-in-out;
+
+                    &:hover {
+                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+                        padding: $button_padding_height*1.25 $button_padding_width*1.25;
+                    }
                 }
 
                 &:nth-child(2n) {
@@ -396,12 +411,6 @@ a {
             }
         }
     }
-}
-
-
-
-.hidden {
-    display: none;
 }
 
 .fa,
