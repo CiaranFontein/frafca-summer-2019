@@ -39,18 +39,21 @@ get_header(); ?>
                         <div class="card-icon">
                             <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
                         </div>
-                        <h3><?php echo $title; ?></h3>
-                        <p><?php echo $description; ?></p>
+                        <div>
+                            <h3><?php echo $title; ?></h3>
+                            <p><?php echo $description; ?></p>
+                        </div>
                     </div>
-
                 <?php endforeach; ?>
+
             </div>
-            <a class='default-btn yellow'>
-                Learn More
+            <a class='about-us-button default-btn yellow'>
+                <?php $button = frafca_cfs('about_us_button') ?>
             </a>
+
         </section><!-- #front-page-about-us -->
 
-        <section id="front-page-what-we-offer">
+        <section id="front-page-what-we-offer" class="what-we-offer">
             <?php
             $what_we_offer = frafca_cfs('what_we_offer');
             foreach ($what_we_offer as $content) :
@@ -59,19 +62,17 @@ get_header(); ?>
                 $description = $content['wwo_description'];
                 $button = $content['wwo_button'];
                 ?>
-                <div class="containter col-2" style="
+                <div class="wwo_image containter col-2" style="
                     background :
                         linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100%), 
                         url(<?php echo $image; ?>);
                     background-size: cover;
                     background-position: center; 
                     background-repeat: no-repeat;
-                    width: 600px;
-                    height: 600px
                 ">
                 </div>
 
-                <div class="containter col-2">
+                <div class="wwo_meta containter col-2">
                     <h3><?php echo $title ?></h3>
                     <p><?php echo $description ?></p>
                     <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">

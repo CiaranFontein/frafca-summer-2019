@@ -4,10 +4,11 @@
       const content = document.querySelector('.fp-about-us-carousel');
       const flkty = new Flickity(content, {
         // carousel options
-        cellAlign: 'left',
+        cellAlign: 'center',
         wrapAround: true,
-        freeScroll: true,
-        autoPlay: true
+        selectedAttraction: 0.01,
+        friction: 0.15,
+        autoPlay: 3000
       });
       console.log(flkty);
     }
