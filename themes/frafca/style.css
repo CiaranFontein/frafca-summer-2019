@@ -1443,7 +1443,8 @@ object {
   bottom: 0;
   margin: 0 auto;
   text-align: center;
-  left: 50%; }
+  right: 40%;
+  left: 40%; }
 
 .front-page-about-us {
   color: #2d2d2d;
@@ -1456,6 +1457,28 @@ object {
   .front-page-about-us h2 {
     margin: 2rem auto;
     font-size: 2.625rem; }
+  .front-page-about-us .fp-about-us-cell {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 460px; }
+    .front-page-about-us .fp-about-us-cell .card-icon {
+      width: 150px; }
 
 /* About Page */
 .about-page-banner .header-meta {
