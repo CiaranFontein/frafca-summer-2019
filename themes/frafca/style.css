@@ -251,6 +251,11 @@ h1, h2 {
   .hero-image-page h1, .hero-image-page h2 {
     color: #FFD400; }
 
+@media (min-width: 1200px) {
+  .page-template-page-about h3 {
+    font-size: 2.25rem;
+    margin-bottom: 3.25rem; } }
+
 /* Copy */
 p {
   margin: 1rem 0; }
@@ -945,12 +950,10 @@ a {
       height: 70px;
       margin: 20px; } }
 
-.footer-connect
-.footer-what-we-do {
+.footer-connect .footer-what-we-do {
   padding-left: 20px; }
   @media (min-width: 1200px) {
-    .footer-connect
-.footer-what-we-do {
+    .footer-connect .footer-what-we-do {
       padding: 0px; } }
 
 .fa-facebook {
@@ -1605,10 +1608,16 @@ object {
   font-size: 1.2rem; }
   .page-template-page-about section:last-child {
     margin-bottom: 80px; }
+  @media (min-width: 1200px) {
+    .page-template-page-about section {
+      font-size: 22px; } }
 
 .page-template-page-about .image-background {
   width: 100%;
   height: 260px; }
+  @media (min-width: 1200px) {
+    .page-template-page-about .image-background {
+      height: 100%; } }
 
 .page-template-page-about .grid-cards-element {
   padding: 0 1.5rem; }
@@ -1618,8 +1627,39 @@ object {
     margin-top: 3.25rem;
     margin-bottom: 1rem; }
 
+@media (min-width: 1200px) {
+  .page-template-page-about .grid-cards {
+    grid-column-gap: 4.5rem; } }
+
 .page-template-page-about .rect-card {
   padding: 3.75rem 1.5rem; }
+
+@media (min-width: 1200px) {
+  .page-template-page-about .container-who-we-are .txt-align-c, .page-template-page-about .container-friendship-center .txt-align-c {
+    text-align: left; }
+  .page-template-page-about .container-who-we-are .grid-cards, .page-template-page-about .container-friendship-center .grid-cards {
+    grid-template-columns: 420px auto; }
+    .page-template-page-about .container-who-we-are .grid-cards-element:nth-child(1), .page-template-page-about .container-friendship-center .grid-cards-element:nth-child(1) {
+      grid-row: 1/3; }
+    .page-template-page-about .container-who-we-are .grid-cards-element:nth-child(2), .page-template-page-about .container-friendship-center .grid-cards-element:nth-child(2) {
+      margin: 0; } }
+
+.page-template-page-about .container-location-history p {
+  margin: 0 auto; }
+  @media (min-width: 1200px) {
+    .page-template-page-about .container-location-history p {
+      width: 970px; } }
+
+@media (min-width: 1200px) {
+  .page-template-page-about .container-our-history .txt-align-c {
+    text-align: right; }
+  .page-template-page-about .container-our-history .grid-cards {
+    grid-template-columns: auto 420px; }
+    .page-template-page-about .container-our-history .grid-cards-element:nth-child(1) {
+      grid-column: 2/3;
+      grid-row: 1/3; }
+    .page-template-page-about .container-our-history .grid-cards-element:nth-child(2) {
+      margin: 0; } }
 
 .page-template-page-about .container-card-about-us .flex-element {
   background-color: #2F2B5C;
@@ -1639,16 +1679,27 @@ object {
   min-height: 100vh;
   text-align: center;
   padding: 1.5rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-about .container-card-about-us .flex-element {
+      min-height: auto;
+      padding: 6.25rem; } }
   .page-template-page-about .container-card-about-us .flex-element .card-logo {
     width: 150px;
     height: 150px;
     margin-bottom: 40px; }
   .page-template-page-about .container-card-about-us .flex-element .card-title {
     margin-bottom: 20px; }
+    .page-template-page-about .container-card-about-us .flex-element .card-title h3 {
+      margin: 0; }
   .page-template-page-about .container-card-about-us .flex-element .card-description {
     margin-bottom: 64px; }
   .page-template-page-about .container-card-about-us .flex-element:nth-child(2n) {
     background-color: #BA5357; }
+
+@media (min-width: 1200px) {
+  .page-template-page-about .container-card-about-us .grid-cards {
+    max-width: 100%;
+    grid-column-gap: unset; } }
 
 /* Resources Page */
 .resources-grid {

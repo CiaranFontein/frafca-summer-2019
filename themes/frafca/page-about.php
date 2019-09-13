@@ -46,7 +46,9 @@ get_header(); ?>
 
         <section id="location-history" class="container-location-history">
             <div class='rect-card txt-align-c pink'>
-                <?php echo frafca_wp_kses_text(frafca_cfs('location_history')); ?>
+                <p>
+                    <?php echo frafca_wp_kses_text(frafca_cfs('location_history')); ?>s
+                </p>
             </div>
         </section><!-- #location-history -->
 
