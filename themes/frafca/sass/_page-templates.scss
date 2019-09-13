@@ -66,6 +66,10 @@
         }
         @include desktop {
             font-size: $font__size_main;
+            margin-top: 120px;
+            &:last-child {
+                margin-bottom: 120px;
+            }
         }
     }
     

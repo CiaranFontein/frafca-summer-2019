@@ -1610,7 +1610,10 @@ object {
     margin-bottom: 80px; }
   @media (min-width: 1200px) {
     .page-template-page-about section {
-      font-size: 22px; } }
+      font-size: 22px;
+      margin-top: 120px; }
+      .page-template-page-about section:last-child {
+        margin-bottom: 120px; } }
 
 .page-template-page-about .image-background {
   width: 100%;
