@@ -54,10 +54,10 @@ get_header(); ?>
             <?php
             $what_we_offer = frafca_cfs('what_we_offer');
             foreach ($what_we_offer as $content) :
-                $image = $content['image'];
-                $title = $content['title'];
-                $description = $content['description'];
-                $button = $content['button'];
+                $image = $content['wwo_image'];
+                $title = $content['wwo_title'];
+                $description = $content['wwo_description'];
+                $button = $content['wwo_button'];
                 ?>
                 <div class="containter col-2" style="
                     background :
@@ -65,7 +65,6 @@ get_header(); ?>
                         url(<?php echo $image; ?>);
                     background-size: cover;
                     background-position: center; 
-                    
                     background-repeat: no-repeat;
                 ">
                 </div>
@@ -79,7 +78,6 @@ get_header(); ?>
                 </div>
 
             <?php endforeach ?>
-
         </section><!-- #front-page-what-we-offer -->
 
         <section id="front-page-get-involved">
@@ -92,7 +90,7 @@ get_header(); ?>
                 foreach ($card_get_involved as $content) :
                     $icon = $content['card_icon'];
                     $title = $content['card_title'];
-                    $description = $content['descriptoin_of_the_card'];
+                    $description = $content['card_description'];
                     $button = $content['button'];
                     ?>
 
@@ -102,24 +100,24 @@ get_header(); ?>
                         </div>
                         <h3><?php echo $title; ?></h3>
                         <p><?php echo $description; ?></p>
-
                         <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                             <?php echo $button['text']; ?>
                         </a>
                     </div>
 
                 <?php endforeach ?>
-
         </section><!-- #front-page-get-involved -->
 
         <section id="front-page-partners">
+
             <h2>Partners</h2>
             <?php
-            $partners = CFS()->get('partners');
+            $partners = frafca_cfs('partners');
             foreach ($partners as $partner) :
                 $partner_name = $partner['partner_name'];
-                $img_partner = $partner['logo'];
+                $img_partner = $partner['partner_logo'];
                 ?>
+
                 <div class="partner-content">
                     <div class="partner-logo">
                         <img src="<?php echo $img_partner; ?>" alt="<?php echo $partner_name; ?>">
