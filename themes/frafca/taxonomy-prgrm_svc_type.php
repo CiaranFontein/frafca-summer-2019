@@ -21,7 +21,6 @@ get_header(); ?>
                             url(<?php echo $term_banner ;?>);
                         background-size: cover;
                         background-position: center; 
-                        
                         background-repeat: no-repeat;                   
                     ">
                 <?php else: ?>

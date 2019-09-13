@@ -57,87 +57,87 @@
 }
 
 /* About Page */
-
-.about-page-banner {
-
-    .header-meta {
-        width: 60%;
-
-        p {
-            font-weight: normal;
-        }
-
-        @include desktop {
-            width: 95%;
+.page-template-page-about {
+    section {
+        margin-top: 80px;
+        font-size: 1.2rem;
+        &:last-child {
+            margin-bottom: 80px;
         }
     }
-}
+    
+    .image-background {
+        width: 100%;
+        height: 260px;
+    }
+    
+    .grid-cards {
+        &-element {
+            padding: 0 1.5rem;
 
+            &:first-child {
+                padding: 0;
+            }
+            &:nth-child(2){
+                margin-top: 3.25rem;
+                margin-bottom: 1rem;
+            }
 
-.who-we-are-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    grid-row-gap: $base__space-unit * 2;
-
-    margin: $base__space-unit * 3 0;
-
-    .about-content-image {
-        grid-area: 1 / 1 / 2 / 2;
-
-        img {
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-        }
+        } // end .grid-cards-element
     }
 
-    .about-content-info {
-        color: #2d2d2d;
-        grid-area: 2 / 1 / 3 / 2;
-        text-align: center;
-        margin: 0 $base__space-unit * 2;
+    .rect-card {
+        padding: 3.75rem 1.5rem;
     }
 
-    @include desktop {
-        .who-we-are-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-template-rows: 1fr;
-            grid-column-gap: $base__space-unit * 2;
+    .container {
 
-            margin: $base__space-unit * 3 0;
+        &-who-we-are {
+        } // end .container-who-we-are
 
-            .about-content-image {
-                grid-area: 1 / 1 / 2 / 2;
+        &-location-history {
+        } // end .container-location-history
 
-                img {
-                    height: 85%;
+        &-card-about-us {
+            .flex {
+                &-element {
+                    background-color: $color__background-article;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    min-height: 100vh;
+                    text-align: center;
+                    padding: 1.5rem;
+
+                    .card {
+                        &-logo {
+                            width: 150px;
+                            height: 150px;
+                            margin-bottom: 40px;
+                        }
+                        &-title {
+                            margin-bottom: 20px;
+                        }
+                        &-description {
+                            margin-bottom: 64px;
+                        }
+                    }
+                    
+                    &:first-child {
+                    }
+                    &:nth-child(2n) {
+                        background-color: $color__background-banner;
+                    }
+
                 }
             }
+        } // end .container-card-about-us
 
-            .about-content-info {
-                color: #2d2d2d;
-                grid-area: 1 / 2 / 2 / 3;
-                text-align: left;
-
-            }
-        }
     }
+
 }
 
-
-
-.location-history {
-
-    background: $color__background-banner;
-    padding: $base__space-unit * 2 $base__space-unit;
-    text-align: center;
-
-    @include desktop {
-        padding: $base__space-unit * 2 $base__space-unit * 5;
-    }
-}
 
 /* Resources Page */
 

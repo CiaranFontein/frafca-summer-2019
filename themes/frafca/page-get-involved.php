@@ -14,8 +14,11 @@ get_header(); ?>
         <!-- Hero Image : type 1  -->
         <header id="get-involved-banner"  class="frafca-hero-image">
 			<?php get_template_part( 'template-parts/hero_banner' ); ?>
-        </header><!-- #front-page-banner -->
-		<h2 class="contact-location-header"><?php echo frafca_cfs('location_header') ?></h2>
+        </header><!-- #get-involved-banner -->
+
+        <h2 class="contact-location-header"><?php echo frafca_cfs('location_header') ?>
+        </h2>
+
         <section class="get-involved">
             <div class="grid-cards contact-cards">
 				<?php  
