@@ -24,7 +24,7 @@ $event_id = get_the_ID();
 
 ?>
 
-<?php get_template_part('template-parts/hero_banner'); ?>
+<?php get_template_part('template-parts/hero_banner_image'); ?>
 
 <div id="tribe-events-content" class="tribe-events-single">
 
@@ -32,77 +32,58 @@ $event_id = get_the_ID();
 	<?php tribe_the_notices() ?>
 
 	<div class="single-event-header">
-	
-		<?php the_title('<h1 class="tribe-events-single-event-title">', '</h1>'); ?>
-		
-		<div class="tribe-events-schedule tribe-clearfix single-event-purple">
+
+		<div class="tribe-events-schedule tribe-clearfix single-event-purple get-ticket-header-container">
+			<?php the_title('<h1 class="tribe-events-single-event-title">', '</h1>'); ?>
 			<?php echo tribe_events_event_schedule_details($event_id, '<i class="far fa-calendar-alt"></i>  ','&nbsp &nbsp', '<h2>', '</h2>'); ?>
-			<!-- <?php //if (tribe_get_cost()) : ?> -->
-				<!-- <span class="tribe-events-cost"><?php echo tribe_get_cost(null, true) ?></span> -->
-			<!-- <?php //endif; ?> -->
 		</div>
-		<!-- <p class="tribe-events-back">
-			<a href="<?php echo esc_url(tribe_get_events_link()); ?>"> <?php printf('&laquo; ' . esc_html_x('All %s', '%s Events plural label', 'the-events-calendar'), $events_label_plural); ?></a>
-		</p> -->
-		<section id="page-contact">
-            <div class="grid-cards contact-cards">
-				<?php  
-                    $ticket = frafca_cfs('ticket');
-                    foreach($ticket as $ticket) :
-                            $getticket = $ticket['get_ticket'];
-                            $price = $ticket['ticket_price'];
-							$description = $ticket['ticket_description'];
-                ?>
 
-                    <div class="purple get-ticket-header">
-                        <a class='default-btn yellow' href="<?php echo $getticket['url']; ?>" target="<?php echo $getticket['target']; ?>">
-                            <?php echo $getticket['text']; ?>
-						</a>
-						<p><?php echo $price;?></p>
-						<p><?php echo $description;?></p>
-                        
+		<div class="get-ticket-header">
+			<?php  
+				$ticket = frafca_cfs('ticket');
+				foreach($ticket as $ticket) :
+						$getticket = $ticket['get_ticket'];
+						$price = $ticket['ticket_price'];
+						$description = $ticket['ticket_description'];
+			?>
 
-                    </div>
+				<div class="rect-card purple get-ticket-header">
+					<a class='default-btn yellow' href="<?php echo $getticket['url']; ?>" target="<?php echo $getticket['target']; ?>">
+						<?php echo $getticket['text']; ?>
+					</a>
+					<p class="get-ticket-price"><?php echo $price;?></p>
+					<p class="get-ticket-description"><?php echo $description;?></p>
+				</div>
 
-                <?php endforeach; ?>
-            
-            </div>
-        </section>
+			<?php endforeach; ?>
+		</div>
+		
+	
 	</div>
 
-	<!-- Event header -->
-	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
-		<!-- Navigation -->
-		<nav class="tribe-events-nav-pagination" aria-label="<?php printf(esc_html__('%s Navigation', 'the-events-calendar'), $events_label_singular); ?>">
-			<ul class="tribe-events-sub-nav">
-				<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link('<span>&laquo;</span> %title%') ?></li>
-				<li class="tribe-events-nav-next"><?php tribe_the_next_event_link('%title% <span>&raquo;</span>') ?></li>
-			</ul>
-			<!-- .tribe-events-sub-nav -->
-		</nav>
+	<div class="single-event-content-container">
+			<?php while (have_posts()) :  the_post(); ?>
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<!-- Event featured image, but exclude link -->
+						<?php echo tribe_event_featured_image($event_id, 'full', false); ?>
+
+						<!-- Event content -->
+						<?php do_action('tribe_events_single_event_before_the_content') ?>
+				</div>
+							<div class="tribe-events-single-event-description tribe-events-content single-event-content">
+								<?php the_content(); ?>
+							</div>
+						<!-- .tribe-events-single-event-description -->
+						<?php do_action('tribe_events_single_event_after_the_content') ?>
+
+						<!-- Event meta -->
+						<?php do_action('tribe_events_single_event_before_the_meta') ?>
+						<?php tribe_get_template_part('modules/meta'); ?>
+						<?php do_action('tribe_events_single_event_after_the_meta') ?>
+			 <!-- #post-x -->
+				<?php if (get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option('showComments', false)) comments_template() ?>
+			<?php endwhile; ?>
 	</div>
-	<!-- #tribe-events-header -->
-
-	<?php while (have_posts()) :  the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<!-- Event featured image, but exclude link -->
-			<?php echo tribe_event_featured_image($event_id, 'full', false); ?>
-
-			<!-- Event content -->
-			<?php do_action('tribe_events_single_event_before_the_content') ?>
-			<div class="tribe-events-single-event-description tribe-events-content">
-				<?php the_content(); ?>
-			</div>
-			<!-- .tribe-events-single-event-description -->
-			<?php do_action('tribe_events_single_event_after_the_content') ?>
-
-			<!-- Event meta -->
-			<?php do_action('tribe_events_single_event_before_the_meta') ?>
-			<?php tribe_get_template_part('modules/meta'); ?>
-			<?php do_action('tribe_events_single_event_after_the_meta') ?>
-		</div> <!-- #post-x -->
-		<?php if (get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option('showComments', false)) comments_template() ?>
-	<?php endwhile; ?>
 
 	<!-- #page-contact -->
 	<!-- #tribe-events-footer -->
@@ -121,8 +102,8 @@ $event_id = get_the_ID();
 						</a>
 
 						<div class="get-ticket-footer-desc">
-							<p><?php echo $price;?></p>
-							<p><?php echo $description;?></p>
+							<p class="get-ticket-price"><?php echo $price;?></p>
+							<p class="get-ticket-description"><?php echo $description;?></p>
 						</div>
                         
  

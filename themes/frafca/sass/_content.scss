@@ -208,9 +208,14 @@
 /* Contact Page **** END */
 
 /* Team Page **** START */
-.page-template-page-meet-our-team-php {
+.page-template-page-meet-our-team {
 	.grid-cards {
-		display: inline;
+		display: block;
+		
+		@include desktop {
+			max-width: $desktop-width;
+			margin: 0  auto;
+		}
 
 		.rect-card {
 			margin: 0;
@@ -233,13 +238,28 @@
 			text-align: left;
 			padding-top: 80px;
 		}
-
-		p:first-child {
-			font-weight: bold;
+		p, a {
+			display: block;
+			font-weight: 500;
+			font-size: 1rem;
 		}
 
-		p:nth-child(2) {
-			font-weight: 500;
+		p:nth-child(1), p:nth-child(2) {
+			font-weight: 900;
+
+		}
+		p:first-child {
+			font-size: 22px;
+			@include desktop {
+				font-size: 2rem;
+			}
+		}
+		p:nth-child(2){
+			@include desktop {
+				
+				font-size: 1.5rem;
+				
+			}
 		}
 
 		a {
@@ -416,9 +436,6 @@
 		}
 	}
 }
-
-
-
 /* Volunteer page **** End */
 
 /* Single Event page **** Start*/
@@ -436,115 +453,171 @@
 	}
 }
 
-
 .single-tribe_events {
 	
 	color: #323232;
 	padding: 0rem;
+	
 
-			.tribe-events-single {
-				padding:0;
-				margin:0;
-			}
+	.tribe-events-single {
+		padding:0;
+		margin:0;
+	}
 
-			.single-event-header {
-				background-color: $color__background-article;
-				color: white;
-				padding: 2rem;
-				transform: translateY(-38px);
-				width: 90%;
-				margin: 0 auto;
-				
-			}
+	.single-event-header {
+		background-color: $color__background-article;
+		color: white;
+		padding: 2rem;
+		transform: translateY(-38px);
+		width: 90%;
+		margin: 0 auto;
+				@include desktop {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+				}
+	}
 
-			.tribe-events-single-event-title {
-				font-size: 1.5rem;
-			}
-			.single-event-purple {
-				background-color: $color__background-article;
-				border: none;
-				padding: 0;
-				font-size: 1rem;
+	.tribe-events-single-event-title {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.single-event-purple {
+		background-color: $color__background-article;
+		border: none;
+		padding: 0;
+		font-size: 1rem;
+		font-weight: 300;
+			span {
 				font-weight: 300;
-					span {
-						font-weight: 300;
-					}
 			}
+	}
 
-			.tribe-events-single-event-description
-			.tribe-events-content {
+	.tribe-events-single-event-description,
+	.tribe-events-content {
+			p:last-child {
+				margin-bottom: 2rem;
+			}
+			span {
+				padding: 2rem;
+			}
+			@include desktop {
+				order: 0;
+				width: 70%;
+			}
+	}
 
-				p:last-child {
-					margin-bottom: 2rem;
-				}
+	.single-event-date-details {
+		display: none;
+	}
+
+	.single-tribe_events,
+	.tribe-events-cal-links {
+		text-align:center;
+		@include desktop {
+			order: 2;
+			width: 100%;
+		}
+	}
+
+	.single-event-venue {
+		display: none;
+	}
+
+	.secondary .tribe-events-venue-map {
+		width: 90%;
+		margin: 2rem 5%; 
 				
-				
+	}
+
+	.tribe-events-meta-group-organizer {
+		padding: 0 3rem;
+			@include desktop {
 
 			}
+	}
+	
+	.single-tribe_events,
+	.tribe-events-event-meta {
+		background: none;
+		border: none;
+		margin: 0;
+	}
 
-			.single-event-date-details {
-				display: none;
+	.tribe-events-single-section,
+	.tribe-events-event-meta,
+	.primary {
+		@include desktop {
+			order: 1;
+			width: 30%;
+			font-size: 19px;
+
+		}
+	
+	.tribe-clearfix {
+		width: 100%;
+	}
+
+	}
+	.secondary {
+		width: 100%;
+		@include desktop {
+			order: 4;
+			width: 100%;
+		}
+
+
+	}
+
+
+	.fa-calendar-alt {
+		font-size: 1.5rem;
+	}
+
+	.get-ticket-header {
+		display: none;
+		@include desktop {
+			display: block;
+			text-align: center;
+			order:5;
+		}
+	}
+
+	.get-ticket-footer {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-evenly;
+		padding: 0 1rem;
+			a {
+				text-align: center;
+				margin: 1rem;
 			}
+		@include desktop {
+			display: none;
+		}
+	}
 
-			.single-tribe_events,
-			.tribe-events-cal-links {
-				text-align:center;
-			}
+	.get-ticket-price {
+		font-size: 19px;
+		font-weight: bold;
+	}
 
-			.single-event-venue {
-				display: none;
-			}
+	.get-ticket-description {
+		font-size: 1rem;
+		margin-bottom: 0rem;
+	}
 
-
-			.secondary .tribe-events-venue-map {
-				width: 90%;
-				margin: 2rem 5%; 
-						
-			}
-
-			.tribe-events-meta-group-organizer {
-				padding: 0 3rem;
-			}
+	.single-event-content-container {
+		@include desktop {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 2rem 2rem;
+		}
+	}
 			
-			.single-tribe_events,
-			.tribe-events-event-meta {
-				background: none;
-				border: none;
-				margin: 0;
-			}
-
-			.tribe-events-single-section,
-			.tribe-events-event-meta,
-			.secondary,
-			.tribe-clearfix {
-				width: 100%;
-			}
-
-			.fa-calendar-alt {
-				font-size: 1.5rem;
-			}
-
-			.get-ticket-header {
-				display: none;
-				@include desktop {
-					display: block;
-				}
-			}
-
-			.get-ticket-footer {
-				display: flex;
-				flex-direction: row-reverse;
-				justify-content: space-evenly;
-				padding: 0 1rem;
-					a {
-						text-align: center;
-						margin: 1rem;
-					}
-				@include desktop {
-					display: none;
-				}
-
-
-			}
 			
 }
+
+
+

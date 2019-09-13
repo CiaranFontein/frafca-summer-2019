@@ -48,12 +48,31 @@ if (! function_exists("array_key_last")) {
         return array_keys($array)[count($array)-1];
     }
 }
+
 function last_frafca_cfs($field_name) {
 
     $last_key = array_key_last( frafca_cfs($field_name) );
     $return_last_arr = frafca_cfs($field_name)[$last_key];
     return $return_last_arr;
 }
+add_action('plugins_loaded', 'last_frafca_cfs');
+
+// Escaping html tags
+function frafca_wp_kses_text($string) {
+    $condition = array(
+        'a' => array(
+            'href' => array(),
+            'title' => array()
+        ),
+        'br' => array(),
+        'em' => array(),
+        'strong' => array(),
+    );
+    $return_value = wp_kses($string, $condition);
+
+	return $return_value;
+}
+add_action('plugins_loaded', 'frafca_wp_kses_text');
 
 
 // Programs and Services posts drop-down menus for ContactForm 7
