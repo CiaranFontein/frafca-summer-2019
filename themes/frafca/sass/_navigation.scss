@@ -267,8 +267,11 @@ a {
 
                     li {
                         padding: 0;
-                        
-                        a {
+                        &::before {
+                            display: none;
+                        }
+                        a { 
+                            padding: .5rem 0;
                             width: 100%;
                         }
                     }
