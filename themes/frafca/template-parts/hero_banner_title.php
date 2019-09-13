@@ -12,7 +12,7 @@ foreach ($heros as $hero) :
             url(<?php echo $hero_img; ?>);
         background-size: cover;
         background-position: center; 
-        background-attachment: fixed;
+        
         background-repeat: no-repeat;                   
     ">
         <h1 class="page-title screen-reader-text">

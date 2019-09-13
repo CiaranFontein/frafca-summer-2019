@@ -41,16 +41,31 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 2px solid black;
+        margin: 20px 0px;
+
+        @include desktop {
+            border: 0;
+        }
 
         .search-label {
-            width: 600px;
+            width: 500px;
+
+            @include desktop {
+                border: 0;
+                width: 600px;
+            }
         }
 
         .search-field {
             padding: 0 20px;
             outline: none;
-            width: 100%;
-            border: 2px solid black;
+
+            @include desktop {
+                border: 2px solid black;
+                width: 550px;
+            }
+
         }
     }
 
@@ -59,7 +74,27 @@ a {
         color: #000;
         font-weight: bold;
         background: $color__link;
-        margin: 0px 50px;
+        margin: 0;
+        background: yellow;
+        border: none;
+        border-radius: 0;
+
+        &:after {
+            font-family: 'Font Awesome 5 Free';
+            content: '\f002';
+        }
+
+        @include desktop {
+            padding: 0.8rem 2.5rem;
+            border: 2px solid black;
+            background: yellow;
+            border-radius: 0.65rem;
+
+            &:after {
+                font-family: $font__main;
+                content: "Search";
+            }
+        }
     }
 }
 
@@ -114,8 +149,12 @@ a {
         background-size: 60px 60px;
         height: 60px;
         width: 60px;
-        z-index: 5;
+        z-index: 4;
         position: relative;
+
+        @include desktop {
+            z-index: 5;
+        }
     }
 
     @include desktop {
@@ -134,13 +173,10 @@ a {
     top: 0;
     z-index: 2;
     padding-top: 80px;
+    // white-space: nowrap;
     opacity: 0;
     transition: $time__transition;
     overflow: hidden;
-
-    .menu-mobile-header-menu-container {
-        padding-bottom: 9rem;
-    }
 
     .sub-menu {
         display: none;
@@ -161,13 +197,14 @@ a {
         &:focus {
             color: $color__background-banner;
             background-color: transparent;
+            text-decoration: underline;
         }
     }
 
     &--open {
         display: block;
         left: 0;
-        width: $navigation__mobile-width;
+        width: 93%;
         opacity: 1;
     }
 
@@ -187,13 +224,12 @@ a {
                 position: relative;
                 margin: 0;
                 padding: 0 0.8rem;
-                width: 85%;
                 font-size: 1rem;
 
                 &::before {
                     position: absolute;
                     content: '';
-                    width: $navigation__mobile-width;
+                    width: 100%;
                     height: 1px;
                     left: 0;
                     bottom: 0;
@@ -212,7 +248,7 @@ a {
                     height: 32px;
                     position: absolute;
                     top: 20px;
-                    right: -2.8rem;
+                    right: .5rem;
                     text-align: center;
                     line-height: 32px;
                     color: $color__link-visited;
@@ -268,6 +304,14 @@ a {
         }
     }
 
+    ul {
+        display: none;
+
+        li {
+            display: none;
+        }
+    }
+
     i {
         color: #fff;
         padding: 0.8rem;
@@ -281,7 +325,8 @@ a {
 
     ul {
         display: block;
-        list-style: none;;
+        list-style: none;
+        padding-inline-start: 0px;
 
         .sub-menu {
             display: none;

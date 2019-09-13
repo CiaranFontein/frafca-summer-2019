@@ -11,8 +11,8 @@
             url(<?php echo $hero_img; ?>);
         background-size: cover;
         background-position: center; 
-        background-attachment: fixed;
-        background-repeat: no-repeat;                   
+        
+        background-repeat: no-repeat;                
     ">
         <h1 class="page-title screen-reader-text">
             <?php single_post_title(); ?>

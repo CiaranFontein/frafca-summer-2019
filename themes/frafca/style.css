@@ -336,6 +336,8 @@ img {
   font-size: 1.5em; }
   .search-form::-webkit-input-placeholder {
     color: blue; }
+  .search-form::-moz-placeholder {
+    color: blue; }
   .search-form::-ms-input-placeholder {
     color: blue; }
   .search-form::placeholder {
@@ -481,14 +483,25 @@ a {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    border: 2px solid black;
+    margin: 20px 0px; }
+    @media (min-width: 1200px) {
+      .search-field-container .search-form {
+        border: 0; } }
     .search-field-container .search-form .search-label {
-      width: 600px; }
+      width: 500px; }
+      @media (min-width: 1200px) {
+        .search-field-container .search-form .search-label {
+          border: 0;
+          width: 600px; } }
     .search-field-container .search-form .search-field {
       padding: 0 20px;
-      outline: none;
-      width: 100%;
-      border: 2px solid black; }
+      outline: none; }
+      @media (min-width: 1200px) {
+        .search-field-container .search-form .search-field {
+          border: 2px solid black;
+          width: 550px; } }
   .search-field-container .search-button {
     padding: 0.8rem 1.5rem;
     border-radius: 0.65rem;
@@ -497,7 +510,22 @@ a {
     color: #000;
     font-weight: bold;
     background: #FFD400;
-    margin: 0px 50px; }
+    margin: 0;
+    background: yellow;
+    border: none;
+    border-radius: 0; }
+    .search-field-container .search-button:after {
+      font-family: 'Font Awesome 5 Free';
+      content: '\f002'; }
+    @media (min-width: 1200px) {
+      .search-field-container .search-button {
+        padding: 0.8rem 2.5rem;
+        border: 2px solid black;
+        background: yellow;
+        border-radius: 0.65rem; }
+        .search-field-container .search-button:after {
+          font-family: "Raleway", sans-serif;
+          content: "Search"; } }
 
 /* Header Menus */
 .site-header {
@@ -557,8 +585,11 @@ a {
     background-size: 60px 60px;
     height: 60px;
     width: 60px;
-    z-index: 5;
+    z-index: 4;
     position: relative; }
+    @media (min-width: 1200px) {
+      .site-header .header-logo {
+        z-index: 5; } }
   @media (min-width: 1200px) {
     .site-header {
       -webkit-box-pack: center;
@@ -582,8 +613,6 @@ a {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   overflow: hidden; }
-  .mobile-header-menu .menu-mobile-header-menu-container {
-    padding-bottom: 9rem; }
   .mobile-header-menu .sub-menu {
     display: none; }
   .mobile-header-menu a {
@@ -597,11 +626,12 @@ a {
       background-color: #2F2B5C; }
     .mobile-header-menu a:focus {
       color: #BA5357;
-      background-color: transparent; }
+      background-color: transparent;
+      text-decoration: underline; }
   .mobile-header-menu--open {
     display: block;
     left: 0;
-    width: 90vw;
+    width: 93%;
     opacity: 1; }
   .mobile-header-menu-container {
     position: relative;
@@ -617,12 +647,11 @@ a {
         position: relative;
         margin: 0;
         padding: 0 0.8rem;
-        width: 85%;
         font-size: 1rem; }
         .mobile-header-menu-container ul li::before {
           position: absolute;
           content: '';
-          width: 90vw;
+          width: 100%;
           height: 1px;
           left: 0;
           bottom: 0;
@@ -635,7 +664,7 @@ a {
           height: 32px;
           position: absolute;
           top: 20px;
-          right: -2.8rem;
+          right: .5rem;
           text-align: center;
           line-height: 32px;
           color: #2F2B5C; }
@@ -677,6 +706,10 @@ a {
     @media (min-width: 1200px) {
       .main-navigation .header-menu {
         display: block; } }
+  .main-navigation ul {
+    display: none; }
+    .main-navigation ul li {
+      display: none; }
   .main-navigation i {
     color: #fff;
     padding: 0.8rem;
@@ -688,7 +721,9 @@ a {
         font-size: 1.5rem; } }
   .main-navigation ul {
     display: block;
-    list-style: none; }
+    list-style: none;
+    -webkit-padding-start: 0px;
+            padding-inline-start: 0px; }
     .main-navigation ul .sub-menu {
       display: none;
       position: absolute;
@@ -1134,45 +1169,59 @@ a {
 
 /* Contact Page **** END */
 /* Team Page **** START */
-.page-template-page-meet-our-team-php .grid-cards {
-  display: inline; }
-  .page-template-page-meet-our-team-php .grid-cards .rect-card {
+.page-template-page-meet-our-team .grid-cards {
+  display: block; }
+  @media (min-width: 1200px) {
+    .page-template-page-meet-our-team .grid-cards {
+      max-width: 1200px;
+      margin: 0  auto; } }
+  .page-template-page-meet-our-team .grid-cards .rect-card {
     margin: 0;
     padding: 0rem 1.5rem 5rem 1.5rem; }
     @media (min-width: 1200px) {
-      .page-template-page-meet-our-team-php .grid-cards .rect-card {
+      .page-template-page-meet-our-team .grid-cards .rect-card {
         padding: 0rem 1.5rem 8rem 1.5rem; } }
-  .page-template-page-meet-our-team-php .grid-cards p {
+  .page-template-page-meet-our-team .grid-cards p {
     margin-bottom: 1.5rem; }
 
-.page-template-page-meet-our-team-php .card-info {
+.page-template-page-meet-our-team .card-info {
   padding: 0 2rem; }
   @media (min-width: 1200px) {
-    .page-template-page-meet-our-team-php .card-info {
+    .page-template-page-meet-our-team .card-info {
       text-align: left;
       padding-top: 80px; } }
-  .page-template-page-meet-our-team-php .card-info p:first-child {
-    font-weight: bold; }
-  .page-template-page-meet-our-team-php .card-info p:nth-child(2) {
-    font-weight: 500; }
-  .page-template-page-meet-our-team-php .card-info a {
+  .page-template-page-meet-our-team .card-info p, .page-template-page-meet-our-team .card-info a {
+    display: block;
+    font-weight: 500;
+    font-size: 1rem; }
+  .page-template-page-meet-our-team .card-info p:nth-child(1), .page-template-page-meet-our-team .card-info p:nth-child(2) {
+    font-weight: 900; }
+  .page-template-page-meet-our-team .card-info p:first-child {
+    font-size: 22px; }
+    @media (min-width: 1200px) {
+      .page-template-page-meet-our-team .card-info p:first-child {
+        font-size: 2rem; } }
+  @media (min-width: 1200px) {
+    .page-template-page-meet-our-team .card-info p:nth-child(2) {
+      font-size: 1.5rem; } }
+  .page-template-page-meet-our-team .card-info a {
     color: #323232;
     text-decoration: none; }
-    .page-template-page-meet-our-team-php .card-info a:hover {
+    .page-template-page-meet-our-team .card-info a:hover {
       color: #323232; }
-    .page-template-page-meet-our-team-php .card-info a:active {
+    .page-template-page-meet-our-team .card-info a:active {
       color: #323232; }
 
-.page-template-page-meet-our-team-php .page-team-header {
+.page-template-page-meet-our-team .page-team-header {
   color: #323232;
   text-align: center;
   padding: 3rem 0 3rem 0; }
   @media (min-width: 1200px) {
-    .page-template-page-meet-our-team-php .page-team-header {
+    .page-template-page-meet-our-team .page-team-header {
       padding: 8rem 0 8rem 0; } }
 
 @media (min-width: 1200px) {
-  .page-template-page-meet-our-team-php .grid-rect-card {
+  .page-template-page-meet-our-team .grid-rect-card {
     display: grid;
     grid-template-columns: 45% 55%;
     grid-gap: 2rem; } }
@@ -1457,35 +1506,6 @@ object {
   .front-page-about-us h2 {
     margin: 2rem auto;
     font-size: 2.625rem; }
-  .front-page-about-us .grid-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
-    color: #ffffff; }
-    .front-page-about-us .grid-cards p {
-      margin: 0; }
-    .front-page-about-us .grid-cards .round-rect-card {
-      text-align: center;
-      padding: 0 1rem;
-      border-radius: 8px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column wrap;
-              flex-flow: column wrap;
-      -webkit-box-pack: space-evenly;
-          -ms-flex-pack: space-evenly;
-              justify-content: space-evenly;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      width: 300px;
-      height: 460px; }
-      .front-page-about-us .grid-cards .round-rect-card .card-icon {
-        width: 150px; }
 
 /* About Page */
 .about-page-banner .header-meta {
@@ -1567,41 +1587,23 @@ object {
 
 .donate-grid {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr;
   margin: 0 auto;
-  margin-top: 2rem;
-  width: 22rem; }
+  margin-top: 2rem; }
   .donate-grid .donate-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-bottom: 2rem;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 3rem;
     text-align: center;
-    border: 1px solid black;
-    background: #2F2B5C;
-    height: 55vh; }
+    background: #2F2B5C; }
     .donate-grid .donate-card h3 {
-      width: 80%;
       margin: 0 auto; }
     .donate-grid .donate-card p {
       font-size: 1.2rem;
-      width: 80%;
       margin: 1rem auto; }
 
 @media (min-width: 1200px) {
   .donate-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
     grid-column-gap: 2rem;
     margin: 0 auto;
     width: 70rem; }
@@ -1616,20 +1618,10 @@ object {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      margin-bottom: 2rem;
       margin: 7rem auto;
-      padding: 1rem 1rem 1rem 1rem;
+      padding: 1.5rem;
       text-align: center;
-      border: 1px solid black;
-      background: #2F2B5C;
-      height: 55vh; }
-      .donate-grid .donate-card h3 {
-        width: 80%;
-        margin: 0 auto; }
-      .donate-grid .donate-card p {
-        font-size: 1.2rem;
-        width: 80%;
-        margin: 1rem auto; } }
+      min-height: 340px; } }
 
 /* Single - single-prgrm_svc.php */
 @media (min-width: 1200px) {

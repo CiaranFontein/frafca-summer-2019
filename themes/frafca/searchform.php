@@ -5,5 +5,5 @@
         <input type="search" class="search-field" placeholder="Search"
             value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search results for:" />
     </label>
-    <button class="search-button">Search</button>
+    <button class="search-button"></button>
 </form>

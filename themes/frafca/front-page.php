@@ -26,7 +26,7 @@ get_header(); ?>
 
         <section id="front-page-about-us" class="front-page-about-us">
             <h2><?php echo frafca_cfs('about_us') ?></h2>
-            <div class="grid-cards">
+            <div class="fp-about-us-carousel">
                 <?php
                 $card_about_us = frafca_cfs('card_about_us');
                 foreach ($card_about_us as $card) :
@@ -65,7 +65,7 @@ get_header(); ?>
                         url(<?php echo $image; ?>);
                     background-size: cover;
                     background-position: center; 
-                    background-attachment: fixed;
+                    
                     background-repeat: no-repeat;
                 ">
                 </div>
