@@ -66,6 +66,8 @@ get_header(); ?>
                     background-size: cover;
                     background-position: center; 
                     background-repeat: no-repeat;
+                    width: 600px;
+                    height: 600px
                 ">
                 </div>
 
