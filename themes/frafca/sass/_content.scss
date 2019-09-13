@@ -476,6 +476,8 @@
 				margin: 0 auto;
 						@include desktop {
 							display: flex;
+							justify-content: space-between;
+							align-items: flex-start;
 						}
 			}
 
@@ -548,20 +550,20 @@
 
 			.tribe-events-single-section,
 			.tribe-events-event-meta,
-			.primary,
-			.tribe-clearfix {
+			.primary {
 				@include desktop {
 					order: 1;
 					width: 30%;
 					font-size: 19px;
 
 				}
+			
+			.tribe-clearfix {
+				width: 100%;
+			}
 
 			}
-			.tribe-events-single-section,
-			.tribe-events-event-meta,
-			.secondary,
-			.tribe-clearfix {
+			.secondary {
 				width: 100%;
 				@include desktop {
 					order: 4;
