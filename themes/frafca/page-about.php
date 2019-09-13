@@ -11,123 +11,134 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-        <?php if (have_posts()) : ?>
+        <!-- Hero Image : type 1  -->
+        <header id="prgrm_svc-banner"  class="frafca-hero-image">
+            <?php get_template_part( 'template-parts/hero_banner' ); ?>
+        </header><!-- #about-page-banner -->
 
-            <?php if (is_home() && !is_front_page()) : ?>
-                <header>
-                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                </header>
-            <?php endif; ?>
-
-            <?php /* Start the Loop */ ?>
-
-
-            <header id="about-page-banner" class="frafca-hero-image about-page-banner">
-
-                <?php get_template_part('template-parts/hero_banner'); ?>
-
-            </header><!-- #about-page-banner -->
-
-            <div class="who-we-are-grid">
+        <section id="who-we-are" class="container-who-we-are">
+            <div class="grid-cards txt-align-c white">
                 <?php
-                    $loop = frafca_cfs('who_we_are');
-                    foreach ($loop as $content) :
-                        $image = $content['who_we_are_image'];
-                        $title = $content['who_we_are_title'];
-                        $description = $content['who_we_are_description'];
-                        ?>
-
-                    <div class="about-content-image">
-                        <?php echo '<img src=' . $image . '">'; ?>
+                    $contents_who_we_are = last_frafca_cfs('who_we_are'); 
+                ?>
+                <div class="grid-cards-element">
+                    <div class="image-background" style="
+                        background : 
+                            linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
+                                url(<?php echo $contents_who_we_are['image'] ;?>);
+                        background-size: cover;
+                        background-position: center; 
+                        background-repeat: no-repeat;
+                    ">
                     </div>
+                </div>
+                <div class="grid-cards-element">
+                    <h3>
+                        <?php echo frafca_wp_kses_text($contents_who_we_are['title']); ?>
+                    </h3>
+                </div>
+                <div class="grid-cards-element">
+                    <?php echo frafca_wp_kses_text($contents_who_we_are['description']); ?>
+                </div>
 
-                    <div class="about-content-info">
-                        <h3><?php echo $title; ?></h3>
-                        <br>
-                        <p><?php echo $description; ?></p>
+            </div>
+        </section><!-- #who-we-are -->
+
+        <section id="location-history" class="container-location-history">
+            <div class='rect-card txt-align-c pink'>
+                <p>
+                    <?php echo frafca_wp_kses_text(frafca_cfs('location_history')); ?>s
+                </p>
+            </div>
+        </section><!-- #location-history -->
+
+        <section id="our-history" class="container-our-history">
+            <div class="grid-cards txt-align-c white">
+                <?php
+                    $contents_our_history = last_frafca_cfs('our_history'); 
+                ?>
+                <div class="grid-cards-element">
+                    <div class="image-background" style="
+                        background : 
+                            linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
+                                url(<?php echo $contents_our_history['image'] ;?>);
+                        background-size: cover;
+                        background-position: top center; 
+                        background-repeat: no-repeat;
+                    ">
                     </div>
+                </div>
+                <div class="grid-cards-element">
+                    <h3>
+                        <?php echo frafca_wp_kses_text($contents_our_history['title']); ?>
+                    </h3>
+                </div>
+                <div class="grid-cards-element">
+                    <?php echo frafca_wp_kses_text($contents_our_history['description']); ?>
+                </div>
 
+            </div>
+        </section><!-- #our-history -->
 
+        <section id="friendship-center" class="container-friendship-center">
+            <div class="grid-cards txt-align-c white">
+                <?php
+                    $contents_friendship_center = last_frafca_cfs('friendship_center'); 
+                ?>
+                <div class="grid-cards-element">
+                    <div class="image-background" style="
+                        background : 
+                            linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100% ), 
+                                url(<?php echo $contents_friendship_center['image'] ;?>);
+                        background-size: cover;
+                        background-position: top center; 
+                        background-repeat: no-repeat;
+                    ">
+                    </div>
+                </div>
+                <div class="grid-cards-element">
+                    <h3>
+                        <?php echo frafca_wp_kses_text($contents_friendship_center['title']); ?>
+                    </h3>
+                </div>
+                <div class="grid-cards-element">
+                    <?php echo frafca_wp_kses_text($contents_friendship_center['description']); ?>
+                </div>
 
+            </div>
+        </section><!-- #friendship-center -->
+
+        <section id="card-about-us" class="container-card-about-us">
+            <div class="grid-cards">
+                <?php 
+                    $contents_card_about_us = frafca_cfs('cards_about_us_page');
+                    foreach( $contents_card_about_us as $content ):
+                        $icon = $content['logo'];
+                        $title = $content['title'];
+                        $description = $content['description'];
+                        $link_text = $content['link-text'];
+                        $link = $content['link'][0];
+                ?>
+                    <div class="flex-element">
+                            
+                        <div class="card-logo">
+                            <img src="<?php echo $icon ;?>">
+                        </div>
+                        <div class="card-title">
+                            <h3><?php echo frafca_wp_kses_text($title); ?></h3>
+                        </div>
+                        <div class="card-description">
+                            <?php echo frafca_wp_kses_text($description) ; ?>
+                        </div>
+
+                        <a class="default-btn yellow" href="<?php echo get_the_permalink($link); ?>" >
+                            <?php echo frafca_wp_kses_text($link_text); ?>
+                        </a> 
+
+                    </div>
                 <?php endforeach; ?>
             </div>
-
-            <div class="location-history">
-                <?php $description = frafca_cfs('location_history'); ?>
-                <p><?php echo $description; ?></p>
-            </div>
-
-            <div class="our-history-grid">
-                <?php
-                    $loop = frafca_cfs('our_history');
-                    foreach ($loop as $content) :
-                        $image = $content['our_history_image'];
-                        $title = $content['our_history_title'];
-                        $description = $content['our_history_description'];
-                        ?>
-
-                    <div class="our-history-image">
-                        <?php echo '<img src=' . $image . '">'; ?>
-                    </div>
-
-                    <div class="our-history-info">
-                        <h3><?php echo $title; ?></h3>
-                        <br>
-                        <p><?php echo $description; ?></p>
-                    </div>
-
-                <?php endforeach; ?>
-            </div>
-
-            <div class="friendship-center-grid">
-                <?php
-                    $loop = frafca_cfs('friendship_center');
-                    foreach ($loop as $content) :
-                        $image = $content['fc_image'];
-                        $title = $content['fc_title'];
-                        $description = $content['fc_description'];
-                        ?>
-
-                    <div class="fc-image">
-                        <?php echo '<img src=' . $image . '">'; ?>
-                    </div>
-
-                    <div class="fc-info">
-                        <h3><?php echo $title; ?></h3>
-                        <br>
-                        <p><?php echo $description; ?></p>
-                    </div>
-
-                <?php endforeach; ?>
-            </div>
-
-            <div class="card-grid">
-                <?php
-                    $loop = frafca_cfs('cards_about_us_page');
-                    foreach ($loop as $content) :
-                        $image = $content['card_logo'];
-                        $url = $content['card_url'];
-                        $description = $content['card_description'];
-                        ?>
-
-                    <div class="fc-image">
-                        <?php echo '<img src=' . $image . '">'; ?>
-                    </div>
-
-                    <div class="fc-info">
-                        <h3><?php echo $title; ?></h3>
-                        <br>
-                        <p><?php echo $description; ?></p>
-                    </div>
-
-                <?php endforeach; ?>
-            </div>
-
-        <?php else : ?>
-
-            <?php get_template_part('template-parts/content', 'none'); ?>
-
-        <?php endif; ?>
+        </section><!-- #card-about-us -->
 
     </main><!-- #main -->
 </div><!-- #primary -->

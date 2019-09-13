@@ -32,6 +32,16 @@ h1, h2 {
 	}
 }
 
+h3 {
+
+	@include desktop {
+		.page-template-page-about & {
+			font-size: 2.25rem;
+			margin-bottom: 3.25rem;
+		}
+	}
+}
+
 /* Copy */
 
 p {
@@ -105,4 +115,9 @@ li {
 	margin-bottom: 0.8rem;
 	.flex-wrap & {
 	}
+}
+
+/* Text Aligns */
+.txt-align-c {
+    text-align: center;
 }

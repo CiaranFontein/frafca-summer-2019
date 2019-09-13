@@ -31,7 +31,8 @@
         color: $color__text-sec;
     }
 
-    .rect-card &, .default-cf7-form & {
+    .rect-card &, .default-cf7-form &,
+    .container-card-about-us & {
         font-size: 1rem;
         font-weight: 900;
         &:hover {
