@@ -24,7 +24,7 @@ $event_id = get_the_ID();
 
 ?>
 
-<?php get_template_part('template-parts/hero_banner'); ?>
+<?php get_template_part('template-parts/hero_banner_image'); ?>
 
 <div id="tribe-events-content" class="tribe-events-single">
 
@@ -60,19 +60,6 @@ $event_id = get_the_ID();
 		
 	
 	</div>
-
-	<!-- Event header -->
-	<!-- <div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>> -->
-		<!-- Navigation -->
-		<!-- <nav class="tribe-events-nav-pagination" aria-label="<?php printf(esc_html__('%s Navigation', 'the-events-calendar'), $events_label_singular); ?>"> -->
-			<!-- <ul class="tribe-events-sub-nav"> -->
-				<!-- <li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link('<span>&laquo;</span> %title%') ?></li> -->
-				<!-- <li class="tribe-events-nav-next"><?php tribe_the_next_event_link('%title% <span>&raquo;</span>') ?></li> -->
-			<!-- </ul> -->
-			<!-- .tribe-events-sub-nav -->
-		<!-- </nav> -->
-	<!-- </div> -->
-	<!-- #tribe-events-header -->
 
 	<div class="single-event-content-container">
 			<?php while (have_posts()) :  the_post(); ?>
