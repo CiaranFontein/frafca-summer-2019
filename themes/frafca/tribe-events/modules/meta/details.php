@@ -53,7 +53,7 @@ $website = tribe_get_event_website_link();
 ?>
 
 <div class="tribe-events-meta-group tribe-events-meta-group-details single-event-date-details">
-	<h2 class="tribe-events-single-section-title"> <?php esc_html_e( 'Details', 'the-events-calendar' ) ?> </h2>
+	<h2 class="tribe-events-single-section-title single-event-detail-title"> <?php esc_html_e( 'Details', 'the-events-calendar' ) ?> </h2>
 	<dl>
 
 		<?php

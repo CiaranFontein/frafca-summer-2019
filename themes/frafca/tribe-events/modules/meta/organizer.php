@@ -17,8 +17,8 @@ $email = tribe_get_organizer_email();
 $website = tribe_get_organizer_website_link();
 ?>
 
-<div class="tribe-events-meta-group tribe-events-meta-group-organizer">
-	<h2 class="tribe-events-single-section-title"><?php echo tribe_get_organizer_label( ! $multiple ); ?></h2>
+<div class="tribe-events-meta-group tribe-events-meta-group-organizer single-event-organizer-container">
+	<h2 class="tribe-events-single-section-title single-event-organizer-title"><?php echo tribe_get_organizer_label( ! $multiple ); ?></h2>
 	<dl>
 		<?php
 		do_action( 'tribe_events_single_meta_organizer_section_start' );
@@ -30,7 +30,7 @@ $website = tribe_get_organizer_website_link();
 
 			?>
 			<dt style="display:none;"><?php // This element is just to make sure we have a valid HTML ?></dt>
-			<dd class="tribe-organizer">
+			<dd class="tribe-organizer single-event-organizer">
 				<?php echo tribe_get_organizer_link( $organizer ) ?>
 			</dd>
 			<?php

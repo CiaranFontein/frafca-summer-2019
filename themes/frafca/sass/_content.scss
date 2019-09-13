@@ -476,6 +476,8 @@
 				margin: 0 auto;
 						@include desktop {
 							display: flex;
+							justify-content: space-between;
+							align-items: flex-start;
 						}
 			}
 
@@ -495,14 +497,18 @@
 					}
 			}
 
-			.tribe-events-single-event-description
+			.tribe-events-single-event-description,
 			.tribe-events-content {
-				p:last-child {
-					margin-bottom: 2rem;
-				}
-				span {
-					padding: 2rem;
-				}
+					p:last-child {
+						margin-bottom: 2rem;
+					}
+					span {
+						padding: 2rem;
+					}
+					@include desktop {
+						order: 0;
+    					width: 70%;
+					}
 			}
 
 			.single-event-date-details {
@@ -512,6 +518,10 @@
 			.single-tribe_events,
 			.tribe-events-cal-links {
 				text-align:center;
+				@include desktop {
+					order: 2;
+    				width: 100%;
+				}
 			}
 
 			.single-event-venue {
@@ -526,6 +536,9 @@
 
 			.tribe-events-meta-group-organizer {
 				padding: 0 3rem;
+					@include desktop {
+
+					}
 			}
 			
 			.single-tribe_events,
@@ -537,10 +550,29 @@
 
 			.tribe-events-single-section,
 			.tribe-events-event-meta,
-			.secondary,
+			.primary {
+				@include desktop {
+					order: 1;
+					width: 30%;
+					font-size: 19px;
+
+				}
+			
 			.tribe-clearfix {
 				width: 100%;
 			}
+
+			}
+			.secondary {
+				width: 100%;
+				@include desktop {
+					order: 4;
+    				width: 100%;
+				}
+
+
+			}
+
 
 			.fa-calendar-alt {
 				font-size: 1.5rem;
@@ -551,6 +583,7 @@
 				@include desktop {
 					display: block;
 					text-align: center;
+					order:5;
 				}
 			}
 
@@ -577,5 +610,17 @@
 				font-size: 1rem;
 				margin-bottom: 0rem;
 			}
+
+			.single-event-content-container {
+				@include desktop {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 2rem 2rem;
+				}
+			}
+			
 			
 }
+
+
+
