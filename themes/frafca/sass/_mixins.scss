@@ -16,7 +16,7 @@
 // Button Style
 
 @mixin white-button {
-    padding: 0.8rem 1.5rem;
+    padding: $button_padding_height $button_padding_width;
     border-radius: 0.65rem;
     background: #fff;
     margin: 0.15rem;
