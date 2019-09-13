@@ -1,8 +1,6 @@
 <!-- hero contents -->
-<h1> hello </h1>
 <?php 
-        $heros = last_frafca_cfs('banner');
-        $hero_img = $heros['banner_image'];
+        $hero_img = frafca_cfs('banner_image');
 ?>
     <div class="hero-image-page" style="
         background : 
@@ -10,6 +8,7 @@
             url(<?php echo $hero_img; ?>);
         background-size: cover;
         background-position: center; 
+        padding: 7%;
         
         background-repeat: no-repeat;                
     ">

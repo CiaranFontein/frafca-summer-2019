@@ -454,7 +454,7 @@
 }
 
 .single-tribe_events {
-	
+
 	color: #323232;
 	padding: 0rem;
 	
@@ -496,6 +496,10 @@
 
 	.tribe-events-single-event-description,
 	.tribe-events-content {
+
+			h1 {
+				font-size: 2rem;
+			}
 			p:last-child {
 				margin-bottom: 2rem;
 			}
@@ -533,9 +537,6 @@
 
 	.tribe-events-meta-group-organizer {
 		padding: 0 3rem;
-			@include desktop {
-
-			}
 	}
 	
 	.single-tribe_events,
@@ -552,7 +553,7 @@
 			order: 1;
 			width: 30%;
 			font-size: 19px;
-
+			display: flex;
 		}
 	
 	.tribe-clearfix {
@@ -612,10 +613,57 @@
 		@include desktop {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 2rem 2rem;
+		padding: 0rem 2rem;
 		}
 	}
-			
+	
+	#tribe-events-content {
+		@include desktop {
+			.tribe-events-meta-group-organizer {
+
+				display: block;
+				float: none;
+				width: 100%;
+				padding: 0;
+				padding-top: 2rem;
+				h2 {
+					display: none;
+					// margin-top: 0;
+					// margin-bottom: 1rem;
+				}
+				.single-event-organizer {
+					flex: none;
+					width: 100%;	
+					position: relative;
+					&::before {
+						position: relative;
+						display: block;
+						width: 100%;
+						content: 'Contact Information';
+						font-size: 1.5rem;
+						font-weight: 900;
+						
+					}
+				}
+				dl {
+					display: flex;
+					flex-wrap: wrap;
+					
+					* {
+						line-height: 1.5;
+					}
+	
+					dt {
+						flex: none;
+						width: 30%;
+					}
+					dd {
+						width: 70%;
+					}
+				}
+			}
+		}
+	}
 			
 }
 
