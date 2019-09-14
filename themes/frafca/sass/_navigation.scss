@@ -115,7 +115,8 @@ a {
     left: 0;
     align-items: center;
     transition: $time__transition;
-
+    z-index: 9999;
+    
     &.darkmode {
         z-index: 1;
         background-color: rgba(47, 43, 92, .6);

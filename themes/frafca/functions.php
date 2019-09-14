@@ -142,15 +142,26 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-add_action('tribe_events_mobile_breakpoint', 'mobile_breakpoint');
-
-function mobile_breakpoint()
-{
-	return 970;
+/**
+ * Allows visitors to page forward/backwards in any direction within month view
+ * an "infinite" number of times (ie, outwith the populated range of months).
+ */
+class ContinualMonthViewPagination {
+	public function __construct() {
+		add_filter( 'tribe_events_the_next_month_link', array( $this, 'next_month' ) );
+		add_filter( 'tribe_events_the_previous_month_link', array( $this, 'previous_month' ) );
+	}
+	public function next_month() {
+		$url = tribe_get_next_month_link();
+		$text = tribe_get_next_month_text();
+		$date = TribeEvents::instance()->nextMonth( tribe_get_month_view_date() );
+		return '<a data-month="' . $date . '" href="' . $url . '" rel="next">' . $text . ' <span>&raquo;</span></a>';
+	}
+	public function previous_month() {
+		$url = tribe_get_previous_month_link();
+		$text = tribe_get_previous_month_text();
+		$date = TribeEvents::instance()->previousMonth( tribe_get_month_view_date() );
+		return '<a data-month="' . $date . '" href="' . $url . '" rel="prev"><span>&laquo;</span> ' . $text . ' </a>';
+	}
 }
-
-function customize_tribe_events_breakpoint()
-{
-	return 970;
-}
-add_filter('tribe_events_mobile_breakpoint', 'customize_tribe_events_breakpoint');
+new ContinualMonthViewPagination;
