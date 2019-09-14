@@ -1649,6 +1649,9 @@ a {
 .tribe-events-title-bar {
   color: yellow; }
 
+.frafca-events-calendar thead th {
+  background-color: #BA5357; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
