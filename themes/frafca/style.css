@@ -1249,13 +1249,12 @@ a {
 
 /* Grid Card **** END */
 /* Contact Page **** START */
-.page-template-page-contact .grid-cards {
-  padding-bottom: 5rem; }
-  @media (min-width: 1200px) {
-    .page-template-page-contact .grid-cards {
-      display: inline;
-      max-width: 1200px;
-      margin: auto; } }
+@media (min-width: 1200px) {
+  .page-template-page-contact .grid-cards {
+    display: inline;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 5rem; } }
 
 @media (min-width: 1200px) {
   .page-template-page-contact .contact-cards {
@@ -1263,16 +1262,27 @@ a {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem; } }
 
-.page-template-page-contact .contact-cards .rect-card p,
+.page-template-page-contact .contact-cards .rect-card p {
+  text-align: left;
+  line-height: 22px;
+  font-size: 19px;
+  margin-bottom: 22px;
+  margin-top: 0px; }
+
 .page-template-page-contact .contact-cards .rect-card h3 {
-  text-align: left; }
+  text-align: left;
+  margin-bottom: 0.5rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-contact .contact-cards .rect-card h3 {
+      font-size: 23px;
+      margin-bottom: 1rem; } }
 
 .page-template-page-contact .contact-cards .rect-card {
   padding: 5rem 2.5rem 2rem; }
   @media (min-width: 1200px) {
     .page-template-page-contact .contact-cards .rect-card {
       margin: 0;
-      padding: 5rem 2.5rem 2rem 2.5rem; }
+      padding: 3rem 2rem 2rem; }
       .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
         margin-left: 0;
         margin-right: 0; } }

@@ -10,6 +10,7 @@
  * @package TribeEventsCalendar
  * @version 4.6.23
  *
+ * Template Name: events
  */
 
 if (!defined('ABSPATH')) {

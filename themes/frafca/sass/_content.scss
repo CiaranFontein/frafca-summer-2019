@@ -158,12 +158,12 @@
 .page-template-page-contact {
 
     .grid-cards {
-        padding-bottom: 5rem;
 
         @include desktop {
             display: inline;
             max-width: 1200px;
             margin: auto;
+            margin-bottom: 5rem;
         }
     }
 
@@ -171,14 +171,28 @@
         @include desktop {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            // margin: 2rem 1rem 5rem 1rem;
             grid-gap: 2rem;
 
         }
 
-        .rect-card p,
+        .rect-card p {
+            text-align: left;
+            line-height: 22px;
+            font-size: 19px;
+            margin-bottom:22px;
+            margin-top: 0px;
+            
+        }
+
         .rect-card h3 {
             text-align: left;
+            margin-bottom: 0.5rem;
+
+            @include desktop {
+            font-size: 23px;
+            margin-bottom: 1rem;
+            }
+
         }
 
         .rect-card {
@@ -186,7 +200,8 @@
 
             @include desktop {
                 margin: 0;
-                padding: 5rem 2.5rem 2rem 2.5rem;
+                padding: 3rem 2rem 2rem;;
+               
 
                 // Adjust margins of even number of container
                 &:nth-child(2*n) {
