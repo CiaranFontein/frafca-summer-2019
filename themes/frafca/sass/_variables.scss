@@ -18,7 +18,7 @@ $color__text-screen: #21759b;
 
 $color__background-article: #2F2B5C;
 $color__background-button: #FFD400;
-$color__background-button-hover: darken($color__background-button, 15%);
+$color__background-button-hover: lighten($color__background-button, 16%);
 $color__background-banner: #BA5357;
 $color__background-black: #323232;
 
@@ -29,7 +29,7 @@ $color__border-abbr: #666;
 
 $color__link: #FFD400;
 $color__link-visited: #2F2B5C;
-$color__link-hover: darken($color__link, 15%);
+$color__link-hover: darken($color__link, 16%);
 
 $color__warning: #FF18FF;
 $color__confirm: #398f14;

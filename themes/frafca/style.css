@@ -799,6 +799,7 @@ a {
           border-radius: 0.65rem;
           background: #fff;
           margin: 0.15rem;
+<<<<<<< HEAD
           color: #000;
           -webkit-transition: 0.1s all ease-in-out;
           transition: 0.1s all ease-in-out; }
@@ -809,6 +810,15 @@ a {
         .main-navigation .side-header-menu li:nth-child(2n) a {
           background: #FFD400;
           text-transform: uppercase; } }
+=======
+          color: #000; }
+        .main-navigation .side-header-menu li:nth-child(2n) a {
+          background: #FFD400;
+          text-transform: uppercase; } }
+
+.hidden {
+  display: none; }
+>>>>>>> 36f00e7c66177ea391fedb7a5c18bbebac2d042c
 
 .fa,
 .fas,
@@ -1659,10 +1669,19 @@ object {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 2rem; }
   .front-page-about-us h2 {
     margin: 2rem auto;
     font-size: 2.625rem; }
+  .front-page-about-us .flickity-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
   .front-page-about-us .fp-about-us-cell {
     width: 100%;
     margin: 0 auto;
@@ -1685,6 +1704,14 @@ object {
     height: 460px; }
     .front-page-about-us .fp-about-us-cell .card-icon {
       width: 150px; }
+
+.what-we-offer .wwo_image {
+  margin: 10rem auto;
+  width: 100vw;
+  height: 100vw; }
+
+.what-we-offer .wwo_meta {
+  background: #323232; }
 
 /* About Page */
 .page-template-page-about section {
