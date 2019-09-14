@@ -103,6 +103,8 @@ function frafca_theme_scripts()
 	wp_enqueue_script('frafca-footer-navigation-animations', get_template_directory_uri() . '/build/js/footer-navigation-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-show-sub-menu-on-hover', get_template_directory_uri() . '/build/js/show-sub-menu-on-hover.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array('jquery'), '', true);
+	wp_enqueue_script('frafca-header-change-on-scroll', get_template_directory_uri() . '/build/js/header-change-on-scroll.min.js', array('jquery'), '', true);
+
 	// Enqueue script only for single-prgrm_svc 
 	if (is_singular('prgrm_svc')) {
 		wp_enqueue_script('frafca-theme-cf7-set-default-option', get_template_directory_uri() . '/build/js/cf7-set-default-option.min.js', array('jquery'), '', true);
