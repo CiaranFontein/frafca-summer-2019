@@ -26,7 +26,8 @@ get_header(); ?>
 							$services = $card['services'];
 							$phone = $card['phone'];
 							$fax = $card['fax'];
-							$button = $card['view_location'];
+                            $button = $card['view_location'];
+
                 ?>
 
                     <div class="rect-card purple">
@@ -38,10 +39,31 @@ get_header(); ?>
                         <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                             <?php echo $button['text']; ?>
                         </a>
-                        
 
                     </div>
 
+                <?php endforeach; ?>
+                
+                <?php 
+                    $cardwl = frafca_cfs('card_without_location');
+                        foreach ($cardwl as $cardwl):
+                            $titlewl = $cardwl['office_title'];
+                            $addresswl = $cardwl['address'];
+                            $serviceswl = $cardwl['services'];
+                            $phonewl = $cardwl['phone'];
+                            $faxwl = $cardwl['fax'];
+                ?>
+
+                    <div class="rect-card purple nolocation">
+
+                        <h3><?php echo $titlewl;?></h3>
+						<p><?php echo $addresswl;?></p>
+						<p><?php echo $serviceswl;?></p>
+						<p><?php echo $phonewl;?></p>
+						<p><?php echo $faxwl;?></p>
+                    
+                    </div>
+               
                 <?php endforeach; ?>
             
             </div>

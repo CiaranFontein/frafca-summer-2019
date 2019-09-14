@@ -1282,7 +1282,7 @@ a {
   @media (min-width: 1200px) {
     .page-template-page-contact .contact-cards .rect-card {
       margin: 0;
-      padding: 3rem 2rem 2rem; }
+      padding: 3rem 1.5rem 2rem; }
       .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
         margin-left: 0;
         margin-right: 0; } }
