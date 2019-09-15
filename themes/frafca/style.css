@@ -1731,12 +1731,16 @@ object {
   bottom: 0;
   margin: 0 auto;
   text-align: center;
-  right: 40%;
-  left: 40%; }
+  right: 35%;
+  left: 35%; }
 
 .front-page-about-us {
   color: #2d2d2d;
   text-align: center; }
+  .front-page-about-us .about-us-button {
+    position: absolute;
+    -webkit-transform: translateY(-350%);
+            transform: translateY(-350%); }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1746,16 +1750,15 @@ object {
   .front-page-about-us h2 {
     margin: 2rem auto;
     font-size: 2.625rem; }
-  .front-page-about-us .flickity-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
+  .front-page-about-us .us-carousel .previous {
+    left: 34%; }
+  .front-page-about-us .us-carousel .next {
+    right: 35%; }
+  .front-page-about-us .us-carousel .flickity-button {
+    top: 78%; }
   .front-page-about-us .fp-about-us-cell {
     width: 100%;
+    min-width: 400px;
     margin: 0 auto;
     text-align: center;
     padding: 0 1rem;
@@ -1773,9 +1776,14 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 460px; }
+    height: 610px; }
     .front-page-about-us .fp-about-us-cell .card-icon {
       width: 150px; }
+    .front-page-about-us .fp-about-us-cell .card-meta {
+      padding-bottom: 8rem;
+      color: #ffffff;
+      padding-left: 1rem;
+      padding-right: 1rem; }
 
 .what-we-offer .wwo_image {
   margin: 10rem auto;
