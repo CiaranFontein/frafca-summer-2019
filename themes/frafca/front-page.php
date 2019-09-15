@@ -26,7 +26,7 @@ get_header(); ?>
 
         <section id="front-page-about-us" class="front-page-about-us">
             <h2><?php echo frafca_cfs('about_us') ?></h2>
-            <div class="fp-about-us-carousel">
+            <div class="us-carousel">
                 <?php
                 $card_about_us = frafca_cfs('card_about_us');
                 foreach ($card_about_us as $card) :
@@ -39,16 +39,17 @@ get_header(); ?>
                         <div class="card-icon">
                             <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
                         </div>
-                        <div>
+                        <div class="card-meta">
                             <h3><?php echo $title; ?></h3>
                             <p><?php echo $description; ?></p>
                         </div>
+
                     </div>
                 <?php endforeach; ?>
-
             </div>
+
             <a class='about-us-button default-btn yellow'>
-                <?php $button = frafca_cfs('about_us_button') ?>
+                <?php frafca_cfs('about_us_button') ?>
             </a>
 
         </section><!-- #front-page-about-us -->
