@@ -705,6 +705,38 @@
 }
 /* Single Event page #### END #/
 
+/* Job Postings page **** START */
+
+.page-template-page-job-postings {
+
+    .rect-card{
+        
+        p:first-child {
+        margin-bottom: 5px;
+        }
+
+        h3 {
+        margin-bottom: 2rem;
+        }
+
+        p:nth-child(3) {
+        margin-bottom: 5rem;
+            @include desktop {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .grid-cards
+    .rect-card {
+        @include desktop{
+        padding: 3rem 4rem;
+        }
+    }
+}
+
+/* Job Postings page #### END #/
+
 /* Calendar page **** Start*/
 
 .header-meta {

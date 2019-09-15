@@ -19,14 +19,12 @@ get_header(); ?>
         <section id="page-contact">
             <div class="grid-cards contact-cards">
 				<?php  
-                    $card = frafca_cfs('card');
+                    $card = frafca_cfs('add_a_new_job_posting_card');
                     foreach($card as $card) :
-                            $title = $card['office_title'];
-                            $address = $card['address'];
-							$services = $card['services'];
-							$phone = $card['phone'];
-							$fax = $card['fax'];
-                            $button = $card['view_location'];
+                            $title = $card['department'];
+                            $address = $card['program'];
+							$services = $card['description'];
+                            $button = $card['learn_more'];
 
                 ?>
 
