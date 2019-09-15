@@ -35,7 +35,7 @@
         margin: $base__space-unit * 2.4 auto;
     }
 
-    .us-carousel {
+    .fp-about-us-carousel {
         .previous {
             left: 37%;
         }
@@ -119,6 +119,26 @@
 
 .front-page-partners {
     background: $color__background-black;
+    color: red;
+    margin: $base__space-unit * 2 auto;
+
+    .fp-partners-carousel {
+        .previous {
+            left: 37%;
+        }
+
+        .next {
+            right: 37%;
+        }
+
+        .flickity-button {
+            top: 78%;
+        }
+
+        .flickity-page-dots {
+            display: none;
+        }
+    }
 }
 
 /* About Page */

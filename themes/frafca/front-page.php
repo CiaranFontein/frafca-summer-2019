@@ -26,7 +26,7 @@ get_header(); ?>
 
         <section id="front-page-about-us" class="front-page-about-us">
             <h2><?php echo frafca_cfs('about_us') ?></h2>
-            <div class="us-carousel">
+            <div class="fp-about-us-carousel">
                 <?php
                 $card_about_us = frafca_cfs('card_about_us');
                 foreach ($card_about_us as $card) :
@@ -106,26 +106,28 @@ get_header(); ?>
                 <?php endforeach ?>
         </section><!-- #front-page-get-involved -->
 
-        <section id="front-page-partners">
+        <section id="front-page-partners" class="front-page-partners">
 
             <h2>Partners</h2>
-            <?php
-            $partners = frafca_cfs('partners');
-            foreach ($partners as $partner) :
-                $partner_name = $partner['partner_name'];
-                $img_partner = $partner['partner_logo'];
-                ?>
+            <div class="fp-partners-carousel">
+                <?php
+                $partners = frafca_cfs('partners');
+                foreach ($partners as $partner) :
+                    $partner_name = $partner['partner_name'];
+                    $img_partner = $partner['partner_logo'];
+                    ?>
 
-                <div class="partner-content">
-                    <div class="partner-logo">
-                        <img src="<?php echo $img_partner; ?>" alt="<?php echo $partner_name; ?>">
+                    <div class="partner-content">
+                        <div class="partner-logo">
+                            <img src="<?php echo $img_partner; ?>" alt="<?php echo $partner_name; ?>">
+                        </div>
+                        <p>
+                            <?php echo $partner_name; ?>
+                        </p>
                     </div>
-                    <p>
-                        <?php echo $partner_name; ?>
-                    </p>
-                </div>
 
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </section><!-- #front-page-partners -->
 
     </main><!-- #main -->
