@@ -28,9 +28,9 @@ foreach ($heros as $hero) :
             <p>
                 <?php echo $hero_description; ?>
             </p>
-            <div class="banner-button">
-                <?php echo $hero_button; ?>
-            </div>
+            <a class='banner-button default-btn yellow' href="<?php echo $hero_button['url']; ?>" target="<?php echo $hero_button['target']; ?>">
+                <?php echo $hero_button['text']; ?>
+            </a>
         </div>
     </div>
 <?php endforeach ?>
