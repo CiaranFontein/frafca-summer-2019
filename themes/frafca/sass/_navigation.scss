@@ -274,10 +274,16 @@ a {
                     font-weight: 500;
 
                     li {
-                        padding: 0;
-
+                        padding: .5rem;
+                        &::before {
+                            display: none;
+                        }
                         a {
+                            padding: 0;
                             width: 100%;
+                        }
+                        &:last-child {
+                            margin-bottom: .5rem;
                         }
                     }
                 }

@@ -720,9 +720,14 @@ a {
           padding: 0 0.8rem;
           font-weight: 500; }
           .mobile-header-menu-container ul li ul li {
-            padding: 0; }
+            padding: .5rem; }
+            .mobile-header-menu-container ul li ul li::before {
+              display: none; }
             .mobile-header-menu-container ul li ul li a {
+              padding: 0;
               width: 100%; }
+            .mobile-header-menu-container ul li ul li:last-child {
+              margin-bottom: .5rem; }
 
 .hamburger-icon {
   z-index: 3;
