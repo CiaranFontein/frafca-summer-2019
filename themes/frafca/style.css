@@ -1701,7 +1701,9 @@ a {
     background-color: #BA5357;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
     .tribe-events-page-template .frafca-events-sub-nav a {
       color: white;
       -webkit-text-decoration: white;
@@ -1715,6 +1717,8 @@ a {
   .tribe-events-page-template #tribe-events-footer:before, .tribe-events-page-template #tribe-events-header:before {
     right: 0; }
   .tribe-events-page-template #tribe-bar-form {
+    background: rgba(255, 255, 255, 0.3); }
+  .tribe-events-page-template #tribe-bar-collapse-toggle {
     background: rgba(255, 255, 255, 0.3);
     -webkit-transform: translateY(-55px);
             transform: translateY(-55px); }
@@ -1722,6 +1726,34 @@ a {
     background: rgba(255, 255, 255, 0.3); }
   .tribe-events-page-template .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type=text] {
     font-size: 1.2rem; }
+  .tribe-events-page-template .tribe-events-calendar {
+    -webkit-transform: translateY(-82px);
+            transform: translateY(-82px); }
+  .tribe-events-page-template #tribe-bar-form .tribe-bar-submit input[type=submit] {
+    background: #FFD400;
+    background-image: none;
+    color: #323232;
+    font-size: 13px;
+    margin: 2rem auto;
+    padding: 0.75rem 0;
+    width: 205px;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .tribe-events-page-template .tribe-bar-submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .tribe-events-page-template #tribe-bar-form.tribe-bar-collapse .tribe-bar-filters {
+    background: white; }
+  .tribe-events-page-template .tribe-events-notices {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
 
 /*--------------------------------------------------------------
 # Media
