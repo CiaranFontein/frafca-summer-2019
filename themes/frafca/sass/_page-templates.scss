@@ -178,11 +178,12 @@
                 .swipe-wrapper {
                     display: flex;
                     flex-wrap: nowrap;
-                    // overflow: hidden;
                     overflow-x: scroll;
                     overflow-y: hidden;
                     align-items: flex-start;
                     width: 100vw;
+                    scroll-snap-type: x mandatory;
+                    transition: height $time__transition;
                 }
                 .swipe-element {
                     flex: none;
@@ -190,6 +191,27 @@
                     padding: 0 1.5rem;
                     margin: 0;
                     margin-bottom: 1rem;
+                    scroll-snap-align: start;
+                }
+
+                .navigation-dots {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .dot {
+                        width: .5rem;
+                        height: .5rem;
+                        background-color: $color__border;
+                        border-radius: 50%;
+                        margin: 0 .5rem 0 0;
+                        transition: $time__transition;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        &.active {
+                            background-color: $color__border-abbr;
+                        }
+                    }
                 }
 
                 @include desktop {
