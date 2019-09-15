@@ -10,7 +10,7 @@
  * @package TribeEventsCalendar
  * @version 4.6.23
  *
- * Template Name: events
+ * Template Name: page-events
  */
 
 if (!defined('ABSPATH')) {
@@ -19,8 +19,7 @@ if (!defined('ABSPATH')) {
 
 get_header();
 ?>
-<?php get_template_part('template-parts/hero_banner_image'); ?>
-
+<?php get_template_part( 'template-parts/hero_banner_image' ); ?>
 <main id="tribe-events-pg-template" class="tribe-events-pg-template">
 	<?php tribe_events_before_html(); ?>
 	<?php tribe_get_view(); ?>

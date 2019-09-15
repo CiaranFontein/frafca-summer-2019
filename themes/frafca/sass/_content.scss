@@ -738,24 +738,44 @@
 /* Job Postings page #### END #/
 
 /* Calendar page **** Start*/
+.tribe-events-page-template {
+    color:black;
+        .header-meta {
+            text-align: center;
+        }
 
-.header-meta {
-    text-align: center;
-}
+        
+        .frafca-events-page-title {
+            color:white;
+            background-color: $color__background-banner;
+        }
 
-.tribe-events-title-bar {
-    color:yellow;
-}
+        .frafca-events-calendar  {
+            thead {
 
-.frafca-events-calendar  {
-        thead {
-
-               th {
+                th {
 
                     background-color: $color__background-banner;
 
-               } 
+                } 
 
+            }
+            
         }
-    
+
+        .frafca-events-month-event-title {
+            color:yellowgreen;
+        }
+
+        .frafca-events-title-bar {
+            display: flex;
+            justify-content: space-between;
+            width:100%;
+            color:white;
+            background-color: $color__background-banner;
+                    a {
+                        color:white;
+                        text-decoration: white;
+                    }
+        }
 }

@@ -1672,14 +1672,31 @@ a {
 /* Job Postings page #### END #/
 
 /* Calendar page **** Start*/
-.header-meta {
-  text-align: center; }
-
-.tribe-events-title-bar {
-  color: yellow; }
-
-.frafca-events-calendar thead th {
-  background-color: #BA5357; }
+.tribe-events-page-template {
+  color: black; }
+  .tribe-events-page-template .header-meta {
+    text-align: center; }
+  .tribe-events-page-template .frafca-events-page-title {
+    color: white;
+    background-color: #BA5357; }
+  .tribe-events-page-template .frafca-events-calendar thead th {
+    background-color: #BA5357; }
+  .tribe-events-page-template .frafca-events-month-event-title {
+    color: yellowgreen; }
+  .tribe-events-page-template .frafca-events-title-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    color: white;
+    background-color: #BA5357; }
+    .tribe-events-page-template .frafca-events-title-bar a {
+      color: white;
+      -webkit-text-decoration: white;
+              text-decoration: white; }
 
 /*--------------------------------------------------------------
 # Media

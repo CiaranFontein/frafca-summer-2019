@@ -3,9 +3,8 @@
 $limit_heros = count(frafca_cfs('banner')) - 1;
 $heros = array(0 => frafca_cfs('banner')[$limit_heros]);
 foreach ($heros as $hero) :
-        $heros = last_frafca_cfs('banner');
-        $hero_img = $heros['banner_image'];
-        $hero_title = $heros['banner_title'];
+        $hero_img = $hero['banner_image'];
+        $hero_title = $hero['banner_title'];
 ?>
     <div class="hero-image-page" style="
         background : 
