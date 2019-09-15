@@ -21,3 +21,23 @@
     background: #fff;
     margin: 0.15rem;
 }
+
+// Flickity Mobile Design
+
+@mixin flickity-center-buttons-no-dots {
+    .previous {
+        left: 37%;
+    }
+
+    .next {
+        right: 37%;
+    }
+
+    .flickity-button {
+        top: 78%;
+    }
+
+    .flickity-page-dots {
+        display: none;
+    }
+}

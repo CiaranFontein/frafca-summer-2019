@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div id="primary" class="content-area">
+<div id="primary" class="front-page-content content-area">
     <main id="main" class="site-main" role="main">
 
         <!-- Hero Image : type 1  -->
@@ -39,17 +39,21 @@ get_header(); ?>
                         <div class="card-icon">
                             <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
                         </div>
-                        <div>
+                        <div class="card-meta">
                             <h3><?php echo $title; ?></h3>
                             <p><?php echo $description; ?></p>
                         </div>
+
                     </div>
                 <?php endforeach; ?>
-
             </div>
-            <a class='about-us-button default-btn yellow'>
-                <?php $button = frafca_cfs('about_us_button') ?>
+
+
+            <?php $button = frafca_cfs('about_us_button') ?>
+            <a class='about-us-button default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                <?php echo $button['text']; ?>
             </a>
+
 
         </section><!-- #front-page-about-us -->
 
@@ -62,14 +66,8 @@ get_header(); ?>
                 $description = $content['wwo_description'];
                 $button = $content['wwo_button'];
                 ?>
-                <div class="wwo_image containter col-2" style="
-                    background :
-                        linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100%), 
-                        url(<?php echo $image; ?>);
-                    background-size: cover;
-                    background-position: center; 
-                    background-repeat: no-repeat;
-                ">
+                <div class="wwo_image containter col-2" style="">
+                    <img src="<?php echo $image; ?>" alt="Who We Are">
                 </div>
 
                 <div class="wwo_meta containter col-2">
@@ -83,7 +81,7 @@ get_header(); ?>
             <?php endforeach ?>
         </section><!-- #front-page-what-we-offer -->
 
-        <section id="front-page-get-involved">
+        <section id="front-page-get-involved" class="front-page-get-involved">
             <h2>
                 <?php echo frafca_cfs('get_involved') ?>
             </h2>
@@ -111,26 +109,28 @@ get_header(); ?>
                 <?php endforeach ?>
         </section><!-- #front-page-get-involved -->
 
-        <section id="front-page-partners">
+        <section id="front-page-partners" class="front-page-partners">
 
             <h2>Partners</h2>
-            <?php
-            $partners = frafca_cfs('partners');
-            foreach ($partners as $partner) :
-                $partner_name = $partner['partner_name'];
-                $img_partner = $partner['partner_logo'];
-                ?>
+            <div class="fp-partners-carousel">
+                <?php
+                $partners = frafca_cfs('partners');
+                foreach ($partners as $partner) :
+                    $partner_name = $partner['partner_name'];
+                    $img_partner = $partner['partner_logo'];
+                    ?>
 
-                <div class="partner-content">
-                    <div class="partner-logo">
-                        <img src="<?php echo $img_partner; ?>" alt="<?php echo $partner_name; ?>">
+                    <div class="partner-content">
+                        <div class="partner-logo">
+                            <img src="<?php echo $img_partner; ?>" alt="<?php echo $partner_name; ?>">
+                        </div>
+                        <p>
+                            <?php echo $partner_name; ?>
+                        </p>
                     </div>
-                    <p>
-                        <?php echo $partner_name; ?>
-                    </p>
-                </div>
 
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </section><!-- #front-page-partners -->
 
     </main><!-- #main -->

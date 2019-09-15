@@ -37,7 +37,7 @@ get_header(); ?>
                         <?php echo frafca_wp_kses_text($contents_who_we_are['title']); ?>
                     </h3>
                 </div>
-                <div class="grid-cards-element">
+                <div class="grid-cards-element frafca_swipte_article">
                     <?php echo frafca_wp_kses_text($contents_who_we_are['description']); ?>
                 </div>
 
@@ -73,7 +73,7 @@ get_header(); ?>
                         <?php echo frafca_wp_kses_text($contents_our_history['title']); ?>
                     </h3>
                 </div>
-                <div class="grid-cards-element">
+                <div class="grid-cards-element frafca_swipte_article">
                     <?php echo frafca_wp_kses_text($contents_our_history['description']); ?>
                 </div>
 
@@ -101,7 +101,7 @@ get_header(); ?>
                         <?php echo frafca_wp_kses_text($contents_friendship_center['title']); ?>
                     </h3>
                 </div>
-                <div class="grid-cards-element">
+                <div class="grid-cards-element frafca_swipte_article">
                     <?php echo frafca_wp_kses_text($contents_friendship_center['description']); ?>
                 </div>
 
