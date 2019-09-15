@@ -1770,13 +1770,13 @@ object {
     margin-top: 2rem; }
   .front-page-about-us h2 {
     margin: 2.4rem auto; }
-  .front-page-about-us .us-carousel .previous {
+  .front-page-about-us .fp-about-us-carousel .previous {
     left: 37%; }
-  .front-page-about-us .us-carousel .next {
+  .front-page-about-us .fp-about-us-carousel .next {
     right: 37%; }
-  .front-page-about-us .us-carousel .flickity-button {
+  .front-page-about-us .fp-about-us-carousel .flickity-button {
     top: 78%; }
-  .front-page-about-us .us-carousel .flickity-page-dots {
+  .front-page-about-us .fp-about-us-carousel .flickity-page-dots {
     display: none; }
   .front-page-about-us .fp-about-us-cell {
     width: 100%;
@@ -1835,7 +1835,17 @@ object {
   margin: 2rem auto; }
 
 .front-page-partners {
-  background: #323232; }
+  background: #323232;
+  color: red;
+  margin: 2rem auto; }
+  .front-page-partners .fp-partners-carousel .previous {
+    left: 37%; }
+  .front-page-partners .fp-partners-carousel .next {
+    right: 37%; }
+  .front-page-partners .fp-partners-carousel .flickity-button {
+    top: 78%; }
+  .front-page-partners .fp-partners-carousel .flickity-page-dots {
+    display: none; }
 
 /* About Page */
 .page-template-page-about section {
