@@ -33,7 +33,7 @@ get_header(); ?>
 					   <p><?php echo $department;?></p>
 					   <h3><?php echo $program;?></h3>
 					   <p><?php echo $description;?></p>
-					   <a class='default-btn yellow' href="<?php echo $button['url']; ?>">
+					   <a class='default-btn yellow' href="<?php echo $button; ?>">
 						   Learn More
 					   </a>
                     </div>
