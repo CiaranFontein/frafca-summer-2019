@@ -1698,17 +1698,30 @@ a {
             justify-content: space-between;
     width: 100%;
     color: white;
-    background-color: #BA5357; }
+    background-color: #BA5357;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .tribe-events-page-template .frafca-events-sub-nav a {
       color: white;
       -webkit-text-decoration: white;
               text-decoration: white; }
     .tribe-events-page-template .frafca-events-sub-nav h1 {
       font-size: 1rem; }
+  .tribe-events-page-template #tribe-events-header .tribe-events-sub-nav {
+    padding: 0 3rem; }
   .tribe-events-page-template #tribe-events-footer:after, .tribe-events-page-template #tribe-events-header:after {
     left: 0; }
   .tribe-events-page-template #tribe-events-footer:before, .tribe-events-page-template #tribe-events-header:before {
     right: 0; }
+  .tribe-events-page-template #tribe-bar-form {
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-transform: translateY(-55px);
+            transform: translateY(-55px); }
+  .tribe-events-page-template .tribe-bar-views-inner {
+    background: rgba(255, 255, 255, 0.3); }
+  .tribe-events-page-template .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type=text] {
+    font-size: 1.2rem; }
 
 /*--------------------------------------------------------------
 # Media
