@@ -116,8 +116,11 @@ function frafca_theme_scripts()
 
 		wp_enqueue_style('flickity-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 		wp_register_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', null, null, true);
-		
 		wp_enqueue_script('frafca-carousel', get_template_directory_uri() . '/build/js/carousel.min.js', array('jquery', 'flickity'), '', true);
+	}
+	// Scripts for articles - About-page
+	if ( is_page('about') ){
+		wp_enqueue_script('frafca-theme-swipe-article', get_template_directory_uri() . '/build/js/swipe-article.min.js', array('jquery'), '', true);
 	}
 	
 	wp_enqueue_script('frafca-theme-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);

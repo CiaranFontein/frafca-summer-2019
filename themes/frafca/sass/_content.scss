@@ -108,47 +108,48 @@
 }
 
 .grid-cards {
-    @include desktop {
-        max-width: $desktop-width;
-        margin: 120px auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+	@include desktop {
+		max-width: $desktop-width;
+		margin: 120px auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-    .rect-card {
-        display: flex;
-        flex-direction: column;
-        margin: 5rem 0;
-        padding: 5rem 1.5rem 2rem 1.5rem;
-        text-align: center;
+	.rect-card {
+		display: flex;
+		flex-direction: column;
+		margin: 5rem 0;
+		padding: 5rem 1.5rem 2rem 1.5rem;
+		text-align: center;
 
-        &.no-content {
-            margin: 0;
-            padding: 2rem;
-            color: $color__background-body;
-        }
+		&.no-content {
+			margin: 0;
+			padding: 2rem;
+			color: $color__background-body;
+			grid-column: 1/3;
+		}
 
-        @include desktop {
-            margin: 0 1rem 2rem 0;
-            padding: 5rem 2.5rem 2rem 2.5rem;
+		@include desktop {
+			margin: 0 1rem 2rem 0;
+			padding: 5rem 2.5rem 2rem 2.5rem;
 
-            // Adjust margins of even number of container
-            &:nth-child(2*n) {
-                margin-left: 1rem;
-                margin-right: 0;
-            }
-        }
+			// Adjust margins of even number of container
+			&:nth-child(2*n) {
+				margin-left: 1rem;
+				margin-right: 0;
+			}
+		}
 
-        p {
-            @include desktop {
-                flex-grow: 1;
-            }
-        }
-    }
+		p {
+			@include desktop {
+				flex-grow: 1;
+			}
+		}
+	}
 
-    p {
-        margin-bottom: 3rem;
-    }
+	p {
+		margin-bottom: 3rem;
+	}
 }
 
 /* Grid Card **** END */
