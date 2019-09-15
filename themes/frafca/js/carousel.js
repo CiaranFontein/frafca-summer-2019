@@ -1,6 +1,5 @@
 (function($) {
   $(document).ready(function() {
-    // if (window.innerWidth <= 1000) {
     const fpAboutUsContent = document.querySelector('.fp-about-us-carousel');
     const fpAbout = new Flickity(fpAboutUsContent, {
       // carousel options
@@ -22,6 +21,5 @@
       autoPlay: 3000
     });
     console.log(fpPartners);
-    // }
   });
 })(jQuery);

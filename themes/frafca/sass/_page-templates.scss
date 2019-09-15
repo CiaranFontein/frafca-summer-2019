@@ -20,7 +20,7 @@
 
     .about-us-button {
         position: absolute;
-        transform: translateY(-350%);
+        transform: translateY(-190%);
         left: 10%;
         right: 10%;
     }
@@ -173,8 +173,10 @@
     .grid-cards {
         &-element {
             padding: 0 1.5rem;
+
             &.frafca_swipte_article {
                 padding: 0;
+
                 .swipe-wrapper {
                     display: flex;
                     flex-wrap: nowrap;
@@ -184,6 +186,7 @@
                     align-items: flex-start;
                     width: 100vw;
                 }
+
                 .swipe-element {
                     flex: none;
                     width: 100vw;

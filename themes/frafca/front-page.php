@@ -48,9 +48,12 @@ get_header(); ?>
                 <?php endforeach; ?>
             </div>
 
-            <a class='about-us-button default-btn yellow'>
-                <?php frafca_cfs('about_us_button') ?>
+
+            <?php $button = frafca_cfs('about_us_button') ?>
+            <a class='about-us-button default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                <?php echo $button['text']; ?>
             </a>
+
 
         </section><!-- #front-page-about-us -->
 

@@ -1764,8 +1764,8 @@ object {
   text-align: center; }
   .front-page-about-us .about-us-button {
     position: absolute;
-    -webkit-transform: translateY(-350%);
-            transform: translateY(-350%);
+    -webkit-transform: translateY(-190%);
+            transform: translateY(-190%);
     left: 10%;
     right: 10%; }
   .front-page-about-us .yellow {
