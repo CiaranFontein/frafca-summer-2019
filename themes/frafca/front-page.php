@@ -63,14 +63,8 @@ get_header(); ?>
                 $description = $content['wwo_description'];
                 $button = $content['wwo_button'];
                 ?>
-                <div class="wwo_image containter col-2" style="
-                    background :
-                        linear-gradient( to bottom, rgba(47,43,92,0.3) 0%, rgba(47,43,92,0.3) 100%), 
-                        url(<?php echo $image; ?>);
-                    background-size: cover;
-                    background-position: center; 
-                    background-repeat: no-repeat;
-                ">
+                <div class="wwo_image containter col-2" style="">
+                    <img src="<?php echo $image; ?>" alt="Who We Are">
                 </div>
 
                 <div class="wwo_meta containter col-2">
@@ -84,7 +78,7 @@ get_header(); ?>
             <?php endforeach ?>
         </section><!-- #front-page-what-we-offer -->
 
-        <section id="front-page-get-involved">
+        <section id="front-page-get-involved" class="front-page-get-involved">
             <h2>
                 <?php echo frafca_cfs('get_involved') ?>
             </h2>

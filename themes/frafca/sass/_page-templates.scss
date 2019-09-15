@@ -21,6 +21,8 @@
     .about-us-button {
         position: absolute;
         transform: translateY(-350%);
+        left: 10%;
+        right: 10%;
     }
 
     .yellow {
@@ -30,42 +32,37 @@
     }
 
     h2 {
-        margin: $base__space-unit * 2 auto;
-        font-size: $font__desktop_icon_size * 1.75;
+        margin: $base__space-unit * 2.4 auto;
     }
 
     .us-carousel {
         .previous {
-            left: 34%;
+            left: 37%;
         }
 
         .next {
-            right: 35%;
+            right: 37%;
         }
 
         .flickity-button {
-
             top: 78%;
+        }
 
+        .flickity-page-dots {
+            display: none;
         }
     }
 
-
-
     .fp-about-us-cell {
         width: 100%;
-        min-width: 400px;
         margin: 0 auto;
-
         text-align: center;
         padding: 0 $base__space-unit;
         border-radius: $border-radius;
-
         display: flex;
         flex-flow: column wrap;
         justify-content: space-evenly;
         align-items: center;
-
         height: 610px;
 
         .card-icon {
@@ -81,16 +78,47 @@
     }
 }
 
+
+
 .what-we-offer {
+    margin-top: $base__space-unit * 2;
+
     .wwo_image {
-        margin: 10rem auto;
-        width: 100vw;
-        height: 100vw;
+
+        background: linear-gradient(to bottom, rgba(47, 43, 92, 0.3) 0%, rgba(47, 43, 92, 0.3) 100%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+
+
     }
 
     .wwo_meta {
         background: $color__background-black;
+        text-align: center;
+        font-size: $font__size_main - 3;
+        padding: $base__space-unit * 2;
     }
+
+    .default-btn {
+        display: inline-grid;
+        margin: $base__space-unit - 0.5 auto;
+    }
+}
+
+.front-page-get-involved {
+    h2 {
+        color: #2d2d2d;
+        text-align: center;
+        margin: $base__space-unit * 2 auto;
+
+    }
+}
+
+.front-page-partners {
+    background: $color__background-black;
 }
 
 /* About Page */
