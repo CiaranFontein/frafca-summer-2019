@@ -1652,6 +1652,25 @@ a {
 
 /* Single Event page #### END #/
 
+/* Job Postings page **** START */
+.page-template-page-job-postings .rect-card p:first-child {
+  margin-bottom: 5px; }
+
+.page-template-page-job-postings .rect-card h3 {
+  margin-bottom: 2rem; }
+
+.page-template-page-job-postings .rect-card p:nth-child(3) {
+  margin-bottom: 5rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-job-postings .rect-card p:nth-child(3) {
+      margin-bottom: 3rem; } }
+
+@media (min-width: 1200px) {
+  .page-template-page-job-postings .grid-cards .rect-card {
+    padding: 3rem 4rem; } }
+
+/* Job Postings page #### END #/
+
 /* Calendar page **** Start*/
 .header-meta {
   text-align: center; }

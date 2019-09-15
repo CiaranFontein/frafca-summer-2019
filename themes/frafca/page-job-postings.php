@@ -18,52 +18,26 @@ get_header(); ?>
 		<h2 class="job-postings-header"><?php echo frafca_cfs('location_header') ?></h2>
         <section id="page-job-postings">
             <div class="grid-cards contact-cards">
-				<?php  
-                    $card = frafca_cfs('card');
-                    foreach($card as $card) :
-                            $title = $card['office_title'];
-                            $address = $card['address'];
-							$services = $card['services'];
-							$phone = $card['phone'];
-							$fax = $card['fax'];
-                            $button = $card['view_location'];
+				<?php
 
-                ?>
+				   $card = frafca_cfs('add_a_new_job_posting_card');
+				   foreach($card as $card) :
+						   $department = $card['department'];
+						   $program = $card['program'];
+						   $description = $card['description'];
+						   $button = $card['learn_more'];
 
-                    <div class="rect-card purple">
-                        <h3><?php echo $title;?></h3>
-						<p><?php echo $address;?></p>
-						<p><?php echo $services;?></p>
-						<p><?php echo $phone;?></p>
-						<p><?php echo $fax;?></p>
-                        <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
-                            <?php echo $button['text']; ?>
-                        </a>
+			   ?>
 
+				   <div class="rect-card purple">
+					   <p><?php echo $department;?></p>
+					   <h3><?php echo $program;?></h3>
+					   <p><?php echo $description;?></p>
+					   <a class='default-btn yellow' href="<?php echo $button; ?>">
+						   Learn More
+					   </a>
                     </div>
 
-                <?php endforeach; ?>
-                
-                <?php 
-                    $cardwl = frafca_cfs('card_without_location');
-                        foreach ($cardwl as $cardwl):
-                            $titlewl = $cardwl['office_title'];
-                            $addresswl = $cardwl['address'];
-                            $serviceswl = $cardwl['services'];
-                            $phonewl = $cardwl['phone'];
-                            $faxwl = $cardwl['fax'];
-                ?>
-
-                    <div class="rect-card purple nolocation">
-
-                        <h3><?php echo $titlewl;?></h3>
-						<p><?php echo $addresswl;?></p>
-						<p><?php echo $serviceswl;?></p>
-						<p><?php echo $phonewl;?></p>
-						<p><?php echo $faxwl;?></p>
-                    
-                    </div>
-               
                 <?php endforeach; ?>
             
             </div>
