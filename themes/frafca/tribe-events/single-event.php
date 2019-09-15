@@ -24,7 +24,6 @@ $event_id = get_the_ID();
 
 ?>
 
-<?php get_template_part('template-parts/hero_banner_image'); ?>
 
 <div id="tribe-events-content" class="tribe-events-single">
 
@@ -35,7 +34,8 @@ $event_id = get_the_ID();
 
 		<div class="tribe-events-schedule tribe-clearfix single-event-purple get-ticket-header-container">
 			<?php the_title('<h1 class="tribe-events-single-event-title">', '</h1>'); ?>
-			<?php echo tribe_events_event_schedule_details($event_id, '<i class="far fa-calendar-alt"></i>  ','&nbsp &nbsp', '<h2>', '</h2>'); ?>
+			<i class="far fa-calendar-alt"></i> &nbsp &nbsp <?php echo tribe_events_event_schedule_details($event_id, '<h2>', '</h2>'); ?>
+			<p class="get-ticket-address-details"><i class="fas fa-map-marker-alt">&nbsp &nbsp</i><?php echo tribe_get_address(); ?>, <?php echo tribe_get_city(); ?></p>
 		</div>
 
 		<div class="get-ticket-header">
@@ -71,6 +71,7 @@ $event_id = get_the_ID();
 						<?php do_action('tribe_events_single_event_before_the_content') ?>
 				</div>
 							<div class="tribe-events-single-event-description tribe-events-content single-event-content">
+								<h1> Details </h1>
 								<?php the_content(); ?>
 							</div>
 						<!-- .tribe-events-single-event-description -->

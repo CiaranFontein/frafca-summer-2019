@@ -16,8 +16,28 @@
 // Button Style
 
 @mixin white-button {
-    padding: 0.8rem 1.5rem;
+    padding: $button_padding_height $button_padding_width;
     border-radius: 0.65rem;
     background: #fff;
     margin: 0.15rem;
+}
+
+// Flickity Mobile Design
+
+@mixin flickity-center-buttons-no-dots {
+    .previous {
+        left: 37%;
+    }
+
+    .next {
+        right: 37%;
+    }
+
+    .flickity-button {
+        top: 78%;
+    }
+
+    .flickity-page-dots {
+        display: none;
+    }
 }

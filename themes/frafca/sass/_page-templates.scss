@@ -9,8 +9,8 @@
         bottom: 0;
         margin: 0 auto;
         text-align: center;
-        right: 40%;
-        left: 40%
+        right: 35%;
+        left: 35%
     }
 }
 
@@ -18,42 +18,127 @@
     color: #2d2d2d;
     text-align: center;
 
+    .about-us-button {
+        position: absolute;
+        transform: translateY(-350%);
+        left: 10%;
+        right: 10%;
+    }
+
     .yellow {
         width: max-content;
         margin: 0 auto;
+        margin-top: $base__space-unit * 2;
     }
 
     h2 {
-        margin: $base__space-unit * 2 auto;
-        font-size: $font__desktop_icon_size * 1.75;
+        margin: $base__space-unit * 2.4 auto;
     }
 
+    .fp-about-us-carousel {
+        .previous {
+            left: 37%;
+        }
 
+        .next {
+            right: 37%;
+        }
 
+        .flickity-button {
+            top: 78%;
+        }
 
+        .flickity-page-dots {
+            display: none;
+        }
+    }
 
     .fp-about-us-cell {
         width: 100%;
         margin: 0 auto;
-
         text-align: center;
         padding: 0 $base__space-unit;
         border-radius: $border-radius;
-
         display: flex;
         flex-flow: column wrap;
         justify-content: space-evenly;
         align-items: center;
-
-
-        height: 460px;
-
+        height: 610px;
 
         .card-icon {
             width: 150px;
         }
+
+        .card-meta {
+            padding-bottom: $base__space-unit * 8;
+            color: $color__text-main;
+            padding-left: $base__space-unit;
+            padding-right: $base__space-unit;
+        }
+    }
+}
+
+
+
+.what-we-offer {
+    margin-top: $base__space-unit * 2;
+
+    .wwo_image {
+
+        background: linear-gradient(to bottom, rgba(47, 43, 92, 0.3) 0%, rgba(47, 43, 92, 0.3) 100%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+
+
     }
 
+    .wwo_meta {
+        background: $color__background-black;
+        text-align: center;
+        font-size: $font__size_main - 3;
+        padding: $base__space-unit * 2;
+    }
+
+    .default-btn {
+        display: inline-grid;
+        margin: $base__space-unit - 0.5 auto;
+    }
+}
+
+.front-page-get-involved {
+    h2 {
+        color: #2d2d2d;
+        text-align: center;
+        margin: $base__space-unit * 2 auto;
+
+    }
+}
+
+.front-page-partners {
+    background: $color__background-black;
+    color: red;
+    margin: $base__space-unit * 2 auto;
+
+    .fp-partners-carousel {
+        .previous {
+            left: 37%;
+        }
+
+        .next {
+            right: 37%;
+        }
+
+        .flickity-button {
+            top: 78%;
+        }
+
+        .flickity-page-dots {
+            display: none;
+        }
+    }
 }
 
 /* About Page */
@@ -61,26 +146,30 @@
     section {
         margin-top: 80px;
         font-size: 1.2rem;
+
         &:last-child {
             margin-bottom: 80px;
         }
+
         @include desktop {
             font-size: $font__size_main;
             margin-top: 120px;
+
             &:last-child {
                 margin-bottom: 120px;
             }
         }
     }
-    
+
     .image-background {
         width: 100%;
         height: 260px;
+
         @include desktop {
             height: 100%;
         }
     }
-    
+
     .grid-cards {
         &-element {
             padding: 0 1.5rem;
@@ -111,15 +200,18 @@
             &:first-child {
                 padding: 0;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 margin-top: 3.25rem;
                 margin-bottom: 1rem;
             }
 
-        } // end .grid-cards-element
+        }
+
+        // end .grid-cards-element
 
         @include desktop {
-            grid-column-gap: 4.5rem; 
+            grid-column-gap: 4.5rem;
         }
     }
 
@@ -134,6 +226,7 @@
                 .txt-align-c {
                     text-align: left;
                 }
+
                 .grid-cards {
                     grid-template-columns: 420px auto;
 
@@ -141,6 +234,7 @@
                         &:nth-child(1) {
                             grid-row: 1/3;
                         }
+
                         &:nth-child(2) {
                             margin: 0;
                         }
@@ -148,24 +242,29 @@
                     }
                 }
             }
-        } // end .container-who-we-are
+        }
+
+        // end .container-who-we-are
 
         &-location-history {
             p {
                 margin: 0 auto;
+
                 @include desktop {
                     width: 970px;
                 }
             }
-        } // end .container-location-history
+        }
+
+        // end .container-location-history
 
         &-our-history {
             @include desktop {
-                
+
                 .txt-align-c {
                     text-align: right;
                 }
-                
+
                 .grid-cards {
                     grid-template-columns: auto 420px;
 
@@ -174,6 +273,7 @@
                             grid-column: 2/3;
                             grid-row: 1/3;
                         }
+
                         &:nth-child(2) {
                             margin: 0;
                         }
@@ -181,13 +281,17 @@
                     }
                 }
             }
-        } // end .container-our-history
+        }
+
+        // end .container-our-history
 
         &-friendship-center {
             @include desktop {
                 @extend .container-who-we-are;
             }
-        } // end .container-friendship-center
+        }
+
+        // end .container-friendship-center
 
         &-card-about-us {
             .flex {
@@ -203,7 +307,7 @@
 
                     @include desktop {
                         min-height: auto;
-                        padding: 6.25rem; 
+                        padding: 6.25rem;
                     }
 
                     .card {
@@ -212,12 +316,15 @@
                             height: 150px;
                             margin-bottom: 40px;
                         }
+
                         &-title {
                             margin-bottom: 20px;
+
                             h3 {
                                 margin: 0;
                             }
                         }
+
                         &-description {
                             margin-bottom: 64px;
                         }
@@ -233,10 +340,12 @@
             @include desktop {
                 .grid-cards {
                     max-width: 100%;
-                    grid-column-gap: unset; 
+                    grid-column-gap: unset;
                 }
             }
-        } // end .container-card-about-us
+        }
+
+        // end .container-card-about-us
 
     }
 

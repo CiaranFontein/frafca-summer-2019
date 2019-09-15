@@ -1,11 +1,7 @@
 <!-- hero contents -->
-<?php
-$limit_heros = count(frafca_cfs('banner')) - 1;
-$heros = array(0 => frafca_cfs('banner')[$limit_heros]);
-foreach ($heros as $hero) :
-        $heros = last_frafca_cfs('banner');
-        $hero_img = $heros['banner_image'];
-        $hero_title = $heros['banner_title'];
+<?php 
+        $hero_img = frafca_cfs('banner_image');
+        $hero_title = frafca_cfs('banner_title');
 ?>
     <div class="hero-image-page" style="
         background : 
@@ -13,17 +9,17 @@ foreach ($heros as $hero) :
             url(<?php echo $hero_img; ?>);
         background-size: cover;
         background-position: center; 
-        background-repeat: no-repeat;
-        padding: 10%;               
+        padding: 7%;
+        
+        background-repeat: no-repeat;                
     ">
         <h1 class="page-title screen-reader-text">
             <?php single_post_title(); ?>
-        </h1>     
-        
+        </h1>
+
         <div class="header-meta">
             <h2>
                 <?php echo $hero_title ;?>
             </h2>
         </div>
     </div>
-    <?php endforeach ?>

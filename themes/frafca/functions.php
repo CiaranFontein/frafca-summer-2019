@@ -103,6 +103,8 @@ function frafca_theme_scripts()
 	wp_enqueue_script('frafca-footer-navigation-animations', get_template_directory_uri() . '/build/js/footer-navigation-animations.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-show-sub-menu-on-hover', get_template_directory_uri() . '/build/js/show-sub-menu-on-hover.min.js', array('jquery'), '', true);
 	wp_enqueue_script('frafca-search-animations', get_template_directory_uri() . '/build/js/search-animations.min.js', array('jquery'), '', true);
+	wp_enqueue_script('frafca-header-change-on-scroll', get_template_directory_uri() . '/build/js/header-change-on-scroll.min.js', array('jquery'), '', true);
+
 	// Enqueue script only for single-prgrm_svc 
 	if (is_singular('prgrm_svc')) {
 		wp_enqueue_script('frafca-theme-cf7-set-default-option', get_template_directory_uri() . '/build/js/cf7-set-default-option.min.js', array('jquery'), '', true);
@@ -143,15 +145,26 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-add_action('tribe_events_mobile_breakpoint', 'mobile_breakpoint');
-
-function mobile_breakpoint()
-{
-	return 970;
+/**
+ * Allows visitors to page forward/backwards in any direction within month view
+ * an "infinite" number of times (ie, outwith the populated range of months).
+ */
+class ContinualMonthViewPagination {
+	public function __construct() {
+		add_filter( 'tribe_events_the_next_month_link', array( $this, 'next_month' ) );
+		add_filter( 'tribe_events_the_previous_month_link', array( $this, 'previous_month' ) );
+	}
+	public function next_month() {
+		$url = tribe_get_next_month_link();
+		$text = tribe_get_next_month_text();
+		$date = TribeEvents::instance()->nextMonth( tribe_get_month_view_date() );
+		return '<a data-month="' . $date . '" href="' . $url . '" rel="next">' . $text . ' <span>&raquo;</span></a>';
+	}
+	public function previous_month() {
+		$url = tribe_get_previous_month_link();
+		$text = tribe_get_previous_month_text();
+		$date = TribeEvents::instance()->previousMonth( tribe_get_month_view_date() );
+		return '<a data-month="' . $date . '" href="' . $url . '" rel="prev"><span>&laquo;</span> ' . $text . ' </a>';
+	}
 }
-
-function customize_tribe_events_breakpoint()
-{
-	return 970;
-}
-add_filter('tribe_events_mobile_breakpoint', 'customize_tribe_events_breakpoint');
+new ContinualMonthViewPagination;

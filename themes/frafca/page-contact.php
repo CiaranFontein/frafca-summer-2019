@@ -19,14 +19,13 @@ get_header(); ?>
         <section id="page-contact">
             <div class="grid-cards contact-cards">
 				<?php  
-                    $card = frafca_cfs('card');
+                    $card = frafca_cfs('add_a_new_job_posting_card');
                     foreach($card as $card) :
-                            $title = $card['office_title'];
-                            $address = $card['address'];
-							$services = $card['services'];
-							$phone = $card['phone'];
-							$fax = $card['fax'];
-							$button = $card['view_location'];
+                            $title = $card['department'];
+                            $address = $card['program'];
+							$services = $card['description'];
+                            $button = $card['learn_more'];
+
                 ?>
 
                     <div class="rect-card purple">
@@ -38,10 +37,31 @@ get_header(); ?>
                         <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                             <?php echo $button['text']; ?>
                         </a>
-                        
 
                     </div>
 
+                <?php endforeach; ?>
+                
+                <?php 
+                    $cardwl = frafca_cfs('card_without_location');
+                        foreach ($cardwl as $cardwl):
+                            $titlewl = $cardwl['office_title'];
+                            $addresswl = $cardwl['address'];
+                            $serviceswl = $cardwl['services'];
+                            $phonewl = $cardwl['phone'];
+                            $faxwl = $cardwl['fax'];
+                ?>
+
+                    <div class="rect-card purple nolocation">
+
+                        <h3><?php echo $titlewl;?></h3>
+						<p><?php echo $addresswl;?></p>
+						<p><?php echo $serviceswl;?></p>
+						<p><?php echo $phonewl;?></p>
+						<p><?php echo $faxwl;?></p>
+                    
+                    </div>
+               
                 <?php endforeach; ?>
             
             </div>

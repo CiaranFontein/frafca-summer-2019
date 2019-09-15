@@ -5,102 +5,106 @@
 /* Posts and pages */
 
 .sticky {
-	display: block;
+    display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+    margin: 0 0 $base__space-unit;
 }
 
 .updated:not(.published) {
-	display: none;
+    display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+    margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+    clear: both;
+    margin: 0 0 $base__space-unit;
 }
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+    display: none;
 }
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .bypostauthor {
-	display: block;
+    display: block;
 }
 
 /* Hero Image **** START */
 .frafca-hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-	.hero-image-page {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 5rem 1rem 1rem 1rem;
-		height: 100vh;
-		text-align: center;
+    .hero-image-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 1rem 1rem 1rem;
+        height: 100vh;
+        text-align: center;
 
-		@include desktop {
-			height: 72vh;
-			padding: 5rem 24rem 5rem 24rem;
-		}
+        @include desktop {
+            height: 72vh;
+            padding: 5rem 24rem 5rem 24rem;
+        }
 
-		.page-template-front-page & {
-			height: 100vh;
-		}
+        .page-template-front-page & {
+            height: 100vh;
+        }
 
-	}
+    }
 
-	.single-prgrm_svc & {
-		margin-bottom: 5rem;
-	}
+    .single-prgrm_svc & {
+        margin-bottom: 5rem;
+    }
 }
 
 /* Hero Image #### END */
 
 /* Grid Card **** START */
 .purple {
-	background-color: $color__background-article;
+    background-color: $color__background-article;
 
-	// Convert to pink color only for .content-type-widgets in DESKTOP version
-	.content-type-widgets & {
-		@include desktop {
-			background-color: $color__background-banner;
-		}
-	}
+    // Convert to pink color only for .content-type-widgets in DESKTOP version
+    .content-type-widgets & {
+        @include desktop {
+            background-color: $color__background-banner;
+        }
+    }
 }
 
 .pink {
-	background-color: $color__background-banner;
+    background-color: $color__background-banner;
 }
 
 .white {
-	background-color: transparent;
-	color: #0D0D0D;
+    background-color: transparent;
+    color: #0D0D0D;
 }
 
 .error-no-data {
-	color: $color__no-data;
+    color: $color__no-data;
 }
 
 .grid-cards {
@@ -154,147 +158,168 @@
 
 .page-template-page-contact {
 
-	.grid-cards {
-		padding-bottom: 5rem;
+    .grid-cards {
 
-		@include desktop {
-			display: inline;
-			max-width: 1200px;
-			margin: auto;
-		}
-	}
+        @include desktop {
+            display: inline;
+            max-width: 1200px;
+            margin: auto;
+            margin-bottom: 5rem;
+        }
+    }
 
-	.contact-cards {
-		@include desktop {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			// margin: 2rem 1rem 5rem 1rem;
-			grid-gap: 2rem;
+    .contact-cards {
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
 
-		}
+        }
 
-		.rect-card p,
-		.rect-card h3 {
-			text-align: left;
-		}
+        .rect-card p {
+            text-align: left;
+            line-height: 22px;
+            font-size: 19px;
+            margin-bottom:22px;
+            margin-top: 0px;
+            
+        }
 
-		.rect-card {
-			padding: 5rem 2.5rem 2rem;
+        .rect-card h3 {
+            text-align: left;
+            margin-bottom: 0.5rem;
 
-			@include desktop {
-				margin: 0;
-				padding: 5rem 2.5rem 2rem 2.5rem;
+            @include desktop {
+            font-size: 23px;
+            margin-bottom: 1rem;
+            }
 
-				// Adjust margins of even number of container
-				&:nth-child(2*n) {
-					margin-left: 0;
-					margin-right: 0;
-				}
-			}
-		}
-	}
+        }
 
-	.contact-location-header {
+        .rect-card {
+            padding: 5rem 2.5rem 2rem;
 
-		color: $color__text-sec;
-		text-align: center;
-		padding: 5rem 0 0 0;
+            @include desktop {
+                margin: 0;
+                padding: 3rem 1.5rem 2rem;;
+               
 
-		@include desktop {
-			padding: 5rem 0 5rem 0;
-		}
-	}
+                // Adjust margins of even number of container
+                &:nth-child(2*n) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .contact-location-header {
+
+        color: $color__text-sec;
+        text-align: center;
+        padding: 5rem 0 0 0;
+
+        @include desktop {
+            padding: 5rem 0 5rem 0;
+        }
+    }
 }
 
 /* Contact Page **** END */
 
 /* Team Page **** START */
 .page-template-page-meet-our-team {
-	.grid-cards {
-		display: block;
-		
-		@include desktop {
-			max-width: $desktop-width;
-			margin: 0  auto;
-		}
+    .grid-cards {
+        display: block;
 
-		.rect-card {
-			margin: 0;
-			padding: 0rem 1.5rem 5rem 1.5rem;
+        @include desktop {
+            max-width: $desktop-width;
+            margin: 0 auto;
+        }
 
-			@include desktop {
-				padding: 0rem 1.5rem 8rem 1.5rem;
-			}
-		}
+        .rect-card {
+            margin: 0;
+            padding: 0rem 1.5rem 5rem 1.5rem;
 
-		p {
-			margin-bottom: 1.5rem;
-		}
-	}
+            @include desktop {
+                padding: 0rem 1.5rem 8rem 1.5rem;
+            }
+        }
 
-	.card-info {
-		padding: 0 2rem;
+        p {
+            margin-bottom: 1.5rem;
+        }
+    }
 
-		@include desktop {
-			text-align: left;
-			padding-top: 80px;
-		}
-		p, a {
-			display: block;
-			font-weight: 500;
-			font-size: 1rem;
-		}
+    .card-info {
+        padding: 0 2rem;
 
-		p:nth-child(1), p:nth-child(2) {
-			font-weight: 900;
+        @include desktop {
+            text-align: left;
+            padding-top: 80px;
+        }
 
-		}
-		p:first-child {
-			font-size: 22px;
-			@include desktop {
-				font-size: 2rem;
-			}
-		}
-		p:nth-child(2){
-			@include desktop {
-				
-				font-size: 1.5rem;
-				
-			}
-		}
+        p,
+        a {
+            display: block;
+            font-weight: 500;
+            font-size: 1rem;
+        }
 
-		a {
-			color: $color__text-sec;
-			text-decoration: none;
+        p:nth-child(1),
+        p:nth-child(2) {
+            font-weight: 900;
 
-			&:hover {
-				color: $color__text-sec;
-			}
+        }
 
-			&:active {
-				color: $color__text-sec;
-			}
-		}
-	}
+        p:first-child {
+            font-size: 22px;
 
-	.page-team-header {
-		color: $color__text-sec;
-		text-align: center;
-		padding: 3rem 0 3rem 0;
+            @include desktop {
+                font-size: 2rem;
+            }
+        }
 
-		@include desktop {
-			padding: 8rem 0 8rem 0;
-		}
-	}
+        p:nth-child(2) {
+            @include desktop {
 
-	.grid-rect-card {
-		@include desktop {
-			display: grid;
-			grid-template-columns: 45% 55%;
-			grid-gap: 2rem;
-		}
+                font-size: 1.5rem;
 
-	}
+            }
+        }
+
+        a {
+            color: $color__text-sec;
+            text-decoration: none;
+
+            &:hover {
+                color: $color__text-sec;
+            }
+
+            &:active {
+                color: $color__text-sec;
+            }
+        }
+    }
+
+    .page-team-header {
+        color: $color__text-sec;
+        text-align: center;
+        padding: 3rem 0 3rem 0;
+
+        @include desktop {
+            padding: 8rem 0 8rem 0;
+        }
+    }
+
+    .grid-rect-card {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            grid-gap: 2rem;
+        }
+
+    }
 
 }
 
@@ -303,140 +328,141 @@
 /* Volunteer page **** Start */
 .page-template-page-volunteer {
 
-	.volunteer-info {
-		margin: 5rem 2rem 0rem 2rem;
-		text-align: center;
+    .volunteer-info {
+        margin: 5rem 2rem 0rem 2rem;
+        text-align: center;
 
-		@include desktop {
-			text-align: left;
-			margin-top: 0;
-		}
+        @include desktop {
+            text-align: left;
+            margin-top: 0;
+        }
 
-	}
+    }
 
-	.volunteer-info-container {
-		text-align: center;
-		margin-bottom: 5rem;
+    .volunteer-info-container {
+        text-align: center;
+        margin-bottom: 5rem;
 
-		h3 {
-			padding: 2rem 0;
-			margin-bottom: 3rem;
-		}
+        h3 {
+            padding: 2rem 0;
+            margin-bottom: 3rem;
+        }
 
-		a {
-			color: $color__text-sec;
-			text-decoration: none;
+        a {
+            color: $color__text-sec;
+            text-decoration: none;
 
-			&:hover {
-				color: $color__text-sec;
-			}
+            &:hover {
+                color: $color__text-sec;
+            }
 
-			&:active {
-				color: $color__text-sec;
-			}
-		}
+            &:active {
+                color: $color__text-sec;
+            }
+        }
 
-		@include desktop {
-			text-align: left;
-		}
-	}
+        @include desktop {
+            text-align: left;
+        }
+    }
 
-	.volunteer-apply-info {
-		text-align: center;
-		margin: 0rem 2rem 5rem 2rem;
+    .volunteer-apply-info {
+        text-align: center;
+        margin: 0rem 2rem 5rem 2rem;
 
-		@include desktop {
-			text-align: left;
-		}
+        @include desktop {
+            text-align: left;
+        }
 
-	}
+    }
 }
 
 .flex-container {
-	@include desktop {
-		max-width: $desktop-width;
-		margin: 120px auto 100px auto;
-		display: flex;
-	}
+    @include desktop {
+        max-width: $desktop-width;
+        margin: 120px auto 100px auto;
+        display: flex;
+    }
 
 
-	.flex-wrap {
+    .flex-wrap {
 
-		h3 {
-			margin-bottom: 1rem;
-		}
+        h3 {
+            margin-bottom: 1rem;
+        }
 
-		p {
-			margin-bottom: 0;
-		}
+        p {
+            margin-bottom: 0;
+        }
 
-		.content-type-text {
-			margin-top: 5rem;
+        .content-type-text {
+            margin-top: 5rem;
 
-			@include desktop {
-				padding: 0;
-				margin-top: 0;
+            @include desktop {
+                padding: 0;
+                margin-top: 0;
 
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
 
-		.content-type-widgets {
+        .content-type-widgets {
 
-			h3,
-			p {
-				padding: 0 2rem;
-				margin-bottom: 1rem;
-			}
+            h3,
+            p {
+                padding: 0 2rem;
+                margin-bottom: 1rem;
+            }
 
-			h3 {
-				padding-top: 2rem;
-				padding-bottom: 2rem;
-				color: $color__text-main;
-			}
+            h3 {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                color: $color__text-main;
+            }
 
-			p {
-				&:last-child {
-					margin-bottom: 3rem;
-				}
-			}
-		}
+            p {
+                &:last-child {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
 
-		@include desktop {
-			&.single-description {
-				order: 1;
-				text-align: left;
-			}
+        @include desktop {
+            &.single-description {
+                order: 1;
+                text-align: left;
+            }
 
-			&.single-details {
-				flex: none;
-				order: 2;
-				width: 350px;
-				margin-right: 120px;
+            &.single-details {
+                flex: none;
+                order: 2;
+                width: 350px;
+                margin-right: 120px;
 
-				.content-type-widgets {
-					border: 1px solid $color__border;
-					margin-bottom: 30px;
+                .content-type-widgets {
+                    border: 1px solid $color__border;
+                    margin-bottom: 30px;
 
-					&:last-child {
-						margin-bottom: 0;
-					}
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
 
-					&>* {
-						margin: 0;
-						margin-bottom: 1.5rem;
+                    &>* {
+                        margin: 0;
+                        margin-bottom: 1.5rem;
 
-						&:last-child {
-							margin-bottom: 1.5rem;
-						}
-					}
-				}
-			}
-		}
-	}
+                        &:last-child {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 /* Volunteer page **** End */
 
 /* Single Event page **** Start*/
@@ -455,7 +481,7 @@
 }
 
 .single-tribe_events {
-	
+
 	color: #323232;
 	padding: 0rem;
 	
@@ -497,6 +523,10 @@
 
 	.tribe-events-single-event-description,
 	.tribe-events-content {
+
+			h1 {
+				font-size: 2rem;
+			}
 			p:last-child {
 				margin-bottom: 2rem;
 			}
@@ -534,9 +564,6 @@
 
 	.tribe-events-meta-group-organizer {
 		padding: 0 3rem;
-			@include desktop {
-
-			}
 	}
 	
 	.single-tribe_events,
@@ -553,7 +580,7 @@
 			order: 1;
 			width: 30%;
 			font-size: 19px;
-
+			display: flex;
 		}
 	
 	.tribe-clearfix {
@@ -571,7 +598,7 @@
 
 	}
 
-
+    .fa-map-marker-alt,
 	.fa-calendar-alt {
 		font-size: 1.5rem;
 	}
@@ -607,18 +634,129 @@
 	.get-ticket-description {
 		font-size: 1rem;
 		margin-bottom: 0rem;
-	}
+    }
+    
+    .get-ticket-address-details {
+        font-size: 17px;
+    }
 
 	.single-event-content-container {
 		@include desktop {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 2rem 2rem;
+		padding: 0rem 2rem;
+		}
+    }
+    
+    #tribe-events-pg-template
+    .tribe-events-content h1 {
+
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+	
+	#tribe-events-content {
+		@include desktop {
+			.tribe-events-meta-group-organizer {
+
+				display: block;
+				float: none;
+				width: 100%;
+				padding: 0;
+                padding-top: 2rem;
+				h2 {
+					display: none;
+					// margin-top: 0;
+					// margin-bottom: 1rem;
+                }
+				.single-event-organizer {
+					flex: none;
+					width: 100%;	
+					position: relative;
+					&::before {
+						position: relative;
+						display: block;
+						width: 100%;
+						content: 'Contact Information';
+						font-size: 1.5rem;
+						font-weight: 900;
+						
+					}
+				}
+				dl {
+					display: flex;
+					flex-wrap: wrap;
+					
+					* {
+						line-height: 1.5;
+					}
+	
+					dt {
+						flex: none;
+						width: 30%;
+					}
+					dd {
+						width: 70%;
+					}
+				}
+			}
 		}
 	}
 			
-			
+}
+/* Single Event page #### END #/
+
+/* Job Postings page **** START */
+
+.page-template-page-job-postings {
+
+    .rect-card{
+        
+        p:first-child {
+        margin-bottom: 5px;
+        }
+
+        h3 {
+        margin-bottom: 2rem;
+        }
+
+        p:nth-child(3) {
+        margin-bottom: 5rem;
+            @include desktop {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .grid-cards
+    .rect-card {
+        @include desktop{
+        padding: 3rem 4rem;
+        }
+    }
 }
 
+/* Job Postings page #### END #/
 
+/* Calendar page **** Start*/
 
+.header-meta {
+    text-align: center;
+}
+
+.tribe-events-title-bar {
+    color:yellow;
+}
+
+.frafca-events-calendar  {
+        thead {
+
+               th {
+
+                    background-color: $color__background-banner;
+
+               } 
+
+        }
+    
+}
