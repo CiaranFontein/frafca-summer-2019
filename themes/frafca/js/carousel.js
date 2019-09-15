@@ -1,5 +1,5 @@
-(function ($) {
-  $(document).ready(function () {
+(function($) {
+  $(document).ready(function() {
     if (window.innerWidth <= 1000) {
       const content = document.querySelector('.fp-about-us-carousel');
       const flkty = new Flickity(content, {

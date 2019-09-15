@@ -1,5 +1,5 @@
 (function($) {
-  let $header = $('.site-header');
+  // let $header = $('.site-header');
   let $section = $('section');
   $(document).on('scroll', function() {
     if ($(this).scrollTop() >= $section.position().top) {
@@ -9,7 +9,7 @@
           console.log('has pink class');
         }
       }
-      let count = $('section > *').length;
+      // let count = $('section > *').length;
     }
   });
 })(jQuery);
