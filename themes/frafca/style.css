@@ -1690,8 +1690,12 @@ a {
   .tribe-events-page-template .frafca-events-month-event-title {
     color: yellowgreen; }
   .tribe-events-page-template .frafca-events-sub-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     color: white;
     background-color: #BA5357; }
@@ -1699,6 +1703,12 @@ a {
       color: white;
       -webkit-text-decoration: white;
               text-decoration: white; }
+    .tribe-events-page-template .frafca-events-sub-nav h1 {
+      font-size: 1rem; }
+  .tribe-events-page-template #tribe-events-footer:after, .tribe-events-page-template #tribe-events-header:after {
+    left: 0; }
+  .tribe-events-page-template #tribe-events-footer:before, .tribe-events-page-template #tribe-events-header:before {
+    right: 0; }
 
 /*--------------------------------------------------------------
 # Media
