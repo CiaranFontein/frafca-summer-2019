@@ -1,5 +1,5 @@
-(function($) {
-  $(document).ready(function() {
+(function ($) {
+  $(document).ready(function () {
     const fpAboutUsContent = document.querySelector('.fp-about-us-carousel');
     const fpAbout = new Flickity(fpAboutUsContent, {
       // carousel options

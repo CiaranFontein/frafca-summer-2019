@@ -768,9 +768,9 @@
             color:yellowgreen;
         }
 
-        .frafca-events-title-bar {
-            display: flex;
-            justify-content: space-between;
+        .frafca-events-sub-nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             width:100%;
             color:white;
             background-color: $color__background-banner;

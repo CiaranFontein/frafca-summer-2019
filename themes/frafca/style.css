@@ -1689,17 +1689,13 @@ a {
     background-color: #BA5357; }
   .tribe-events-page-template .frafca-events-month-event-title {
     color: yellowgreen; }
-  .tribe-events-page-template .frafca-events-title-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .tribe-events-page-template .frafca-events-sub-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     color: white;
     background-color: #BA5357; }
-    .tribe-events-page-template .frafca-events-title-bar a {
+    .tribe-events-page-template .frafca-events-sub-nav a {
       color: white;
       -webkit-text-decoration: white;
               text-decoration: white; }
