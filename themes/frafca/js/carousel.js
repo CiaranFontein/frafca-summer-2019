@@ -14,7 +14,7 @@
     const fpPartnersContent = document.querySelector('.fp-partners-carousel');
     const fpPartners = new Flickity(fpPartnersContent, {
       // carousel options
-      cellAlign: 'center',
+      cellAlign: 'left',
       wrapAround: true,
       selectedAttraction: 0.01,
       friction: 0.15,

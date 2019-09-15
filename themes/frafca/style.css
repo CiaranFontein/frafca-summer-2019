@@ -1751,6 +1751,10 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.front-page-content .yellow {
+  font-size: 19px;
+  font-weight: 600; }
+
 .page-template-front-page .scroll-down {
   position: absolute;
   bottom: 0;
@@ -1767,7 +1771,8 @@ object {
     -webkit-transform: translateY(-190%);
             transform: translateY(-190%);
     left: 10%;
-    right: 10%; }
+    right: 10%;
+    font-size: 19px; }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1840,10 +1845,16 @@ object {
   text-align: center;
   margin: 2rem auto; }
 
+.front-page-get-involved .card-icon {
+  width: 150px;
+  margin: 0 auto; }
+
 .front-page-partners {
   background: #323232;
-  color: red;
   margin: 2rem auto; }
+  .front-page-partners h2 {
+    padding: 2rem 0;
+    text-align: center; }
   .front-page-partners .fp-partners-carousel .previous {
     left: 37%; }
   .front-page-partners .fp-partners-carousel .next {
@@ -1852,6 +1863,26 @@ object {
     top: 78%; }
   .front-page-partners .fp-partners-carousel .flickity-page-dots {
     display: none; }
+  .front-page-partners .partner-content {
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 625px; }
+    .front-page-partners .partner-content .partner-logo {
+      width: 150px; }
 
 /* About Page */
 .page-template-page-about section {
