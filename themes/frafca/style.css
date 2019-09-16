@@ -589,6 +589,18 @@ a {
       color: #ffffff; }
     .site-header.darkmode .hamburger-icon--open {
       color: #323232; }
+  .site-header.mediummode {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px); }
+    .site-header.mediummode .hamburger-icon,
+    .site-header.mediummode .main-navigation i {
+      color: #ffffff; }
+    .site-header.mediummode .hamburger-icon--open {
+      color: #323232; }
   .site-header .header-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1185,6 +1197,7 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 5rem 1rem 1rem 1rem;
+    width: 100%;
     height: 100vh;
     text-align: center; }
     @media (min-width: 1200px) {
