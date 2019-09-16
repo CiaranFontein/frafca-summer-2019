@@ -380,11 +380,11 @@ img {
     background: #FFD400;
     color: #323232; }
   .rect-card .default-btn, .default-cf7-form .default-btn,
-  .container-card-about-us .default-btn {
+  .container-card-about-us .default-btn, .error404 .default-btn {
     font-size: 1rem;
     font-weight: 900; }
     .rect-card .default-btn:hover, .default-cf7-form .default-btn:hover,
-    .container-card-about-us .default-btn:hover {
+    .container-card-about-us .default-btn:hover, .error404 .default-btn:hover {
       background-color: #ffe252; }
   .default-cf7-form .default-btn {
     position: relative;
@@ -2317,3 +2317,27 @@ object {
         font-size: 31px; }
       .search-results-content a {
         font-size: 33px; } }
+
+.error404 {
+  color: #323232; }
+  .error404 .site-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    min-height: 80vh;
+    margin: 0 auto;
+    text-align: center; }
+    .error404 .site-content h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem; }
+    .error404 .site-content h2 {
+      margin-bottom: 1rem; }
+    .error404 .site-content p {
+      margin-bottom: 3rem; }
+    .error404 .site-content a {
+      margin: 0 auto;
+      width: 50%; }
