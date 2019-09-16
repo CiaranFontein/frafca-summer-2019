@@ -2341,3 +2341,8 @@ object {
     .error404 .site-content a {
       margin: 0 auto;
       width: 50%; }
+    @media (min-width: 1200px) {
+      .error404 .site-content {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
