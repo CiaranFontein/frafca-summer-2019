@@ -25,7 +25,10 @@
         }
 
         @include desktop {
-            justify-content: center;    
+            justify-content: center;
+            a  {
+                width: 200px;
+            }    
         }
         
     }
