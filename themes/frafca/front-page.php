@@ -50,7 +50,7 @@ get_header(); ?>
 
 
             <?php $button = frafca_cfs('about_us_button') ?>
-            <a class='about-us-button default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+            <a class="about-us-button default-btn yellow" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                 <?php echo $button['text']; ?>
             </a>
 
@@ -70,7 +70,7 @@ get_header(); ?>
                     <img src="<?php echo $image; ?>" alt="Who We Are">
                 </div>
 
-                <div class="wwo_meta containter col-2">
+                <div class="wwo_meta col-2">
                     <h3><?php echo $title ?></h3>
                     <p><?php echo $description ?></p>
                     <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">

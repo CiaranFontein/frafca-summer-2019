@@ -210,6 +210,7 @@
     .grid-cards {
         &-element {
             padding: 0 1.5rem;
+
             &.frafca_swipe_article {
                 padding: 0;
 
@@ -224,413 +225,430 @@
                     transition: height $time__transition;
                 }
 
-                .swipe-element {
-                    flex: none;
-                    width: 100vw;
-                    padding: 0 1.5rem;
-                    margin: 0;
-                    margin-bottom: 1rem;
-                    scroll-snap-align: start;
-                }
+                &.frafca_swipe_article {
+                    .frafca_swipte_article {
+                        padding: 0;
 
-                .navigation-dots {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    .dot {
-                        width: .5rem;
-                        height: .5rem;
-                        background-color: $color__border;
-                        border-radius: 50%;
-                        margin: 0 .5rem 0 0;
-                        transition: $time__transition;
-
-                        &:last-child {
-                            margin-right: 0;
+                        .swipe-wrapper {
+                            display: flex;
+                            flex-wrap: nowrap;
+                            overflow-x: scroll;
+                            overflow-y: hidden;
+                            align-items: flex-start;
+                            width: 100vw;
+                            scroll-snap-type: x mandatory;
+                            transition: height $time__transition;
                         }
 
-                        &.active {
-                            background-color: $color__border-abbr;
-                        }
-                    }
-                }
-
-                @include desktop {
-                    padding: 0 1.5rem;
-                }
-            }
-
-            &:first-child {
-                padding: 0;
-            }
-
-            &:nth-child(2) {
-                margin-top: 3.25rem;
-                margin-bottom: 1rem;
-            }
-
-        }
-
-        // end .grid-cards-element
-
-        @include desktop {
-            grid-column-gap: 4.5rem;
-        }
-    }
-
-    .rect-card {
-        padding: 3.75rem 1.5rem;
-    }
-
-    .container {
-
-        &-who-we-are {
-            @include desktop {
-                .txt-align-c {
-                    text-align: left;
-                }
-
-                .grid-cards {
-                    grid-template-columns: 420px auto;
-
-                    &-element {
-                        &:nth-child(1) {
-                            grid-row: 1/3;
-                        }
-
-                        &:nth-child(2) {
+                        .swipe-element {
+                            flex: none;
+                            width: 100vw;
+                            padding: 0 1.5rem;
                             margin: 0;
+                            margin-bottom: 1rem;
+                            scroll-snap-align: start;
                         }
 
-                    }
-                }
-            }
-        }
+                        .navigation-dots {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
 
-        // end .container-who-we-are
+                            .dot {
+                                width: .5rem;
+                                height: .5rem;
+                                background-color: $color__border;
+                                border-radius: 50%;
+                                margin: 0 .5rem 0 0;
+                                transition: $time__transition;
 
-        &-location-history {
-            p {
-                margin: 0 auto;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
 
-                @include desktop {
-                    width: 970px;
-                }
-            }
-        }
-
-        // end .container-location-history
-
-        &-our-history {
-            @include desktop {
-
-                .txt-align-c {
-                    text-align: right;
-                }
-
-                .grid-cards {
-                    grid-template-columns: auto 420px;
-
-                    &-element {
-                        &:nth-child(1) {
-                            grid-column: 2/3;
-                            grid-row: 1/3;
-                        }
-
-                        &:nth-child(2) {
-                            margin: 0;
-                        }
-
-                    }
-                }
-            }
-        }
-
-        // end .container-our-history
-
-        &-friendship-center {
-            @include desktop {
-                @extend .container-who-we-are;
-            }
-        }
-
-        // end .container-friendship-center
-
-        &-card-about-us {
-            .flex {
-                &-element {
-                    background-color: $color__background-article;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    min-height: 100vh;
-                    text-align: center;
-                    padding: 1.5rem;
-
-                    @include desktop {
-                        min-height: auto;
-                        padding: 6.25rem;
-                    }
-
-                    .card {
-                        &-logo {
-                            width: 150px;
-                            height: 150px;
-                            margin-bottom: 40px;
-                        }
-
-                        &-title {
-                            margin-bottom: 20px;
-
-                            h3 {
-                                margin: 0;
+                                &.active {
+                                    background-color: $color__border-abbr;
+                                }
                             }
                         }
 
-                        &-description {
-                            margin-bottom: 64px;
+                        @include desktop {
+                            padding: 0 1.5rem;
                         }
                     }
 
-                    &:nth-child(2n) {
-                        background-color: $color__background-banner;
+                    &:first-child {
+                        padding: 0;
+                    }
+
+                    &:nth-child(2) {
+                        margin-top: 3.25rem;
+                        margin-bottom: 1rem;
                     }
 
                 }
+
+                // end .grid-cards-element
+
+                @include desktop {
+                    grid-column-gap: 4.5rem;
+                }
             }
 
-            @include desktop {
-                .grid-cards {
-                    max-width: 100%;
-                    grid-column-gap: unset;
+            .rect-card {
+                padding: 3.75rem 1.5rem;
+            }
+
+            .container {
+
+                &-who-we-are {
+                    @include desktop {
+                        .txt-align-c {
+                            text-align: left;
+                        }
+
+                        .grid-cards {
+                            grid-template-columns: 420px auto;
+
+                            &-element {
+                                &:nth-child(1) {
+                                    grid-row: 1/3;
+                                }
+
+                                &:nth-child(2) {
+                                    margin: 0;
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                // end .container-who-we-are
+
+                &-location-history {
+                    p {
+                        margin: 0 auto;
+
+                        @include desktop {
+                            width: 970px;
+                        }
+                    }
+                }
+
+                // end .container-location-history
+
+                &-our-history {
+                    @include desktop {
+
+                        .txt-align-c {
+                            text-align: right;
+                        }
+
+                        .grid-cards {
+                            grid-template-columns: auto 420px;
+
+                            &-element {
+                                &:nth-child(1) {
+                                    grid-column: 2/3;
+                                    grid-row: 1/3;
+                                }
+
+                                &:nth-child(2) {
+                                    margin: 0;
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                // end .container-our-history
+
+                &-friendship-center {
+                    @include desktop {
+                        @extend .container-who-we-are;
+                    }
+                }
+
+                // end .container-friendship-center
+
+                &-card-about-us {
+                    .flex {
+                        &-element {
+                            background-color: $color__background-article;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            min-height: 100vh;
+                            text-align: center;
+                            padding: 1.5rem;
+
+                            @include desktop {
+                                min-height: auto;
+                                padding: 6.25rem;
+                            }
+
+                            .card {
+                                &-logo {
+                                    width: 150px;
+                                    height: 150px;
+                                    margin-bottom: 40px;
+                                }
+
+                                &-title {
+                                    margin-bottom: 20px;
+
+                                    h3 {
+                                        margin: 0;
+                                    }
+                                }
+
+                                &-description {
+                                    margin-bottom: 64px;
+                                }
+                            }
+
+                            &:nth-child(2n) {
+                                background-color: $color__background-banner;
+                            }
+
+                        }
+                    }
+
+                    @include desktop {
+                        .grid-cards {
+                            max-width: 100%;
+                            grid-column-gap: unset;
+                        }
+                    }
+                }
+
+                // end .container-card-about-us
+
+            }
+
+        }
+
+
+        /* Resources Page */
+
+        .resources-grid {
+            // margin-left: $base__space-unit * 3;
+            // margin-right: $base__space-unit * 3;
+            max-width: 1000px;
+
+            .resources {
+                padding: $base__space-unit * 3 $base__space-unit * 2;
+
+
+                .cfs-hyperlink {
+                    .text {
+                        color: $color__text-main;
+                    }
                 }
             }
         }
 
-        // end .container-card-about-us
+        /* Donate Page */
 
-    }
+        #donate-page-banner {
+            .banner-title {
+                margin-top: 0rem;
+            }
 
-}
+            @include desktop {
+                .banner-title {
+                    margin-top: 7.5rem;
+                }
+            }
 
+            .banner-button {
 
-/* Resources Page */
+                margin: $base__space-unit * 2 auto;
+                padding: $base__space-unit - 0.25 0;
+                width: 205px;
+                border-radius: 10px;
+                background-color: #FFD400;
 
-.resources-grid {
-    // margin-left: $base__space-unit * 3;
-    // margin-right: $base__space-unit * 3;
-    max-width: 1000px;
+                a {
+                    color: #2d2d2d;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
 
-    .resources {
-        padding: $base__space-unit * 3 $base__space-unit * 2;
-
-
-        .cfs-hyperlink {
-            .text {
-                color: $color__text-main;
             }
         }
-    }
-}
 
-/* Donate Page */
-
-#donate-page-banner {
-    .banner-title {
-        margin-top: 0rem;
-    }
-
-    @include desktop {
-        .banner-title {
-            margin-top: 7.5rem;
-        }
-    }
-
-    .banner-button {
-
-        margin: $base__space-unit * 2 auto;
-        padding: $base__space-unit - 0.25 0;
-        width: 205px;
-        border-radius: 10px;
-        background-color: #FFD400;
-
-        a {
-            color: #2d2d2d;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-    }
-}
-
-.donate-grid {
-    display: grid;
-    margin: 0 auto;
-    margin-top: $base__space-unit * 2;
-
-    .donate-card {
-        margin-bottom: $base__space-unit * 2;
-        padding: 3rem;
-        text-align: center;
-        background: $color__background-article;
-
-        h3 {
+        .donate-grid {
+            display: grid;
             margin: 0 auto;
-        }
+            margin-top: $base__space-unit * 2;
 
-        p {
-            font-size: $font__desktop_icon_size/1.25;
-            margin: $base__space-unit auto;
-        }
-    }
-}
+            .donate-card {
+                margin-bottom: $base__space-unit * 2;
+                padding: 3rem;
+                text-align: center;
+                background: $color__background-article;
 
-@include desktop {
-    .donate-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 2rem;
-        margin: 0 auto;
-        width: 70rem;
-
-        .donate-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: $base__space-unit * 7 auto;
-            padding: 1.5rem;
-            text-align: center;
-            min-height: 340px;
-        }
-    }
-}
-
-/* Single - single-prgrm_svc.php */
-.flex-container {
-    @include desktop {
-        max-width: $desktop-width;
-        margin: 120px auto 100px auto;
-        display: flex;
-    }
-
-
-    .flex-wrap {
-
-        h3 {
-            margin-bottom: 1rem;
-        }
-
-        p {
-            margin-bottom: 0;
-        }
-
-        .content-type-text,
-        .content-type-list {
-            padding: 0 2rem;
-            margin-bottom: 3rem;
-
-            @include desktop {
-                padding: 0;
-
-                &:last-child {
-                    margin-bottom: 0;
+                h3 {
+                    margin: 0 auto;
                 }
-            }
-        }
 
-        .content-type-widgets {
-
-            h3,
-            p {
-                padding: 0 2rem;
-                margin-bottom: 1rem;
-            }
-
-            h3 {
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                color: $color__text-main;
-            }
-
-            p {
-                &:last-child {
-                    margin-bottom: 3rem;
+                p {
+                    font-size: $font__desktop_icon_size/1.25;
+                    margin: $base__space-unit auto;
                 }
             }
         }
 
         @include desktop {
-            &.single-description {
-                order: 2;
+            .donate-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 2rem;
+                margin: 0 auto;
+                width: 70rem;
+
+                .donate-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: $base__space-unit * 7 auto;
+                    padding: 1.5rem;
+                    text-align: center;
+                    min-height: 340px;
+                }
+            }
+        }
+
+        /* Single - single-prgrm_svc.php */
+        .flex-container {
+            @include desktop {
+                max-width: $desktop-width;
+                margin: 120px auto 100px auto;
+                display: flex;
             }
 
-            &.single-details {
-                flex: none;
-                order: 1;
-                width: 350px;
-                margin-right: 120px;
 
-                .content-type-widgets {
-                    border: 1px solid $color__border;
-                    margin-bottom: 30px;
+            .flex-wrap {
 
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
+                h3 {
+                    margin-bottom: 1rem;
+                }
 
-                    &>* {
-                        margin: 0;
-                        margin-bottom: 1.5rem;
+                p {
+                    margin-bottom: 0;
+                }
+
+                .content-type-text,
+                .content-type-list {
+                    padding: 0 2rem;
+                    margin-bottom: 3rem;
+
+                    @include desktop {
+                        padding: 0;
 
                         &:last-child {
-                            margin-bottom: 1.5rem;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .content-type-widgets {
+
+                    h3,
+                    p {
+                        padding: 0 2rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    h3 {
+                        padding-top: 2rem;
+                        padding-bottom: 2rem;
+                        color: $color__text-main;
+                    }
+
+                    p {
+                        &:last-child {
+                            margin-bottom: 3rem;
+                        }
+                    }
+                }
+
+                @include desktop {
+                    &.single-description {
+                        order: 2;
+                    }
+
+                    &.single-details {
+                        flex: none;
+                        order: 1;
+                        width: 350px;
+                        margin-right: 120px;
+
+                        .content-type-widgets {
+                            border: 1px solid $color__border;
+                            margin-bottom: 30px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            &>* {
+                                margin: 0;
+                                margin-bottom: 1.5rem;
+
+                                &:last-child {
+                                    margin-bottom: 1.5rem;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-    }
-}
 
-/* Search Results Page */
-.search-results-content {
-    color: #000000;
-    min-height: 55vh;
-    margin: $base__space-unit * 2 auto;
-    padding: $base__space-unit * 2 $base__space-unit * 2;
+        /* Search Results Page */
+        .search-results-content {
+            color: #000000;
+            min-height: 55vh;
+            margin: $base__space-unit * 2 auto;
+            padding: $base__space-unit * 2 $base__space-unit * 2;
 
-    h1 {
-        font-size: $font__size_main + 6;
-    }
+            h1 {
+                font-size: $font__size_main + 6;
+            }
 
-    a {
-        color: $color__link-search;
-        font-size: $font__size_main + 8;
-        // padding-bottom: $base__space-unit *4;
-    }
+            a {
+                color: $color__link-search;
+                font-size: $font__size_main + 8;
+                // padding-bottom: $base__space-unit *4;
+            }
 
-    .search-page-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: $base__space-unit * 3;
-    }
+            .search-page-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: $base__space-unit * 3;
+            }
 
-    .search-count {}
+            .search-count {}
 
-    @include desktop {
-        margin: $base__space-unit * 4 auto;
-        padding: $base__space-unit * 3 $base__space-unit * 8;
+            @include desktop {
+                margin: $base__space-unit * 4 auto;
+                padding: $base__space-unit * 3 $base__space-unit * 8;
 
-        h1 {
-            font-size: $font__size_main + 9;
-        }
+                h1 {
+                    font-size: $font__size_main + 9;
+                }
 
-        a {
-            font-size: $font__size_main + 11;
-            // padding-bottom: $base__space-unit *4;
+                a {
+                    font-size: $font__size_main + 11;
+                    // padding-bottom: $base__space-unit *4;
+                }
+            }
         }
     }
 }
