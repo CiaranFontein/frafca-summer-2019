@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'tribe_events_before_template' );
 
 //Title Bar
-tribe_get_template_part( 'month/title-bar' );
+// tribe_get_template_part( 'month/title-bar' );
 
 // Tribe Bar
 tribe_get_template_part( 'modules/bar' );

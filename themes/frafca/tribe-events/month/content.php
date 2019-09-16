@@ -50,7 +50,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php tribe_get_template_part( 'month/tooltip' ); ?>
 </div><!-- #tribe-events-content -->
 
+
 <section class="tribe-events-listing">
+		
 		<?php
 		if(!is_singular('tribe_events')):
 
@@ -58,22 +60,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'posts_per_page' => 5,
 				'post_type'       => 'tribe_events'
 			) );
-
-			var_dump($event_posts);
+ 
+			// if the page isn't refreshing goto -> settings -> permalinks 
+			// and this will help to clear PHP transients which are caching the events calendar code
+			// var_dump($event_posts);
 
 			if ( $event_posts ) {
 				foreach ( $event_posts as $post ) : setup_postdata( $post ); 
-				
-				// var_dump(get_post_meta($post->ID));
-				// echo $post->ID;
 
-				$venue_id = get_post_meta($post->ID, '_EventVenueID')[0];
-				$venue_address = get_post_meta($venue_id, '_VenueAddress')[0];
+				$venue_id = '';
 
-				echo "venue address <h2>" . $venue_address . "</h2>";
+				if(!empty($venue_id = get_post_meta($post->ID, '_EventVenueID'))):
+					// echo 'venue is set';
+					$venue_id = get_post_meta($post->ID, '_EventVenueID')[0];
+					// $event_location_address = get_post_meta($post->ID, '_VenueAddress')[0];
+					$venue_address = get_post_meta($venue_id, '_VenueAddress')[0];
+		?>
+				<a class="frafca-event-on-mobile" href="<?php echo get_the_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a>
+		<?php	
+					echo '<p>location: ' . $venue_address . '</p>';
 
-				$event_location_address = get_post_meta($post->ID, '_VenueAddress')[0];
-				// var_dump($event_location_address);
+					else:
+					echo 'Venue address is not available at this time';
+
+				endif;
 
 				$event_start_date = get_post_meta($post->ID, '_EventStartDate')[0];
 				echo $event_start_date;
@@ -81,7 +91,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				$event_end_date = get_post_meta($post->ID, '_EventEndDate')[0];
 				echo $event_end_date;
 				?>
-					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
 				<?php
 				endforeach;
 				wp_reset_postdata();
