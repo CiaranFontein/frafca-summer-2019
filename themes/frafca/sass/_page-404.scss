@@ -1,0 +1,35 @@
+.error404  {
+    color: $color__text-sec;
+
+    .site-content {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        min-height: 80vh;
+        margin: 0 auto;
+        text-align: center;
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 3rem;
+        }
+        a {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        @include desktop {
+            justify-content: center;
+            a  {
+                width: 200px;
+            }    
+        }
+        
+    }
+}
