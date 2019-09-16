@@ -594,3 +594,32 @@
         }
     }
 }
+
+/* Search Results Page */
+.search-results-content {
+    color: #000000;
+    min-height: 51vh;
+    margin: $base__space-unit * 2 auto;
+    padding: $base__space-unit * 2 $base__space-unit * 2;
+
+    a {
+        color: $color__link-search;
+        font-size: $font__size_main + 8;
+        // padding-bottom: $base__space-unit *4;
+    }
+
+    .search-page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $base__space-unit * 3;
+    }
+
+    // a {
+    //     color: $color__link-search;
+    //     font-size: $font__size_main + 6;
+    // }
+
+
+    .search-count {}
+}

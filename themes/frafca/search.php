@@ -8,12 +8,12 @@
 
 get_header(); ?>
 
-<section id="primary" class="content-area">
+<section id="primary" class="content-area search-results-content">
 	<main id="main" class="site-main" role="main">
 
 		<?php if (have_posts()) : ?>
 
-			<header class="page-header">
+			<header class="page-header search-page-header">
 				<h1 class="page-title"><?php printf(esc_html('Search Results for: %s'), '<span>' . get_search_query() . '</span>'); ?></h1>
 				<div class="search-count">
 					<?php $allsearch = new WP_Query("s=$s&showposts=0");

@@ -2235,3 +2235,24 @@ object {
         margin-bottom: 1.5rem; }
         .flex-container .flex-wrap.single-details .content-type-widgets > *:last-child {
           margin-bottom: 1.5rem; } }
+
+/* Search Results Page */
+.search-results-content {
+  color: #000000;
+  min-height: 51vh;
+  margin: 2rem auto;
+  padding: 2rem 2rem; }
+  .search-results-content a {
+    color: #265BC7;
+    font-size: 30px; }
+  .search-results-content .search-page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 3rem; }
