@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'tribe_events_after_the_title' ); ?>
 		<!-- .tribe-events-nav-previous -->
 		<li class="tribe-events-nav-next frafca-events-nav-next">
-		<i class="fas fa-angle-right"></i><?php tribe_events_the_next_month_link(); ?>
+		<?php tribe_events_the_next_month_link(); ?><i class="fas fa-angle-right"></i>
 		</li>
 		<!-- .tribe-events-nav-next -->
 	</ul><!-- .tribe-events-sub-nav -->

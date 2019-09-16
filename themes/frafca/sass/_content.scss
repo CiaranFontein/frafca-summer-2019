@@ -749,6 +749,7 @@
         .frafca-events-page-title {
             color:white;
             background-color: $color__background-banner;
+            margin:auto;
         }
 
         .frafca-events-calendar  {
@@ -764,10 +765,6 @@
             
         }
 
-        .frafca-events-month-event-title {
-            color:yellowgreen;
-        }
-
         .frafca-events-sub-nav {
             display: flex;
             justify-content: space-between;
@@ -776,12 +773,26 @@
             background-color: $color__background-banner;
             align-items: center;
             transform: translateY(-80px);
+            margin:0;
+            height: 56px;
                     a {
                         color:white;
                         text-decoration: white;
+                            @include desktop {
+                                font-size: 17px;
+                                font-weight: 300;
+                            }
                     }
+
+                    span {
+                        display:none;
+                    }
+
                     h1 {
                         font-size: 1rem;
+                            @include desktop {
+                                font-size: 1.5rem;
+                            }
                     }
 
         }
@@ -800,7 +811,9 @@
 
         #tribe-bar-form {
             background: hsla(0,0%,100%,.3);
-            // transform: translateY(-55px);
+            @include desktop {
+            transform: translateY(-97px);
+            }
         }
 
         #tribe-bar-collapse-toggle {
@@ -832,6 +845,9 @@
             border-radius: 10px;
             text-align: center;
             justify-content: center;
+                    @include desktop {
+                        display:none;
+                    }
         }
 
         .tribe-bar-submit {
@@ -843,18 +859,46 @@
             background: white;
         }
 
+
         .tribe-events-notices {
             transform: translateY(-80px);
         }
 
-        // #tribe-mobile-container {
-        //     display: none;
-        // }
-
-        .tribe-events-listing {
-            color: black;
+        .fa-angle-right,
+        .fa-angle-left {
+            padding: 8px;
         }
 
-        
+        .tribe-bar-filters-inner 
+        .tribe-clearfix {
+            @include desktop{
+            transform: translateY(-96px);
+            background: hsla(0,0%,100%,.7);
+            }
+        }
+
+        #tribe-events-content a {
+            color: #16605C;
+            font-weight: bold;
+        }
+
+        .events-archive,
+        .events-gridview, 
+        .tribe-events-last,
+        .type-tribe_events {
+            // border-left: 5px solid #334C71;
+            background:rgba(22, 96, 92, 0.1);
+
+        }
+
+        .tribe-events-calendar thead th {
+            background-color: white;
+            color: black;
+            border:none;
+        }
+
+        .frafca-events-nav-next a {
+            color: white;
+        }
 
 }
