@@ -886,9 +886,19 @@
         .events-gridview, 
         .tribe-events-last,
         .type-tribe_events {
-            border-left: 5px solid #334C71;
+            // border-left: 5px solid #334C71;
             background:rgba(22, 96, 92, 0.1);
 
+        }
+
+        .tribe-events-calendar thead th {
+            background-color: white;
+            color: black;
+            border:none;
+        }
+
+        .frafca-events-nav-next a {
+            color: white;
         }
 
 }

@@ -12,6 +12,7 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<!-- <?php get_search_form(); ?> -->
+		<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
 
 		<?php if (have_posts()) : ?>
 

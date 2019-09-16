@@ -1786,8 +1786,13 @@ a {
   .tribe-events-page-template .events-gridview,
   .tribe-events-page-template .tribe-events-last,
   .tribe-events-page-template .type-tribe_events {
-    border-left: 5px solid #334C71;
     background: rgba(22, 96, 92, 0.1); }
+  .tribe-events-page-template .tribe-events-calendar thead th {
+    background-color: white;
+    color: black;
+    border: none; }
+  .tribe-events-page-template .frafca-events-nav-next a {
+    color: white; }
 
 /*--------------------------------------------------------------
 # Media
