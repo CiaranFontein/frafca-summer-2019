@@ -24,12 +24,12 @@ global $wp_locale;
 
 	<h2 class="tribe-events-visuallyhidden"><?php printf( esc_html__( 'Calendar of %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></h2>
 
-	<table class="tribe-events-calendar frafca-events-calendar">
+	<table class="tribe-events-calendar">
 		<caption class="tribe-events-visuallyhidden"><?php printf( esc_html__( 'Calendar of %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></caption>
 		<thead>
 		<tr>
 			<?php foreach ( $days_of_week as $day ) : ?>
-				<th class="frafca-events" id="tribe-events-<?php echo esc_attr( strtolower( $day ) ); ?>" title="<?php echo esc_attr( $day ); ?>" data-day-abbr="<?php echo esc_attr( $wp_locale->get_weekday_abbrev( $day ) ); ?>"><?php echo $day ?></th>
+				<th id="tribe-events-<?php echo esc_attr( strtolower( $day ) ); ?>" title="<?php echo esc_attr( $day ); ?>" data-day-abbr="<?php echo esc_attr( $wp_locale->get_weekday_abbrev( $day ) ); ?>"><?php echo $day ?></th>
 			<?php endforeach; ?>
 		</tr>
 		</thead>

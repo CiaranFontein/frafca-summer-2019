@@ -1,6 +1,5 @@
-(function($) {
-  $(document).ready(function() {
-    // if (window.innerWidth <= 1000) {
+(function ($) {
+  $(document).ready(function () {
     const fpAboutUsContent = document.querySelector('.fp-about-us-carousel');
     const fpAbout = new Flickity(fpAboutUsContent, {
       // carousel options
@@ -15,13 +14,12 @@
     const fpPartnersContent = document.querySelector('.fp-partners-carousel');
     const fpPartners = new Flickity(fpPartnersContent, {
       // carousel options
-      cellAlign: 'center',
+      cellAlign: 'left',
       wrapAround: true,
       selectedAttraction: 0.01,
       friction: 0.15,
       autoPlay: 3000
     });
     console.log(fpPartners);
-    // }
   });
 })(jQuery);

@@ -3,6 +3,15 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.front-page-content {
+
+    .yellow {
+        font-size: $font__size_main - 3;
+        font-weight: 600;
+    }
+}
+
 .page-template-front-page {
     .scroll-down {
         position: absolute;
@@ -20,9 +29,10 @@
 
     .about-us-button {
         position: absolute;
-        transform: translateY(-350%);
+        transform: translateY(-190%);
         left: 10%;
         right: 10%;
+        font-size: $font__size_main - 3;
     }
 
     .yellow {
@@ -115,12 +125,21 @@
         margin: $base__space-unit * 2 auto;
 
     }
+
+    .card-icon {
+        width: 150px;
+        margin: 0 auto;
+    }
 }
 
 .front-page-partners {
     background: $color__background-black;
-    color: red;
     margin: $base__space-unit * 2 auto;
+
+    h2 {
+        padding: $base__space-unit * 2 0;
+        text-align: center;
+    }
 
     .fp-partners-carousel {
         .previous {
@@ -137,6 +156,24 @@
 
         .flickity-page-dots {
             display: none;
+        }
+    }
+
+    .partner-content {
+        // border: 2px solid red;
+        width: 100%;
+        text-align: center;
+        padding: 0 $base__space-unit;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+        height: 625px;
+
+        .partner-logo {
+            width: 150px;
         }
     }
 }
@@ -173,8 +210,14 @@
     .grid-cards {
         &-element {
             padding: 0 1.5rem;
+<<<<<<< HEAD
             &.frafca_swipe_article {
+=======
+
+            &.frafca_swipte_article {
+>>>>>>> 43c32a513a876020b7ebabbf0db5dde21e45b850
                 padding: 0;
+
                 .swipe-wrapper {
                     display: flex;
                     flex-wrap: nowrap;
@@ -185,6 +228,7 @@
                     scroll-snap-type: x mandatory;
                     transition: height $time__transition;
                 }
+
                 .swipe-element {
                     flex: none;
                     width: 100vw;
@@ -198,6 +242,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
                     .dot {
                         width: .5rem;
                         height: .5rem;
@@ -205,9 +250,11 @@
                         border-radius: 50%;
                         margin: 0 .5rem 0 0;
                         transition: $time__transition;
+
                         &:last-child {
                             margin-right: 0;
                         }
+
                         &.active {
                             background-color: $color__border-abbr;
                         }
@@ -548,6 +595,47 @@
                     }
                 }
             }
+        }
+    }
+}
+
+/* Search Results Page */
+.search-results-content {
+    color: #000000;
+    min-height: 55vh;
+    margin: $base__space-unit * 2 auto;
+    padding: $base__space-unit * 2 $base__space-unit * 2;
+
+    h1 {
+        font-size: $font__size_main + 6;
+    }
+
+    a {
+        color: $color__link-search;
+        font-size: $font__size_main + 8;
+        // padding-bottom: $base__space-unit *4;
+    }
+
+    .search-page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $base__space-unit * 3;
+    }
+
+    .search-count {}
+
+    @include desktop {
+        margin: $base__space-unit * 4 auto;
+        padding: $base__space-unit * 3 $base__space-unit * 8;
+
+        h1 {
+            font-size: $font__size_main + 9;
+        }
+
+        a {
+            font-size: $font__size_main + 11;
+            // padding-bottom: $base__space-unit *4;
         }
     }
 }

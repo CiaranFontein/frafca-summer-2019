@@ -112,5 +112,13 @@ $event_id = get_the_ID();
 
                 <?php endforeach; ?>
 	
-
+				<?php if ( tribe_get_cost() ) : ?>
+	<div class="tribe-events-event-cost">
+		<span class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></span>
+		<?php
+		/** This action is documented in the-events-calendar/src/views/list/single-event.php */
+		do_action( 'tribe_events_inside_cost' )
+		?>
+	</div>
+<?php endif; ?>
 </div><!-- #tribe-events-content -->

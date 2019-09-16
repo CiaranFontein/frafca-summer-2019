@@ -15,17 +15,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 } ?>
 
-<div id="tribe-events-content" class="tribe-events-month frafca-events-month">
+<div id="tribe-events-content" class="tribe-events-month">
 
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
 
 	<!-- Month Header -->
 	<?php do_action( 'tribe_events_before_header' ) ?>
-	<div id="tribe-events-header" class="frafca-events-header" <?php tribe_events_the_header_attributes() ?>>
+	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
 
-		<!-- Header Navigation -->
-		<!-- <?php //tribe_get_template_part( 'month/nav' ); ?> -->
+	<!-- Header Navigation -->
+	<?php tribe_get_template_part( 'month/nav' ); ?>
 
 	</div>
 	<!-- #tribe-events-header -->
@@ -38,16 +38,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'tribe_events_before_footer' ) ?>
 	<div id="tribe-events-footer">
 
-		<!-- Footer Navigation -->
-		<?php do_action( 'tribe_events_before_footer_nav' ); ?>
-		<!-- <?php //tribe_get_template_part( 'month/nav' ); ?> -->
-		<?php do_action( 'tribe_events_after_footer_nav' ); ?>
+	<!-- Footer Navigation -->
+	<?php do_action( 'tribe_events_before_footer_nav' ); ?>
+	<!-- <?php //tribe_get_template_part( 'month/nav' ); ?> -->
+	<?php do_action( 'tribe_events_after_footer_nav' ); ?>
 
 	</div>
 	<!-- #tribe-events-footer -->
-	<?php do_action( 'tribe_events_after_footer' ) ?>
-
-	<?php tribe_get_template_part( 'month/mobile' ); ?>
-	<?php tribe_get_template_part( 'month/tooltip' ); ?>
+	<!-- <?php //do_action( 'tribe_events_after_footer' ) ?> -->
+	<!-- <?php //tribe_get_template_part( 'month/mobile' ); ?> -->
+	<!-- <?php //tribe_get_template_part( 'month/tooltip' ); ?> -->
 
 </div><!-- #tribe-events-content -->

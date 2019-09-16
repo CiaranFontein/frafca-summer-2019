@@ -739,24 +739,156 @@
 /* Job Postings page #### END #/
 
 /* Calendar page **** Start*/
+.tribe-events-page-template {
+    color:black;
+        .header-meta {
+            text-align: center;
+        }
 
-.header-meta {
-    text-align: center;
-}
+        
+        .frafca-events-page-title {
+            color:white;
+            background-color: $color__background-banner;
+            margin:auto;
+        }
 
-.tribe-events-title-bar {
-    color:yellow;
-}
+        .frafca-events-calendar  {
+            thead {
 
-.frafca-events-calendar  {
-        thead {
-
-               th {
+                th {
 
                     background-color: $color__background-banner;
 
-               } 
+                } 
+
+            }
+            
+        }
+
+        .frafca-events-sub-nav {
+            display: flex;
+            justify-content: space-between;
+            width:100%;
+            color:white;
+            background-color: $color__background-banner;
+            align-items: center;
+            transform: translateY(-80px);
+            margin:0;
+            height: 56px;
+                    a {
+                        color:white;
+                        text-decoration: white;
+                            @include desktop {
+                                font-size: 17px;
+                                font-weight: 300;
+                            }
+                    }
+
+                    span {
+                        display:none;
+                    }
+
+                    h1 {
+                        font-size: 1rem;
+                            @include desktop {
+                                font-size: 1.5rem;
+                            }
+                    }
 
         }
-    
+
+        #tribe-events-header .tribe-events-sub-nav {
+            padding: 0 3rem;
+        }
+
+        #tribe-events-footer:after, #tribe-events-header:after {
+            left: 0;
+        }
+
+        #tribe-events-footer:before, #tribe-events-header:before {
+            right: 0;
+        }
+
+        #tribe-bar-form {
+            background: hsla(0,0%,100%,.3);
+            @include desktop {
+            transform: translateY(-97px);
+            }
+        }
+
+        #tribe-bar-collapse-toggle {
+            background: hsla(0,0%,100%,.3);
+            transform: translateY(-55px);
+        }
+
+        .tribe-bar-views-inner {
+            background: hsla(0,0%,100%,.3);
+
+        }
+
+        .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type=text] {
+            font-size: 1.2rem;
+        }
+
+        .tribe-events-calendar {
+            transform: translateY(-82px);
+        }
+
+        #tribe-bar-form .tribe-bar-submit input[type=submit] {
+            background: $color__background-button;
+            background-image: none;
+            color: $color__text-sec;
+            font-size: 13px;
+            margin: $base__space-unit * 2 auto;
+            padding: $base__space-unit - 0.25 0;
+            width: 205px;
+            border-radius: 10px;
+            text-align: center;
+            justify-content: center;
+                    @include desktop {
+                        display:none;
+                    }
+        }
+
+        .tribe-bar-submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        #tribe-bar-form.tribe-bar-collapse .tribe-bar-filters {
+            background: white;
+        }
+
+
+        .tribe-events-notices {
+            transform: translateY(-80px);
+        }
+
+        .fa-angle-right,
+        .fa-angle-left {
+            padding: 8px;
+        }
+
+        .tribe-bar-filters-inner 
+        .tribe-clearfix {
+            @include desktop{
+            transform: translateY(-96px);
+            background: hsla(0,0%,100%,.7);
+            }
+        }
+
+        #tribe-events-content a {
+            color: #16605C;
+            font-weight: bold;
+        }
+
+        .events-archive,
+        .events-gridview, 
+        .tribe-events-last,
+        .type-tribe_events {
+            border-left: 5px solid #334C71;
+            background:rgba(22, 96, 92, 0.1);
+
+        }
+
 }

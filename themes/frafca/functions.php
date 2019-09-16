@@ -157,13 +157,13 @@ class ContinualMonthViewPagination {
 	public function next_month() {
 		$url = tribe_get_next_month_link();
 		$text = tribe_get_next_month_text();
-		$date = TribeEvents::instance()->nextMonth( tribe_get_month_view_date() );
+		$date = Tribe__Events__Main::instance()->nextMonth( tribe_get_month_view_date() );
 		return '<a data-month="' . $date . '" href="' . $url . '" rel="next">' . $text . ' <span>&raquo;</span></a>';
 	}
 	public function previous_month() {
 		$url = tribe_get_previous_month_link();
 		$text = tribe_get_previous_month_text();
-		$date = TribeEvents::instance()->previousMonth( tribe_get_month_view_date() );
+		$date = Tribe__Events__Main::instance()->previousMonth( tribe_get_month_view_date() );
 		return '<a data-month="' . $date . '" href="' . $url . '" rel="prev"><span>&laquo;</span> ' . $text . ' </a>';
 	}
 }
