@@ -50,7 +50,7 @@ get_header(); ?>
 
 
             <?php $button = frafca_cfs('about_us_button') ?>
-            <a class='about-us-button default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+            <a class="about-us-button default-btn yellow" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
                 <?php echo $button['text']; ?>
             </a>
 
