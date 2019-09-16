@@ -31,7 +31,7 @@
                 <div class=" hamburger-icon">
                     <i class="fas fa-bars"></i>
                 </div>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <a class='logo-link' href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <div class="site-branding header-logo">
                         <h1 class="site-title screen-reader-text">
                             <?php bloginfo( 'name' ); ?>

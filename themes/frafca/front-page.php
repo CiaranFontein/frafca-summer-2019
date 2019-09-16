@@ -97,7 +97,7 @@ get_header(); ?>
                     $button = $content['button'];
                     ?>
 
-                    <div class="round-rect-card purple">
+                    <div class="fp-get-involved-card round-rect-card purple">
                         <div class="card-icon">
                             <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
                         </div>

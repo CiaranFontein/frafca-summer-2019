@@ -48,6 +48,7 @@ a {
         align-items: center;
         border: 2px solid black;
         margin: 20px 0px;
+        font-size: 1.25rem;
 
         @include desktop {
             border: 0;
@@ -58,18 +59,19 @@ a {
 
             @include desktop {
                 border: 0;
-                width: 600px;
-                margin-right: 50px;
             }
         }
 
         .search-field {
-            padding: 0 20px;
+            padding: 0.35rem 1.25rem;
             outline: none;
             color: #000;
+            border-top-left-radius: 0.65rem;
+            border-bottom-left-radius: 0.65rem;
 
             @include desktop {
-                border: 2px solid #000;
+                border: 1px solid #000;
+                border-right: none;
                 width: 550px;
             }
 
@@ -92,9 +94,10 @@ a {
         }
 
         @include desktop {
-            padding: 0.8rem 2.5rem;
+            padding: 0.4rem 2.5rem;
             background: $color__background-button;
-            border-radius: 0.65rem;
+            border-top-right-radius: 0.65rem;
+            border-bottom-right-radius: 0.65rem;
 
             &:after {
                 font-family: $font__main;
@@ -158,6 +161,10 @@ a {
 
         @include desktop {
             justify-content: space-between;
+
+            a {
+                text-decoration: none;
+            }
         }
     }
 
@@ -176,6 +183,9 @@ a {
         position: relative;
 
         @include desktop {
+            line-height: 3.8rem;
+            vertical-align: center;
+            font-size: 3.2rem;
             z-index: 5;
         }
     }
@@ -334,8 +344,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // height: 100%;
-    // padding: 0.8rem 0rem;
     height: 80px;
 
     .header-menu {

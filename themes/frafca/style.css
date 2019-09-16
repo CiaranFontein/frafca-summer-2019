@@ -1729,7 +1729,8 @@ a {
     .tribe-events-page-template .frafca-events-sub-nav span {
       display: none; }
     .tribe-events-page-template .frafca-events-sub-nav h1 {
-      font-size: 1rem; }
+      font-size: 1rem;
+      width: 100%; }
       @media (min-width: 1200px) {
         .tribe-events-page-template .frafca-events-sub-nav h1 {
           font-size: 1.5rem; } }
@@ -1789,8 +1790,8 @@ a {
     padding: 8px; }
   @media (min-width: 1200px) {
     .tribe-events-page-template .tribe-bar-filters-inner .tribe-clearfix {
-      -webkit-transform: translateY(-96px);
-              transform: translateY(-96px);
+      -webkit-transform: translateY(-92px);
+              transform: translateY(-92px);
       background: rgba(255, 255, 255, 0.7); } }
   .tribe-events-page-template #tribe-events-content a {
     font-weight: bold; }
@@ -1805,6 +1806,10 @@ a {
     border: none; }
   .tribe-events-page-template .frafca-events-nav-next a {
     color: white; }
+  .tribe-events-page-template .frafca-event-on-mobile {
+    text-decoration: none; }
+  .tribe-events-page-template .tribe-events-listing {
+    border-bottom: solid #323232 1px; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1968,6 +1973,25 @@ object {
   width: 150px;
   margin: 0 auto; }
 
+.front-page-get-involved .fp-get-involved-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 30rem; }
+  .front-page-get-involved .fp-get-involved-card p {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
 .front-page-partners {
   background: #323232;
   margin: 2rem auto; }
@@ -1999,7 +2023,7 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 625px; }
+    height: 500px; }
     .front-page-partners .partner-content .partner-logo {
       width: 150px; }
 
