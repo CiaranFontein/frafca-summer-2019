@@ -1,7 +1,7 @@
 (function ($) {
     
     const $desktop_width = 1200;
-    const $targets = $('.frafca_swipte_article');
+    const $targets = $('.frafca_swipe_article');
     let arrayOriginal = [],
         horizontalScrollBegin;
 
