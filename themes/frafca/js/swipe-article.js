@@ -2,8 +2,7 @@
     
     const $desktop_width = 1200;
     const $targets = $('.frafca_swipe_article');
-    let arrayOriginal = [],
-        horizontalScrollBegin;
+    let arrayOriginal = [];
 
     // Save the article in the array
     $targets.each((index, value)=> {
