@@ -1754,6 +1754,8 @@ a {
   .tribe-events-page-template .tribe-events-notices {
     -webkit-transform: translateY(-80px);
             transform: translateY(-80px); }
+  .tribe-events-page-template .tribe-events-listing {
+    color: black; }
 
 /*--------------------------------------------------------------
 # Media
