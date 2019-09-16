@@ -11,6 +11,8 @@ get_header(); ?>
 <section id="primary" class="content-area search-results-content">
 	<main id="main" class="site-main" role="main">
 
+		<!-- <?php get_search_form(); ?> -->
+
 		<?php if (have_posts()) : ?>
 
 			<header class="page-header search-page-header">

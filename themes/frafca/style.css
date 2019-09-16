@@ -2241,9 +2241,11 @@ object {
 /* Search Results Page */
 .search-results-content {
   color: #000000;
-  min-height: 51vh;
+  min-height: 55vh;
   margin: 2rem auto;
   padding: 2rem 2rem; }
+  .search-results-content h1 {
+    font-size: 28px; }
   .search-results-content a {
     color: #265BC7;
     font-size: 30px; }
@@ -2258,3 +2260,11 @@ object {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 3rem; }
+  @media (min-width: 1200px) {
+    .search-results-content {
+      margin: 4rem auto;
+      padding: 3rem 8rem; }
+      .search-results-content h1 {
+        font-size: 31px; }
+      .search-results-content a {
+        font-size: 33px; } }

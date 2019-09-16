@@ -598,9 +598,13 @@
 /* Search Results Page */
 .search-results-content {
     color: #000000;
-    min-height: 51vh;
+    min-height: 55vh;
     margin: $base__space-unit * 2 auto;
     padding: $base__space-unit * 2 $base__space-unit * 2;
+
+    h1 {
+        font-size: $font__size_main + 6;
+    }
 
     a {
         color: $color__link-search;
@@ -615,11 +619,19 @@
         margin-bottom: $base__space-unit * 3;
     }
 
-    // a {
-    //     color: $color__link-search;
-    //     font-size: $font__size_main + 6;
-    // }
-
-
     .search-count {}
+
+    @include desktop {
+        margin: $base__space-unit * 4 auto;
+        padding: $base__space-unit * 3 $base__space-unit * 8;
+
+        h1 {
+            font-size: $font__size_main + 9;
+        }
+
+        a {
+            font-size: $font__size_main + 11;
+            // padding-bottom: $base__space-unit *4;
+        }
+    }
 }
