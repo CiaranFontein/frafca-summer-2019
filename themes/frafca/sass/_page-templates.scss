@@ -130,11 +130,28 @@
         width: 150px;
         margin: 0 auto;
     }
+
+
+    .fp-get-involved-card {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+
+        height: 30rem;
+
+        p {
+            padding-left: $base__space-unit;
+            padding-right: $base__space-unit;
+        }
+    }
 }
 
 .front-page-partners {
     background: $color__background-black;
     margin: $base__space-unit * 2 auto;
+
 
     h2 {
         padding: $base__space-unit * 2 0;
@@ -142,6 +159,8 @@
     }
 
     .fp-partners-carousel {
+
+
         .previous {
             left: 37%;
         }
@@ -170,7 +189,7 @@
         justify-content: center;
         align-items: center;
 
-        height: 625px;
+        height: 500px;
 
         .partner-logo {
             width: 150px;

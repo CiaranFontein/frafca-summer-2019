@@ -1968,6 +1968,25 @@ object {
   width: 150px;
   margin: 0 auto; }
 
+.front-page-get-involved .fp-get-involved-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 30rem; }
+  .front-page-get-involved .fp-get-involved-card p {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
 .front-page-partners {
   background: #323232;
   margin: 2rem auto; }
@@ -1999,7 +2018,7 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 625px; }
+    height: 500px; }
     .front-page-partners .partner-content .partner-logo {
       width: 150px; }
 
