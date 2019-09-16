@@ -36,9 +36,11 @@ get_header(); ?>
                     ?>
 
                     <div class="round-rect-card pink fp-about-us-cell">
+
                         <div class="card-icon">
                             <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
                         </div>
+
                         <div class="card-meta">
                             <h3><?php echo $title; ?></h3>
                             <p><?php echo $description; ?></p>
