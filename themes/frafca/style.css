@@ -1780,7 +1780,6 @@ a {
               transform: translateY(-96px);
       background: rgba(255, 255, 255, 0.7); } }
   .tribe-events-page-template #tribe-events-content a {
-    color: #16605C;
     font-weight: bold; }
   .tribe-events-page-template .events-archive,
   .tribe-events-page-template .events-gridview,
