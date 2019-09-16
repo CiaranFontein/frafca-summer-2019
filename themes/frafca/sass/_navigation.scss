@@ -116,10 +116,26 @@ a {
     align-items: center;
     transition: $time__transition;
     z-index: 9999;
-    
+
     &.darkmode {
         z-index: 1;
         background-color: rgba(47, 43, 92, .6);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+        backdrop-filter: blur(4px);
+
+        .hamburger-icon,
+        .main-navigation i {
+            color: $color__background-screen;
+        }
+
+        .hamburger-icon--open {
+            color: $color__text-sec;
+        }
+    }
+
+    &.mediummode {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .3);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
         backdrop-filter: blur(4px);
 
@@ -275,13 +291,16 @@ a {
 
                     li {
                         padding: .5rem;
+
                         &::before {
                             display: none;
                         }
+
                         a {
                             padding: 0;
                             width: 100%;
                         }
+
                         &:last-child {
                             margin-bottom: .5rem;
                         }

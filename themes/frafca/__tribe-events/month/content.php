@@ -45,48 +45,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 	<!-- #tribe-events-footer -->
-	<?php do_action( 'tribe_events_after_footer' ) ?>
-	<?php tribe_get_template_part( 'month/mobile' ); ?>
-	<?php tribe_get_template_part( 'month/tooltip' ); ?>
+	<!-- <?php //do_action( 'tribe_events_after_footer' ) ?> -->
+	<!-- <?php //tribe_get_template_part( 'month/mobile' ); ?> -->
+	<!-- <?php //tribe_get_template_part( 'month/tooltip' ); ?> -->
+
 </div><!-- #tribe-events-content -->
-
-<section class="tribe-events-listing">
-		<?php
-		if(!is_singular('tribe_events')):
-
-			$event_posts = get_posts( array(
-				'posts_per_page' => 5,
-				'post_type'       => 'tribe_events'
-			) );
-
-			var_dump($event_posts);
-
-			if ( $event_posts ) {
-				foreach ( $event_posts as $post ) : setup_postdata( $post ); 
-				
-				// var_dump(get_post_meta($post->ID));
-				// echo $post->ID;
-
-				$venue_id = get_post_meta($post->ID, '_EventVenueID')[0];
-				$venue_address = get_post_meta($venue_id, '_VenueAddress')[0];
-
-				echo "venue address <h2>" . $venue_address . "</h2>";
-
-				$event_location_address = get_post_meta($post->ID, '_VenueAddress')[0];
-				// var_dump($event_location_address);
-
-				$event_start_date = get_post_meta($post->ID, '_EventStartDate')[0];
-				echo $event_start_date;
-
-				$event_end_date = get_post_meta($post->ID, '_EventEndDate')[0];
-				echo $event_end_date;
-				?>
-					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-				<?php
-				endforeach;
-				wp_reset_postdata();
-			}
-
-		endif;
-		?>
-</section>
