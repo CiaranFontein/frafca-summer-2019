@@ -2036,9 +2036,9 @@ object {
             scroll-snap-type: x mandatory;
         -webkit-transition: height 0.4s;
         transition: height 0.4s; }
-      .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article {
+      .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article {
         padding: 0; }
-        .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article .swipe-wrapper {
+        .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article .swipe-wrapper {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -2054,7 +2054,7 @@ object {
               scroll-snap-type: x mandatory;
           -webkit-transition: height 0.4s;
           transition: height 0.4s; }
-        .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article .swipe-element {
+        .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article .swipe-element {
           -webkit-box-flex: 0;
               -ms-flex: none;
                   flex: none;
@@ -2063,7 +2063,7 @@ object {
           margin: 0;
           margin-bottom: 1rem;
           scroll-snap-align: start; }
-        .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article .navigation-dots {
+        .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article .navigation-dots {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -2073,7 +2073,7 @@ object {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center; }
-          .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article .navigation-dots .dot {
+          .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article .navigation-dots .dot {
             width: .5rem;
             height: .5rem;
             background-color: #BBBBBB;
@@ -2081,12 +2081,12 @@ object {
             margin: 0 .5rem 0 0;
             -webkit-transition: 0.4s;
             transition: 0.4s; }
-            .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article .navigation-dots .dot:last-child {
+            .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article .navigation-dots .dot:last-child {
               margin-right: 0; }
-            .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article .navigation-dots .dot.active {
+            .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article .navigation-dots .dot.active {
               background-color: #666; }
         @media (min-width: 1200px) {
-          .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipte_article {
+          .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article .frafca_swipe_article {
             padding: 0 1.5rem; } }
       .page-template-page-about .grid-cards-element.frafca_swipe_article.frafca_swipe_article:first-child {
         padding: 0; }
