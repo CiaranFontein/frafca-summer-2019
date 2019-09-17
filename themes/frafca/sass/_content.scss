@@ -773,7 +773,7 @@
             color:white;
             background-color: $color__background-banner;
             align-items: center;
-            transform: translateY(-80px);
+            transform: translateY(-70px);
             margin:0;
             height: 56px;
                     a {
@@ -813,8 +813,12 @@
 
         #tribe-bar-form {
             background: hsla(0,0%,100%,.3);
-            @include desktop {
-            transform: translateY(-97px);
+                @media screen and (min-width: 728px) {
+                    transform: translateY(-93px);
+                }    
+          
+                @include desktop {
+                    transform: translateY(-97px);
             }
         }
 
@@ -851,9 +855,13 @@
             border-radius: 10px;
             text-align: center;
             justify-content: center;
+                    @media screen and (min-width: 728px) {
+                        display:none;
+                    }
                     @include desktop {
                         display:none;
                     }
+
         }
 
         .tribe-bar-submit {
@@ -877,9 +885,12 @@
 
         .tribe-bar-filters-inner 
         .tribe-clearfix {
+            @media screen and (min-width: 728px) {
+                transform: translateY(-92px);
+            }
             @include desktop{
-            transform: translateY(-92px);
-            background: hsla(0,0%,100%,.7);
+                transform: translateY(-92px);
+                background: hsla(0,0%,100%,.7);
             }
 
         }
@@ -925,7 +936,7 @@
             &::before {
                 content: '';
                 position: absolute;
-                left: 5%;
+                left: 2rem;
                 height: 80%;
                 width: 5px;
                 background: #323232;
@@ -952,14 +963,31 @@
             display:none;
         }
 
-        .tribe-events-ical
+        .tribe-events-ical,
         .tribe-events-button {
             display:none;
+            transform: translateY(-95px);
         }
 
        
         .tribe-events-sub-nav li {
             width: 20%;
+        }
+
+        .tribe-events-listing {
+            transform: translateY(-90px);
+                    h4 {
+                        font-size: 16px;
+                        // font-weight: 500;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    @include desktop {
+                        display:none;
+                    }
         }
 
     
