@@ -22,7 +22,6 @@
   $(window).on('click', function(evt) {
     let target = evt.target;
     if ($header[0].contains(target)) {
-      console.log('clicky header');
       return;
     }
     evt.preventDefault();

@@ -483,7 +483,7 @@ a {
             li {
                 a {
                     @include white-button;
-                    color: #000;
+                    color: $color__background-black;
                     transition: 0.3s all ease-in-out;
 
                     &:hover {
