@@ -119,16 +119,21 @@ get_header(); ?>
                 $partners = frafca_cfs('partners');
                 foreach ($partners as $partner) :
                     $partner_name = $partner['partner_name'];
-                    $img_partner = $partner['partner_logo'];
+                    $partner_image = $partner['partner_logo'];
+                    $partner_url = $partner['partner_url']
                     ?>
 
                     <div class="partner-content">
                         <div class="partner-logo">
-                            <img src="<?php echo $img_partner; ?>" alt="<?php echo $partner_name; ?>">
+                            <a href="<?php echo $partner_url['url']; ?>" target="<?php echo $partner_url['target']; ?>">
+                                <img src="<?php echo $partner_image; ?>" alt="<?php echo $partner_name; ?>">
+                            </a>
                         </div>
                         <p>
                             <?php echo $partner_name; ?>
                         </p>
+
+
                     </div>
 
                 <?php endforeach; ?>
