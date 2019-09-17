@@ -1,25 +1,30 @@
 (function($) {
   let searchActive = false;
   let $logo = $('.header-logo');
-  let $homeURL = $logo.attr('href');
   let $logoBackground = $logo.css('background');
   let $header = $('.site-header');
   let $container = $('.search-field-container');
   let $searchIcon = $('.search-icon');
 
-  $searchIcon.on('click', function() {
+  $searchIcon.on('click', function(evt) {
+    evt.preventDefault();
     openSearchField();
   });
 
-  $('.logo-link').on('click', function(event) {
+  $('.logo-link').on('click', function(evt) {
     if (searchActive) {
+      evt.preventDefault();
       closeSearchField();
-      event.preventDefault();
       searchActive = false;
     }
   });
 
-  $('.frafca-hero-image').on('click', function() {
+  $(window).on('click', function(evt) {
+    let target = evt.target;
+    if ($header[0].contains(target)) {
+      return;
+    }
+    evt.preventDefault();
     closeSearchField();
   });
 
@@ -29,7 +34,6 @@
     $container.addClass('search-field-container--active');
     $container.css({ height: $header.height() + 'px' });
     $logo.css('background', 'none');
-    // $logo.attr('href', '#');
     $logo.html('X');
   }
 
@@ -37,8 +41,6 @@
     $container.stop().fadeOut(300);
     $container.removeClass('search-field-container--active');
     $logo.css('background', $logoBackground);
-    $logo.attr('href', $homeURL);
-    // $logo.attr('onclick', 'return true');
     $logo.empty();
   }
 })(jQuery);
