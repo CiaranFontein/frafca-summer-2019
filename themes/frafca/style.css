@@ -513,7 +513,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 2px solid black;
+    border: 2px solid #323232;
     margin: 20px 0px;
     font-size: 1.25rem; }
     @media (min-width: 1200px) {
@@ -838,7 +838,7 @@ a {
       position: absolute;
       top: 75px;
       background: white;
-      color: black;
+      color: #323232;
       left: 0; }
       @media (min-width: 1200px) {
         .main-navigation ul .sub-menu {
@@ -855,7 +855,7 @@ a {
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
-          color: black;
+          color: #323232;
           line-height: 4.5rem; }
           .main-navigation ul .sub-menu li a:hover {
             text-shadow: none;
@@ -880,13 +880,13 @@ a {
     @media (min-width: 1200px) {
       .main-navigation .side-header-menu {
         display: block;
-        color: #000; }
+        color: #323232; }
         .main-navigation .side-header-menu li a {
           padding: 0.8rem 1.5rem;
           border-radius: 0.65rem;
           background: #fff;
           margin: 0.15rem;
-          color: #000;
+          color: #323232;
           -webkit-transition: 0.1s all ease-in-out;
           transition: 0.1s all ease-in-out; }
           .main-navigation .side-header-menu li a:hover {
@@ -1230,7 +1230,7 @@ a {
 
 .white {
   background-color: transparent;
-  color: #0D0D0D; }
+  color: #323232; }
 
 .error-no-data {
   color: #BBBBBB; }

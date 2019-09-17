@@ -46,7 +46,7 @@ a {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        border: 2px solid black;
+        border: 2px solid $color__background-black;
         margin: 20px 0px;
         font-size: 1.25rem;
 
@@ -420,7 +420,7 @@ a {
             position: absolute;
             top: 75px;
             background: white;
-            color: black;
+            color: $color__background-black;
             left: 0;
 
             @include desktop {
@@ -442,7 +442,7 @@ a {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    color: black;
+                    color: $color__background-black;
                     line-height: 4.5rem;
 
                     &:hover {
@@ -478,12 +478,12 @@ a {
 
         @include desktop {
             display: block;
-            color: #000;
+            color: $color__background-black;
 
             li {
                 a {
                     @include white-button;
-                    color: #000;
+                    color: $color__background-black;
                     transition: 0.1s all ease-in-out;
 
                     &:hover {
