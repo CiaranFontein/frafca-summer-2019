@@ -1,6 +1,7 @@
 <!-- hero contents -->
 <?php 
-    if ( !empty( $heros['banner_image'] ) ) :
+    if ( !empty( last_frafca_cfs('banner') ) ) :
+
         $heros = last_frafca_cfs('banner');
         $hero_img = $heros['banner_image'];
         $hero_title = $heros['banner_title'];
@@ -32,4 +33,4 @@
                 <?php echo $hero_description; ?>
             </p>
         </div>
-    </div>
+    </div> <!-- end .hero-image-page -->
