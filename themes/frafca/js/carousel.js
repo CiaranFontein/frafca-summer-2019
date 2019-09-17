@@ -17,8 +17,8 @@
       cellAlign: 'left',
       wrapAround: true,
       selectedAttraction: 0.01,
-      friction: 0.15,
-      autoPlay: 3000
+      // friction: 0.15,
+      autoPlay: 2000
     });
     console.log(fpPartners);
   });
