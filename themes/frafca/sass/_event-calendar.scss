@@ -25,3 +25,274 @@
     }
 }
 /* Hero Image - tribe-events-page **** END */
+
+
+/* Calendar page **** Start*/
+.tribe-events-page-template {
+    color:black;
+        .header-meta {
+            text-align: center;
+        }
+
+        
+        .frafca-events-page-title {
+            color:white;
+            background-color: $color__background-banner;
+            margin:auto;
+        }
+
+        .frafca-events-calendar  {
+            thead {
+
+                th {
+
+                    background-color: $color__background-banner;
+
+                } 
+
+            }
+            
+        }
+
+        .frafca-events-sub-nav {
+            display: flex;
+            justify-content: space-between;
+            width:100%;
+            color:white;
+            background-color: $color__background-banner;
+            align-items: center;
+            transform: translateY(-70px);
+            margin:0;
+            height: 56px;
+                    a {
+                        color:white;
+                        text-decoration: white;
+                            @include desktop {
+                                font-size: 17px;
+                                font-weight: 300;
+                            }
+                    }
+
+                    span {
+                        display:none;
+                    }
+
+                    h1 {
+                        font-size: 1rem;
+                        width:85%;
+                            @include desktop {
+                                font-size: 1.5rem;
+                            }
+                    }
+
+        }
+
+        #tribe-events-header .tribe-events-sub-nav {
+            padding: 0 3rem;
+        }
+
+        #tribe-events-footer:after, #tribe-events-header:after {
+            left: 0;
+        }
+
+        #tribe-events-footer:before, #tribe-events-header:before {
+            right: 0;
+        }
+
+        #tribe-bar-form {
+            background: hsla(0,0%,100%,.3);
+                @media screen and (min-width: 728px) {
+                    transform: translateY(-93px);
+                }    
+          
+                @include desktop {
+                    transform: translateY(-97px);
+            }
+        }
+
+        #tribe-bar-collapse-toggle {
+            background: hsla(0,0%,100%,.3);
+            transform: translateY(-55px);
+        }
+
+        .tribe-bar-views-inner {
+            background: hsla(0,0%,100%,.3);
+
+        }
+
+        .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type=text] {
+            font-size: 1.2rem;
+        }
+
+        .label-tribe-bar-date input[type=text] {
+
+        }
+
+        .tribe-events-calendar {
+            transform: translateY(-82px);
+        }
+
+        #tribe-bar-form .tribe-bar-submit input[type=submit] {
+            background: $color__background-button;
+            background-image: none;
+            color: $color__text-sec;
+            font-size: 13px;
+            margin: $base__space-unit * 2 auto;
+            padding: $base__space-unit - 0.25 0;
+            width: 205px;
+            border-radius: 10px;
+            text-align: center;
+            justify-content: center;
+                    @media screen and (min-width: 728px) {
+                        display:none;
+                    }
+                    @include desktop {
+                        display:none;
+                    }
+
+        }
+
+        .tribe-bar-submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        #tribe-bar-form.tribe-bar-collapse .tribe-bar-filters {
+            background: white;
+        }
+
+
+        .tribe-events-notices {
+            transform: translateY(-80px);
+        }
+
+        .fa-angle-right,
+        .fa-angle-left {
+            padding: 8px;
+        }
+
+        .tribe-bar-filters-inner 
+        .tribe-clearfix {
+            @media screen and (min-width: 728px) {
+                transform: translateY(-92px);
+            }
+            @include desktop{
+                transform: translateY(-92px);
+                background: hsla(0,0%,100%,.7);
+            }
+
+        }
+
+        #tribe-events-content a {
+            // color: #16605C;
+            font-weight: bold;
+        }
+
+        .events-archive,
+        .events-gridview, 
+        .tribe-events-last,
+        .type-tribe_events {
+            // border-left: 5px solid #334C71;
+            background:rgba(22, 96, 92, 0.1);
+
+        }
+
+        .tribe-events-calendar thead th {
+            background-color: white;
+            color: black;
+            border:none;
+        }
+
+        .frafca-events-nav-next a {
+            color: white;
+        }
+
+        .frafca-event-on-mobile {
+            text-decoration: none;
+        }
+
+        .frafca-events-listing-mobile {
+            border-bottom: 1px solid #323232;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem 3rem;
+            height: auto;
+
+            position:relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 2rem;
+                height: 80%;
+                width: 5px;
+                background: #323232;
+            }
+                p{
+                    font-size: 12px;
+                    margin-bottom:0;
+                }
+        }
+
+        #tribe-events p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tribe-mobile-container {
+            // display:none;
+        }
+
+        .frafca-events-mobile-old-list {
+            display:none;
+        }
+
+        .tribe-mobile-day-heading {
+            display:none;
+        }
+
+        .tribe-events-ical,
+        .tribe-events-button {
+            display:none;
+            transform: translateY(-95px);
+        }
+
+       
+        .tribe-events-sub-nav li {
+            width: 20%;
+        }
+
+        .tribe-events-listing {
+            transform: translateY(-90px);
+                    h4 {
+                        font-size: 16px;
+                        // font-weight: 500;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    @include desktop {
+                        display:none;
+                    }
+        }
+
+        #tribe-bar-form {
+            
+            label {
+                @include desktop {
+                    font-size: 16px;
+                }
+            }
+
+            ::placeholder {
+                color: white;
+                opacity: 1;
+            }
+
+        }
+
+    
+
+}
