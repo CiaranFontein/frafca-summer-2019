@@ -2380,7 +2380,9 @@ object {
     .error404 .main-navigation ul li a {
       color: #323232; }
     .error404 .sub-menu {
-      border: 1px solid #ccc; } }
+      border: 1px solid #ccc; }
+    .error404 .side-header-menu .menu li:first-child a {
+      border: 1px solid #323232; } }
   .error404 .site-content {
     width: 80%;
     margin: 120px auto 2rem auto;

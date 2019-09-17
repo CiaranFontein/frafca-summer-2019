@@ -7,11 +7,22 @@
     }
 
     @include desktop {
-        .main-navigation ul li a {
-            color: $color__text-sec;
+        .main-navigation ul li {
+
+            a {
+                color: $color__text-sec;
+            }
+
         }
         .sub-menu {
             border: 1px solid $color__background-hr;
+        }
+        .side-header-menu {
+            .menu li:first-child {
+                a {
+                    border: 1px solid $color__background-black;
+                }
+            }
         }
     }
 
