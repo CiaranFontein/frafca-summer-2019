@@ -140,6 +140,8 @@
         text-align: center;
 
         height: 30rem;
+        margin-bottom: $base__space-unit * 2;
+        padding: $base__space-unit 0;
 
         p {
             padding-left: $base__space-unit;
@@ -159,6 +161,10 @@
     }
 
     .fp-partners-carousel {
+
+        .flickity-viewport {
+            height: 400px !important;
+        }
 
 
         .previous {
@@ -189,10 +195,14 @@
         justify-content: center;
         align-items: center;
 
-        height: 500px;
+        margin-top: $base__space-unit * 2;
 
         .partner-logo {
             width: 150px;
+        }
+
+        @include desktop {
+            width: 25%;
         }
     }
 }

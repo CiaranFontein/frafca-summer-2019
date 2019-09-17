@@ -1,5 +1,5 @@
-(function ($) {
-  $(document).ready(function () {
+(function($) {
+  $(document).ready(function() {
     const fpAboutUsContent = document.querySelector('.fp-about-us-carousel');
     const fpAbout = new Flickity(fpAboutUsContent, {
       // carousel options
@@ -17,8 +17,8 @@
       cellAlign: 'left',
       wrapAround: true,
       selectedAttraction: 0.01,
-      friction: 0.15,
-      autoPlay: 3000
+      // friction: 0.15,
+      autoPlay: 2000
     });
     console.log(fpPartners);
   });
