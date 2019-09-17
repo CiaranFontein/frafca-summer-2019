@@ -35,6 +35,7 @@
     $container.css({ height: $header.height() + 'px' });
     $logo.css('background', 'none');
     $logo.html('X');
+    $('.search-field').focus();
   }
 
   function closeSearchField() {
