@@ -1,0 +1,27 @@
+/* Hero Image - tribe-events-page **** START */
+.tribe-events-page-template {
+
+    .hero-image-page {
+        padding: 10%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 4rem 1rem;
+        width: 100%;
+        height: 36vh;
+        text-align: center;
+    }
+    
+    .tribe-events-sub-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        
+        h1 {
+            flex-grow: 1;
+            margin: 0;
+        }
+    }
+}
+/* Hero Image - tribe-events-page **** END */
