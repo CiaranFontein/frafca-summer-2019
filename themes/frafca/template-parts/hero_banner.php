@@ -1,5 +1,6 @@
 <!-- hero contents -->
 <?php 
+    if ( !empty( $heros['banner_image'] ) ) :
         $heros = last_frafca_cfs('banner');
         $hero_img = $heros['banner_image'];
         $hero_title = $heros['banner_title'];
@@ -14,6 +15,11 @@
         
         background-repeat: no-repeat;                
     ">
+    <?php else: ?>
+        <div class="hero-image-page" style="
+            background: rgba(47,43,92,1);
+        ">
+    <?php endif; ?> <!-- endif !empty( $heros['banner_image'] ) -->
         <h1 class="page-title screen-reader-text">
             <?php single_post_title(); ?>
         </h1>     
