@@ -513,8 +513,9 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 2px solid black;
-    margin: 20px 0px; }
+    border: 2px solid #323232;
+    margin: 20px 0px;
+    font-size: 1.25rem; }
     @media (min-width: 1200px) {
       .search-field-container .search-form {
         border: 0;
@@ -523,16 +524,17 @@ a {
                 justify-content: center; } }
     @media (min-width: 1200px) {
       .search-field-container .search-form .search-label {
-        border: 0;
-        width: 600px;
-        margin-right: 50px; } }
+        border: 0; } }
     .search-field-container .search-form .search-field {
-      padding: 0 20px;
+      padding: 0.35rem 1.25rem;
       outline: none;
-      color: #000; }
+      color: #000;
+      border-top-left-radius: 0.65rem;
+      border-bottom-left-radius: 0.65rem; }
       @media (min-width: 1200px) {
         .search-field-container .search-form .search-field {
-          border: 2px solid #000;
+          border: 1px solid #000;
+          border-right: none;
           width: 550px; } }
   .search-field-container .search-button {
     padding: 0.8rem 1.5rem;
@@ -551,9 +553,10 @@ a {
       content: '\f002'; }
     @media (min-width: 1200px) {
       .search-field-container .search-button {
-        padding: 0.8rem 2.5rem;
+        padding: 0.4rem 2.5rem;
         background: #FFD400;
-        border-radius: 0.65rem; }
+        border-top-right-radius: 0.65rem;
+        border-bottom-right-radius: 0.65rem; }
         .search-field-container .search-button:after {
           font-family: "Raleway", sans-serif;
           content: "Search"; } }
@@ -617,7 +620,9 @@ a {
       .site-header .header-container {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; } }
+                justify-content: space-between; }
+        .site-header .header-container a {
+          text-decoration: none; } }
   @media (min-width: 1200px) {
     .site-header {
       background: rgba(255, 255, 255, 0.3);
@@ -633,6 +638,9 @@ a {
     position: relative; }
     @media (min-width: 1200px) {
       .site-header .header-logo {
+        line-height: 3.8rem;
+        vertical-align: center;
+        font-size: 3.2rem;
         z-index: 5; } }
   @media (min-width: 1200px) {
     .site-header {
@@ -830,7 +838,7 @@ a {
       position: absolute;
       top: 75px;
       background: white;
-      color: black;
+      color: #323232;
       left: 0; }
       @media (min-width: 1200px) {
         .main-navigation ul .sub-menu {
@@ -847,7 +855,7 @@ a {
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
-          color: black;
+          color: #323232;
           line-height: 4.5rem; }
           .main-navigation ul .sub-menu li a:hover {
             text-shadow: none;
@@ -872,13 +880,14 @@ a {
     @media (min-width: 1200px) {
       .main-navigation .side-header-menu {
         display: block;
-        color: #000; }
+        color: #323232;
+        font-weight: 900; }
         .main-navigation .side-header-menu li a {
           padding: 0.8rem 1.5rem;
           border-radius: 0.65rem;
           background: #fff;
           margin: 0.15rem;
-          color: #000;
+          color: #323232;
           -webkit-transition: 0.1s all ease-in-out;
           transition: 0.1s all ease-in-out; }
           .main-navigation .side-header-menu li a:hover {
@@ -1222,7 +1231,7 @@ a {
 
 .white {
   background-color: transparent;
-  color: #0D0D0D; }
+  color: #323232; }
 
 .error-no-data {
   color: #BBBBBB; }
@@ -1808,8 +1817,28 @@ a {
     color: white; }
   .tribe-events-page-template .frafca-event-on-mobile {
     text-decoration: none; }
-  .tribe-events-page-template .tribe-events-listing {
-    border-bottom: solid #323232 1px; }
+  .tribe-events-page-template .frafca-events-listing-mobile {
+    border-bottom: 1px solid #323232;
+    border-left: 3px solid #323232;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 3rem;
+    height: auto; }
+    .tribe-events-page-template .frafca-events-listing-mobile p {
+      font-size: 12px;
+      margin-bottom: 0; }
+  .tribe-events-page-template #tribe-events p:last-child {
+    margin-bottom: 0; }
+  .tribe-events-page-template .tribe-mobile-container {
+    display: none; }
 
 /*--------------------------------------------------------------
 # Media
@@ -2344,31 +2373,58 @@ object {
 
 .error404 {
   color: #323232; }
+  .error404 .hamburger-icon,
+  .error404 .main-navigation i {
+    color: #323232; }
+  @media (min-width: 1200px) {
+    .error404 .main-navigation ul li a {
+      color: #323232; }
+    .error404 .sub-menu {
+      border: 1px solid #ccc; }
+    .error404 .side-header-menu .menu li:first-child a {
+      border: 1px solid #323232; } }
   .error404 .site-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 80%;
-    min-height: 80vh;
-    margin: 0 auto;
+    margin: 120px auto 2rem auto;
     text-align: center; }
     .error404 .site-content h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 2rem; }
+      @media (min-width: 1200px) {
+        .error404 .site-content h1 {
+          font-size: 4rem; } }
     .error404 .site-content h2 {
+      font-size: 1.2rem;
       margin-bottom: 1rem; }
+      @media (min-width: 1200px) {
+        .error404 .site-content h2 {
+          font-size: 2rem; } }
     .error404 .site-content p {
+      font-size: 1rem;
       margin-bottom: 3rem; }
+      @media (min-width: 1200px) {
+        .error404 .site-content p {
+          font-size: 1.5rem; } }
     .error404 .site-content a {
       margin: 0 auto;
-      width: 50%; }
+      width: 50%;
+      max-width: 200px; }
     @media (min-width: 1200px) {
       .error404 .site-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        min-height: 80vh;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center; }
+                justify-content: center;
+        margin: 0 auto; }
         .error404 .site-content a {
           width: 200px; } }
+
+.site-header {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }

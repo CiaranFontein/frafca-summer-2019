@@ -101,7 +101,7 @@
 
 .white {
     background-color: transparent;
-    color: #0D0D0D;
+    color: $color__background-black;
 }
 
 .error-no-data {
@@ -908,8 +908,27 @@
             text-decoration: none;
         }
 
-        .tribe-events-listing {
-            border-bottom: solid #323232 1px;
+        .frafca-events-listing-mobile {
+            border-bottom: 1px solid #323232;
+            border-left: 3px solid #323232;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem 3rem;
+            height: auto;
+
+                p{
+                    font-size: 12px;
+                    margin-bottom:0;
+                }
+        }
+
+        #tribe-events p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tribe-mobile-container {
+            display:none;
         }
 
 }
