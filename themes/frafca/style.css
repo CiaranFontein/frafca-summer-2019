@@ -532,12 +532,12 @@ a {
     .search-field-container .search-form .search-field {
       padding: 0.35rem 1.25rem;
       outline: none;
-      color: #000;
-      border-top-left-radius: 0.65rem;
-      border-bottom-left-radius: 0.65rem; }
+      color: #000; }
       @media (min-width: 1200px) {
         .search-field-container .search-form .search-field {
           border: 1px solid #000;
+          border-top-left-radius: 0.65rem;
+          border-bottom-left-radius: 0.65rem;
           border-right: none;
           width: 550px; } }
   .search-field-container .search-button {

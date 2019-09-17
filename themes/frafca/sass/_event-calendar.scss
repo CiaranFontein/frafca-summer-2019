@@ -238,9 +238,8 @@
         #tribe-events p:last-child {
             margin-bottom: 0;
         }
-
-        .tribe-mobile-container {
-            // display:none;
+        #tribe-mobile-container {
+            display:none;
         }
 
         .frafca-events-mobile-old-list {
@@ -263,7 +262,7 @@
         }
 
         .tribe-events-listing {
-            transform: translateY(-90px);
+            // transform: translateY(-90px);
                     h4 {
                         font-size: 16px;
                         // font-weight: 500;
