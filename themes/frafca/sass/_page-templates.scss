@@ -44,21 +44,7 @@
     }
 
     .fp-about-us-carousel {
-        .previous {
-            left: 37%;
-        }
-
-        .next {
-            right: 37%;
-        }
-
-        .flickity-button {
-            top: 78%;
-        }
-
-        .flickity-page-dots {
-            display: none;
-        }
+        @include flickity-center-buttons-no-dots;
     }
 
     .fp-about-us-cell {
@@ -165,21 +151,7 @@
         }
 
 
-        .previous {
-            left: 37%;
-        }
-
-        .next {
-            right: 37%;
-        }
-
-        .flickity-button {
-            top: 78%;
-        }
-
-        .flickity-page-dots {
-            display: none;
-        }
+        @include flickity-center-buttons-no-dots;
     }
 
     .partner-content {
