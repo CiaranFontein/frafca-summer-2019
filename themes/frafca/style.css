@@ -258,6 +258,10 @@ h2 {
   .hero-image-page h1, .hero-image-page
   h2 {
     color: #FFD400; }
+    .tribe-events-page-template .hero-image-page h1, .tribe-events-page-template .hero-image-page
+    h2 {
+      font-size: 1.2rem;
+      color: white; }
 
 @media (min-width: 1200px) {
   .page-template-page-about h3 {
@@ -1947,9 +1951,7 @@ object {
   position: absolute;
   bottom: 0;
   margin: 0 auto;
-  text-align: center;
-  right: 35%;
-  left: 35%; }
+  text-align: center; }
 
 .front-page-about-us {
   color: #2d2d2d;
@@ -2466,7 +2468,42 @@ object {
         margin: 0 auto; }
         .error404 .site-content a {
           width: 200px; } }
+  .error404 .site-header {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
 
-.site-header {
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+/* Hero Image - tribe-events-page **** START */
+.tribe-events-page-template .hero-image-page {
+  padding: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4rem 1rem;
+  width: 100%;
+  height: 36vh;
+  text-align: center; }
+
+.tribe-events-page-template .tribe-events-sub-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0; }
+  .tribe-events-page-template .tribe-events-sub-nav h1 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0; }
+
+/* Hero Image - tribe-events-page **** END */

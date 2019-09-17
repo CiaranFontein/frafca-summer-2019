@@ -65,11 +65,12 @@
         height: 100vh;
         text-align: center;
 
+        
         @include desktop {
             height: 72vh;
             padding: 5rem 24rem 5rem 24rem;
         }
-
+        
         .page-template-front-page & {
             height: 100vh;
         }
@@ -80,7 +81,6 @@
         margin-bottom: 5rem;
     }
 }
-
 /* Hero Image #### END */
 
 /* Grid Card **** START */
