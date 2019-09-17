@@ -908,8 +908,11 @@
             text-decoration: none;
         }
 
-        .tribe-events-listing {
-            border-bottom: solid #323232 1px;
+        .frafca-events-listing-mobile {
+            border-bottom: 5px solid #323232;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
 }

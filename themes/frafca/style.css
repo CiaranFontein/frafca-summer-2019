@@ -1808,8 +1808,18 @@ a {
     color: white; }
   .tribe-events-page-template .frafca-event-on-mobile {
     text-decoration: none; }
-  .tribe-events-page-template .tribe-events-listing {
-    border-bottom: solid #323232 1px; }
+  .tribe-events-page-template .frafca-events-listing-mobile {
+    border-bottom: 5px solid #323232;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
 /*--------------------------------------------------------------
 # Media
