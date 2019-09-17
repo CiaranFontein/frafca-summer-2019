@@ -513,7 +513,11 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+<<<<<<< HEAD
+    border: 2px solid black;
+=======
     border: 2px solid #323232;
+>>>>>>> fc9590460a761f332e63581acab4e11ed5451a86
     margin: 20px 0px;
     font-size: 1.25rem; }
     @media (min-width: 1200px) {
@@ -2016,7 +2020,9 @@ object {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  height: 30rem; }
+  height: 30rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0; }
   .front-page-get-involved .fp-get-involved-card p {
     padding-left: 1rem;
     padding-right: 1rem; }
@@ -2027,6 +2033,8 @@ object {
   .front-page-partners h2 {
     padding: 2rem 0;
     text-align: center; }
+  .front-page-partners .fp-partners-carousel .flickity-viewport {
+    height: 400px !important; }
   .front-page-partners .fp-partners-carousel .previous {
     left: 37%; }
   .front-page-partners .fp-partners-carousel .next {
@@ -2052,9 +2060,12 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 500px; }
+    margin-top: 2rem; }
     .front-page-partners .partner-content .partner-logo {
       width: 150px; }
+    @media (min-width: 1200px) {
+      .front-page-partners .partner-content {
+        width: 25%; } }
 
 /* About Page */
 .page-template-page-about section {
