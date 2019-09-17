@@ -22,9 +22,9 @@
   $(window).on('click', function(evt) {
     let target = evt.target;
     if ($header[0].contains(target)) {
-      return;
+      return;  // this is roughly the same as preventDefault
     }
-    evt.preventDefault();
+    // evt.preventDefault();
     closeSearchField();
   });
 
