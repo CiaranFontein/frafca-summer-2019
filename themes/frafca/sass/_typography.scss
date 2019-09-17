@@ -35,6 +35,10 @@ h2 {
 
     .hero-image-page & {
         color: $color__link;
+        .tribe-events-page-template & {
+            font-size: 1.2rem;
+            color: white;
+        }
     }
 }
 
