@@ -1927,9 +1927,7 @@ object {
   position: absolute;
   bottom: 0;
   margin: 0 auto;
-  text-align: center;
-  right: 35%;
-  left: 35%; }
+  text-align: center; }
 
 .front-page-about-us {
   color: #2d2d2d;
