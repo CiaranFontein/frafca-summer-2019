@@ -17,10 +17,10 @@ get_header(); ?>
             <?php get_template_part('template-parts/hero_banner'); ?>
 
             <!-- scroll down with the arrow -->
-            <div class="scroll-down">
+            <a href="#front-page-about-us" class="scroll-down">
                 <p>Scroll Down</p>
                 <i class="fas fa-chevron-down"></i>
-            </div>
+            </a>
 
         </header><!-- #front-page-banner -->
 
@@ -35,18 +35,18 @@ get_header(); ?>
                     $description = $card['card_description'];
                     ?>
 
-                    <div class="round-rect-card pink fp-about-us-cell">
+                <div class="round-rect-card pink fp-about-us-cell">
 
-                        <div class="card-icon">
-                            <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
-                        </div>
-
-                        <div class="card-meta">
-                            <h3><?php echo $title; ?></h3>
-                            <p><?php echo $description; ?></p>
-                        </div>
-
+                    <div class="card-icon">
+                        <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
                     </div>
+
+                    <div class="card-meta">
+                        <h3><?php echo $title; ?></h3>
+                        <p><?php echo $description; ?></p>
+                    </div>
+
+                </div>
                 <?php endforeach; ?>
             </div>
 
@@ -55,7 +55,8 @@ get_header(); ?>
             $button_url = str_replace(array("http://", "https://"), array("", ""), $button['url']);
             ?>
 
-            <a class="about-us-button default-btn yellow" href="<?php echo $button_url; ?>" target="<?php echo $button['target']; ?>">
+            <a class="about-us-button default-btn yellow" href="<?php echo $button_url; ?>"
+                target="<?php echo $button['target']; ?>">
                 <?php echo $button['text']; ?>
             </a>
 
@@ -70,20 +71,21 @@ get_header(); ?>
                 $description = $content['wwo_description'];
                 $button = $content['wwo_button'];
                 ?>
-                <div class="wwo_image containter col-2" style="">
-                    <img src="<?php echo $image; ?>" alt="Who We Are">
-                </div>
+            <div class="wwo_image containter col-2" style="">
+                <img src="<?php echo $image; ?>" alt="Who We Are">
+            </div>
 
-                <div class="wwo_meta col-2">
-                    <h3><?php echo $title ?></h3>
-                    <p><?php echo $description ?></p>
-                    <?php
+            <div class="wwo_meta col-2">
+                <h3><?php echo $title ?></h3>
+                <p><?php echo $description ?></p>
+                <?php
                         $button_url = str_replace(array("http://", "https://"), array("", ""), $button['url']);
                         ?>
-                    <a class='default-btn yellow' href="<?php echo $button_url; ?>" target="<?php echo $button['target']; ?>">
-                        <?php echo $button['text']; ?>
-                    </a>
-                </div>
+                <a class='default-btn yellow' href="<?php echo $button_url; ?>"
+                    target="<?php echo $button['target']; ?>">
+                    <?php echo $button['text']; ?>
+                </a>
+            </div>
 
             <?php endforeach ?>
         </section><!-- #front-page-what-we-offer -->
@@ -102,19 +104,20 @@ get_header(); ?>
                     $button = $content['button'];
                     ?>
 
-                    <div class="fp-get-involved-card round-rect-card purple">
-                        <div class="card-icon">
-                            <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
-                        </div>
-                        <h3><?php echo $title; ?></h3>
-                        <p><?php echo $description; ?></p>
-                        <?php
+                <div class="fp-get-involved-card round-rect-card purple">
+                    <div class="card-icon">
+                        <img src="<?php echo $icon; ?>" alt="<?php echo $title; ?>">
+                    </div>
+                    <h3><?php echo $title; ?></h3>
+                    <p><?php echo $description; ?></p>
+                    <?php
                             $button_url = str_replace(array("http://", "https://"), array("", ""), $button['url']);
                             ?>
-                        <a class='default-btn yellow' href="<?php echo $button_url; ?>" target="<?php echo $button['target']; ?>">
-                            <?php echo $button['text']; ?>
-                        </a>
-                    </div>
+                    <a class='default-btn yellow' href="<?php echo $button_url; ?>"
+                        target="<?php echo $button['target']; ?>">
+                        <?php echo $button['text']; ?>
+                    </a>
+                </div>
 
                 <?php endforeach ?>
         </section><!-- #front-page-get-involved -->
@@ -131,16 +134,16 @@ get_header(); ?>
                     $partner_url = $partner['partner_url']
                     ?>
 
-                    <div class="partner-content">
-                        <div class="partner-logo">
-                            <a href="<?php echo $partner_url['url']; ?>" target="<?php echo $partner_url['target']; ?>">
-                                <img src="<?php echo $partner_image; ?>" alt="<?php echo $partner_name; ?>">
-                            </a>
-                        </div>
-                        <p>
-                            <?php echo $partner_name; ?>
-                        </p>
+                <div class="partner-content">
+                    <div class="partner-logo">
+                        <a href="<?php echo $partner_url['url']; ?>" target="<?php echo $partner_url['target']; ?>">
+                            <img src="<?php echo $partner_image; ?>" alt="<?php echo $partner_name; ?>">
+                        </a>
                     </div>
+                    <p>
+                        <?php echo $partner_name; ?>
+                    </p>
+                </div>
                 <?php endforeach; ?>
 
             </div>

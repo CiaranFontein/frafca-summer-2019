@@ -2,6 +2,10 @@
 # Content
 --------------------------------------------------------------*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Posts and pages */
 
 .sticky {
@@ -109,48 +113,48 @@
 }
 
 .grid-cards {
-	@include desktop {
-		max-width: $desktop-width;
-		margin: 120px auto;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
+    @include desktop {
+        max-width: $desktop-width;
+        margin: 120px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-	.rect-card {
-		display: flex;
-		flex-direction: column;
-		margin: 5rem 0;
-		padding: 5rem 1.5rem 2rem 1.5rem;
-		text-align: center;
+    .rect-card {
+        display: flex;
+        flex-direction: column;
+        margin: 5rem 0;
+        padding: 5rem 1.5rem 2rem 1.5rem;
+        text-align: center;
 
-		&.no-content {
-			margin: 0;
-			padding: 2rem;
-			color: $color__background-body;
-			grid-column: 1/3;
-		}
+        &.no-content {
+            margin: 0;
+            padding: 2rem;
+            color: $color__background-body;
+            grid-column: 1/3;
+        }
 
-		@include desktop {
-			margin: 0 1rem 2rem 0;
-			padding: 5rem 2.5rem 2rem 2.5rem;
+        @include desktop {
+            margin: 0 1rem 2rem 0;
+            padding: 5rem 2.5rem 2rem 2.5rem;
 
-			// Adjust margins of even number of container
-			&:nth-child(2*n) {
-				margin-left: 1rem;
-				margin-right: 0;
-			}
-		}
+            // Adjust margins of even number of container
+            &:nth-child(2*n) {
+                margin-left: 1rem;
+                margin-right: 0;
+            }
+        }
 
-		p {
-			@include desktop {
-				flex-grow: 1;
-			}
-		}
-	}
+        p {
+            @include desktop {
+                flex-grow: 1;
+            }
+        }
+    }
 
-	p {
-		margin-bottom: 3rem;
-	}
+    p {
+        margin-bottom: 3rem;
+    }
 }
 
 /* Grid Card **** END */
@@ -181,9 +185,9 @@
             text-align: left;
             line-height: 22px;
             font-size: 19px;
-            margin-bottom:22px;
+            margin-bottom: 22px;
             margin-top: 0px;
-            
+
         }
 
         .rect-card h3 {
@@ -191,8 +195,8 @@
             margin-bottom: 0.5rem;
 
             @include desktop {
-            font-size: 23px;
-            margin-bottom: 1rem;
+                font-size: 23px;
+                margin-bottom: 1rem;
             }
 
         }
@@ -202,8 +206,9 @@
 
             @include desktop {
                 margin: 0;
-                padding: 3rem 1.5rem 2rem;;
-               
+                padding: 3rem 1.5rem 2rem;
+                ;
+
 
                 // Adjust margins of even number of container
                 &:nth-child(2*n) {
@@ -378,12 +383,12 @@
     }
 }
 
-    .flex-container {
-        @include desktop {
-            max-width: $desktop-width;
-            margin: 120px auto 100px auto;
-            display: flex;
-        }
+.flex-container {
+    @include desktop {
+        max-width: $desktop-width;
+        margin: 120px auto 100px auto;
+        display: flex;
+    }
 
 
     .flex-wrap {
@@ -468,272 +473,291 @@
 
 /* Single Event page **** Start*/
 #tribe-events-pg-template {
-	padding: 0px;
+    padding: 0px;
 }
+
 #tribe-events {
-	p:last-child {
-		margin-bottom: 2rem;
-	}
-	div {
-		&.tribe-events-single-event-description {
-			padding: 0rem 3rem;
-		}
-	}
+    p:last-child {
+        margin-bottom: 2rem;
+    }
+
+    div {
+        &.tribe-events-single-event-description {
+            padding: 0rem 3rem;
+        }
+    }
 }
 
 .single-tribe_events {
 
-	color: #323232;
-	padding: 0rem;
-	
-
-	.tribe-events-single {
-		padding:0;
-		margin:0;
-	}
-
-	.single-event-header {
-		background-color: $color__background-article;
-		color: white;
-		padding: 2rem;
-		transform: translateY(-38px);
-		width: 90%;
-		margin: 0 auto;
-				@include desktop {
-					display: flex;
-					justify-content: space-between;
-					align-items: flex-start;
-				}
-	}
-
-	.tribe-events-single-event-title {
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-	}
-
-	.single-event-purple {
-		background-color: $color__background-article;
-		border: none;
-		padding: 0;
-		font-size: 1rem;
-		font-weight: 300;
-			span {
-				font-weight: 300;
-			}
-	}
-
-	.tribe-events-single-event-description,
-	.tribe-events-content {
-
-			h1 {
-				font-size: 2rem;
-			}
-			p:last-child {
-				margin-bottom: 2rem;
-			}
-			span {
-				padding: 2rem;
-			}
-			@include desktop {
-				order: 0;
-				width: 70%;
-			}
-	}
-
-	.single-event-date-details {
-		display: none;
-	}
-
-	.single-tribe_events,
-	.tribe-events-cal-links {
-		text-align:center;
-		@include desktop {
-			order: 2;
-			width: 100%;
-		}
-	}
-
-	.single-event-venue {
-		display: none;
-	}
-
-	.secondary .tribe-events-venue-map {
-		width: 90%;
-		margin: 2rem 5%; 
-				
-	}
-
-	.tribe-events-meta-group-organizer {
-		padding: 0 3rem;
-	}
-	
-	.single-tribe_events,
-	.tribe-events-event-meta {
-		background: none;
-		border: none;
-		margin: 0;
-	}
-
-	.tribe-events-single-section,
-	.tribe-events-event-meta,
-	.primary {
-		@include desktop {
-			order: 1;
-			width: 30%;
-			font-size: 19px;
-			display: flex;
-		}
-	
-	.tribe-clearfix {
-		width: 100%;
-	}
-
-	}
-	.secondary {
-		width: 100%;
-		@include desktop {
-			order: 4;
-			width: 100%;
-		}
+    color: #323232;
+    padding: 0rem;
 
 
-	}
+    .tribe-events-single {
+        padding: 0;
+        margin: 0;
+    }
+
+    .single-event-header {
+        background-color: $color__background-article;
+        color: white;
+        padding: 2rem;
+        transform: translateY(-38px);
+        width: 90%;
+        margin: 0 auto;
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .tribe-events-single-event-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .single-event-purple {
+        background-color: $color__background-article;
+        border: none;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 300;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .tribe-events-single-event-description,
+    .tribe-events-content {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p:last-child {
+            margin-bottom: 2rem;
+        }
+
+        span {
+            padding: 2rem;
+        }
+
+        @include desktop {
+            order: 0;
+            width: 70%;
+        }
+    }
+
+    .single-event-date-details {
+        display: none;
+    }
+
+    .single-tribe_events,
+    .tribe-events-cal-links {
+        text-align: center;
+
+        @include desktop {
+            order: 2;
+            width: 100%;
+        }
+    }
+
+    .single-event-venue {
+        display: none;
+    }
+
+    .secondary .tribe-events-venue-map {
+        width: 90%;
+        margin: 2rem 5%;
+
+    }
+
+    .tribe-events-meta-group-organizer {
+        padding: 0 3rem;
+    }
+
+    .single-tribe_events,
+    .tribe-events-event-meta {
+        background: none;
+        border: none;
+        margin: 0;
+    }
+
+    .tribe-events-single-section,
+    .tribe-events-event-meta,
+    .primary {
+        @include desktop {
+            order: 1;
+            width: 30%;
+            font-size: 19px;
+            display: flex;
+        }
+
+        .tribe-clearfix {
+            width: 100%;
+        }
+
+    }
+
+    .secondary {
+        width: 100%;
+
+        @include desktop {
+            order: 4;
+            width: 100%;
+        }
+
+
+    }
 
     .fa-map-marker-alt,
-	.fa-calendar-alt {
-		font-size: 1.5rem;
-	}
-
-	.get-ticket-header {
-		display: none;
-		@include desktop {
-			display: block;
-			text-align: center;
-			order:5;
-		}
-	}
-
-	.get-ticket-footer {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-evenly;
-		padding: 0 1rem;
-			a {
-				text-align: center;
-				margin: 1rem;
-			}
-		@include desktop {
-			display: none;
-		}
-	}
-
-	.get-ticket-price {
-		font-size: 19px;
-		font-weight: bold;
-	}
-
-	.get-ticket-description {
-		font-size: 1rem;
-		margin-bottom: 0rem;
+    .fa-calendar-alt {
+        font-size: 1.5rem;
     }
-    
+
+    .get-ticket-header {
+        display: none;
+
+        @include desktop {
+            display: block;
+            text-align: center;
+            order: 5;
+        }
+    }
+
+    .get-ticket-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        padding: 0 1rem;
+
+        a {
+            text-align: center;
+            margin: 1rem;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .get-ticket-price {
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    .get-ticket-description {
+        font-size: 1rem;
+        margin-bottom: 0rem;
+    }
+
     .get-ticket-address-details {
         font-size: 17px;
     }
 
-	.single-event-content-container {
-		@include desktop {
-		display: flex;
-		flex-wrap: wrap;
-		padding: 0rem 2rem;
-		}
+    .single-event-content-container {
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0rem 2rem;
+        }
     }
-    
-    #tribe-events-pg-template
-    .tribe-events-content h1 {
+
+    #tribe-events-pg-template .tribe-events-content h1 {
 
         font-size: 1.7rem;
         margin-bottom: 1rem;
     }
-	
-	#tribe-events-content {
-		@include desktop {
-			.tribe-events-meta-group-organizer {
 
-				display: block;
-				float: none;
-				width: 100%;
-				padding: 0;
+    #tribe-events-content {
+        @include desktop {
+            .tribe-events-meta-group-organizer {
+
+                display: block;
+                float: none;
+                width: 100%;
+                padding: 0;
                 padding-top: 2rem;
-				h2 {
-					display: none;
-					// margin-top: 0;
-					// margin-bottom: 1rem;
+
+                h2 {
+                    display: none;
+                    // margin-top: 0;
+                    // margin-bottom: 1rem;
                 }
-				.single-event-organizer {
-					flex: none;
-					width: 100%;	
-					position: relative;
-					&::before {
-						position: relative;
-						display: block;
-						width: 100%;
-						content: 'Contact Information';
-						font-size: 1.5rem;
-						font-weight: 900;
-						
-					}
-				}
-				dl {
-					display: flex;
-					flex-wrap: wrap;
-					
-					* {
-						line-height: 1.5;
-					}
-	
-					dt {
-						flex: none;
-						width: 30%;
-					}
-					dd {
-						width: 70%;
-					}
-				}
-			}
-		}
-	}
-			
+
+                .single-event-organizer {
+                    flex: none;
+                    width: 100%;
+                    position: relative;
+
+                    &::before {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        content: 'Contact Information';
+                        font-size: 1.5rem;
+                        font-weight: 900;
+
+                    }
+                }
+
+                dl {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    * {
+                        line-height: 1.5;
+                    }
+
+                    dt {
+                        flex: none;
+                        width: 30%;
+                    }
+
+                    dd {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+
 }
+
 /* Single Event page #### END #/
 
 /* Job Postings page **** START */
 
 .page-template-page-job-postings {
 
-    .rect-card{
-        
+    .rect-card {
+
         p:first-child {
-        margin-bottom: 5px;
+            margin-bottom: 5px;
         }
 
         h3 {
-        margin-bottom: 2rem;
+            margin-bottom: 2rem;
         }
 
         p:nth-child(3) {
-        margin-bottom: 5rem;
+            margin-bottom: 5rem;
+
             @include desktop {
                 margin-bottom: 3rem;
             }
         }
     }
 
-    .grid-cards
-    .rect-card {
-        @include desktop{
-        padding: 3rem 4rem;
+    .grid-cards .rect-card {
+        @include desktop {
+            padding: 3rem 4rem;
         }
     }
 }
+
 /* Job Postings page #### END */
