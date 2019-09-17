@@ -56,7 +56,6 @@ a {
         }
 
         .search-label {
-
             @include desktop {
                 border: 0;
             }
@@ -66,11 +65,11 @@ a {
             padding: 0.35rem 1.25rem;
             outline: none;
             color: #000;
-            border-top-left-radius: 0.65rem;
-            border-bottom-left-radius: 0.65rem;
 
             @include desktop {
                 border: 1px solid #000;
+                border-top-left-radius: 0.65rem;
+                border-bottom-left-radius: 0.65rem;
                 border-right: none;
                 width: 550px;
             }
