@@ -1,35 +1,66 @@
 .error404  {
     color: $color__text-sec;
 
+    .hamburger-icon,
+    .main-navigation i {
+        color: $color__text-sec;
+    }
+
+    @include desktop {
+        .main-navigation ul li a {
+            color: $color__text-sec;
+        }
+        .sub-menu {
+            border: 1px solid $color__background-hr;
+        }
+    }
+
     .site-content {
-        display: flex;
-        align-items: center;
         width: 80%;
-        min-height: 80vh;
-        margin: 0 auto;
+        margin: 120px auto 2rem auto;
         text-align: center;
 
         h1 {
-            font-size: 4rem;
             margin-bottom: 1rem;
+            font-size: 2rem;
+            @include desktop {
+                font-size: 4rem;
+            }
         }
         h2 {
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 1rem; 
+            @include desktop {
+                font-size: 2rem;
+            }
         }
         p {
+            font-size: 1rem;
             margin-bottom: 3rem;
+            @include desktop {
+                font-size: 1.5rem;
+            }
         }
         a {
             margin: 0 auto;
             width: 50%;
+            max-width: 200px;
         }
 
         @include desktop {
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
             justify-content: center;
+            margin: 0 auto;
             a  {
                 width: 200px;
             }    
         }
         
     }
+}
+
+.site-header {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }

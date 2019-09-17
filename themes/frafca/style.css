@@ -1983,6 +1983,25 @@ object {
   width: 150px;
   margin: 0 auto; }
 
+.front-page-get-involved .fp-get-involved-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 30rem; }
+  .front-page-get-involved .fp-get-involved-card p {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
 .front-page-partners {
   background: #323232;
   margin: 2rem auto; }
@@ -2014,7 +2033,7 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 625px; }
+    height: 500px; }
     .front-page-partners .partner-content .partner-logo {
       width: 150px; }
 
@@ -2335,31 +2354,56 @@ object {
 
 .error404 {
   color: #323232; }
+  .error404 .hamburger-icon,
+  .error404 .main-navigation i {
+    color: #323232; }
+  @media (min-width: 1200px) {
+    .error404 .main-navigation ul li a {
+      color: #323232; }
+    .error404 .sub-menu {
+      border: 1px solid #ccc; } }
   .error404 .site-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 80%;
-    min-height: 80vh;
-    margin: 0 auto;
+    margin: 120px auto 2rem auto;
     text-align: center; }
     .error404 .site-content h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 2rem; }
+      @media (min-width: 1200px) {
+        .error404 .site-content h1 {
+          font-size: 4rem; } }
     .error404 .site-content h2 {
+      font-size: 1.2rem;
       margin-bottom: 1rem; }
+      @media (min-width: 1200px) {
+        .error404 .site-content h2 {
+          font-size: 2rem; } }
     .error404 .site-content p {
+      font-size: 1rem;
       margin-bottom: 3rem; }
+      @media (min-width: 1200px) {
+        .error404 .site-content p {
+          font-size: 1.5rem; } }
     .error404 .site-content a {
       margin: 0 auto;
-      width: 50%; }
+      width: 50%;
+      max-width: 200px; }
     @media (min-width: 1200px) {
       .error404 .site-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        min-height: 80vh;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center; }
+                justify-content: center;
+        margin: 0 auto; }
         .error404 .site-content a {
           width: 200px; } }
+
+.site-header {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
