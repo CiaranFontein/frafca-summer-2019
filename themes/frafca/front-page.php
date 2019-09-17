@@ -50,12 +50,14 @@ get_header(); ?>
                 <?php endforeach; ?>
             </div>
 
-
             <?php $button = frafca_cfs('about_us_button') ?>
-            <a class="about-us-button default-btn yellow" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+            <?php
+            $button_url = str_replace(array("http://", "https://"), array("", ""), $button['url']);
+            ?>
+
+            <a class="about-us-button default-btn yellow" href="<?php echo $button_url; ?>" target="<?php echo $button['target']; ?>">
                 <?php echo $button['text']; ?>
             </a>
-
 
         </section><!-- #front-page-about-us -->
 
@@ -75,7 +77,10 @@ get_header(); ?>
                 <div class="wwo_meta col-2">
                     <h3><?php echo $title ?></h3>
                     <p><?php echo $description ?></p>
-                    <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                    <?php
+                        $button_url = str_replace(array("http://", "https://"), array("", ""), $button['url']);
+                        ?>
+                    <a class='default-btn yellow' href="<?php echo $button_url; ?>" target="<?php echo $button['target']; ?>">
                         <?php echo $button['text']; ?>
                     </a>
                 </div>
@@ -103,7 +108,10 @@ get_header(); ?>
                         </div>
                         <h3><?php echo $title; ?></h3>
                         <p><?php echo $description; ?></p>
-                        <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                        <?php
+                            $button_url = str_replace(array("http://", "https://"), array("", ""), $button['url']);
+                            ?>
+                        <a class='default-btn yellow' href="<?php echo $button_url; ?>" target="<?php echo $button['target']; ?>">
                             <?php echo $button['text']; ?>
                         </a>
                     </div>
@@ -132,11 +140,9 @@ get_header(); ?>
                         <p>
                             <?php echo $partner_name; ?>
                         </p>
-
-
                     </div>
-
                 <?php endforeach; ?>
+
             </div>
         </section><!-- #front-page-partners -->
 
