@@ -479,6 +479,7 @@ a {
         @include desktop {
             display: block;
             color: $color__background-black;
+            font-weight: 900;
 
             li {
                 a {

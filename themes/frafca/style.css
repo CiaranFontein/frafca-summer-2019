@@ -880,7 +880,8 @@ a {
     @media (min-width: 1200px) {
       .main-navigation .side-header-menu {
         display: block;
-        color: #323232; }
+        color: #323232;
+        font-weight: 900; }
         .main-navigation .side-header-menu li a {
           padding: 0.8rem 1.5rem;
           border-radius: 0.65rem;
