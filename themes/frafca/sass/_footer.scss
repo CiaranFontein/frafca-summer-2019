@@ -121,6 +121,8 @@
 .menu-footer-what-we-do-container a {
     text-decoration: none;
     color: #FFFFFF;
+    font-size: 23px;
+    line-height: 2.5rem;
 
     &:hover {
         color: $color__link;
