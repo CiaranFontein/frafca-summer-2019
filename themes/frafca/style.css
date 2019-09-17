@@ -514,7 +514,8 @@ a {
         -ms-flex-align: center;
             align-items: center;
     border: 2px solid black;
-    margin: 20px 0px; }
+    margin: 20px 0px;
+    font-size: 1.25rem; }
     @media (min-width: 1200px) {
       .search-field-container .search-form {
         border: 0;
@@ -523,16 +524,17 @@ a {
                 justify-content: center; } }
     @media (min-width: 1200px) {
       .search-field-container .search-form .search-label {
-        border: 0;
-        width: 600px;
-        margin-right: 50px; } }
+        border: 0; } }
     .search-field-container .search-form .search-field {
-      padding: 0 20px;
+      padding: 0.35rem 1.25rem;
       outline: none;
-      color: #000; }
+      color: #000;
+      border-top-left-radius: 0.65rem;
+      border-bottom-left-radius: 0.65rem; }
       @media (min-width: 1200px) {
         .search-field-container .search-form .search-field {
-          border: 2px solid #000;
+          border: 1px solid #000;
+          border-right: none;
           width: 550px; } }
   .search-field-container .search-button {
     padding: 0.8rem 1.5rem;
@@ -551,9 +553,10 @@ a {
       content: '\f002'; }
     @media (min-width: 1200px) {
       .search-field-container .search-button {
-        padding: 0.8rem 2.5rem;
+        padding: 0.4rem 2.5rem;
         background: #FFD400;
-        border-radius: 0.65rem; }
+        border-top-right-radius: 0.65rem;
+        border-bottom-right-radius: 0.65rem; }
         .search-field-container .search-button:after {
           font-family: "Raleway", sans-serif;
           content: "Search"; } }
@@ -617,7 +620,9 @@ a {
       .site-header .header-container {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; } }
+                justify-content: space-between; }
+        .site-header .header-container a {
+          text-decoration: none; } }
   @media (min-width: 1200px) {
     .site-header {
       background: rgba(255, 255, 255, 0.3);
@@ -633,6 +638,9 @@ a {
     position: relative; }
     @media (min-width: 1200px) {
       .site-header .header-logo {
+        line-height: 3.8rem;
+        vertical-align: center;
+        font-size: 3.2rem;
         z-index: 5; } }
   @media (min-width: 1200px) {
     .site-header {
