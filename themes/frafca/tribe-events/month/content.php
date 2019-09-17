@@ -52,51 +52,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 <section class="tribe-events-listing">
-		
+
 		<?php
-		if(!is_singular('tribe_events')):
+				global $post;
 
-			$event_posts = get_posts( array(
-				'posts_per_page' => 5,
-				'post_type'       => 'tribe_events'
-			) );
- 
-			// if the page isn't refreshing goto -> settings -> permalinks 
-			// and this will help to clear PHP transients which are caching the events calendar code
-			// var_dump($event_posts);
+				$events = tribe_get_events( [ 'posts_per_page' => 5 ] );
 
-			if ( $event_posts ) {
-				foreach ( $event_posts as $post ) : setup_postdata( $post ); 
+				// var_dump($events);
 
-				$venue_id = '';
-
-				if(!empty($venue_id = get_post_meta($post->ID, '_EventVenueID'))):
-					// echo 'venue is set';
-					$venue_id = get_post_meta($post->ID, '_EventVenueID')[0];
-					// $event_location_address = get_post_meta($post->ID, '_VenueAddress')[0];
-					$venue_address = get_post_meta($venue_id, '_VenueAddress')[0];
+				foreach ( $events as $post ) {
+				setup_postdata( $post );
+				echo '<div class="frafca-events-listing-mobile"';
+				echo '<h4>' . ($post->post_title) . '</h4>';
+				//echo '<h4>' . get_the_permalink( $post ) . '</h4>';
+				echo '<p>' . tribe_get_start_date( $post ) . ' - ' . tribe_get_end_time( $post ) . '</p>';
+				echo '<p>' . tribe_get_address( $post ) . ' ' . tribe_get_city( $post ) . '</p>';
+				// echo "<a href='".get_the_permalink( $post )."'>Link</a>";
+				echo '</div>';
+		}
 		?>
-				<a class="frafca-event-on-mobile" href="<?php echo get_the_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a>
-		<?php	
-					echo '<p>location: ' . $venue_address . '</p>';
 
-					else:
-					echo 'Venue address is not available at this time';
-
-				endif;
-
-				$event_start_date = get_post_meta($post->ID, '_EventStartDate')[0];
-				echo $event_start_date;
-
-				$event_end_date = get_post_meta($post->ID, '_EventEndDate')[0];
-				echo $event_end_date;
-				?>
-
-				<?php
-				endforeach;
-				wp_reset_postdata();
-			}
-
-		endif;
-		?>
-</section>
+</section> <!-- .tribe-events-listinge.end -->
