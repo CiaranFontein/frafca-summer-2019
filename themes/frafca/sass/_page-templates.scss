@@ -61,15 +61,14 @@
     }
 
     .fp-about-us-carousel {
-
         @include flickity-center-buttons-no-dots;
 
         @include desktop {
 
             &::after {
                 content: '';
+                // Removes flickity content from the carousel and changes the carousel from 1 slide to three none draggable
             }
-
 
             .flickity-viewport {
                 margin-bottom: $base__space-unit * 10;
