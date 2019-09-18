@@ -34,6 +34,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<!-- Month Grid -->
 	<?php tribe_get_template_part( 'month/loop', 'grid' ) ?>
 
+	<?php get_template_part( 'template-parts/calendar_mobile' ); ?>
+
 	<!-- Month Footer -->
 	<?php do_action( 'tribe_events_before_footer' ) ?>
 	<div id="tribe-events-footer">
@@ -48,46 +50,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'tribe_events_after_footer' ) ?>
 	<?php tribe_get_template_part( 'month/mobile' ); ?>
 	<?php tribe_get_template_part( 'month/tooltip' ); ?>
+
 </div><!-- #tribe-events-content -->
-
-
-<!-- .tribe-events-listing -->
-<section class="tribe-events-listing">
-
-	<?php 
-	$parse_current_uri = explode( 'events/' , $_SERVER['REQUEST_URI']);
-	
-	var_dump($parse_current_uri);
-	
-	// Default calendar view
-		if ( 
-			empty( $_GET['tribe-bar-date']) 
-			&& 
-			empty( $_GET['tribe-bar-search'] ) 
-			&&
-			strlen($parse_current_uri[1]) === 0
-		) :
-		get_template_part( 'template-parts/calendar_template' );
-	?>
-
-	<?php elseif (strlen($parse_current_uri[1]) > 0):
-	// traversing 
-		get_template_part( 'template-parts/calendar_template', 'date' );
-	?>
-
-<<<<<<< HEAD
-	<?php elseif ($_GET['tribe-bar-date']): 
-	// Query by the date
-		$filter_event_date = $_GET['tribe-bar-date'];
-	?>
-
-	<?php elseif ($_GET['tribe-bar-search']):
-	// Query by the search keyword
-		$filter_event_search = $_GET['tribe-bar-search'];
-	?>
-	<?php else: 
-	// Query by the date and search keyword
-		$filter_event_date = $_GET['tribe-bar-date'];
-		$filter_event_search = $_GET['tribe-bar-search'];
-	?>
-	<?php endif; flush_rewrite_rules( $hard = true );?>
