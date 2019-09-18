@@ -24,29 +24,29 @@
         $event_city = tribe_get_city( $post );
     ?>
     
-        <div class="frafca-events-listing-mobile">
-            <h4>
-                <a href="<?php echo get_the_permalink( $post );?>"> 
-                    <?php echo $title ?>
-                </a>
-            </h4>
-            <p>
-                <!-- Check if it's all day event -->
-                <?php 
-                if ( !empty( $end_date ) ){
-                    echo "$start_date - $end_date";
-                } else {
-                    echo $start_date;
-                }
-                ?>
-            </p>
-            <!-- Check if event_city exist -->
-            <?php if ( !empty( $event_city )) : ?>
-                <p><?php echo "$event_address, $event_city"; ?></p>
-            <?php elseif ( !empty( $event_address ) ) : ?>
-                <p><?php echo $event_address; ?></p>
-            <?php endif; ?>
-        </div>
+        <a href="<?php echo get_the_permalink( $post );?>"> 
+            <div class="frafca-events-listing-mobile">
+                <h4>
+                        <?php echo $title ?>
+                </h4>
+                <p>
+                    <!-- Check if it's all day event -->
+                    <?php 
+                    if ( !empty( $end_date ) ){
+                        echo "$start_date - $end_date";
+                    } else {
+                        echo $start_date;
+                    }
+                    ?>
+                </p>
+                <!-- Check if event_city exist -->
+                <?php if ( !empty( $event_city )) : ?>
+                    <p><?php echo "$event_address, $event_city"; ?></p>
+                <?php elseif ( !empty( $event_address ) ) : ?>
+                    <p><?php echo $event_address; ?></p>
+                <?php endif; ?>
+            </div>
+        </a>
     <?php endforeach; ?>
 </section> 
 <!-- end .tribe-events-listing -->
