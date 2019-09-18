@@ -1574,11 +1574,15 @@ object {
   margin: 0 auto;
   text-align: center; }
   .page-template-front-page a.scroll-down:hover {
-    text-shadow: 0 0.5rem 1rem rgba(1, 1, 1, 0.5); }
+    text-shadow: 0 0.5rem 1rem rgba(213, 194, 194, 0.5); }
 
 .front-page-about-us {
   color: #2d2d2d;
   text-align: center; }
+  .front-page-about-us a {
+    font-size: 1.25rem; }
+    .front-page-about-us a:hover {
+      background-color: #ffe252; }
   .front-page-about-us .about-us-button {
     position: absolute;
     -webkit-transform: translateY(-190%);
@@ -1586,6 +1590,10 @@ object {
     left: 10%;
     right: 10%;
     font-size: -1.625rem; }
+    @media (min-width: 1200px) {
+      .front-page-about-us .about-us-button {
+        -webkit-transform: translateY(-230%);
+                transform: translateY(-230%); } }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1595,13 +1603,20 @@ object {
   .front-page-about-us h2 {
     margin: 2.4rem auto; }
   .front-page-about-us .fp-about-us-carousel .previous {
-    left: 37%; }
+    left: 35%; }
   .front-page-about-us .fp-about-us-carousel .next {
-    right: 37%; }
+    right: 35%; }
   .front-page-about-us .fp-about-us-carousel .flickity-button {
     top: 78%; }
   .front-page-about-us .fp-about-us-carousel .flickity-page-dots {
     display: none; }
+  @media (min-width: 1200px) {
+    .front-page-about-us .fp-about-us-carousel::after {
+      content: ''; }
+    .front-page-about-us .fp-about-us-carousel .flickity-viewport {
+      margin-bottom: 10rem; }
+    .front-page-about-us .fp-about-us-carousel .flickity-button {
+      display: none; } }
   .front-page-about-us .fp-about-us-cell {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1613,7 +1628,6 @@ object {
     margin: 0 auto;
     text-align: center;
     padding: 0 1rem;
-    border-radius: 0.65rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
@@ -1629,12 +1643,24 @@ object {
       color: #fff;
       padding-left: 1rem;
       padding-right: 1rem; }
+    @media (min-width: 1200px) {
+      .front-page-about-us .fp-about-us-cell {
+        width: 27%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 0.65rem;
+        height: 400px; }
+        .front-page-about-us .fp-about-us-cell .card-icon {
+          width: 150px;
+          margin: 1rem; }
+        .front-page-about-us .fp-about-us-cell .card-meta {
+          padding: 0; } }
 
 .what-we-offer {
   margin-top: 2rem; }
   .what-we-offer .wwo_image {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 43, 92, 0.3)), to(rgba(47, 43, 92, 0.3)));
-    background: linear-gradient(to bottom, rgba(47, 43, 92, 0.3) 0%, rgba(47, 43, 92, 0.3) 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#2f2b5c), color-stop(#5a3165), color-stop(#803766), color-stop(#a14261), to(#ba5357));
+    background-image: linear-gradient(to right bottom, #2f2b5c, #5a3165, #803766, #a14261, #ba5357);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1649,9 +1675,38 @@ object {
     text-align: center;
     font-size: -1.625rem;
     padding: 2rem; }
+    .what-we-offer .wwo_meta a {
+      font-size: 1.25rem; }
+      .what-we-offer .wwo_meta a:hover {
+        background-color: #ffe252; }
   .what-we-offer .default-btn {
     display: inline-grid;
     margin: 0.5rem auto; }
+  @media (min-width: 1200px) {
+    .what-we-offer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .what-we-offer .wwo_image {
+        -webkit-box-pack: initial;
+            -ms-flex-pack: initial;
+                justify-content: initial; }
+      .what-we-offer .wwo_meta {
+        -webkit-box-flex: 50%;
+            -ms-flex: 50%;
+                flex: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        text-align: left; }
+        .what-we-offer .wwo_meta h3 {
+          font-size: 3rem; } }
 
 .front-page-get-involved h2 {
   color: #2d2d2d;
@@ -1680,8 +1735,37 @@ object {
   margin-bottom: 2rem;
   padding: 1rem 0; }
   .front-page-get-involved .fp-get-involved-card p {
-    padding-left: 1rem;
-    padding-right: 1rem; }
+    padding-left: 2rem;
+    padding-right: 2rem; }
+
+@media (min-width: 1200px) {
+  .front-page-get-involved .flex-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 0 1rem; }
+    .front-page-get-involved .flex-cards .fp-get-involved-card {
+      margin: 0 2rem;
+      height: unset;
+      border-radius: 0.65rem;
+      -webkit-box-flex: 30%;
+          -ms-flex: 30%;
+              flex: 30%; }
+      .front-page-get-involved .flex-cards .fp-get-involved-card .card-icon {
+        margin-top: 1rem;
+        width: 145px; }
+      .front-page-get-involved .flex-cards .fp-get-involved-card h3 {
+        margin-top: 1rem; }
+      .front-page-get-involved .flex-cards .fp-get-involved-card p {
+        height: 140px;
+        font-size: 1.25rem; }
+      .front-page-get-involved .flex-cards .fp-get-involved-card a {
+        margin-bottom: 1rem;
+        font-size: 1.25rem; }
+        .front-page-get-involved .flex-cards .fp-get-involved-card a:hover {
+          background-color: #ffe252; } }
 
 .front-page-partners {
   background: #323232;
@@ -1692,9 +1776,9 @@ object {
   .front-page-partners .fp-partners-carousel .flickity-viewport {
     height: 400px !important; }
   .front-page-partners .fp-partners-carousel .previous {
-    left: 37%; }
+    left: 35%; }
   .front-page-partners .fp-partners-carousel .next {
-    right: 37%; }
+    right: 35%; }
   .front-page-partners .fp-partners-carousel .flickity-button {
     top: 78%; }
   .front-page-partners .fp-partners-carousel .flickity-page-dots {
@@ -1722,6 +1806,15 @@ object {
     @media (min-width: 1200px) {
       .front-page-partners .partner-content {
         width: 25%; } }
+  @media (min-width: 1200px) {
+    .front-page-partners .fp-partners-carousel .flickity-viewport {
+      height: 300px !important; }
+    .front-page-partners .fp-partners-carousel .previous {
+      left: 1%; }
+    .front-page-partners .fp-partners-carousel .next {
+      right: 1%; }
+    .front-page-partners .fp-partners-carousel .flickity-button {
+      top: 40%; } }
 
 /* About Page */
 .page-template-page-about section {
@@ -1732,7 +1825,7 @@ object {
   @media (min-width: 1200px) {
     .page-template-page-about section {
       font-size: 1.375rem;
-      margin-top: 120px; }
+      margin-top: 7.5rem; }
       .page-template-page-about section:last-child {
         margin-bottom: 120px; } }
 
@@ -2730,6 +2823,7 @@ object {
         font-weight: 900; }
         @media (min-width: 1200px) {
           .single-tribe_events #tribe-events-content .tribe-events-meta-group-organizer .single-event-organizer::before {
+            margin-top: 1.5rem;
             font-size: 1.5rem;
             font-weight: 900; } }
     .single-tribe_events #tribe-events-content .tribe-events-meta-group-organizer dl {
@@ -2804,9 +2898,11 @@ object {
           font-size: 1.5rem; } }
   .tribe-events-page-template #tribe-events-header .tribe-events-sub-nav {
     padding: 0 3rem; }
-  .tribe-events-page-template #tribe-events-footer:after, .tribe-events-page-template #tribe-events-header:after {
+  .tribe-events-page-template #tribe-events-footer:after,
+  .tribe-events-page-template #tribe-events-header:after {
     left: 0; }
-  .tribe-events-page-template #tribe-events-footer:before, .tribe-events-page-template #tribe-events-header:before {
+  .tribe-events-page-template #tribe-events-footer:before,
+  .tribe-events-page-template #tribe-events-header:before {
     right: 0; }
   .tribe-events-page-template #tribe-bar-form {
     background: rgba(255, 255, 255, 0.3); }
@@ -2901,9 +2997,9 @@ object {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1rem 3rem;
     height: auto;
     position: relative; }
@@ -2911,72 +3007,81 @@ object {
       content: '';
       position: absolute;
       left: 2rem;
-      height: 80%;
+      height: 70%;
       width: 5px;
-      background: #323232; }
+      background: #334C71; }
+    .tribe-events-page-template .frafca-events-listing-mobile::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f105";
+      position: absolute;
+      right: 2rem;
+      width: 0;
+      background: #000000; }
     .tribe-events-page-template .frafca-events-listing-mobile p {
       font-size: 12px;
-      margin-bottom: 0; }
-  .tribe-events-page-template #tribe-events-footer:before, .tribe-events-page-template #tribe-events-header:before {
-    right: 0; }
-  .tribe-events-page-template #tribe-bar-form {
-    background: rgba(255, 255, 255, 0.3); }
-    @media screen and (min-width: 728px) {
-      .tribe-events-page-template #tribe-bar-form {
-        -webkit-transform: translateY(-93px);
-                transform: translateY(-93px); } }
-    .tribe-events-page-template #tribe-bar-form #tribe-events-footer ~ a.tribe-events-ical.tribe-events-button {
-      display: none; }
-    .tribe-events-page-template #tribe-bar-form #tribe-mobile-container {
-      display: none; }
-    .tribe-events-page-template #tribe-bar-form .frafca-events-mobile-old-list {
-      display: none; }
-    .tribe-events-page-template #tribe-bar-form .tribe-mobile-day-heading {
-      display: none; }
-    .tribe-events-page-template #tribe-bar-form .tribe-events-ical,
-    .tribe-events-page-template #tribe-bar-form .tribe-events-button {
-      display: none;
-      -webkit-transform: translateY(-95px);
-              transform: translateY(-95px); }
-    .tribe-events-page-template #tribe-bar-form .tribe-events-sub-nav li {
-      width: 20%; }
-    .tribe-events-page-template #tribe-bar-form .tribe-events-listing {
-      -webkit-transform: translateY(-90px);
-              transform: translateY(-90px); }
-      .tribe-events-page-template #tribe-bar-form .tribe-events-listing h4 {
-        font-size: 16px; }
-      .tribe-events-page-template #tribe-bar-form .tribe-events-listing a {
-        text-decoration: none; }
-      @media (min-width: 1200px) {
-        .tribe-events-page-template #tribe-bar-form .tribe-events-listing {
-          display: none; } }
+      margin-bottom: 0;
+      margin-top: .1rem; }
+  .tribe-events-page-template #tribe-events p:last-child {
+    margin-bottom: 0; }
+  .tribe-events-page-template .frafca-events-mobile-old-list {
+    display: none; }
+  .tribe-events-page-template .tribe-mobile-day-heading {
+    display: none; }
+  .tribe-events-page-template .tribe-events-ical,
+  .tribe-events-page-template .tribe-events-button {
+    display: none;
+    -webkit-transform: translateY(-95px);
+            transform: translateY(-95px); }
+  .tribe-events-page-template .tribe-events-sub-nav li {
+    width: 20%; }
+  .tribe-events-page-template .tribe-events-listing {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px); }
+    .tribe-events-page-template .tribe-events-listing h4 {
+      font-size: 16px; }
+    .tribe-events-page-template .tribe-events-listing a {
+      text-decoration: none; }
     @media (min-width: 1200px) {
-      .tribe-events-page-template #tribe-bar-form #tribe-bar-form label {
-        font-size: 16px;
+      .tribe-events-page-template .tribe-events-listing {
+        display: none; } }
+  @media (min-width: 1200px) {
+    .tribe-events-page-template #tribe-bar-form label {
+      font-size: 16px;
+      color: white; } }
+  .tribe-events-page-template #tribe-bar-form ::-webkit-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .tribe-events-page-template #tribe-bar-form ::-ms-input-placeholder {
+    color: white;
+    opacity: 1; }
+  .tribe-events-page-template #tribe-bar-form ::placeholder {
+    color: white;
+    opacity: 1; }
+  .tribe-events-page-template .header-meta {
+    -ms-flex-item-align: center;
+        align-self: center; }
+    @media (min-width: 1200px) {
+      .tribe-events-page-template .header-meta h2 {
+        font-size: 35px;
+        color: #FFD400; } }
+  .tribe-events-page-template #tribe-bar-form input[type=text] {
+    color: #323232; }
+    @media (min-width: 1200px) {
+      .tribe-events-page-template #tribe-bar-form input[type=text] {
         color: white; } }
-    .tribe-events-page-template #tribe-bar-form #tribe-bar-form ::-webkit-input-placeholder {
-      color: white;
-      opacity: 1; }
-    .tribe-events-page-template #tribe-bar-form #tribe-bar-form ::-ms-input-placeholder {
-      color: white;
-      opacity: 1; }
-    .tribe-events-page-template #tribe-bar-form #tribe-bar-form ::placeholder {
-      color: white;
-      opacity: 1; }
-    .tribe-events-page-template #tribe-bar-form .header-meta {
-      -ms-flex-item-align: center;
-          align-self: center; }
-      @media (min-width: 1200px) {
-        .tribe-events-page-template #tribe-bar-form .header-meta h2 {
-          font-size: 35px;
-          color: #FFD400; } }
-    .tribe-events-page-template #tribe-bar-form #tribe-bar-form input[type=text] {
-      color: #323232; }
-    .tribe-events-page-template #tribe-bar-form .frafca-events-button {
-      -webkit-transform: translateY(20px);
-              transform: translateY(20px); }
-    .tribe-events-page-template #tribe-bar-form .tribe-bar-toggle-text {
-      color: white; }
-    .tribe-events-page-template #tribe-bar-form .tribe-events-cal-links {
-      -webkit-transform: translateY(104px);
-              transform: translateY(104px); }
+  .tribe-events-page-template .frafca-events-button {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
+  .tribe-events-page-template .tribe-bar-toggle-text {
+    color: white; }
+  .tribe-events-page-template .tribe-events-cal-links {
+    -webkit-transform: translateY(104px);
+            transform: translateY(104px); }
+  .tribe-events-page-template .tribe-bar-filters {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px); }
+    @media (min-width: 1200px) {
+      .tribe-events-page-template .tribe-bar-filters {
+        -webkit-transform: translateY(-7px);
+                transform: translateY(-7px); } }
