@@ -167,14 +167,15 @@ html {
             margin: auto;
             margin-bottom: 5rem;
         }
+
     }
 
     .contact-cards {
+
         @include desktop {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 2rem;
-
         }
 
         .rect-card p {
@@ -658,7 +659,6 @@ html {
     .single-event-content-container {
         @include desktop {
             display: flex;
-            flex-wrap: wrap;
             padding: 0rem 2rem;
         }
     }
