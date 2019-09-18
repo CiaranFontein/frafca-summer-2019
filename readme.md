@@ -5,12 +5,56 @@
 ### Functionalities
 
 #### Animations
-Search Bar
+
+##### Search Bar Fade In/Out
+
 //Gif
+
+#### Hamburger Slide Out/In
+
+//Gif
+
+#### Desktop Header Dropdowns
+
+//Gif
+
+#### Image/Content Carousels
+
+//Gif
+
+#### Footer Dropdown
+
+//Gif
+
+#### Add Custom Content
+
+##### Add Custom Events
+
+##### Add Custom Job Postings
 
 ## Tutorial
 
-### Adding Events
+### Site Updates
+
+#### Adding a New Partner
+
+#### Removing a Partner
+
+#### Adding a New Team Member
+
+#### Removing a Team Member
+
+### Content Management
+
+#### Editing the Home Page Content
+
+#### Editing the About Page Content
+
+#### Editing the Get Involved Page Content
+
+#### Editing a Banner's Text
+
+#### Adding Events
 
 ## Technologies Used
 
