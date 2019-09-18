@@ -41,3 +41,40 @@
         display: none;
     }
 }
+
+// Flex Default Design
+
+@mixin flex-default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+// Shadow Defaults
+@mixin text-shadow {
+    text-shadow: $shadow_settings;
+}
+
+@mixin box-shadow {
+    box-shadow: $shadow_settings
+}
+
+//Blur Filter
+@mixin blur-filter {
+    backdrop-filter: blur($blur_amount);
+}
+
+//Padding
+@mixin avg-padding {
+    padding: $button_padding_height;
+}

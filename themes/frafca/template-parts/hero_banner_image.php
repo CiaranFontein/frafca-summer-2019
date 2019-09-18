@@ -1,8 +1,8 @@
 <!-- hero contents -->
     
-    <?php if (  !empty(frafca_cfs('banner')) ): 
-        $hero_img = $heros['banner_image'];
+    <?php if (!empty(frafca_cfs('banner')) ):
         $heros = last_frafca_cfs('banner');
+        $hero_img = $heros['banner_image'];
     ?>
         <div class="hero-image-page" style="
             background : 

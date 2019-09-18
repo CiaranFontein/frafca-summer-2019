@@ -75,6 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		get_template_part( 'template-parts/calendar_template', 'date' );
 	?>
 
+<<<<<<< HEAD
 	<?php elseif ($_GET['tribe-bar-date']): 
 	// Query by the date
 		$filter_event_date = $_GET['tribe-bar-date'];

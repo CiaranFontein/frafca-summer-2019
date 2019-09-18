@@ -3,7 +3,6 @@
 --------------------------------------------------------------*/
 
 /* Links */
-
 a {
     color: $color__link;
 
@@ -43,9 +42,8 @@ a {
     }
 
     .search-form {
-        display: flex;
+        @include align-items-center;
         justify-content: flex-end;
-        align-items: center;
         border: 2px solid $color__background-black;
         margin: 20px 0px;
         font-size: 1.25rem;
@@ -73,7 +71,6 @@ a {
                 border-right: none;
                 width: 550px;
             }
-
         }
     }
 
@@ -108,22 +105,20 @@ a {
 
 /* Header Menus */
 .site-header {
-    display: flex;
-    justify-content: center;
+    @include flex-default;
     height: auto;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    align-items: center;
     transition: $time__transition;
     z-index: 9999;
 
     &.darkmode {
         z-index: 1;
         background-color: rgba(47, 43, 92, .6);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
-        backdrop-filter: blur(4px);
+        @include box-shadow;
+        @include blur-filter;
 
         .hamburger-icon,
         .main-navigation i {
@@ -138,7 +133,7 @@ a {
     &.mediummode {
         z-index: 1;
         background-color: rgba(0, 0, 0, .3);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+        @include box-shadow;
         backdrop-filter: blur(4px);
 
         .hamburger-icon,
@@ -152,11 +147,10 @@ a {
     }
 
     .header-container {
-        display: flex;
+        @include align-items-center;
         justify-content: space-between;
         width: 1300px;
         max-width: 1400px;
-        align-items: center;
 
         @include desktop {
             justify-content: space-between;
@@ -166,7 +160,6 @@ a {
             }
         }
     }
-
 
     @include desktop {
         background: rgba(255, 255, 255, 0.3);
@@ -187,11 +180,6 @@ a {
             font-size: 3.2rem;
             z-index: 5;
         }
-    }
-
-    @include desktop {
-        justify-content: center;
-        align-items: center;
     }
 }
 
@@ -340,9 +328,8 @@ a {
 
 .main-navigation {
     background: none;
-    display: flex;
+    @include align-items-center;
     justify-content: space-between;
-    align-items: center;
     height: 80px;
 
     .header-menu {
@@ -371,10 +358,8 @@ a {
                         }
 
                         a {
-                            display: flex;
-                            align-items: center;
+                            @include align-items-center;
                             height: 100%;
-
                         }
                     }
                 }
@@ -401,7 +386,7 @@ a {
             font-size: $font__desktop_icon_size;
 
             &:hover {
-                text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+                @include text-shadow;
             }
         }
     }
@@ -417,7 +402,8 @@ a {
             flex-direction: column;
             position: absolute;
             top: 75px;
-            background: white;
+            background: #fff;
+            ;
             color: $color__background-black;
             left: 0;
 
@@ -432,9 +418,8 @@ a {
                 position: relative;
 
                 &:hover {
-                    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+                    @include box-shadow;
                 }
-
 
                 a {
                     white-space: nowrap;
@@ -463,12 +448,11 @@ a {
                 text-shadow: none;
 
                 &:hover {
-                    box-shadow: 1px .3rem 0.3rem rgba(0, 0, 0, .6);
+                    @include box-shadow;
                 }
             }
         }
     }
-
 
     .side-header-menu {
         display: none;
@@ -486,7 +470,7 @@ a {
                     transition: 0.3s all ease-in-out;
 
                     &:hover {
-                        box-shadow: 0.25rem .25rem 0.3rem rgba(0, 0, 0, 0.6);
+                        @include box-shadow;
                     }
                 }
 

@@ -5,7 +5,6 @@
 /* Front page */
 
 .front-page-content {
-
     .yellow {
         font-size: $font__size_main - 3;
         font-weight: 600;
@@ -13,11 +12,17 @@
 }
 
 .page-template-front-page {
-    .scroll-down {
+    a.scroll-down {
+        text-decoration: none;
+        color: #fff;
         position: absolute;
         bottom: 0;
         margin: 0 auto;
         text-align: center;
+
+        &:hover {
+            text-shadow: 0 .5rem 1rem rgba(1, 1, 1, .5);
+        }
     }
 }
 
@@ -44,33 +49,18 @@
     }
 
     .fp-about-us-carousel {
-        .previous {
-            left: 37%;
-        }
-
-        .next {
-            right: 37%;
-        }
-
-        .flickity-button {
-            top: 78%;
-        }
-
-        .flickity-page-dots {
-            display: none;
-        }
+        @include flickity-center-buttons-no-dots;
     }
 
     .fp-about-us-cell {
+        @include align-items-center;
         width: 100%;
         margin: 0 auto;
         text-align: center;
         padding: 0 $base__space-unit;
         border-radius: $border-radius;
-        display: flex;
         flex-flow: column wrap;
         justify-content: space-evenly;
-        align-items: center;
         height: 610px;
 
         .card-icon {
@@ -92,15 +82,11 @@
     margin-top: $base__space-unit * 2;
 
     .wwo_image {
-
         background: linear-gradient(to bottom, rgba(47, 43, 92, 0.3) 0%, rgba(47, 43, 92, 0.3) 100%);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-
-
+        @include justify-content-center;
     }
 
     .wwo_meta {
@@ -121,7 +107,6 @@
         color: #2d2d2d;
         text-align: center;
         margin: $base__space-unit * 2 auto;
-
     }
 
     .card-icon {
@@ -129,14 +114,11 @@
         margin: 0 auto;
     }
 
-
     .fp-get-involved-card {
-        display: flex;
+        @include align-items-center;
         flex-flow: column wrap;
         justify-content: space-around;
-        align-items: center;
         text-align: center;
-
         height: 30rem;
         margin-bottom: $base__space-unit * 2;
         padding: $base__space-unit 0;
@@ -152,7 +134,6 @@
     background: $color__background-black;
     margin: $base__space-unit * 2 auto;
 
-
     h2 {
         padding: $base__space-unit * 2 0;
         text-align: center;
@@ -164,35 +145,15 @@
             height: 400px !important;
         }
 
-
-        .previous {
-            left: 37%;
-        }
-
-        .next {
-            right: 37%;
-        }
-
-        .flickity-button {
-            top: 78%;
-        }
-
-        .flickity-page-dots {
-            display: none;
-        }
+        @include flickity-center-buttons-no-dots;
     }
 
     .partner-content {
-        // border: 2px solid red;
+        @include flex-default;
         width: 100%;
         text-align: center;
         padding: 0 $base__space-unit;
-
-        display: flex;
         flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-
         margin-top: $base__space-unit * 2;
 
         .partner-logo {
@@ -262,9 +223,7 @@
                 }
 
                 .navigation-dots {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include flex-default;
 
                     .dot {
                         width: .5rem;
@@ -297,7 +256,6 @@
                 margin-top: 3.25rem;
                 margin-bottom: 1rem;
             }
-
         }
 
         // end .grid-cards-element
@@ -312,7 +270,6 @@
     }
 
     .container {
-
         &-who-we-are {
             @include desktop {
                 .txt-align-c {
@@ -330,7 +287,6 @@
                         &:nth-child(2) {
                             margin: 0;
                         }
-
                     }
                 }
             }
@@ -369,7 +325,6 @@
                         &:nth-child(2) {
                             margin: 0;
                         }
-
                     }
                 }
             }
@@ -388,10 +343,8 @@
         &-card-about-us {
             .flex {
                 &-element {
+                    @include flex-default;
                     background-color: $color__background-article;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
                     flex-direction: column;
                     min-height: 100vh;
                     text-align: center;
@@ -425,7 +378,6 @@
                     &:nth-child(2n) {
                         background-color: $color__background-banner;
                     }
-
                 }
             }
 
@@ -440,20 +392,14 @@
         // end .container-card-about-us
 
     }
-
 }
 
-
 /* Resources Page */
-
 .resources-grid {
-    // margin-left: $base__space-unit * 3;
-    // margin-right: $base__space-unit * 3;
     max-width: 1000px;
 
     .resources {
         padding: $base__space-unit * 3 $base__space-unit * 2;
-
 
         .cfs-hyperlink {
             .text {
@@ -464,7 +410,6 @@
 }
 
 /* Donate Page */
-
 #donate-page-banner {
     .banner-title {
         margin-top: 0rem;
@@ -477,7 +422,6 @@
     }
 
     .banner-button {
-
         margin: $base__space-unit * 2 auto;
         padding: $base__space-unit - 0.25 0;
         width: 205px;
@@ -489,7 +433,6 @@
             text-decoration: none;
             font-weight: bold;
         }
-
     }
 }
 
@@ -524,13 +467,607 @@
         width: 70rem;
 
         .donate-card {
-            display: flex;
+            @include justify-content-center;
             flex-direction: column;
-            justify-content: center;
             margin: $base__space-unit * 7 auto;
             padding: 1.5rem;
             text-align: center;
             min-height: 340px;
+        }
+    }
+}
+
+
+/* Contact Page **** START */
+
+.page-template-page-contact {
+
+    .grid-cards {
+
+        @include desktop {
+            display: inline;
+            max-width: 1200px;
+            margin: auto;
+            margin-bottom: 5rem;
+        }
+
+    }
+
+    .contact-cards {
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+        }
+
+        .rect-card p {
+            text-align: left;
+            line-height: 22px;
+            font-size: 19px;
+            margin-bottom: 22px;
+            margin-top: 0px;
+
+        }
+
+        .rect-card h3 {
+            text-align: left;
+            margin-bottom: 0.5rem;
+
+            @include desktop {
+                font-size: 23px;
+                margin-bottom: 1rem;
+            }
+
+        }
+
+        .rect-card {
+            padding: 5rem 2.5rem 2rem;
+
+            @include desktop {
+                margin: 0;
+                padding: 3rem 1.5rem 2rem;
+                ;
+
+
+                // Adjust margins of even number of container
+                &:nth-child(2*n) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .contact-location-header {
+
+        color: $color__text-sec;
+        text-align: center;
+        padding: 5rem 0 0 0;
+
+        @include desktop {
+            padding: 5rem 0 5rem 0;
+        }
+    }
+}
+
+/* Contact Page **** END */
+
+/* Team Page **** START */
+.page-template-page-meet-our-team {
+    .grid-cards {
+        display: block;
+
+        @include desktop {
+            max-width: $desktop-width;
+            margin: 0 auto;
+        }
+
+        .rect-card {
+            margin: 0;
+            padding: 0rem 1.5rem 5rem 1.5rem;
+
+            @include desktop {
+                padding: 0rem 1.5rem 8rem 1.5rem;
+            }
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .card-info {
+        padding: 0 2rem;
+
+        @include desktop {
+            text-align: left;
+            padding-top: 80px;
+        }
+
+        p,
+        a {
+            display: block;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        p:nth-child(1),
+        p:nth-child(2) {
+            font-weight: 900;
+
+        }
+
+        p:first-child {
+            font-size: 22px;
+
+            @include desktop {
+                font-size: 2rem;
+            }
+        }
+
+        p:nth-child(2) {
+            @include desktop {
+
+                font-size: 1.5rem;
+
+            }
+        }
+
+        a {
+            color: $color__text-sec;
+            text-decoration: none;
+
+            &:hover {
+                color: $color__text-sec;
+            }
+
+            &:active {
+                color: $color__text-sec;
+            }
+        }
+    }
+
+    .page-team-header {
+        color: $color__text-sec;
+        text-align: center;
+        padding: 3rem 0 3rem 0;
+
+        @include desktop {
+            padding: 8rem 0 8rem 0;
+        }
+    }
+
+    .grid-rect-card {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            grid-gap: 2rem;
+        }
+
+    }
+
+}
+
+/* Volunteer page */
+
+.page-template-page-volunteer {
+
+    .volunteer-info {
+        margin: 5rem 2rem 0rem 2rem;
+        text-align: center;
+
+        @include desktop {
+            text-align: left;
+            margin-top: 0;
+        }
+
+    }
+
+    .volunteer-info-container {
+        text-align: center;
+        margin-bottom: 5rem;
+
+        h3 {
+            padding: 2rem 0;
+            margin-bottom: 3rem;
+        }
+
+        a {
+            color: $color__text-sec;
+            text-decoration: none;
+
+            &:hover {
+                color: $color__text-sec;
+            }
+
+            &:active {
+                color: $color__text-sec;
+            }
+        }
+
+        @include desktop {
+            text-align: left;
+        }
+    }
+
+    .volunteer-apply-info {
+        text-align: center;
+        margin: 0rem 2rem 5rem 2rem;
+
+        @include desktop {
+            text-align: left;
+        }
+
+    }
+}
+
+.flex-container {
+    @include desktop {
+        max-width: $desktop-width;
+        margin: 120px auto 100px auto;
+        display: flex;
+    }
+
+
+    .flex-wrap {
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .content-type-text {
+            margin-top: 5rem;
+
+            @include desktop {
+                padding: 0;
+                margin-top: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .content-type-widgets {
+
+            h3,
+            p {
+                padding: 0 2rem;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                color: $color__text-main;
+            }
+
+            p {
+                &:last-child {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        @include desktop {
+            &.single-description {
+                order: 1;
+                text-align: left;
+            }
+
+            &.single-details {
+                flex: none;
+                order: 2;
+                width: 350px;
+                margin-right: 120px;
+
+                .content-type-widgets {
+                    border: 1px solid $color__border;
+                    margin-bottom: 30px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &>* {
+                        margin: 0;
+                        margin-bottom: 1.5rem;
+
+                        &:last-child {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Single Event page **** Start*/
+#tribe-events-pg-template {
+    padding: 0px;
+}
+
+#tribe-events {
+    p:last-child {
+        margin-bottom: 2rem;
+    }
+
+    div {
+        &.tribe-events-single-event-description {
+            padding: 0rem 3rem;
+        }
+    }
+}
+
+.single-tribe_events {
+
+    color: #323232;
+    padding: 0rem;
+
+    .tribe-events-single {
+        padding: 0;
+        margin: 0;
+    }
+
+    .single-event-header {
+        background-color: $color__background-article;
+        color: white;
+        padding: 2rem;
+        transform: translateY(-38px);
+        width: 90%;
+        margin: 0 auto;
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .tribe-events-single-event-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .single-event-purple {
+        background-color: $color__background-article;
+        border: none;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 300;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .tribe-events-single-event-description,
+    .tribe-events-content {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p:last-child {
+            margin-bottom: 2rem;
+        }
+
+        span {
+            padding: 2rem;
+        }
+
+        @include desktop {
+            order: 0;
+            width: 70%;
+        }
+    }
+
+    .single-event-date-details {
+        display: none;
+    }
+
+    .single-tribe_events,
+    .tribe-events-cal-links {
+        text-align: center;
+
+        @include desktop {
+            order: 2;
+            width: 100%;
+        }
+    }
+
+    .single-event-venue {
+        display: none;
+    }
+
+    .secondary .tribe-events-venue-map {
+        width: 90%;
+        margin: 2rem 5%;
+
+    }
+
+    .tribe-events-meta-group-organizer {
+        padding: 0 3rem;
+    }
+
+    .single-tribe_events,
+    .tribe-events-event-meta {
+        background: none;
+        border: none;
+        margin: 0;
+    }
+
+    .tribe-events-single-section,
+    .tribe-events-event-meta,
+    .primary {
+        @include desktop {
+            order: 1;
+            width: 30%;
+            font-size: 19px;
+            display: flex;
+        }
+
+        .tribe-clearfix {
+            width: 100%;
+        }
+
+    }
+
+    .secondary {
+        width: 100%;
+
+        @include desktop {
+            order: 4;
+            width: 100%;
+        }
+
+
+    }
+
+    .fa-map-marker-alt,
+    .fa-calendar-alt {
+        font-size: 1.5rem;
+    }
+
+    .get-ticket-header {
+        display: none;
+
+        @include desktop {
+            display: block;
+            text-align: center;
+            order: 5;
+        }
+    }
+
+    .get-ticket-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        padding: 0 1rem;
+
+        a {
+            text-align: center;
+            margin: 1rem;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .get-ticket-price {
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    .get-ticket-description {
+        font-size: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    .get-ticket-address-details {
+        font-size: 17px;
+    }
+
+    .single-event-content-container {
+        @include desktop {
+            display: flex;
+            padding: 0rem 2rem;
+        }
+    }
+
+    #tribe-events-pg-template .tribe-events-content h1 {
+
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    #tribe-events-content {
+        @include desktop {
+            .tribe-events-meta-group-organizer {
+
+                display: block;
+                float: none;
+                width: 100%;
+                padding: 0;
+                padding-top: 2rem;
+
+                h2 {
+                    display: none;
+                    // margin-top: 0;
+                    // margin-bottom: 1rem;
+                }
+
+                .single-event-organizer {
+                    flex: none;
+                    width: 100%;
+                    position: relative;
+
+                    &::before {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        content: 'Contact Information';
+                        font-size: 1.5rem;
+                        font-weight: 900;
+
+                    }
+                }
+
+                dl {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    * {
+                        line-height: 1.5;
+                    }
+
+                    dt {
+                        flex: none;
+                        width: 30%;
+                    }
+
+                    dd {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Job Postings page */
+
+.page-template-page-job-postings {
+
+    .rect-card {
+
+        p:first-child {
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            margin-bottom: 2rem;
+        }
+
+        p:nth-child(3) {
+            margin-bottom: 5rem;
+
+            @include desktop {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .grid-cards .rect-card {
+        @include desktop {
+            padding: 3rem 4rem;
         }
     }
 }
@@ -543,9 +1080,7 @@
         display: flex;
     }
 
-
     .flex-wrap {
-
         h3 {
             margin-bottom: 1rem;
         }
@@ -636,17 +1171,13 @@
     a {
         color: $color__link-search;
         font-size: $font__size_main + 8;
-        // padding-bottom: $base__space-unit *4;
     }
 
     .search-page-header {
-        display: flex;
+        @include align-items-center;
         justify-content: space-between;
-        align-items: center;
         margin-bottom: $base__space-unit * 3;
     }
-
-    .search-count {}
 
     @include desktop {
         margin: $base__space-unit * 4 auto;
@@ -658,7 +1189,6 @@
 
         a {
             font-size: $font__size_main + 11;
-            // padding-bottom: $base__space-unit *4;
         }
     }
 }
