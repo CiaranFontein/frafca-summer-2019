@@ -36,6 +36,27 @@ $event_id = get_the_ID();
 			<i class="far fa-calendar-alt"></i> &nbsp &nbsp <?php echo tribe_events_event_schedule_details($event_id, '<h2>', '</h2>'); ?>
 			<p class="get-ticket-address-details"><i class="fas fa-map-marker-alt">&nbsp &nbsp</i><?php echo tribe_get_address(); ?>, <?php echo tribe_get_city(); ?></p>
 		</div>
+
+		<?php if ( tribe_get_cost() ) : ?> 
+			<!-- <div class="tribe-events-event-cost"> -->
+			<div class="rect-card white get-ticket-header">
+		<?php  
+			$ticketdesc = frafca_cfs('ticket_link_description');
+		?>
+			<a class="default-btn yellow" href="<?php echo tribe_get_event_website_url(); ?>" target="_blank"> Get Ticket </a>
+
+			<div class="get-ticket-header-desc">
+					
+			<p class="get-ticket-price-header"><?php echo tribe_get_cost( null, true ); ?></p>
+			<p class="get-ticket-description-header"><?php echo $ticketdesc;?></p>
+
+		</div>
+		
+		<?php
+		do_action( 'tribe_events_inside_cost' )
+		?>
+	</div>
+<?php endif; ?>
 		
 	
 	</div>

@@ -175,6 +175,11 @@
         font-size: 1.5rem;
     }
 
+    .tribe-events-schedule {
+        h2 {
+            font-size: 1rem;
+        }
+    }
     .get-ticket-header {
         display: none;
 
@@ -183,6 +188,21 @@
             text-align: center;
             order: 5;
         }
+
+    }
+
+    .get-ticket-header-desc {
+        color: #ffff;
+    }
+
+    .get-ticket-price-header{
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .get-ticket-description-header{
+        font-size: 1rem;
+        
     }
 
     .get-ticket-footer {
