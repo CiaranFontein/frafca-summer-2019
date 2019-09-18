@@ -44,7 +44,7 @@
                         <?php wp_nav_menu( array( 'theme_location' => 'Header-Menu', 'Header-Menu' => 'Header-Menu' ) ); ?>
                     </div>
                     <a class="search-icon" href="#">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search" aria-label="Enter search keywords"></i>
                     </a>
                     <div class="side-header-menu">
                         <?php wp_nav_menu( array( 'theme_location' => 'Side-Header-Menu', 'Side-Header-Menu' => 'Side-Header-Menu' ) ); ?>
