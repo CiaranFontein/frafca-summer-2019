@@ -60,10 +60,17 @@ $font__desktop_icon_size: 1.5rem;
 
 // Border 
 $color__border: #BBBBBB;
-$border-radius: 8px;
+$border-radius: 0.5rem;
+
+//Shadow
+$shadow_opacity: 0.4;
+$shadow_settings: 0 .5rem 1rem rgba(0, 0, 0, $shadow_opacity);
+
+//Blur
+$blur_amount:0.25rem;
 
 // Animation time
-$time__transition: .4s;
+$time__transition: .35s;
 
 $button_padding_height: 0.8rem;
 $button_padding_width: 1.5rem;
