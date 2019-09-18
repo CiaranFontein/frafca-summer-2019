@@ -1,7 +1,8 @@
 <?php
-    global $post;
-    $month_start = date('Y-m') . '-01';
-	$month_end = date("Y-m-t");
+    // global $post;
+    $get_current_date = strtotime('01 '.tribe_get_events_title());
+    $month_start = date('Y-m-d', $get_current_date);
+	$month_end = date("Y-m-t", $get_current_date);
 	$events = tribe_get_events([ 
         'posts_per_page' => -1,
         'start_date'   => $month_start,
@@ -9,8 +10,10 @@
 		]);
 ?>
     <div class="header-current-month">
-		<input id="hidden-current-month-value" type="hidden" value="<?php echo date('Y-m');?>">
-		<?php echo date('F, Y') ;?>
+        
+		<input id="hidden-current-month-value" type="hidden" value="<?php echo date('Y-m', $get_current_date);?>">
+        <?php echo date('F, Y', $get_current_date) ;?>
+        
 	</div> <!-- end .header-current-month -->
 		
     <?php
