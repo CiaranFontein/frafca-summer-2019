@@ -7,7 +7,10 @@
       wrapAround: true,
       selectedAttraction: 0.01,
       friction: 0.15,
-      autoPlay: 3000
+      autoPlay: 3000,
+      // percentPosition: false,
+      // watchCSS: true
+      draggable: '>2'
     });
     console.log(fpAbout);
 
@@ -21,5 +24,5 @@
       autoPlay: 2000
     });
     console.log(fpPartners);
-  });
+  }); // End of Document.Ready
 })(jQuery);
