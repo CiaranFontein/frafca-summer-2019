@@ -1607,8 +1607,11 @@ object {
     font-size: -1.625rem; }
     @media (min-width: 1200px) {
       .front-page-about-us .about-us-button {
-        -webkit-transform: translateY(-230%);
-                transform: translateY(-230%); } }
+        position: relative;
+        left: initial;
+        right: initial;
+        -webkit-transform: none;
+                transform: none; } }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1626,12 +1629,20 @@ object {
   .front-page-about-us .fp-about-us-carousel .flickity-page-dots {
     display: none; }
   @media (min-width: 1200px) {
-    .front-page-about-us .fp-about-us-carousel::after {
-      content: ''; }
-    .front-page-about-us .fp-about-us-carousel .flickity-viewport {
-      margin-bottom: 10rem; }
-    .front-page-about-us .fp-about-us-carousel .flickity-button {
-      display: none; } }
+    .front-page-about-us .fp-about-us-carousel {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: relative; }
+      .front-page-about-us .fp-about-us-carousel::after {
+        content: ''; }
+      .front-page-about-us .fp-about-us-carousel .flickity-viewport {
+        margin-bottom: 10rem; }
+      .front-page-about-us .fp-about-us-carousel .flickity-button {
+        display: none; } }
   .front-page-about-us .fp-about-us-cell {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1660,11 +1671,14 @@ object {
       padding-right: 1rem; }
     @media (min-width: 1200px) {
       .front-page-about-us .fp-about-us-cell {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         width: 27%;
         margin-left: 1rem;
         margin-right: 1rem;
         border-radius: 0.65rem;
-        height: 400px; }
+        height: 420px; }
         .front-page-about-us .fp-about-us-cell .card-icon {
           width: 150px;
           margin: 1rem; }
@@ -2799,6 +2813,11 @@ object {
   .single-tribe_events .get-ticket-description {
     font-size: 1rem;
     margin-bottom: 0rem; }
+  .single-tribe_events .get-ticket-footer-desc {
+    text-align: center;
+    margin-top: 0.6rem; }
+    .single-tribe_events .get-ticket-footer-desc p {
+      margin: .3rem 1rem; }
   .single-tribe_events .get-ticket-address-details {
     font-size: 17px; }
   @media (min-width: 1200px) {

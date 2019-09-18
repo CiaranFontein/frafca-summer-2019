@@ -46,7 +46,10 @@
         font-size: $font__size_main - 3;
 
         @include desktop {
-            transform: translateY(-230%);
+            position: relative;
+            left: initial;
+            right: initial;
+            transform: none;
         }
     }
 
@@ -64,6 +67,9 @@
         @include flickity-center-buttons-no-dots;
 
         @include desktop {
+            display: flex;
+            justify-content: center;
+            position: relative;
 
             &::after {
                 content: '';
@@ -103,12 +109,13 @@
         }
 
         @include desktop {
-
+            justify-content: flex-start;
             width: 27%;
             margin-left: $base__space-unit;
             margin-right: $base__space-unit;
             border-radius: $border-radius;
-            height: 400px;
+            height: 420px;
+
 
             h3 {}
 
