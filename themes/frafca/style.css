@@ -1590,6 +1590,10 @@ object {
     left: 10%;
     right: 10%;
     font-size: -1.625rem; }
+    @media (min-width: 1200px) {
+      .front-page-about-us .about-us-button {
+        -webkit-transform: translateY(-230%);
+                transform: translateY(-230%); } }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1606,6 +1610,13 @@ object {
     top: 78%; }
   .front-page-about-us .fp-about-us-carousel .flickity-page-dots {
     display: none; }
+  @media (min-width: 1200px) {
+    .front-page-about-us .fp-about-us-carousel::after {
+      content: ''; }
+    .front-page-about-us .fp-about-us-carousel .flickity-viewport {
+      margin-bottom: 10rem; }
+    .front-page-about-us .fp-about-us-carousel .flickity-button {
+      display: none; } }
   .front-page-about-us .fp-about-us-cell {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1617,7 +1628,6 @@ object {
     margin: 0 auto;
     text-align: center;
     padding: 0 1rem;
-    border-radius: 0.65rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
@@ -1633,6 +1643,18 @@ object {
       color: #fff;
       padding-left: 1rem;
       padding-right: 1rem; }
+    @media (min-width: 1200px) {
+      .front-page-about-us .fp-about-us-cell {
+        width: 27%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 0.65rem;
+        height: 400px; }
+        .front-page-about-us .fp-about-us-cell .card-icon {
+          width: 150px;
+          margin: 1rem; }
+        .front-page-about-us .fp-about-us-cell .card-meta {
+          padding: 0; } }
 
 .what-we-offer {
   margin-top: 2rem; }
@@ -1803,7 +1825,7 @@ object {
   @media (min-width: 1200px) {
     .page-template-page-about section {
       font-size: 1.375rem;
-      margin-top: 120px; }
+      margin-top: 7.5rem; }
       .page-template-page-about section:last-child {
         margin-bottom: 120px; } }
 
