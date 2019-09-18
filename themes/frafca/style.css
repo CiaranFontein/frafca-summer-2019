@@ -2785,6 +2785,11 @@ object {
   .single-tribe_events .get-ticket-description {
     font-size: 1rem;
     margin-bottom: 0rem; }
+  .single-tribe_events .get-ticket-footer-desc {
+    text-align: center;
+    margin-top: 0.6rem; }
+    .single-tribe_events .get-ticket-footer-desc p {
+      margin: .3rem 1rem; }
   .single-tribe_events .get-ticket-address-details {
     font-size: 17px; }
   @media (min-width: 1200px) {

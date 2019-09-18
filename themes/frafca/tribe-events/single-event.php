@@ -76,9 +76,15 @@ $event_id = get_the_ID();
 		<?php  
 			$ticketdesc = frafca_cfs('ticket_link_description');
 		?>
-		<p class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></p>
 		<a class="default-btn yellow" href="<?php echo tribe_get_event_website_url(); ?>" target="_blank"> Get Ticket </a>
+
+		<div class="get-ticket-footer-desc">
+				
+			<p class="get-ticket-price"><?php echo tribe_get_cost( null, true ); ?></p>
 			<p class="get-ticket-description"><?php echo $ticketdesc;?></p>
+
+		</div>
+		
 		<?php
 		do_action( 'tribe_events_inside_cost' )
 		?>
