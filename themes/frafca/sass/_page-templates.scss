@@ -124,8 +124,8 @@
         padding: $base__space-unit 0;
 
         p {
-            padding-left: $base__space-unit;
-            padding-right: $base__space-unit;
+            padding-left: $base__space-unit * 2;
+            padding-right: $base__space-unit * 2;
         }
     }
 }
@@ -163,6 +163,18 @@
         @include desktop {
             width: 25%;
         }
+    }
+
+    @include desktop {
+        .fp-partners-carousel {
+
+            .flickity-viewport {
+                height: 400px !important;
+            }
+
+            @include flickity-button-reset;
+        }
+
     }
 }
 

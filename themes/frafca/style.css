@@ -1372,9 +1372,9 @@ object {
   .front-page-about-us h2 {
     margin: 2.4rem auto; }
   .front-page-about-us .fp-about-us-carousel .previous {
-    left: 37%; }
+    left: 35%; }
   .front-page-about-us .fp-about-us-carousel .next {
-    right: 37%; }
+    right: 35%; }
   .front-page-about-us .fp-about-us-carousel .flickity-button {
     top: 78%; }
   .front-page-about-us .fp-about-us-carousel .flickity-page-dots {
@@ -1457,8 +1457,8 @@ object {
   margin-bottom: 2rem;
   padding: 1rem 0; }
   .front-page-get-involved .fp-get-involved-card p {
-    padding-left: 1rem;
-    padding-right: 1rem; }
+    padding-left: 2rem;
+    padding-right: 2rem; }
 
 .front-page-partners {
   background: #323232;
@@ -1469,9 +1469,9 @@ object {
   .front-page-partners .fp-partners-carousel .flickity-viewport {
     height: 400px !important; }
   .front-page-partners .fp-partners-carousel .previous {
-    left: 37%; }
+    left: 35%; }
   .front-page-partners .fp-partners-carousel .next {
-    right: 37%; }
+    right: 35%; }
   .front-page-partners .fp-partners-carousel .flickity-button {
     top: 78%; }
   .front-page-partners .fp-partners-carousel .flickity-page-dots {
@@ -1499,6 +1499,15 @@ object {
     @media (min-width: 1200px) {
       .front-page-partners .partner-content {
         width: 25%; } }
+  @media (min-width: 1200px) {
+    .front-page-partners .fp-partners-carousel .flickity-viewport {
+      height: 400px !important; }
+    .front-page-partners .fp-partners-carousel .previous {
+      left: 1%; }
+    .front-page-partners .fp-partners-carousel .next {
+      right: 1%; }
+    .front-page-partners .fp-partners-carousel .flickity-button {
+      top: 40%; } }
 
 /* About Page */
 .page-template-page-about section {
