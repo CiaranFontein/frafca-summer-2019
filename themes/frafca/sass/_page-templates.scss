@@ -53,15 +53,14 @@
     }
 
     .fp-about-us-cell {
+        @include align-items-center;
         width: 100%;
         margin: 0 auto;
         text-align: center;
         padding: 0 $base__space-unit;
         border-radius: $border-radius;
-        display: flex;
         flex-flow: column wrap;
         justify-content: space-evenly;
-        align-items: center;
         height: 610px;
 
         .card-icon {
@@ -87,8 +86,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
+        @include justify-content-center;
     }
 
     .wwo_meta {
@@ -117,10 +115,9 @@
     }
 
     .fp-get-involved-card {
-        display: flex;
+        @include align-items-center;
         flex-flow: column wrap;
         justify-content: space-around;
-        align-items: center;
         text-align: center;
         height: 30rem;
         margin-bottom: $base__space-unit * 2;
@@ -470,9 +467,8 @@
         width: 70rem;
 
         .donate-card {
-            display: flex;
+            @include justify-content-center;
             flex-direction: column;
-            justify-content: center;
             margin: $base__space-unit * 7 auto;
             padding: 1.5rem;
             text-align: center;
@@ -583,9 +579,8 @@
     }
 
     .search-page-header {
-        display: flex;
+        @include align-items-center;
         justify-content: space-between;
-        align-items: center;
         margin-bottom: $base__space-unit * 3;
     }
 
