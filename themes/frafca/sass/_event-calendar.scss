@@ -498,18 +498,20 @@
     }
 
     .frafca-events-listing-mobile {
-        border-bottom: 1px solid #323232;
+        border-bottom: 1px solid $color__text-sec;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 1rem 3rem;
+        padding: 1rem 1.5rem;
         height: auto;
         position: relative;
+        color: $color__text-sec;
+        font-weight: 500;
 
         &::before {
             content: '';
             position: absolute;
-            left: 2rem;
+            left: 0.75rem;
             height: 70%;
             width: 5px;
             background: #334C71;
@@ -551,7 +553,7 @@
     .tribe-events-ical,
     .tribe-events-button {
         display: none;
-        transform: translateY(-95px);
+        transform: translateY(-68px);
     }
 
     .tribe-events-sub-nav li {
@@ -559,17 +561,16 @@
     }
 
     .tribe-events-listing {
-        transform: translateY(-90px);
+        transform: translateY(-68px);
 
         .header-current-month {
-            text-align: center;
             color: white;
             font-size: 1rem;
+            padding: .5rem 1.5rem
         }
 
         h4 {
             font-size: 1rem;
-            // font-weight: 500;
         }
 
         a {
