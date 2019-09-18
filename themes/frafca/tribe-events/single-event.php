@@ -24,7 +24,6 @@ $event_id = get_the_ID();
 
 ?>
 
-
 <div id="tribe-events-content" class="tribe-events-single">
 
 	<!-- Notices -->
@@ -68,29 +67,23 @@ $event_id = get_the_ID();
 
 	<!-- #page-contact -->
 	<!-- #tribe-events-footer -->
-
 	
 
-		<?php
-		while (have_posts()) :  the_post();
-				global $post;
-				$events = tribe_get_events( [] );
-				// var_dump($events);
-				foreach ( $events as $post ): 
-				setup_postdata( $post );
-				$cost = tribe_get_cost( $post );
-				$title = $post->post_title;
 
-				
-					if ( ! empty( $cost )  && $title === the_title() ) : 
-						echo tribe_get_event_website_link();
-						echo tribe_get_cost();
-					endif;
-
-				endforeach;
-		endwhile;
-			
-			
+<?php if ( tribe_get_cost() ) : ?> 
+	<!-- <div class="tribe-events-event-cost"> -->
+	<div class="rect-card white get-ticket-footer">
+		<?php  
+			$ticketdesc = frafca_cfs('ticket_link_description');
 		?>
+		<p class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></p>
+		<a class="default-btn yellow" href="<?php echo tribe_get_event_website_url(); ?>" target="_blank"> Get Ticket </a>
+			<p class="get-ticket-description"><?php echo $ticketdesc;?></p>
+		<?php
+		do_action( 'tribe_events_inside_cost' )
+		?>
+	</div>
+<?php endif; ?>
+
 
 </div>

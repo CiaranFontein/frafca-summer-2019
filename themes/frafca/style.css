@@ -635,9 +635,9 @@ a {
               justify-content: center; } }
   .site-header .header-logo {
     background: url(../../images/logos/2018_frafca_logo_final.png) no-repeat;
-    background-size: 3.75rem 3.75rem;
-    height: 3.75rem;
-    width: 3.75rem;
+    background-size: 4.25rem 4.25rem;
+    height: 4.25rem;
+    width: 4.25rem;
     z-index: 4;
     position: relative; }
     @media (min-width: 1200px) {
@@ -1141,6 +1141,7 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* HTML Smooth Scrolling */
 html {
   scroll-behavior: smooth; }
 
@@ -3000,13 +3001,15 @@ object {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 1rem 3rem;
+    padding: 1rem 1.5rem;
     height: auto;
-    position: relative; }
+    position: relative;
+    color: #323232;
+    font-weight: 500; }
     .tribe-events-page-template .frafca-events-listing-mobile::before {
       content: '';
       position: absolute;
-      left: 2rem;
+      left: 0.75rem;
       height: 70%;
       width: 5px;
       background: #334C71; }
@@ -3031,15 +3034,19 @@ object {
   .tribe-events-page-template .tribe-events-ical,
   .tribe-events-page-template .tribe-events-button {
     display: none;
-    -webkit-transform: translateY(-95px);
-            transform: translateY(-95px); }
+    -webkit-transform: translateY(-68px);
+            transform: translateY(-68px); }
   .tribe-events-page-template .tribe-events-sub-nav li {
     width: 20%; }
   .tribe-events-page-template .tribe-events-listing {
-    -webkit-transform: translateY(-90px);
-            transform: translateY(-90px); }
+    -webkit-transform: translateY(-68px);
+            transform: translateY(-68px); }
+    .tribe-events-page-template .tribe-events-listing .header-current-month {
+      color: white;
+      font-size: 1rem;
+      padding: .5rem 1.5rem; }
     .tribe-events-page-template .tribe-events-listing h4 {
-      font-size: 16px; }
+      font-size: 1rem; }
     .tribe-events-page-template .tribe-events-listing a {
       text-decoration: none; }
     @media (min-width: 1200px) {
