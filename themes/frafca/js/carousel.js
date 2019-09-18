@@ -21,5 +21,5 @@
       autoPlay: 2000
     });
     console.log(fpPartners);
-  });
+  }); // End of Document.Ready
 })(jQuery);

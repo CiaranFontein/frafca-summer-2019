@@ -100,6 +100,26 @@
         display: inline-grid;
         margin: $base__space-unit - 0.5 auto;
     }
+
+    @include desktop {
+        display: flex;
+
+        .wwo_image {
+            justify-content: initial;
+        }
+
+        .wwo_meta {
+            flex: 50%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            text-align: left;
+
+            h3 {
+                font-size: 3rem;
+            }
+        }
+    }
 }
 
 .front-page-get-involved {
@@ -126,6 +146,44 @@
         p {
             padding-left: $base__space-unit * 2;
             padding-right: $base__space-unit * 2;
+        }
+    }
+
+    @include desktop {
+        .flex-cards {
+
+            display: flex;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            padding: $base__space-unit;
+
+            .fp-get-involved-card {
+                margin: $base__space-unit + 1;
+                height: unset;
+                border-radius: $border-radius;
+                flex: 30%;
+
+
+                .card-icon {
+                    margin-top: 1rem;
+                    width: 145px;
+                }
+
+                h3 {
+                    margin-top: $base__space-unit;
+                }
+
+                p {
+                    height: 140px;
+                    font-size: 1.25rem;
+                }
+
+                a {
+                    margin-bottom: $base__space-unit;
+
+                }
+
+            }
         }
     }
 }
@@ -169,7 +227,7 @@
         .fp-partners-carousel {
 
             .flickity-viewport {
-                height: 400px !important;
+                height: 300px !important;
             }
 
             @include flickity-button-reset;
