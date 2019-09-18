@@ -37,26 +37,6 @@ $event_id = get_the_ID();
 			<i class="far fa-calendar-alt"></i> &nbsp &nbsp <?php echo tribe_events_event_schedule_details($event_id, '<h2>', '</h2>'); ?>
 			<p class="get-ticket-address-details"><i class="fas fa-map-marker-alt">&nbsp &nbsp</i><?php echo tribe_get_address(); ?>, <?php echo tribe_get_city(); ?></p>
 		</div>
-
-		<div class="get-ticket-header">
-			<?php  
-				$ticket = frafca_cfs('ticket');
-				foreach($ticket as $ticket) :
-						$getticket = $ticket['get_ticket'];
-						$price = $ticket['ticket_price'];
-						$description = $ticket['ticket_description'];
-			?>
-
-				<div class="rect-card purple get-ticket-header">
-					<a class='default-btn yellow' href="<?php echo $getticket['url']; ?>" target="<?php echo $getticket['target']; ?>">
-						<?php echo $getticket['text']; ?>
-					</a>
-					<p class="get-ticket-price"><?php echo $price;?></p>
-					<p class="get-ticket-description"><?php echo $description;?></p>
-				</div>
-
-			<?php endforeach; ?>
-		</div>
 		
 	
 	</div>
@@ -89,36 +69,28 @@ $event_id = get_the_ID();
 	<!-- #page-contact -->
 	<!-- #tribe-events-footer -->
 
-				<?php  
-                    $ticket = frafca_cfs('ticket');
-                    foreach($ticket as $ticket) :
-                            $getticket = $ticket['get_ticket'];
-                            $price = $ticket['ticket_price'];
-							$description = $ticket['ticket_description'];
-                ?>
-
-                    <div class="rect-card white get-ticket-footer">
-                        <a class='default-btn yellow' href="<?php echo $getticket['url']; ?>" target="<?php echo $getticket['target']; ?>">
-                            <?php echo $getticket['text']; ?>
-						</a>
-
-						<div class="get-ticket-footer-desc">
-							<p class="get-ticket-price"><?php echo $price;?></p>
-							<p class="get-ticket-description"><?php echo $description;?></p>
-						</div>
-                        
- 
-                    </div>
-
-                <?php endforeach; ?>
 	
-				<?php if ( tribe_get_cost() ) : ?>
-	<div class="tribe-events-event-cost">
-		<span class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></span>
+
 		<?php
-		/** This action is documented in the-events-calendar/src/views/list/single-event.php */
-		do_action( 'tribe_events_inside_cost' )
+		while (have_posts()) :  the_post();
+				global $post;
+				$events = tribe_get_events( [] );
+				// var_dump($events);
+				foreach ( $events as $post ): 
+				setup_postdata( $post );
+				$cost = tribe_get_cost( $post );
+				$title = $post->post_title;
+
+				
+					if ( ! empty( $cost )  && $title === the_title() ) : 
+						echo tribe_get_event_website_link();
+						echo tribe_get_cost();
+					endif;
+
+				endforeach;
+		endwhile;
+			
+			
 		?>
-	</div>
-<?php endif; ?>
-</div><!-- #tribe-events-content -->
+
+</div>

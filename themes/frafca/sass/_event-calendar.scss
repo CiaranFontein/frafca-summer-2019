@@ -36,7 +36,7 @@
 	}
 	div {
 		&.tribe-events-single-event-description {
-			padding: 0rem 3rem;
+            padding: 0rem 3rem;
 		}
 	}
 }
@@ -230,8 +230,7 @@
                     }
 				h2 {
 					display: none;
-					// margin-top: 0;
-					// margin-bottom: 1rem;
+				
                 }
 				.single-event-organizer {
 					flex: none;
@@ -245,6 +244,7 @@
 						font-size: 1rem;
                         font-weight: 900;
                         @include desktop {
+                        margin-top: 1.5rem;
                         font-size: 1.5rem;
                         font-weight: 900;
                         }
@@ -469,23 +469,34 @@
             border-bottom: 1px solid #323232;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             padding: 1rem 3rem;
             height: auto;
-
             position:relative;
 
             &::before {
                 content: '';
                 position: absolute;
                 left: 2rem;
-                height: 80%;
+                height: 70%;
                 width: 5px;
-                background: #323232;
+                background: #334C71;
             }
+
+            &::after {
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f105";
+                position: absolute;
+                right: 2rem;
+                width: 0;
+                background: #000000;
+            }
+
                 p{
                     font-size: 12px;
                     margin-bottom:0;
+                    margin-top: .1rem;
                 }
         }
 
@@ -559,6 +570,9 @@
 
         #tribe-bar-form input[type=text] {
             color: $color__text-sec;
+                @include desktop {
+                    color: white;
+                }
         }
 
         .frafca-events-button {
@@ -573,5 +587,11 @@
             transform: translateY(104px);
         }
 
+        .tribe-bar-filters {
+            transform: translateY(-50px);
+                @include desktop {
+                    transform: translateY(-7px);
+                }
+        }
 
 }
