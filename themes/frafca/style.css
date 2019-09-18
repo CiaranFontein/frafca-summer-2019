@@ -2814,10 +2814,10 @@ object {
       .tribe-events-page-template #tribe-bar-form {
         -webkit-transform: translateY(-93px);
                 transform: translateY(-93px); } }
-    .tribe-events-page-template #tribe-bar-form #tribe-events-footer ~ a.tribe-events-ical.tribe-events-button {
-      display: none; }
-    .tribe-events-page-template #tribe-bar-form #tribe-mobile-container {
-      display: none; }
+    @media (min-width: 1200px) {
+      .tribe-events-page-template #tribe-bar-form {
+        -webkit-transform: translateY(-97px);
+                transform: translateY(-97px); } }
   .tribe-events-page-template #tribe-bar-collapse-toggle {
     background: rgba(255, 255, 255, 0.3);
     -webkit-transform: translateY(-55px);
@@ -2917,56 +2917,66 @@ object {
     .tribe-events-page-template .frafca-events-listing-mobile p {
       font-size: 12px;
       margin-bottom: 0; }
-  .tribe-events-page-template #tribe-events p:last-child {
-    margin-bottom: 0; }
-  .tribe-events-page-template .frafca-events-mobile-old-list {
-    display: none; }
-  .tribe-events-page-template .tribe-mobile-day-heading {
-    display: none; }
-  .tribe-events-page-template .tribe-events-ical,
-  .tribe-events-page-template .tribe-events-button {
-    display: none;
-    -webkit-transform: translateY(-95px);
-            transform: translateY(-95px); }
-  .tribe-events-page-template .tribe-events-sub-nav li {
-    width: 20%; }
-  .tribe-events-page-template .tribe-events-listing {
-    -webkit-transform: translateY(-90px);
-            transform: translateY(-90px); }
-    .tribe-events-page-template .tribe-events-listing h4 {
-      font-size: 16px; }
-    .tribe-events-page-template .tribe-events-listing a {
-      text-decoration: none; }
+  .tribe-events-page-template #tribe-events-footer:before, .tribe-events-page-template #tribe-events-header:before {
+    right: 0; }
+  .tribe-events-page-template #tribe-bar-form {
+    background: rgba(255, 255, 255, 0.3); }
+    @media screen and (min-width: 728px) {
+      .tribe-events-page-template #tribe-bar-form {
+        -webkit-transform: translateY(-93px);
+                transform: translateY(-93px); } }
+    .tribe-events-page-template #tribe-bar-form #tribe-events-footer ~ a.tribe-events-ical.tribe-events-button {
+      display: none; }
+    .tribe-events-page-template #tribe-bar-form #tribe-mobile-container {
+      display: none; }
+    .tribe-events-page-template #tribe-bar-form .frafca-events-mobile-old-list {
+      display: none; }
+    .tribe-events-page-template #tribe-bar-form .tribe-mobile-day-heading {
+      display: none; }
+    .tribe-events-page-template #tribe-bar-form .tribe-events-ical,
+    .tribe-events-page-template #tribe-bar-form .tribe-events-button {
+      display: none;
+      -webkit-transform: translateY(-95px);
+              transform: translateY(-95px); }
+    .tribe-events-page-template #tribe-bar-form .tribe-events-sub-nav li {
+      width: 20%; }
+    .tribe-events-page-template #tribe-bar-form .tribe-events-listing {
+      -webkit-transform: translateY(-90px);
+              transform: translateY(-90px); }
+      .tribe-events-page-template #tribe-bar-form .tribe-events-listing h4 {
+        font-size: 16px; }
+      .tribe-events-page-template #tribe-bar-form .tribe-events-listing a {
+        text-decoration: none; }
+      @media (min-width: 1200px) {
+        .tribe-events-page-template #tribe-bar-form .tribe-events-listing {
+          display: none; } }
     @media (min-width: 1200px) {
-      .tribe-events-page-template .tribe-events-listing {
-        display: none; } }
-  @media (min-width: 1200px) {
-    .tribe-events-page-template #tribe-bar-form label {
-      font-size: 16px;
-      color: white; } }
-  .tribe-events-page-template #tribe-bar-form ::-webkit-input-placeholder {
-    color: white;
-    opacity: 1; }
-  .tribe-events-page-template #tribe-bar-form ::-ms-input-placeholder {
-    color: white;
-    opacity: 1; }
-  .tribe-events-page-template #tribe-bar-form ::placeholder {
-    color: white;
-    opacity: 1; }
-  .tribe-events-page-template .header-meta {
-    -ms-flex-item-align: center;
-        align-self: center; }
-    @media (min-width: 1200px) {
-      .tribe-events-page-template .header-meta h2 {
-        font-size: 35px;
-        color: #FFD400; } }
-  .tribe-events-page-template #tribe-bar-form input[type=text] {
-    color: #323232; }
-  .tribe-events-page-template .frafca-events-button {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px); }
-  .tribe-events-page-template .tribe-bar-toggle-text {
-    color: white; }
-  .tribe-events-page-template .tribe-events-cal-links {
-    -webkit-transform: translateY(104px);
-            transform: translateY(104px); }
+      .tribe-events-page-template #tribe-bar-form #tribe-bar-form label {
+        font-size: 16px;
+        color: white; } }
+    .tribe-events-page-template #tribe-bar-form #tribe-bar-form ::-webkit-input-placeholder {
+      color: white;
+      opacity: 1; }
+    .tribe-events-page-template #tribe-bar-form #tribe-bar-form ::-ms-input-placeholder {
+      color: white;
+      opacity: 1; }
+    .tribe-events-page-template #tribe-bar-form #tribe-bar-form ::placeholder {
+      color: white;
+      opacity: 1; }
+    .tribe-events-page-template #tribe-bar-form .header-meta {
+      -ms-flex-item-align: center;
+          align-self: center; }
+      @media (min-width: 1200px) {
+        .tribe-events-page-template #tribe-bar-form .header-meta h2 {
+          font-size: 35px;
+          color: #FFD400; } }
+    .tribe-events-page-template #tribe-bar-form #tribe-bar-form input[type=text] {
+      color: #323232; }
+    .tribe-events-page-template #tribe-bar-form .frafca-events-button {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px); }
+    .tribe-events-page-template #tribe-bar-form .tribe-bar-toggle-text {
+      color: white; }
+    .tribe-events-page-template #tribe-bar-form .tribe-events-cal-links {
+      -webkit-transform: translateY(104px);
+              transform: translateY(104px); }
