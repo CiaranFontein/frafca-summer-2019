@@ -537,7 +537,10 @@ a {
       .search-field-container .search-form .search-label {
         border: 0; } }
     .search-field-container .search-form .search-field {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
       padding: 0.35rem 1.25rem;
+      width: 100%;
       outline: none;
       color: #000; }
       @media (min-width: 1200px) {
@@ -1628,8 +1631,7 @@ object {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    margin: 0 auto;
-    margin-top: 2rem; }
+    margin: 0 auto; }
   .front-page-about-us h2 {
     margin: 2.4rem auto; }
   .front-page-about-us .fp-about-us-carousel .previous {

@@ -60,7 +60,9 @@ a {
         }
 
         .search-field {
+            box-sizing: border-box;
             padding: 0.35rem 1.25rem;
+            width: 100%;
             outline: none;
             color: #000;
 
