@@ -1,5 +1,17 @@
 # FRAFCA - ReadME.md
 
+## Features
+
+### Functionalities
+
+#### Animations
+Search Bar
+//Gif
+
+## Tutorial
+
+### Adding Events
+
 ## Technologies Used
 
 The following highlights the languages used to markup, design and animate the Instanews website along with the key functions used for each language:
