@@ -377,17 +377,11 @@
         @media screen and (min-width: 728px) {
             transform: translateY(-93px);
         }
-<<<<<<< HEAD
         #tribe-events-footer~a.tribe-events-ical.tribe-events-button {
             display: none;
         }
         #tribe-mobile-container {
             display:none;
-=======
-
-        @include desktop {
-            transform: translateY(-97px);
->>>>>>> 1dc3ca3bfd840b9738b560d31c329f7819fe7b5e
         }
     }
 
