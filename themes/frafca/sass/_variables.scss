@@ -1,14 +1,11 @@
 // Structure
-
 $base__space-unit: 1rem;
 $navigation__mobile-width: 90vw;
 
 // Media Query
-
 $desktop-width: 1200px;
 
 // Colors
-
 $color__background-body: #4D4E60;
 $color__background-screen: #fff;
 $color__text-main: #fff;
@@ -37,7 +34,6 @@ $color__confirm: #398f14;
 $color__no-data: #BBBBBB;
 
 // Typography
-
 $font__main: 'Raleway',
 sans-serif;
 $font__header: 'Merriweather',
@@ -52,15 +48,13 @@ Courier,
 monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
-
 $font__size_main: 1.375rem;
-
 $font__mobile_icon_size: 2.5rem;
 $font__desktop_icon_size: 1.5rem;
 
 // Border 
 $color__border: #BBBBBB;
-$border-radius: 0.5rem;
+$border-radius: 0.65rem;
 
 //Shadow
 $shadow_opacity: 0.4;
@@ -72,5 +66,8 @@ $blur_amount:0.25rem;
 // Animation time
 $time__transition: .35s;
 
-$button_padding_height: 0.8rem;
+$avg_padding: 0.8rem;
 $button_padding_width: 1.5rem;
+
+//Logo Size (Header)
+$logo_size: 3.75rem;
