@@ -54,6 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="tribe-events-listing">
 
 		<?php
+
 				global $post;
 				$month_start = date('Y-m') . '-01';
 				$month_end = date("Y-m-t");
@@ -69,10 +70,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				setup_postdata( $post );
 				echo '<div class="frafca-events-listing-mobile">';
 				echo '<h4><a href="'. get_the_permalink( $post ). '">' . ($post->post_title) . '</a></h4>';
-				// echo '<h4>' . get_the_permalink( $post ) . '</h4>';
 				echo '<p>' . tribe_get_start_date( $post ) . ' - ' . tribe_get_end_time( $post ) . '</p>';
 				echo '<p>' . tribe_get_address( $post ) . ' ' . tribe_get_city( $post ) . '</p>';
-				// echo "<a href='".get_the_permalink( $post )."'>Link</a>";
 				echo '</div>';
 		}
 		?>
