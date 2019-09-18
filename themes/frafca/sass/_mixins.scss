@@ -6,7 +6,6 @@
 }
 
 // Media Query
-
 @mixin desktop {
     @media (min-width: $desktop-width) {
         @content;
@@ -14,16 +13,14 @@
 }
 
 // Button Style
-
 @mixin white-button {
-    padding: $button_padding_height $button_padding_width;
-    border-radius: 0.65rem;
+    padding: $avg_padding $button_padding_width;
+    border-radius: $border-radius;
     background: #fff;
     margin: 0.15rem;
 }
 
 // Flickity Mobile Design
-
 @mixin flickity-center-buttons-no-dots {
     .previous {
         left: 37%;
@@ -43,7 +40,6 @@
 }
 
 // Flex Default Design
-
 @mixin flex-default {
     display: flex;
     justify-content: center;
@@ -76,5 +72,20 @@
 
 //Padding
 @mixin avg-padding {
-    padding: $button_padding_height;
+    padding: $avg_padding;
+}
+
+@mixin avg-0-padding {
+    padding: 0 $avg_padding;
+}
+
+//Sizing 
+@mixin pos-relative {
+    height: 100%;
+    position: relative;
+}
+
+//Transitions
+@mixin default-transition {
+    transition: $time__transition all ease-in-out;
 }

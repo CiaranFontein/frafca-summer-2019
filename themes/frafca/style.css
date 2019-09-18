@@ -375,7 +375,7 @@ img {
   display: block;
   padding: 16px 8px;
   border: 0 solid transparent;
-  border-radius: 0.5rem;
+  border-radius: 0.65rem;
   min-width: 210px;
   text-decoration: none;
   -ms-flex-item-align: center;
@@ -503,7 +503,7 @@ a {
   width: 100vw;
   position: absolute;
   z-index: 4;
-  padding: 0 10px; }
+  padding: 0 0.75rem; }
   @media (min-width: 1200px) {
     .search-field-container {
       padding: 0; } }
@@ -518,7 +518,7 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
     border: 2px solid #323232;
-    margin: 20px 0px;
+    margin: 1.25rem 0;
     font-size: 1.25rem; }
     @media (min-width: 1200px) {
       .search-field-container .search-form {
@@ -601,8 +601,8 @@ a {
     background-color: rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px); }
+    -webkit-backdrop-filter: blur(0.25rem);
+            backdrop-filter: blur(0.25rem); }
     .site-header.mediummode .hamburger-icon,
     .site-header.mediummode .main-navigation i {
       color: #fff; }
@@ -635,9 +635,9 @@ a {
               justify-content: center; } }
   .site-header .header-logo {
     background: url(../../images/logos/2018_frafca_logo_final.png) no-repeat;
-    background-size: 60px 60px;
-    height: 60px;
-    width: 60px;
+    background-size: 3.75rem 3.75rem;
+    height: 3.75rem;
+    width: 3.75rem;
     z-index: 4;
     position: relative; }
     @media (min-width: 1200px) {
@@ -656,7 +656,7 @@ a {
   left: -100vw;
   top: 0;
   z-index: 2;
-  padding-top: 80px;
+  padding-top: 5rem;
   opacity: 0;
   -webkit-transition: 0.35s;
   transition: 0.35s;
@@ -675,7 +675,7 @@ a {
             flex-grow: 1;
     padding: 1.5rem 0; }
     .mobile-header-menu a:active {
-      color: white;
+      color: #fff;
       background-color: #2F2B5C; }
     .mobile-header-menu a:focus {
       color: #BA5357;
@@ -722,9 +722,9 @@ a {
               -ms-flex: none;
                   flex: none;
           width: 3rem;
-          top: 20px;
+          top: 1.25rem;
           right: .5rem;
-          line-height: 72px;
+          line-height: 4.5rem;
           text-align: center;
           color: #2F2B5C;
           z-index: 300; }
@@ -771,7 +771,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 80px; }
+  height: 5rem; }
   .main-navigation .header-menu {
     display: none; }
     @media (min-width: 1200px) {
@@ -779,8 +779,8 @@ a {
         display: block;
         height: 100%; }
         .main-navigation .header-menu .menu-header-menu-container {
-          position: relative;
-          height: 100%; }
+          height: 100%;
+          position: relative; }
           .main-navigation .header-menu .menu-header-menu-container ul {
             height: 100%;
             margin: 0;
@@ -863,8 +863,8 @@ a {
         height: 100%;
         text-decoration: none;
         color: #fff;
-        -webkit-transition: 0.3s all ease-in-out;
-        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.35s all ease-in-out;
+        transition: 0.35s all ease-in-out;
         text-shadow: none; }
         .main-navigation ul li a:hover {
           -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
@@ -883,8 +883,8 @@ a {
           background: #fff;
           margin: 0.15rem;
           color: #323232;
-          -webkit-transition: 0.3s all ease-in-out;
-          transition: 0.3s all ease-in-out; }
+          -webkit-transition: 0.35s all ease-in-out;
+          transition: 0.35s all ease-in-out; }
           .main-navigation .side-header-menu li a:hover {
             -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
                     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
@@ -1275,6 +1275,229 @@ html {
   margin-bottom: 3rem; }
 
 /* Grid Card **** END */
+/* Contact Page **** START */
+@media (min-width: 1200px) {
+  .page-template-page-contact .grid-cards {
+    display: inline;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 5rem; } }
+
+@media (min-width: 1200px) {
+  .page-template-page-contact .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem; } }
+
+.page-template-page-contact .contact-cards .rect-card p {
+  text-align: left;
+  line-height: 22px;
+  font-size: 19px;
+  margin-bottom: 22px;
+  margin-top: 0px; }
+
+.page-template-page-contact .contact-cards .rect-card h3 {
+  text-align: left;
+  margin-bottom: 0.5rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-contact .contact-cards .rect-card h3 {
+      font-size: 23px;
+      margin-bottom: 1rem; } }
+
+.page-template-page-contact .contact-cards .rect-card {
+  padding: 5rem 2.5rem 2rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-contact .contact-cards .rect-card {
+      margin: 0;
+      padding: 3rem 1.5rem 2rem; }
+      .page-template-page-contact .contact-cards .rect-card:nth-child(2*n) {
+        margin-left: 0;
+        margin-right: 0; } }
+
+.page-template-page-contact .contact-location-header {
+  color: #323232;
+  text-align: center;
+  padding: 5rem 0 0 0; }
+  @media (min-width: 1200px) {
+    .page-template-page-contact .contact-location-header {
+      padding: 5rem 0 5rem 0; } }
+
+/* Contact Page **** END */
+/* Team Page **** START */
+.page-template-page-meet-our-team .grid-cards {
+  display: block; }
+  @media (min-width: 1200px) {
+    .page-template-page-meet-our-team .grid-cards {
+      max-width: 1200px;
+      margin: 0 auto; } }
+  .page-template-page-meet-our-team .grid-cards .rect-card {
+    margin: 0;
+    padding: 0rem 1.5rem 5rem 1.5rem; }
+    @media (min-width: 1200px) {
+      .page-template-page-meet-our-team .grid-cards .rect-card {
+        padding: 0rem 1.5rem 8rem 1.5rem; } }
+  .page-template-page-meet-our-team .grid-cards p {
+    margin-bottom: 1.5rem; }
+
+.page-template-page-meet-our-team .card-info {
+  padding: 0 2rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-meet-our-team .card-info {
+      text-align: left;
+      padding-top: 80px; } }
+  .page-template-page-meet-our-team .card-info p,
+  .page-template-page-meet-our-team .card-info a {
+    display: block;
+    font-weight: 500;
+    font-size: 1rem; }
+  .page-template-page-meet-our-team .card-info p:nth-child(1),
+  .page-template-page-meet-our-team .card-info p:nth-child(2) {
+    font-weight: 900; }
+  .page-template-page-meet-our-team .card-info p:first-child {
+    font-size: 22px; }
+    @media (min-width: 1200px) {
+      .page-template-page-meet-our-team .card-info p:first-child {
+        font-size: 2rem; } }
+  @media (min-width: 1200px) {
+    .page-template-page-meet-our-team .card-info p:nth-child(2) {
+      font-size: 1.5rem; } }
+  .page-template-page-meet-our-team .card-info a {
+    color: #323232;
+    text-decoration: none; }
+    .page-template-page-meet-our-team .card-info a:hover {
+      color: #323232; }
+    .page-template-page-meet-our-team .card-info a:active {
+      color: #323232; }
+
+.page-template-page-meet-our-team .page-team-header {
+  color: #323232;
+  text-align: center;
+  padding: 3rem 0 3rem 0; }
+  @media (min-width: 1200px) {
+    .page-template-page-meet-our-team .page-team-header {
+      padding: 8rem 0 8rem 0; } }
+
+@media (min-width: 1200px) {
+  .page-template-page-meet-our-team .grid-rect-card {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-gap: 2rem; } }
+
+/* Team Page **** END */
+/* Volunteer page **** Start */
+.page-template-page-volunteer .volunteer-info {
+  margin: 5rem 2rem 0rem 2rem;
+  text-align: center; }
+  @media (min-width: 1200px) {
+    .page-template-page-volunteer .volunteer-info {
+      text-align: left;
+      margin-top: 0; } }
+
+.page-template-page-volunteer .volunteer-info-container {
+  text-align: center;
+  margin-bottom: 5rem; }
+  .page-template-page-volunteer .volunteer-info-container h3 {
+    padding: 2rem 0;
+    margin-bottom: 3rem; }
+  .page-template-page-volunteer .volunteer-info-container a {
+    color: #323232;
+    text-decoration: none; }
+    .page-template-page-volunteer .volunteer-info-container a:hover {
+      color: #323232; }
+    .page-template-page-volunteer .volunteer-info-container a:active {
+      color: #323232; }
+  @media (min-width: 1200px) {
+    .page-template-page-volunteer .volunteer-info-container {
+      text-align: left; } }
+
+.page-template-page-volunteer .volunteer-apply-info {
+  text-align: center;
+  margin: 0rem 2rem 5rem 2rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-volunteer .volunteer-apply-info {
+      text-align: left; } }
+
+@media (min-width: 1200px) {
+  .flex-container {
+    max-width: 1200px;
+    margin: 120px auto 100px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.flex-container .flex-wrap h3 {
+  margin-bottom: 1rem; }
+
+.flex-container .flex-wrap p {
+  margin-bottom: 0; }
+
+.flex-container .flex-wrap .content-type-text {
+  margin-top: 5rem; }
+  @media (min-width: 1200px) {
+    .flex-container .flex-wrap .content-type-text {
+      padding: 0;
+      margin-top: 0; }
+      .flex-container .flex-wrap .content-type-text:last-child {
+        margin-bottom: 0; } }
+
+.flex-container .flex-wrap .content-type-widgets h3,
+.flex-container .flex-wrap .content-type-widgets p {
+  padding: 0 2rem;
+  margin-bottom: 1rem; }
+
+.flex-container .flex-wrap .content-type-widgets h3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #fff; }
+
+.flex-container .flex-wrap .content-type-widgets p:last-child {
+  margin-bottom: 3rem; }
+
+@media (min-width: 1200px) {
+  .flex-container .flex-wrap.single-description {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: left; }
+  .flex-container .flex-wrap.single-details {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 350px;
+    margin-right: 120px; }
+    .flex-container .flex-wrap.single-details .content-type-widgets {
+      border: 1px solid #BBBBBB;
+      margin-bottom: 30px; }
+      .flex-container .flex-wrap.single-details .content-type-widgets:last-child {
+        margin-bottom: 0; }
+      .flex-container .flex-wrap.single-details .content-type-widgets > * {
+        margin: 0;
+        margin-bottom: 1.5rem; }
+        .flex-container .flex-wrap.single-details .content-type-widgets > *:last-child {
+          margin-bottom: 1.5rem; } }
+
+/* Volunteer page **** End */
+/* Job Postings page **** START */
+.page-template-page-job-postings .rect-card p:first-child {
+  margin-bottom: 5px; }
+
+.page-template-page-job-postings .rect-card h3 {
+  margin-bottom: 2rem; }
+
+.page-template-page-job-postings .rect-card p:nth-child(3) {
+  margin-bottom: 5rem; }
+  @media (min-width: 1200px) {
+    .page-template-page-job-postings .rect-card p:nth-child(3) {
+      margin-bottom: 3rem; } }
+
+@media (min-width: 1200px) {
+  .page-template-page-job-postings .grid-cards .rect-card {
+    padding: 3rem 4rem; } }
+
+/* Job Postings page #### END */
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1390,7 +1613,7 @@ object {
     margin: 0 auto;
     text-align: center;
     padding: 0 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.65rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
@@ -2293,12 +2516,12 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 4rem 1rem;
   width: 100%;
   height: 36vh;
@@ -2308,12 +2531,12 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0; }
   .tribe-events-page-template .tribe-events-sub-nav h1 {
     -webkit-box-flex: 1;
@@ -2537,11 +2760,11 @@ object {
 
 /* Calendar page **** Start*/
 .tribe-events-page-template {
-  color: #000; }
+  color: black; }
   .tribe-events-page-template .header-meta {
     text-align: center; }
   .tribe-events-page-template .frafca-events-page-title {
-    color: #fff;
+    color: white;
     background-color: #BA5357;
     margin: auto; }
   .tribe-events-page-template .frafca-events-calendar thead th {
@@ -2550,26 +2773,26 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-    color: #fff;
+    color: white;
     background-color: #BA5357;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-transform: translateY(-70px);
             transform: translateY(-70px);
     margin: 0;
     height: 56px; }
     .tribe-events-page-template .frafca-events-sub-nav a {
-      color: #fff;
-      -webkit-text-decoration: #fff;
-              text-decoration: #fff; }
+      color: white;
+      -webkit-text-decoration: white;
+              text-decoration: white; }
       @media (min-width: 1200px) {
         .tribe-events-page-template .frafca-events-sub-nav a {
-          font-size: 1rem;
+          font-size: 17px;
           font-weight: 300; } }
     .tribe-events-page-template .frafca-events-sub-nav span {
       display: none; }
@@ -2581,11 +2804,9 @@ object {
           font-size: 1.5rem; } }
   .tribe-events-page-template #tribe-events-header .tribe-events-sub-nav {
     padding: 0 3rem; }
-  .tribe-events-page-template #tribe-events-footer:after,
-  .tribe-events-page-template #tribe-events-header:after {
+  .tribe-events-page-template #tribe-events-footer:after, .tribe-events-page-template #tribe-events-header:after {
     left: 0; }
-  .tribe-events-page-template #tribe-events-footer:before,
-  .tribe-events-page-template #tribe-events-header:before {
+  .tribe-events-page-template #tribe-events-footer:before, .tribe-events-page-template #tribe-events-header:before {
     right: 0; }
   .tribe-events-page-template #tribe-bar-form {
     background: rgba(255, 255, 255, 0.3); }
@@ -2605,6 +2826,8 @@ object {
     background: rgba(255, 255, 255, 0.3); }
   .tribe-events-page-template .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type=text] {
     font-size: 1.2rem; }
+  .tribe-events-page-template .tribe-bar-date {
+    color: white; }
   .tribe-events-page-template .tribe-events-calendar {
     -webkit-transform: translateY(-82px);
             transform: translateY(-82px); }
@@ -2616,7 +2839,11 @@ object {
     margin: 2rem auto;
     padding: 0.75rem 0;
     width: 205px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     @media screen and (min-width: 728px) {
       .tribe-events-page-template #tribe-bar-form .tribe-bar-submit input[type=submit] {
         display: none; } }
@@ -2631,13 +2858,13 @@ object {
         -ms-flex-pack: center;
             justify-content: center; }
   .tribe-events-page-template #tribe-bar-form.tribe-bar-collapse .tribe-bar-filters {
-    background: #fff; }
+    background: white; }
   .tribe-events-page-template .tribe-events-notices {
     -webkit-transform: translateY(-80px);
             transform: translateY(-80px); }
   .tribe-events-page-template .fa-angle-right,
   .tribe-events-page-template .fa-angle-left {
-    padding: 0.5rem; }
+    padding: 8px; }
   @media screen and (min-width: 728px) {
     .tribe-events-page-template .tribe-bar-filters-inner .tribe-clearfix {
       -webkit-transform: translateY(-92px);
@@ -2647,6 +2874,9 @@ object {
       -webkit-transform: translateY(-92px);
               transform: translateY(-92px);
       background: rgba(255, 255, 255, 0.7); } }
+  .tribe-events-page-template .tribe-bar-filters-open {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
   .tribe-events-page-template #tribe-events-content a {
     font-weight: bold; }
   .tribe-events-page-template .events-archive,
@@ -2655,11 +2885,11 @@ object {
   .tribe-events-page-template .type-tribe_events {
     background: rgba(22, 96, 92, 0.1); }
   .tribe-events-page-template .tribe-events-calendar thead th {
-    background-color: #fff;
-    color: #000;
+    background-color: white;
+    color: black;
     border: none; }
   .tribe-events-page-template .frafca-events-nav-next a {
-    color: #fff; }
+    color: white; }
   .tribe-events-page-template .frafca-event-on-mobile {
     text-decoration: none; }
   .tribe-events-page-template .frafca-events-listing-mobile {
@@ -2685,7 +2915,7 @@ object {
       width: 5px;
       background: #323232; }
     .tribe-events-page-template .frafca-events-listing-mobile p {
-      font-size: 0.75rem;
+      font-size: 12px;
       margin-bottom: 0; }
   .tribe-events-page-template #tribe-events p:last-child {
     margin-bottom: 0; }
@@ -2704,7 +2934,7 @@ object {
     -webkit-transform: translateY(-90px);
             transform: translateY(-90px); }
     .tribe-events-page-template .tribe-events-listing h4 {
-      font-size: 1rem; }
+      font-size: 16px; }
     .tribe-events-page-template .tribe-events-listing a {
       text-decoration: none; }
     @media (min-width: 1200px) {
@@ -2712,7 +2942,8 @@ object {
         display: none; } }
   @media (min-width: 1200px) {
     .tribe-events-page-template #tribe-bar-form label {
-      font-size: 1rem; } }
+      font-size: 16px;
+      color: white; } }
   .tribe-events-page-template #tribe-bar-form ::-webkit-input-placeholder {
     color: white;
     opacity: 1; }
@@ -2722,3 +2953,20 @@ object {
   .tribe-events-page-template #tribe-bar-form ::placeholder {
     color: white;
     opacity: 1; }
+  .tribe-events-page-template .header-meta {
+    -ms-flex-item-align: center;
+        align-self: center; }
+    @media (min-width: 1200px) {
+      .tribe-events-page-template .header-meta h2 {
+        font-size: 35px;
+        color: #FFD400; } }
+  .tribe-events-page-template #tribe-bar-form input[type=text] {
+    color: #323232; }
+  .tribe-events-page-template .frafca-events-button {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
+  .tribe-events-page-template .tribe-bar-toggle-text {
+    color: white; }
+  .tribe-events-page-template .tribe-events-cal-links {
+    -webkit-transform: translateY(104px);
+            transform: translateY(104px); }
