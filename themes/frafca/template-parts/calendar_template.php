@@ -9,7 +9,7 @@
 		]);
 ?>
 
-    <div class="header-current-month">
+    <div class="header-current-month pink">
 		<input id="hidden-current-month-value" type="hidden" value="<?php echo date('Y-m');?>">
 		<?php echo date('F, Y') ;?>
 	</div> <!-- end .header-current-month -->

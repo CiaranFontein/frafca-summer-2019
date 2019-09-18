@@ -3038,6 +3038,9 @@ object {
   .tribe-events-page-template .tribe-events-listing {
     -webkit-transform: translateY(-90px);
             transform: translateY(-90px); }
+    .tribe-events-page-template .tribe-events-listing .header-current-month {
+      text-align: center;
+      color: white; }
     .tribe-events-page-template .tribe-events-listing h4 {
       font-size: 16px; }
     .tribe-events-page-template .tribe-events-listing a {

@@ -561,6 +561,11 @@
     .tribe-events-listing {
         transform: translateY(-90px);
 
+        .header-current-month {
+            text-align: center;
+            color: white;
+        }
+
         h4 {
             font-size: 16px;
             // font-weight: 500;

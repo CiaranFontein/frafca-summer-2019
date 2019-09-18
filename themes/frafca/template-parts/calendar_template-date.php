@@ -9,7 +9,7 @@
 		'end_date'     => $month_end,
 		]);
 ?>
-    <div class="header-current-month">
+    <div class="header-current-month pink">
         
 		<input id="hidden-current-month-value" type="hidden" value="<?php echo date('Y-m', $get_current_date);?>">
         <?php echo date('F, Y', $get_current_date) ;?>
