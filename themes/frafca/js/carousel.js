@@ -1,18 +1,22 @@
 (function($) {
+  const breakPoint = 1200;
+  let originalText;
+  if ( $('.page-template-front-page') ){
+    originalText = $('.header-meta').html();
+  }
+
   $(document).ready(function() {
-    const fpAboutUsContent = document.querySelector('.fp-about-us-carousel');
-    const fpAbout = new Flickity(fpAboutUsContent, {
-      // carousel options
-      cellAlign: 'center',
-      wrapAround: true,
-      selectedAttraction: 0.01,
-      friction: 0.15,
-      autoPlay: 3000,
-      // percentPosition: false,
-      // watchCSS: true
-      draggable: '>2'
+    const $fpAboutUsContent = $('.fp-about-us-carousel');
+
+    // Bind the function only when it's mobile
+    stopFlickty($fpAboutUsContent);
+    
+    $(window).on('resize', function(){
+      stopFlickty($fpAboutUsContent);
     });
-    console.log(fpAbout);
+    
+
+
 
     const fpPartnersContent = document.querySelector('.fp-partners-carousel');
     const fpPartners = new Flickity(fpPartnersContent, {
@@ -23,6 +27,41 @@
       // friction: 0.15,
       autoPlay: 2000
     });
-    console.log(fpPartners);
+
   }); // End of Document.Ready
+
+
+
+  function stopFlickty($ele){
+    let curBrowserWidth = $(window).width();
+
+    if ( curBrowserWidth < breakPoint ){
+        // Change text in banner title
+        $('.header-meta').html(originalText);
+        $('.header-meta').find('h2').html(`<span>Welcome to FRAFCA</span>`);
+
+        /* Mobile flickity */
+        $ele.flickity({
+          cellAlign: 'center',
+          wrapAround: true,
+          selectedAttraction: 0.01,
+          friction: 0.15,
+          autoPlay: 3000,
+          draggable: '>1',
+          resize: true,
+          setGallerySize: true,
+        })
+        .flickity('playPlayer')
+        .flickity('reposition');
+      
+      } else {
+        // Change text in banner title
+        $('.header-meta').html(originalText);
+
+        /* Desktop flickity  */
+        // Stop flickity functions
+        $ele.flickity('destroy');        
+      }
+  }
+
 })(jQuery);

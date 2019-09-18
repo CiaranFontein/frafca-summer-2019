@@ -251,10 +251,6 @@ h1,
 h2 {
   font-size: 30px;
   font-weight: 700; }
-  @media (min-width: 1200px) {
-    h1,
-    h2 {
-      font-size: 42px; } }
   .hero-image-page h1, .hero-image-page
   h2 {
     color: #FFD400; }
@@ -262,6 +258,17 @@ h2 {
     h2 {
       font-size: 1.2rem;
       color: white; }
+  .page-template-front-page h1, .page-template-front-page
+  h2 {
+    font-family: "Merriweather", serif;
+    color: #ffffff; }
+    .page-template-front-page h1 span, .page-template-front-page
+    h2 span {
+      color: #FFD400; }
+  @media (min-width: 1200px) {
+    h1,
+    h2 {
+      font-size: 42px; } }
 
 @media (min-width: 1200px) {
   .page-template-page-about h3 {
@@ -1209,12 +1216,31 @@ html {
     width: 100%;
     height: 100vh;
     text-align: center; }
+    .frafca-hero-image .hero-image-page .header-meta h2 {
+      margin: 0 auto; }
+      @media (min-width: 1200px) {
+        .frafca-hero-image .hero-image-page .header-meta h2 {
+          width: 500px; }
+          .page-template-front-page .frafca-hero-image .hero-image-page .header-meta h2 {
+            width: 100%;
+            margin: 0; } }
+    .frafca-hero-image .hero-image-page .header-meta p {
+      font-weight: 500; }
+    @media (min-width: 1200px) {
+      .page-template-front-page .frafca-hero-image .hero-image-page .header-meta {
+        width: 720px; } }
     @media (min-width: 1200px) {
       .frafca-hero-image .hero-image-page {
         height: 72vh;
-        padding: 5rem 24rem 5rem 24rem; } }
+        padding: 5rem 24rem; } }
     .page-template-front-page .frafca-hero-image .hero-image-page {
       height: 100vh; }
+      @media (min-width: 1200px) {
+        .page-template-front-page .frafca-hero-image .hero-image-page {
+          padding: 5rem;
+          -webkit-box-pack: left;
+              -ms-flex-pack: left;
+                  justify-content: left; } }
   .single-prgrm_svc .frafca-hero-image {
     margin-bottom: 5rem; }
 
@@ -1586,15 +1612,18 @@ object {
       background-color: #ffe252; }
   .front-page-about-us .about-us-button {
     position: absolute;
-    -webkit-transform: translateY(-190%);
-            transform: translateY(-190%);
+    -webkit-transform: translateY(-145%);
+            transform: translateY(-145%);
     left: 10%;
     right: 10%;
     font-size: -1.625rem; }
     @media (min-width: 1200px) {
       .front-page-about-us .about-us-button {
-        -webkit-transform: translateY(-230%);
-                transform: translateY(-230%); } }
+        position: relative;
+        left: initial;
+        right: initial;
+        -webkit-transform: none;
+                transform: none; } }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1612,12 +1641,20 @@ object {
   .front-page-about-us .fp-about-us-carousel .flickity-page-dots {
     display: none; }
   @media (min-width: 1200px) {
-    .front-page-about-us .fp-about-us-carousel::after {
-      content: ''; }
-    .front-page-about-us .fp-about-us-carousel .flickity-viewport {
-      margin-bottom: 10rem; }
-    .front-page-about-us .fp-about-us-carousel .flickity-button {
-      display: none; } }
+    .front-page-about-us .fp-about-us-carousel {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: relative; }
+      .front-page-about-us .fp-about-us-carousel::after {
+        content: ''; }
+      .front-page-about-us .fp-about-us-carousel .flickity-viewport {
+        margin-bottom: 10rem; }
+      .front-page-about-us .fp-about-us-carousel .flickity-button {
+        display: none; } }
   .front-page-about-us .fp-about-us-cell {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1646,11 +1683,14 @@ object {
       padding-right: 1rem; }
     @media (min-width: 1200px) {
       .front-page-about-us .fp-about-us-cell {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         width: 27%;
         margin-left: 1rem;
         margin-right: 1rem;
         border-radius: 0.65rem;
-        height: 400px; }
+        height: 420px; }
         .front-page-about-us .fp-about-us-cell .card-icon {
           width: 150px;
           margin: 1rem; }

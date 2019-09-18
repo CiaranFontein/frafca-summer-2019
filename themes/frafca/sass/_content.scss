@@ -60,6 +60,34 @@ html {
     flex-direction: column;
 
     .hero-image-page {
+
+        .header-meta {
+            h2 {
+                margin: 0 auto;
+                
+                @include desktop {
+
+                    width: 500px;
+                    .page-template-front-page & {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+
+            p {
+                font-weight: 500;
+
+                @include desktop {}
+            }
+
+            @include desktop {
+                .page-template-front-page & {
+                    width: 720px;
+                }
+            }
+        }
+
         @include flex-default;
         padding: 5rem 1rem 1rem 1rem;
         width: 100%;
@@ -68,11 +96,15 @@ html {
 
         @include desktop {
             height: 72vh;
-            padding: 5rem 24rem 5rem 24rem;
+            padding: 5rem 24rem;
         }
 
         .page-template-front-page & {
             height: 100vh;
+            @include desktop {
+                padding: 5rem;
+                justify-content: left;
+            }
         }
 
     }
