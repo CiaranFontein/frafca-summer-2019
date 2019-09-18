@@ -251,10 +251,6 @@ h1,
 h2 {
   font-size: 30px;
   font-weight: 700; }
-  @media (min-width: 1200px) {
-    h1,
-    h2 {
-      font-size: 42px; } }
   .hero-image-page h1, .hero-image-page
   h2 {
     color: #FFD400; }
@@ -262,6 +258,17 @@ h2 {
     h2 {
       font-size: 1.2rem;
       color: white; }
+  .page-template-front-page h1, .page-template-front-page
+  h2 {
+    font-family: "Merriweather", serif;
+    color: #ffffff; }
+    .page-template-front-page h1 span, .page-template-front-page
+    h2 span {
+      color: #FFD400; }
+  @media (min-width: 1200px) {
+    h1,
+    h2 {
+      font-size: 42px; } }
 
 @media (min-width: 1200px) {
   .page-template-page-about h3 {
@@ -1210,25 +1217,30 @@ html {
     height: 100vh;
     text-align: center; }
     .frafca-hero-image .hero-image-page .header-meta h2 {
-      width: 400px;
-      margin: 0 auto;
-      color: #ffffff; }
-      .frafca-hero-image .hero-image-page .header-meta h2 span {
-        color: #FFD400; }
+      margin: 0 auto; }
       @media (min-width: 1200px) {
         .frafca-hero-image .hero-image-page .header-meta h2 {
-          width: 500px; } }
+          width: 500px; }
+          .page-template-front-page .frafca-hero-image .hero-image-page .header-meta h2 {
+            width: 100%;
+            margin: 0; } }
     .frafca-hero-image .hero-image-page .header-meta p {
       font-weight: 500; }
     @media (min-width: 1200px) {
-      .frafca-hero-image .hero-image-page .header-meta {
-        padding: 4rem 30rem 0 0; } }
+      .page-template-front-page .frafca-hero-image .hero-image-page .header-meta {
+        width: 720px; } }
     @media (min-width: 1200px) {
       .frafca-hero-image .hero-image-page {
         height: 72vh;
-        padding: 5rem 24rem 5rem 24rem; } }
+        padding: 5rem 24rem; } }
     .page-template-front-page .frafca-hero-image .hero-image-page {
       height: 100vh; }
+      @media (min-width: 1200px) {
+        .page-template-front-page .frafca-hero-image .hero-image-page {
+          padding: 5rem;
+          -webkit-box-pack: left;
+              -ms-flex-pack: left;
+                  justify-content: left; } }
   .single-prgrm_svc .frafca-hero-image {
     margin-bottom: 5rem; }
 
