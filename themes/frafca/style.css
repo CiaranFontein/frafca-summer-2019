@@ -635,9 +635,9 @@ a {
               justify-content: center; } }
   .site-header .header-logo {
     background: url(../../images/logos/2018_frafca_logo_final.png) no-repeat;
-    background-size: 3.75rem 3.75rem;
-    height: 3.75rem;
-    width: 3.75rem;
+    background-size: 4.25rem 4.25rem;
+    height: 4.25rem;
+    width: 4.25rem;
     z-index: 4;
     position: relative; }
     @media (min-width: 1200px) {
@@ -1141,6 +1141,7 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* HTML Smooth Scrolling */
 html {
   scroll-behavior: smooth; }
 
@@ -3040,9 +3041,10 @@ object {
             transform: translateY(-90px); }
     .tribe-events-page-template .tribe-events-listing .header-current-month {
       text-align: center;
-      color: white; }
+      color: white;
+      font-size: 1rem; }
     .tribe-events-page-template .tribe-events-listing h4 {
-      font-size: 16px; }
+      font-size: 1rem; }
     .tribe-events-page-template .tribe-events-listing a {
       text-decoration: none; }
     @media (min-width: 1200px) {
