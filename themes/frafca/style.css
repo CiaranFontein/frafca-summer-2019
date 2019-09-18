@@ -1209,6 +1209,20 @@ html {
     width: 100%;
     height: 100vh;
     text-align: center; }
+    .frafca-hero-image .hero-image-page .header-meta h2 {
+      width: 400px;
+      margin: 0 auto;
+      color: #ffffff; }
+      .frafca-hero-image .hero-image-page .header-meta h2 span {
+        color: #FFD400; }
+      @media (min-width: 1200px) {
+        .frafca-hero-image .hero-image-page .header-meta h2 {
+          width: 500px; } }
+    .frafca-hero-image .hero-image-page .header-meta p {
+      font-weight: 500; }
+    @media (min-width: 1200px) {
+      .frafca-hero-image .hero-image-page .header-meta {
+        padding: 4rem 30rem 0 0; } }
     @media (min-width: 1200px) {
       .frafca-hero-image .hero-image-page {
         height: 72vh;
@@ -1586,8 +1600,8 @@ object {
       background-color: #ffe252; }
   .front-page-about-us .about-us-button {
     position: absolute;
-    -webkit-transform: translateY(-190%);
-            transform: translateY(-190%);
+    -webkit-transform: translateY(-145%);
+            transform: translateY(-145%);
     left: 10%;
     right: 10%;
     font-size: -1.625rem; }

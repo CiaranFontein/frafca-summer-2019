@@ -60,6 +60,33 @@ html {
     flex-direction: column;
 
     .hero-image-page {
+
+        .header-meta {
+            h2 {
+                width: 400px;
+                margin: 0 auto;
+                color: #ffffff;
+
+                span {
+                    color: $color__background-button;
+                }
+
+                @include desktop {
+                    width: 500px;
+                }
+            }
+
+            p {
+                font-weight: 500;
+
+                @include desktop {}
+            }
+
+            @include desktop {
+                padding: 4rem 30rem 0 0;
+            }
+        }
+
         @include flex-default;
         padding: 5rem 1rem 1rem 1rem;
         width: 100%;
