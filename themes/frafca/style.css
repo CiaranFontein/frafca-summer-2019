@@ -1574,11 +1574,15 @@ object {
   margin: 0 auto;
   text-align: center; }
   .page-template-front-page a.scroll-down:hover {
-    text-shadow: 0 0.5rem 1rem rgba(1, 1, 1, 0.5); }
+    text-shadow: 0 0.5rem 1rem rgba(213, 194, 194, 0.5); }
 
 .front-page-about-us {
   color: #2d2d2d;
   text-align: center; }
+  .front-page-about-us a {
+    font-size: 1.25rem; }
+    .front-page-about-us a:hover {
+      background-color: #ffe252; }
   .front-page-about-us .about-us-button {
     position: absolute;
     -webkit-transform: translateY(-190%);
@@ -1633,8 +1637,8 @@ object {
 .what-we-offer {
   margin-top: 2rem; }
   .what-we-offer .wwo_image {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 43, 92, 0.3)), to(rgba(47, 43, 92, 0.3)));
-    background: linear-gradient(to bottom, rgba(47, 43, 92, 0.3) 0%, rgba(47, 43, 92, 0.3) 100%);
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#2f2b5c), color-stop(#5a3165), color-stop(#803766), color-stop(#a14261), to(#ba5357));
+    background-image: linear-gradient(to right bottom, #2f2b5c, #5a3165, #803766, #a14261, #ba5357);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1649,6 +1653,10 @@ object {
     text-align: center;
     font-size: -1.625rem;
     padding: 2rem; }
+    .what-we-offer .wwo_meta a {
+      font-size: 1.25rem; }
+      .what-we-offer .wwo_meta a:hover {
+        background-color: #ffe252; }
   .what-we-offer .default-btn {
     display: inline-grid;
     margin: 0.5rem auto; }
@@ -1732,7 +1740,10 @@ object {
         height: 140px;
         font-size: 1.25rem; }
       .front-page-get-involved .flex-cards .fp-get-involved-card a {
-        margin-bottom: 1rem; } }
+        margin-bottom: 1rem;
+        font-size: 1.25rem; }
+        .front-page-get-involved .flex-cards .fp-get-involved-card a:hover {
+          background-color: #ffe252; } }
 
 .front-page-partners {
   background: #323232;
