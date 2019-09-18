@@ -50,57 +50,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php tribe_get_template_part( 'month/tooltip' ); ?>
 </div><!-- #tribe-events-content -->
 
+
+<!-- .tribe-events-listing -->
 <section class="tribe-events-listing">
-	<?php
-	global $post;
-	// $month_start = date('Y-m') . '-01';
-	// $month_end = date("Y-m-t");
-	$events = tribe_get_events([ 
-		'posts_per_page' => 5,
-		// 'start_date'   => $month_start,
-		// 'end_date'     => $month_end,
-		]);
+
+	<?php 
+	$parse_current_uri = explode( 'events/' , $_SERVER['REQUEST_URI']);
+	
+	var_dump($parse_current_uri);
+	
+	// Default calendar view
+		if ( 
+			empty( $_GET['tribe-bar-date']) 
+			&& 
+			empty( $_GET['tribe-bar-search'] ) 
+			&&
+			strlen($parse_current_uri[1]) === 0
+		) :
+		get_template_part( 'template-parts/calendar_template' );
 	?>
 
-	<div class="header-current-month">
+	<?php elseif (strlen($parse_current_uri[1]) > 0):
+	// traversing 
+		get_template_part( 'template-parts/calendar_template', 'date' );
+	?>
 
-	</div>
-		
-		<?php
-		// var_dump($month_start, $month_end);
+	<?php elseif ($_GET['tribe-bar-date']): 
+	// Query by the date
+		$filter_event_date = $_GET['tribe-bar-date'];
+	?>
 
-		foreach ( $events as $post ) :
-			setup_postdata( $post );
-			$title = $post -> post_title;
-			$start_date = tribe_get_start_date( $post );
-			$end_date = tribe_get_end_time( $post );
-			$event_address = tribe_get_address( $post );
-			$event_city = tribe_get_city( $post );
-			// var_dump($post);
-		?>
-			<div class="frafca-events-listing-mobile">
-				<h4>
-					<a href="<?php echo get_the_permalink( $post );?>"> 
-						<?php echo $title ?>
-					</a>
-				</h4>
-				
-				<p>
-					<!-- Check if it's all day event -->
-					<?php 
-					if ( !empty( $end_date ) ){
-						echo "$start_date - $end_date";
-					} else {
-						echo $start_date;
-					}
-					?>
-				</p>
-				<!-- Check if event_city exist -->
-				<?php if ( !empty( $event_city )) : ?>
-					<p><?php echo "$event_address, $event_city"; ?></p>
-				<?php elseif ( !empty( $event_address ) ) : ?>
-					<p><?php echo $event_address; ?></p>
-				<?php endif; ?>
-			</div>
-		<?php endforeach; ?>
-</section> <!-- .tribe-events-listinge.end -->
+	<?php elseif ($_GET['tribe-bar-search']):
+	// Query by the search keyword
+		$filter_event_search = $_GET['tribe-bar-search'];
+	?>
+	<?php else: 
+	// Query by the date and search keyword
+		$filter_event_date = $_GET['tribe-bar-date'];
+		$filter_event_search = $_GET['tribe-bar-search'];
+	?>
+	<?php endif; flush_rewrite_rules( $hard = true );?>

@@ -238,6 +238,9 @@
         #tribe-events p:last-child {
             margin-bottom: 0;
         }
+        #tribe-events-footer~a.tribe-events-ical.tribe-events-button {
+            display: none;
+        }
         #tribe-mobile-container {
             display:none;
         }
@@ -262,7 +265,7 @@
         }
 
         .tribe-events-listing {
-            // transform: translateY(-90px);
+            transform: translateY(-90px);
                     h4 {
                         font-size: 16px;
                         // font-weight: 500;
