@@ -59,3 +59,22 @@
     display: flex;
     align-items: center;
 }
+
+// Shadow Defaults
+@mixin text-shadow {
+    text-shadow: $shadow_settings;
+}
+
+@mixin box-shadow {
+    box-shadow: $shadow_settings
+}
+
+//Blur Filter
+@mixin blur-filter {
+    backdrop-filter: blur($blur_amount);
+}
+
+//Padding
+@mixin avg-padding {
+    padding: $button_padding_height;
+}

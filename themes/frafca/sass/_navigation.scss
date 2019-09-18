@@ -117,8 +117,8 @@ a {
     &.darkmode {
         z-index: 1;
         background-color: rgba(47, 43, 92, .6);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
-        backdrop-filter: blur(4px);
+        @include box-shadow;
+        @include blur-filter;
 
         .hamburger-icon,
         .main-navigation i {
@@ -133,7 +133,7 @@ a {
     &.mediummode {
         z-index: 1;
         background-color: rgba(0, 0, 0, .3);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+        @include box-shadow;
         backdrop-filter: blur(4px);
 
         .hamburger-icon,
@@ -386,7 +386,7 @@ a {
             font-size: $font__desktop_icon_size;
 
             &:hover {
-                text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+                @include text-shadow;
             }
         }
     }
@@ -402,7 +402,8 @@ a {
             flex-direction: column;
             position: absolute;
             top: 75px;
-            background: white;
+            background: #fff;
+            ;
             color: $color__background-black;
             left: 0;
 
@@ -417,7 +418,7 @@ a {
                 position: relative;
 
                 &:hover {
-                    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+                    @include box-shadow;
                 }
 
                 a {
@@ -447,7 +448,7 @@ a {
                 text-shadow: none;
 
                 &:hover {
-                    box-shadow: 1px .3rem 0.3rem rgba(0, 0, 0, .6);
+                    @include box-shadow;
                 }
             }
         }
@@ -469,7 +470,7 @@ a {
                     transition: 0.3s all ease-in-out;
 
                     &:hover {
-                        box-shadow: 0.25rem .25rem 0.3rem rgba(0, 0, 0, 0.6);
+                        @include box-shadow;
                     }
                 }
 

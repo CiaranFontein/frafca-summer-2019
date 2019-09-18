@@ -10,8 +10,8 @@ $desktop-width: 1200px;
 // Colors
 
 $color__background-body: #4D4E60;
-$color__background-screen: #ffffff;
-$color__text-main: #ffffff;
+$color__background-screen: #fff;
+$color__text-main: #fff;
 $color__text-sec: #323232;
 
 $color__text-screen: #21759b;
@@ -53,16 +53,28 @@ monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
-$font__size_main: 22px;
+$font__size_main: 1.375rem;
 
 $font__mobile_icon_size: 2.5rem;
 $font__desktop_icon_size: 1.5rem;
 
 // Border 
 $color__border: #BBBBBB;
-$border-radius: 8px;
+$border-radius: 0.5rem;
+
+//Shadow
+$shadow_opacity: 0.4;
+$shadow_settings: 0 .5rem 1rem rgba(0, 0, 0, $shadow_opacity);
+
+//Blur
+$blur_amount:0.25rem;
 
 // Animation time
+<<<<<<< HEAD
 $time__transition: .4s;
+=======
+$time__transition: .35s;
+
+>>>>>>> b3c00afaf4b211f3991668b358a20d321b8db32d
 $button_padding_height: 0.8rem;
 $button_padding_width: 1.5rem;
