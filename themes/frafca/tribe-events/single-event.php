@@ -33,7 +33,7 @@ $event_id = get_the_ID();
 
 		<div class="tribe-events-schedule tribe-clearfix single-event-purple get-ticket-header-container">
 			<?php the_title('<h1 class="tribe-events-single-event-title">', '</h1>'); ?>
-			<i class="far fa-calendar-alt"></i> &nbsp &nbsp <?php echo tribe_events_event_schedule_details($event_id, '<h2>', '</h2>'); ?>
+			<p class="get-ticket-address-details"><i class="far fa-calendar-alt"></i> &nbsp &nbsp <?php echo tribe_events_event_schedule_details($event_id); ?></p>
 			<p class="get-ticket-address-details"><i class="fas fa-map-marker-alt">&nbsp &nbsp</i><?php echo tribe_get_address(); ?>, <?php echo tribe_get_city(); ?></p>
 		</div>
 
