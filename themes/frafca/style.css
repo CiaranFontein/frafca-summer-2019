@@ -2833,6 +2833,8 @@ object {
   .single-tribe_events .fa-map-marker-alt,
   .single-tribe_events .fa-calendar-alt {
     font-size: 1.5rem; }
+  .single-tribe_events .tribe-events-schedule h2 {
+    font-size: 1rem; }
   .single-tribe_events .get-ticket-header {
     display: none; }
     @media (min-width: 1200px) {
@@ -2842,6 +2844,13 @@ object {
         -webkit-box-ordinal-group: 6;
             -ms-flex-order: 5;
                 order: 5; } }
+  .single-tribe_events .get-ticket-header-desc {
+    color: #ffff; }
+  .single-tribe_events .get-ticket-price-header {
+    font-weight: bold;
+    margin-bottom: 0; }
+  .single-tribe_events .get-ticket-description-header {
+    font-size: 1rem; }
   .single-tribe_events .get-ticket-footer {
     display: -webkit-box;
     display: -ms-flexbox;
