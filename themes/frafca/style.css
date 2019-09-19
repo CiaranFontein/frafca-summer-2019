@@ -2735,6 +2735,9 @@ object {
             flex-grow: 1;
     margin: 0; }
 
+.tribe-events-page-template .tribe-events-month-event-title {
+  border-left: solid; }
+
 /* Hero Image - tribe-events-page **** END */
 /* Single Event page **** Start*/
 #tribe-events-pg-template {
