@@ -23,6 +23,11 @@
             margin: 0;
         }
     }
+
+    .tribe-events-month-event-title {
+        border-left: solid;
+        
+    }
 }
 
 /* Hero Image - tribe-events-page **** END */
@@ -569,12 +574,10 @@
         }
     }
 
+
+
     #tribe-events p:last-child {
         margin-bottom: 0;
-    }
-
-    .tribe-mobile-container {
-        // display:none;
     }
 
     .frafca-events-mobile-old-list {
