@@ -1624,11 +1624,14 @@ object {
   text-decoration: none;
   color: #fff;
   position: absolute;
-  bottom: 0;
+  bottom: .25rem;
   margin: 0 auto;
   text-align: center; }
   .page-template-front-page a.scroll-down:hover {
     text-shadow: 0 0.5rem 1rem rgba(213, 194, 194, 0.5); }
+  .page-template-front-page a.scroll-down p {
+    margin: 0;
+    font-size: 1rem; }
 
 .front-page-about-us {
   color: #2d2d2d;
@@ -1888,6 +1891,10 @@ object {
     .front-page-partners .fp-partners-carousel .flickity-button {
       top: 40%; } }
 
+@media (min-width: 1200px) {
+  .page-template-front-page section, .page-template-front-page .what-we-offer, .page-template-front-page .front-page-partners {
+    margin-top: 7.5rem; } }
+
 /* About Page */
 .page-template-page-about section {
   margin-top: 80px;
@@ -2126,7 +2133,10 @@ object {
   line-height: 22px;
   font-size: 19px;
   margin-bottom: 22px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset; }
 
 .page-template-page-contact .contact-cards .rect-card h3 {
   text-align: left;
