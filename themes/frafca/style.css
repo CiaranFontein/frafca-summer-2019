@@ -1650,15 +1650,18 @@ object {
         right: initial;
         -webkit-transform: none;
                 transform: none;
-        padding: 1rem 2rem;
-        margin: 1.5rem auto 4rem auto; } }
+        padding: 1rem 2rem; } }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     margin: 0 auto; }
+    @media (min-width: 1200px) {
+      .front-page-about-us .yellow {
+        margin: 1.5rem auto 4rem auto; } }
   .front-page-about-us h2 {
-    margin: 2.4rem auto; }
+    margin: 2.4rem auto;
+    color: #2d2d2d; }
   .front-page-about-us .fp-about-us-carousel .previous {
     left: 35%; }
   .front-page-about-us .fp-about-us-carousel .next {
