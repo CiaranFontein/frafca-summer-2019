@@ -16,12 +16,14 @@
         text-decoration: none;
         color: #fff;
         position: absolute;
-        bottom: 0;
+        bottom: .25rem;
         margin: 0 auto;
         text-align: center;
-
-        &:hover {
-            text-shadow: 0 .5rem 1rem rgba(213, 194, 194, 0.5);
+        
+        &:hover { text-shadow: 0 .5rem 1rem rgba(213, 194, 194, 0.5); }
+        p { 
+            margin: 0;
+            font-size: 1rem;
         }
     }
 }
@@ -309,6 +311,15 @@
             @include flickity-button-reset;
         }
 
+    }
+}
+
+.page-template-front-page {
+    @include desktop {
+
+        section, .what-we-offer, .front-page-partners {
+            margin-top: 7.5rem;
+        }
     }
 }
 
@@ -653,7 +664,7 @@
             font-size: 19px;
             margin-bottom: 22px;
             margin-top: 0px;
-
+            flex-grow: unset;
         }
 
         .rect-card h3 {

@@ -513,6 +513,9 @@
 
     #tribe-events-content a {
         font-weight: bold;
+        @include desktop {
+            color: $color__background-black;
+        }
     }
 
     .events-archive,
@@ -694,4 +697,23 @@
         }
     }
 
+}
+
+#tribe-events-content {
+    .tribe-events-sub-nav,
+    .frafca-events-sub-nav {
+        a {
+            color: white;
+        }
+    }
+}
+
+
+a.tribe-events-button {
+    @include desktop {
+        color: white !important;
+        &:hover {
+            color: $color__link !important;
+        }
+    }
 }
