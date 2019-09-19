@@ -3149,6 +3149,10 @@ object {
       margin-top: .1rem; }
   .tribe-events-page-template #tribe-events p:last-child {
     margin-bottom: 0; }
+  .tribe-events-page-template #tribe-mobile-container {
+    display: none; }
+  .tribe-events-page-template .tribe-mobile-container {
+    display: none; }
   .tribe-events-page-template .frafca-events-mobile-old-list {
     display: none; }
   .tribe-events-page-template .tribe-mobile-day-heading {
