@@ -51,14 +51,15 @@
             right: initial;
             transform: none;
             padding: 1rem 2rem;
-            margin: 1.5rem auto 4rem auto;
-            
         }
     }
 
     .yellow {
         width: max-content;
         margin: 0 auto;
+        @include desktop {
+            margin: 1.5rem auto 4rem auto;
+        }
     }
 
     h2 {
