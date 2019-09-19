@@ -1,31 +1,6 @@
 .error404  {
     color: $color__text-sec;
 
-    .hamburger-icon,
-    .main-navigation i {
-        color: $color__text-sec;
-    }
-
-    @include desktop {
-        .main-navigation ul li {
-
-            a {
-                color: $color__text-sec;
-            }
-
-        }
-        .sub-menu {
-            border: 1px solid $color__background-hr;
-        }
-        .side-header-menu {
-            .menu li:first-child {
-                a {
-                    border: 1px solid $color__background-black;
-                }
-            }
-        }
-    }
-
     .site-content {
         width: 80%;
         margin: 120px auto 2rem auto;
@@ -69,8 +44,5 @@
             }    
         }
         
-    }
-    .site-header {
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     }
 }
