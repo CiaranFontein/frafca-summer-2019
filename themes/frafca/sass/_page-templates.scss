@@ -1302,34 +1302,71 @@
 .search-results-content {
     color: #000000;
     min-height: 55vh;
-    margin: $base__space-unit * 2 auto;
+    margin: $base__space-unit * 4 auto $base__space-unit * 2 auto;
     padding: $base__space-unit * 2 $base__space-unit * 2;
 
     h1 {
-        font-size: $font__size_main + 6;
+        font-size: 1rem;
     }
 
     a {
         color: $color__link-search;
-        font-size: $font__size_main + 8;
+        font-size: 1rem;
+        line-height: 1;
     }
 
     .search-page-header {
         @include align-items-center;
+        flex-direction: column;
         justify-content: space-between;
         margin-bottom: $base__space-unit * 3;
+
+        .page-title {
+            span {
+                font-style: italic;
+            }
+        }
+        .search-count {
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            flex-direction: row;
+        }
     }
+
+    .entry-header {
+        .entry-title {
+            font-size: $font__size_main;
+            line-height: 1.5;
+        }
+        p {
+            margin: 0;
+            font-size: 10px;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            a {
+                font-size: 10px;
+                color: $color__border-abbr;
+                text-decoration: none;
+            }
+        }
+
+    }
+
 
     @include desktop {
         margin: $base__space-unit * 4 auto;
         padding: $base__space-unit * 3 $base__space-unit * 8;
 
         h1 {
-            font-size: $font__size_main + 9;
+            font-size: $font__size_main ;
         }
 
         a {
-            font-size: $font__size_main + 11;
+            font-size: $font__size_main ;
         }
     }
 }

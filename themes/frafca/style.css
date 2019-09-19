@@ -521,9 +521,9 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border: 2px solid #323232;
     margin: 1.25rem 0;
     font-size: 1.25rem; }
@@ -656,6 +656,29 @@ a {
         vertical-align: center;
         font-size: 3.2rem;
         z-index: 5; } }
+  .error404 .site-header,
+  .search .site-header {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+    .error404 .site-header .hamburger-icon,
+    .error404 .site-header .main-navigation i,
+    .search .site-header .hamburger-icon,
+    .search .site-header .main-navigation i {
+      color: #323232; }
+    @media (min-width: 1200px) {
+      .error404 .site-header .main-navigation ul li a,
+      .search .site-header .main-navigation ul li a {
+        color: #323232; }
+      .error404 .site-header .sub-menu,
+      .search .site-header .sub-menu {
+        border: 1px solid #ccc; }
+      .error404 .site-header .side-header-menu .menu li:first-child a,
+      .search .site-header .side-header-menu .menu li:first-child a {
+        border: 1px solid #323232; } }
+
+#ajaxsearchlite1 .probox {
+  z-index: -1;
+  border-radius: 0 !important; }
 
 .mobile-header-menu {
   display: block;
@@ -2562,13 +2585,14 @@ object {
 .search-results-content {
   color: #000000;
   min-height: 55vh;
-  margin: 2rem auto;
+  margin: 4rem auto 2rem auto;
   padding: 2rem 2rem; }
   .search-results-content h1 {
-    font-size: 7.375rem; }
+    font-size: 1rem; }
   .search-results-content a {
     color: #265BC7;
-    font-size: 9.375rem; }
+    font-size: 1rem;
+    line-height: 1; }
   .search-results-content .search-page-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2576,31 +2600,49 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-bottom: 3rem; }
+    .search-results-content .search-page-header .page-title span {
+      font-style: italic; }
+    .search-results-content .search-page-header .search-count {
+      font-size: 1rem; }
+    @media (min-width: 1200px) {
+      .search-results-content .search-page-header {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+  .search-results-content .entry-header .entry-title {
+    font-size: 1.375rem;
+    line-height: 1.5; }
+  .search-results-content .entry-header p {
+    margin: 0;
+    font-size: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .search-results-content .entry-header p a {
+      font-size: 10px;
+      color: #666;
+      text-decoration: none; }
   @media (min-width: 1200px) {
     .search-results-content {
       margin: 4rem auto;
       padding: 3rem 8rem; }
       .search-results-content h1 {
-        font-size: 10.375rem; }
+        font-size: 1.375rem; }
       .search-results-content a {
-        font-size: 12.375rem; } }
+        font-size: 1.375rem; } }
 
 .error404 {
   color: #323232; }
-  .error404 .hamburger-icon,
-  .error404 .main-navigation i {
-    color: #323232; }
-  @media (min-width: 1200px) {
-    .error404 .main-navigation ul li a {
-      color: #323232; }
-    .error404 .sub-menu {
-      border: 1px solid #ccc; }
-    .error404 .side-header-menu .menu li:first-child a {
-      border: 1px solid #323232; } }
   .error404 .site-content {
     width: 80%;
     margin: 120px auto 2rem auto;
@@ -2642,9 +2684,6 @@ object {
         margin: 0 auto; }
         .error404 .site-content a {
           width: 200px; } }
-  .error404 .site-header {
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
 
 /* Hero Image - tribe-events-page **** START */
 .tribe-events-page-template .hero-image-page {
