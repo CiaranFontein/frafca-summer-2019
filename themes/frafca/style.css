@@ -1649,7 +1649,9 @@ object {
         left: initial;
         right: initial;
         -webkit-transform: none;
-                transform: none; } }
+                transform: none;
+        padding: 1rem 2rem;
+        margin: 1.5rem auto 4rem auto; } }
   .front-page-about-us .yellow {
     width: -webkit-max-content;
     width: -moz-max-content;
