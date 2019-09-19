@@ -575,9 +575,14 @@
     #tribe-events p:last-child {
         margin-bottom: 0;
     }
-
+    #tribe-mobile-container {
+        .type-tribe_events {
+            display:none;
+        }
+    }
+        
     .tribe-mobile-container {
-        // display:none;
+        display:none;
     }
 
     .frafca-events-mobile-old-list {
