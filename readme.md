@@ -94,17 +94,17 @@ ___
 
 ####  2.3.1. <a name='Header'></a>Header
 
-##### Header Dropdown (Desktop)
+##### Header Hover and Dropdown (Desktop)
 
-![](name-of-giphy.gif)
+![header-dropdown](/themes/frafca/images/gifs/dropdown-hover-header.gif)
 
 ##### Search Bar Fade In/Out (Mobile)
 
-![](name-of-giphy.gif)
+![header-searchbar](/themes/frafca/images/gifs/dropdown-search-header.gif)
 
-####  2.3.2. <a name='HamburgerMenuSlideOutInMobile'></a>Hamburger Menu Slide Out/In (Mobile)
+##### <a name='HamburgerMenuSlideOutInMobile'></a>Hamburger Menu Slide Out/In (Mobile)
 
-![](name-of-giphy.gif)
+![hamburger-menu](/themes/frafca/images/gifs/hamburger-menu.gif)
 
 ####  2.3.3. <a name='Footer'></a>Footer
 
@@ -116,13 +116,13 @@ ___
 
 ##### Card Carousel
 
-##### Partners Carousel (Mobile)
-
-![](name-of-giphy.gif)
-
 ##### Partners Carousel (Desktop)
 
-![](name-of-giphy.gif)
+![carousel-partners-desktop](/themes/frafca/images/gifs/animation-partners-mobile.gif)
+
+##### Partners Carousel (Mobile)
+
+![carousel-partners-mobile](/themes/frafca/images/gifs/animation-partners.gif)
 
 ___
 
@@ -173,5 +173,8 @@ ___
 ##  4. <a name='References'></a>References
 ___
 
+
+- CMB2
+- Custom Field Suite
 - Flickity
-- Custom Fli
+- Optimole
