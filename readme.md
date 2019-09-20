@@ -38,11 +38,11 @@ The following highlights the languages used to markup, design and animate the In
   * Git Init    (Initialized Git Repository for website)
   * Git Ignore  (Added .ignore file to exclude unnecessary files/folders.)
 
-## Website Overiew
+## Website Overview
 
 ### Full Desktop View
 
-![frafca-desktop](full-desktop-view.gif)
+![frafca-desktop](/frafca/wp-content/themes/frafca/images/gifs/full-desktop-website.gif)
 
 ### Full Mobile View
 
