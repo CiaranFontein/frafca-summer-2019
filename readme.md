@@ -48,6 +48,8 @@ The following highlights the languages used to markup, design and animate the In
 
 ![frafca-mobile](/themes/frafca/images/gifs/full-mobile-website.gif)
 
+
+
 ### Animations
 
 #### Search Bar Fade In/Out
@@ -68,7 +70,7 @@ The following highlights the languages used to markup, design and animate the In
 
 #### Footer Dropdown
 
-![](name-of-giphy.gif)
+![](/themes/frafca/images/gifs/animation-footer.gif)
 
 
 
