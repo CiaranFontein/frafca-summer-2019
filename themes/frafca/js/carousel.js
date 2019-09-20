@@ -1,5 +1,9 @@
 (function($) {
   const breakPoint = 1200;
+  let originalText;
+  if ($('.page-template-front-page')) {
+    originalText = $('.header-meta').html();
+  }
 
   $(document).ready(function() {
     const $fpAboutUsContent = $('.fp-about-us-carousel');
@@ -25,6 +29,12 @@
     let curBrowserWidth = $(window).width();
 
     if (curBrowserWidth < breakPoint) {
+      // Change text in banner title
+      $('.header-meta').html(originalText);
+      $('.header-meta')
+        .find('h2')
+        .html(`<span>Welcome to FRAFCA</span>`);
+
       /* Mobile flickity */
       $ele
         .flickity({
@@ -40,9 +50,12 @@
         .flickity('playPlayer')
         .flickity('reposition');
     } else {
+      // Change text in banner title
+      $('.header-meta').html(originalText);
+
       /* Desktop flickity  */
       // Stop flickity functions
       $ele.flickity('destroy');
     }
-  } // End of Functions StopFlickity
+  }
 })(jQuery);

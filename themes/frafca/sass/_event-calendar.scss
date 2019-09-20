@@ -23,6 +23,11 @@
             margin: 0;
         }
     }
+
+    .tribe-events-month-event-title {
+        border-left: solid;
+        
+    }
 }
 
 /* Hero Image - tribe-events-page **** END */
@@ -72,7 +77,7 @@
 
     .tribe-events-single-event-title {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .single-event-purple {
@@ -175,6 +180,11 @@
         font-size: 1.5rem;
     }
 
+    .tribe-events-schedule {
+        h2 {
+            font-size: 1rem;
+        }
+    }
     .get-ticket-header {
         display: none;
 
@@ -183,6 +193,22 @@
             text-align: center;
             order: 5;
         }
+
+    }
+
+    .get-ticket-header-desc {
+        color: #ffff;
+    }
+
+    .get-ticket-price-header{
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .get-ticket-description-header{
+        font-size: 1rem;
+        margin-top: .5rem;
+        
     }
 
     .get-ticket-footer {
@@ -262,6 +288,7 @@
                 flex: none;
                 width: 100%;
                 position: relative;
+                padding-left: 0;
 
                 &::before {
                     position: relative;
@@ -270,6 +297,8 @@
                     content: 'Contact Information';
                     font-size: 1rem;
                     font-weight: 900;
+                    margin-bottom: .5rem;
+                    
 
                     @include desktop {
                         margin-top: 1.5rem;
@@ -300,9 +329,11 @@
                 dd {
                     width: 80%;
                     font-size: 1rem;
+                    padding-left: 1.5rem;
 
                     @include desktop {
                         width: 70%;
+                        padding-left: .8rem;
                     }
                 }
             }
@@ -393,6 +424,7 @@
 
         @media screen and (min-width: 728px) {
             transform: translateY(-93px);
+    
         }
 
         @include desktop {
@@ -480,15 +512,16 @@
     }
 
     #tribe-events-content a {
-        // color: #16605C;
         font-weight: bold;
+        @include desktop {
+            color: $color__background-black;
+        }
     }
 
     .events-archive,
     .events-gridview,
     .tribe-events-last,
     .type-tribe_events {
-        // border-left: 5px solid #334C71;
         background: rgba(22, 96, 92, 0.1);
 
     }
@@ -544,12 +577,17 @@
         }
     }
 
+
+
     #tribe-events p:last-child {
         margin-bottom: 0;
     }
-
+    #tribe-mobile-container {
+        display:none;
+    }
+        
     .tribe-mobile-container {
-        // display:none;
+        display:none;
     }
 
     .frafca-events-mobile-old-list {
@@ -595,8 +633,14 @@
     #tribe-bar-form {
 
         label {
+
+            @media screen and (min-width: 728px) {
+                font-size: 1rem;
+                color: white;
+            }
+
             @include desktop {
-                font-size: 16px;
+                font-size: 1rem;
                 color: white;
             }
         }
@@ -612,8 +656,13 @@
         align-self: center;
 
         h2 {
+
+            @media screen and (min-width: 728px) {
+                font-size: 2.2rem;
+                color: $color__link;
+            }
             @include desktop {
-                font-size: 35px;
+                font-size: 2.2rem;
                 color: $color__link;
             }
         }
@@ -622,8 +671,12 @@
     #tribe-bar-form input[type=text] {
         color: $color__text-sec;
 
+        @media screen and (min-width: 728px) {
+            font-size: 1rem;
+        }
+
         @include desktop {
-            color: white;
+            color: #ffff;
         }
     }
 
@@ -640,11 +693,34 @@
     }
 
     .tribe-bar-filters {
-        transform: translateY(-50px);
+            transform: translateY(-50px);
+
+        @media screen and (min-width: 728px) {
+            transform: translateY(0px);
+        }
 
         @include desktop {
             transform: translateY(-7px);
         }
     }
 
+}
+
+#tribe-events-content {
+    .tribe-events-sub-nav,
+    .frafca-events-sub-nav {
+        a {
+            color: white;
+        }
+    }
+}
+
+
+a.tribe-events-button {
+    @include desktop {
+        color: white !important;
+        &:hover {
+            color: $color__link !important;
+        }
+    }
 }

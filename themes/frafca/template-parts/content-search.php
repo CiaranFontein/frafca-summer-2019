@@ -12,13 +12,7 @@
 	<header class="entry-header">
 		<?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
 
-		<p></p>
-
-		<?php if ('post' === get_post_type()) : ?>
-			<div class="entry-meta">
-				<?php frafca_theme_posted_on(); ?> / <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?> / <?php frafca_theme_posted_by(); ?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<p><a href="<?php esc_url(the_permalink() ) ;?>"><?php the_permalink(); ?></a></p>
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">

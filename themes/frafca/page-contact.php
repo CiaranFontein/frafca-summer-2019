@@ -26,7 +26,8 @@ get_header(); ?>
 							$services = $card['services'];
 							$phone = $card['phone'];
 							$fax = $card['fax'];
-							$button = $card['view_location'];
+                            $button = $card['view_location'];
+
                 ?>
 
                     <div class="rect-card purple">
@@ -34,12 +35,12 @@ get_header(); ?>
 						<p><?php echo $address;?></p>
 						<p><?php echo $services;?></p>
 						<p><?php echo $phone;?></p>
-						<p><?php echo $fax;?></p>
-                        <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
-                            <?php echo $button['text']; ?>
-                        </a>
-                        
-
+                        <p><?php echo $fax;?></p>
+                        <?php if( !empty($button['url']) ) : ?>
+                            <a class='default-btn yellow' href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>">
+                                <?php echo $button['text']; ?>
+                            </a>
+                        <?php endif; ?>
                     </div>
 
                 <?php endforeach; ?>

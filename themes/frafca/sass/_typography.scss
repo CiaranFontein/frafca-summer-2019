@@ -29,10 +29,6 @@ h2 {
     font-size: 30px;
     font-weight: 700;
 
-    @include desktop {
-        font-size: 42px;
-    }
-
     .hero-image-page & {
         color: $color__link;
         .tribe-events-page-template & {
@@ -40,6 +36,19 @@ h2 {
             color: white;
         }
     }
+
+    .page-template-front-page & {
+        font-family: $font__header;
+        color: #ffffff;
+        span {
+            color: $color__background-button;
+        }
+    }
+
+    @include desktop {
+        font-size: 42px;
+    }
+
 }
 
 h3 {

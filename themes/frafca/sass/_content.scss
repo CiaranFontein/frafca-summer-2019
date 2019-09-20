@@ -63,16 +63,15 @@ html {
 
         .header-meta {
             h2 {
-                width: 400px;
                 margin: 0 auto;
-                color: #ffffff;
-
-                span {
-                    color: $color__background-button;
-                }
-
+                
                 @include desktop {
+
                     width: 500px;
+                    .page-template-front-page & {
+                        width: 100%;
+                        margin: 0;
+                    }
                 }
             }
 
@@ -83,7 +82,9 @@ html {
             }
 
             @include desktop {
-                padding: 4rem 30rem 0 0;
+                .page-template-front-page & {
+                    width: 720px;
+                }
             }
         }
 
@@ -95,11 +96,15 @@ html {
 
         @include desktop {
             height: 72vh;
-            padding: 5rem 24rem 5rem 24rem;
+            padding: 5rem 24rem;
         }
 
         .page-template-front-page & {
             height: 100vh;
+            @include desktop {
+                padding: 5rem;
+                justify-content: left;
+            }
         }
 
     }

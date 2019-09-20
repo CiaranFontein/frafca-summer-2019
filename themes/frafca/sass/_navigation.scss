@@ -43,7 +43,7 @@ a {
 
     .search-form {
         @include align-items-center;
-        justify-content: flex-end;
+        justify-content: space-between;
         border: 2px solid $color__background-black;
         margin: 1.25rem 0;
         font-size: 1.25rem;
@@ -60,7 +60,10 @@ a {
         }
 
         .search-field {
+            box-sizing: border-box;
             padding: 0.35rem 1.25rem;
+            width: 100%;
+            border:none;
             outline: none;
             color: #000;
 
@@ -181,6 +184,39 @@ a {
             z-index: 5;
         }
     }
+
+    .error404 &,
+    .search & {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+        .hamburger-icon,
+        .main-navigation i {
+            color: $color__text-sec;
+        }
+        @include desktop {
+            .main-navigation ul li {
+    
+                a {
+                    color: $color__text-sec;
+                }
+    
+            }
+            .sub-menu {
+                border: 1px solid $color__background-hr;
+            }
+            .side-header-menu {
+                .menu li:first-child {
+                    a {
+                        border: 1px solid $color__background-black;
+                    }
+                }
+            }
+        }
+    }
+}
+#ajaxsearchlite1 .probox {
+    z-index: -1;
+    border-radius: 0 !important;
 }
 
 .mobile-header-menu {
