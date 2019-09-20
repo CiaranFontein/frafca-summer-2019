@@ -1,9 +1,5 @@
 # Welcome to FRAFCA - Friendship Reginal Aborginal Friendship Center Association
-{: .text-center}
-{: .gitlab-purple}
 
-1. TOC
-{:toc}
 
 ## Technologies Used
 
@@ -43,6 +39,14 @@ The following highlights the languages used to markup, design and animate the In
   * Git Ignore  (Added .ignore file to exclude unnecessary files/folders.)
 
 ## Website Overiew
+
+### Full Desktop View
+
+![frafca-desktop](full-desktop-view.gif)
+
+### Full Mobile View
+
+![frafca-mobile](name-of-giphy.gif)
 
 ### Animations
 
