@@ -1,3 +1,9 @@
+# <p style="text-align: center;">Welcome to <span style="color:#FFD400;">FRAFCA</span></p> <br> <p style="text-align: center">Friendship Regional Aborginal Friendship Center Association</p>
+
+<div style="margin:0 auto; width:150px;"><img src="/themes/frafca/images/logos/2018_frafca_logo_final.png" /></div>
+
+## Table of Contents
+
 <!-- vscode-markdown-toc -->
 * 1. [Technologies Used](#TechnologiesUsed)
 * 2. [Website Overview](#WebsiteOverview)
@@ -20,20 +26,13 @@
 		* 3.2.3. [Add Custom Event](#AddCustomEvent)
 		* 3.2.4. [Add Custom Job Posting](#AddCustomJobPosting)
 		* 3.2.5. [Add Custom Resources](#AddCustomResources)
-* 4. [Tutorial](#Tutorial-1)
-	* 4.1. [Site Updates](#SiteUpdates-1)
+* 4. [References](#References)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->  
-
-# <p style="text-align: center;">Welcome to <span style="color:#FFD400;">FRAFCA</span></p> <br> <p style="text-align: center">Friendship Regional Aborginal Friendship Center Association</p>
-
-<!-- ![frafca-logo]<div>(/themes/frafca/images/logos/2018_frafca_logo_final.png)</div> -->
-<div style="margin:0 auto; width:150px;"><img src="/themes/frafca/images/logos/2018_frafca_logo_final.png" /></div>
-
 ___
 
 ##  1. <a name='TechnologiesUsed'></a>Technologies Used
@@ -171,7 +170,8 @@ ___
 ![](name-of-giphy.gif)
 
 
-##  4. <a name='Tutorial-1'></a>Tutorial
+##  4. <a name='References'></a>References
 ___
 
-###  4.1. <a name='SiteUpdates-1'></a>Site Updates
+- Flickity
+- Custom Fli
