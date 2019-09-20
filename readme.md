@@ -1,11 +1,42 @@
-# Welcome to FRAFCA - Friendship Reginal Aborginal Friendship Center Association
-{: .text-center}
-{: .gitlab-purple}
+# <p style="text-align: center;">Welcome to <span style="color:#FFD400;">FRAFCA</span></p> <br> <p style="text-align: center">Friendship Regional Aborginal Friendship Center Association</p>
 
-1. TOC
-{:toc}
+<div style="margin:0 auto; width:150px;"><img src="/themes/frafca/images/logos/2018_frafca_logo_final.png" /></div>
 
-## Technologies Used
+## Table of Contents
+
+<!-- vscode-markdown-toc -->
+* 1. [Technologies Used](#TechnologiesUsed)
+* 2. [Website Overview](#WebsiteOverview)
+	* 2.1. [Full Desktop View](#FullDesktopView)
+	* 2.2. [Full Mobile View](#FullMobileView)
+	* 2.3. [Animations](#Animations)
+		* 2.3.1. [Header](#Header)
+		* 2.3.2. [Hamburger Menu Slide Out/In (Mobile)](#HamburgerMenuSlideOutInMobile)
+		* 2.3.3. [Footer](#Footer)
+		* 2.3.4. [Image/Content Carousels](#ImageContentCarousels)
+* 3. [Tutorial](#Tutorial)
+	* 3.1. [Site Updates](#SiteUpdates)
+		* 3.1.1. [Editing the Home Page Content](#EditingtheHomePageContent)
+		* 3.1.2. [Editing the About Page Content](#EditingtheAboutPageContent)
+		* 3.1.3. [Editing the Get Involved Page Content](#EditingtheGetInvolvedPageContent)
+		* 3.1.4. [Editing a Banner's Text](#EditingaBannersText)
+	* 3.2. [Custom Content Updates](#CustomContentUpdates)
+		* 3.2.1. [Adding a New Partner](#AddingaNewPartner)
+		* 3.2.2. [Removing a Partner](#RemovingaPartner)
+		* 3.2.3. [Add Custom Event](#AddCustomEvent)
+		* 3.2.4. [Add Custom Job Posting](#AddCustomJobPosting)
+		* 3.2.5. [Add Custom Resources](#AddCustomResources)
+* 4. [References](#References)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->  
+___
+
+##  1. <a name='TechnologiesUsed'></a>Technologies Used
+___
 
 The following highlights the languages used to markup, design and animate the Instanews website along with the key functions used for each language:
 
@@ -42,85 +73,108 @@ The following highlights the languages used to markup, design and animate the In
   * Git Init    (Initialized Git Repository for website)
   * Git Ignore  (Added .ignore file to exclude unnecessary files/folders.)
 
-## Website Overiew
+___
 
-### Animations
+##  2. <a name='WebsiteOverview'></a>Website Overview
+___
 
-#### Search Bar Fade In/Out
+###  2.1. <a name='FullDesktopView'></a>Full Desktop View
 
-![](name-of-giphy.gif)
+![frafca-desktop](/themes/frafca/images/gifs/full-desktop-website.gif)
 
-#### Hamburger Slide Out/In
+###  2.2. <a name='FullMobileView'></a>Full Mobile View
 
-![](name-of-giphy.gif)
+![frafca-mobile](/themes/frafca/images/gifs/full-mobile-website.gif)
 
-#### Desktop Header Dropdowns
 
-![](name-of-giphy.gif)
 
-#### Image/Content Carousels
+###  2.3. <a name='Animations'></a>Animations
 
-![](name-of-giphy.gif)
+___
 
-#### Footer Dropdown
+####  2.3.1. <a name='Header'></a>Header
 
-![](name-of-giphy.gif)
+##### Header Hover and Dropdown (Desktop)
 
-### Add Custom Content
+![header-dropdown](/themes/frafca/images/gifs/dropdown-hover-header.gif)
 
-#### Add Custom Events
+##### Search Bar Fade In/Out (Mobile)
 
-![](name-of-giphy.gif)
+![header-searchbar](/themes/frafca/images/gifs/dropdown-search-header.gif)
 
-#### Add Custom Job Postings
+##### <a name='HamburgerMenuSlideOutInMobile'></a>Hamburger Menu Slide Out/In (Mobile)
 
-![](name-of-giphy.gif)
+![hamburger-menu](/themes/frafca/images/gifs/hamburger-menu.gif)
 
-#### Add Custom Resources
+####  2.3.3. <a name='Footer'></a>Footer
 
-## Tutorial
+##### Footer Dropdown (Mobile)
 
-### Site Updates
+![](/themes/frafca/images/gifs/animation-footer.gif)
 
-#### Adding a New Partner
+####  2.3.4. <a name='ImageContentCarousels'></a>Image/Content Carousels
 
-![](name-of-giphy.gif)
+##### Card Carousel
 
-#### Removing a Partner
+##### Partners Carousel (Desktop)
 
-![](name-of-giphy.gif)
+![carousel-partners-desktop](/themes/frafca/images/gifs/animation-partners-mobile.gif)
 
-#### Adding a New Team Member
+##### Partners Carousel (Mobile)
 
-![](name-of-giphy.gif)
+![carousel-partners-mobile](/themes/frafca/images/gifs/animation-partners.gif)
 
-#### Removing a Team Member
+___
 
-![](name-of-giphy.gif)
+##  3. <a name='Tutorial'></a>Tutorial
+___
 
-### Content Management
+###  3.1. <a name='SiteUpdates'></a>Site Updates
 
-#### Editing the Home Page Content
-
-![](name-of-giphy.gif)
-
-#### Editing the About Page Content
+####  3.1.1. <a name='EditingtheHomePageContent'></a>Editing the Home Page Content
 
 ![](name-of-giphy.gif)
 
-#### Editing the Get Involved Page Content
+####  3.1.2. <a name='EditingtheAboutPageContent'></a>Editing the About Page Content
 
 ![](name-of-giphy.gif)
 
-#### Editing a Banner's Text
+####  3.1.3. <a name='EditingtheGetInvolvedPageContent'></a>Editing the Get Involved Page Content
 
 ![](name-of-giphy.gif)
 
-#### Adding Events
+####  3.1.4. <a name='EditingaBannersText'></a>Editing a Banner's Text
+
+![](name-of-giphy.gif)
+
+###  3.2. <a name='CustomContentUpdates'></a>Custom Content Updates
+
+####  3.2.1. <a name='AddingaNewPartner'></a>Adding a New Partner
+
+![](name-of-giphy.gif)
+
+####  3.2.2. <a name='RemovingaPartner'></a>Removing a Partner
+
+![](name-of-giphy.gif)
+
+####  3.2.3. <a name='AddCustomEvent'></a>Add Custom Event
+
+![](name-of-giphy.gif)
+
+####  3.2.4. <a name='AddCustomJobPosting'></a>Add Custom Job Posting
+
+![](name-of-giphy.gif)
+
+####  3.2.5. <a name='AddCustomResources'></a>Add Custom Resources
 
 ![](name-of-giphy.gif)
 
 
+##  4. <a name='References'></a>References
+___
 
 
-
+- CMB2
+- Custom Field Suite
+- Flickity
+- Optimole
