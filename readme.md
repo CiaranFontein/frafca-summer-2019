@@ -46,7 +46,7 @@ The following highlights the languages used to markup, design and animate the In
 
 ### Full Mobile View
 
-![frafca-mobile](name-of-giphy.gif)
+![frafca-mobile](/themes/frafca/images/gifs/full-mobile-website.gif)
 
 ### Animations
 
@@ -70,39 +70,12 @@ The following highlights the languages used to markup, design and animate the In
 
 ![](name-of-giphy.gif)
 
-### Add Custom Content
 
-#### Add Custom Events
 
-![](name-of-giphy.gif)
-
-#### Add Custom Job Postings
-
-![](name-of-giphy.gif)
-
-#### Add Custom Resources
 
 ## Tutorial
 
 ### Site Updates
-
-#### Adding a New Partner
-
-![](name-of-giphy.gif)
-
-#### Removing a Partner
-
-![](name-of-giphy.gif)
-
-#### Adding a New Team Member
-
-![](name-of-giphy.gif)
-
-#### Removing a Team Member
-
-![](name-of-giphy.gif)
-
-### Content Management
 
 #### Editing the Home Page Content
 
@@ -120,11 +93,26 @@ The following highlights the languages used to markup, design and animate the In
 
 ![](name-of-giphy.gif)
 
-#### Adding Events
+### Custom Content Updates
+
+#### Adding a New Partner
 
 ![](name-of-giphy.gif)
 
+#### Removing a Partner
 
+![](name-of-giphy.gif)
 
+#### Add Custom Event
+
+![](name-of-giphy.gif)
+
+#### Add Custom Job Posting
+
+![](name-of-giphy.gif)
+
+#### Add Custom Resources
+
+![](name-of-giphy.gif)
 
 
