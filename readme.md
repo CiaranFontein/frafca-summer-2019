@@ -42,7 +42,7 @@ The following highlights the languages used to markup, design and animate the In
 
 ### Full Desktop View
 
-![frafca-desktop](/Applications/MAMP/htdocs/frafca/wp-content/themes/frafca/images/gifs/full-desktop-website.gif)
+![frafca-desktop](/themes/frafca/images/gifs/full-desktop-website.gif)
 
 ### Full Mobile View
 
